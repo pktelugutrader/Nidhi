@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -694,56 +693,21 @@
     .footer-social a:hover { background: var(--gold-bright); color: #0f1f3d; border-color: var(--gold-bright); }
     .disclaimer { font-size: 11px; color: rgba(255,255,255,0.4); line-height: 1.7; max-width: 900px; margin: 20px auto 0; text-align: center; }
 
-    /* ── FLOATING WHATSAPP ── */
-    .fab-whatsapp {
-      position: fixed; bottom: 24px; right: 24px; z-index: 90;
-      width: 60px; height: 60px; border-radius: 50%;
-      background: #25D366; color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 28px; box-shadow: 0 8px 30px rgba(37,211,102,0.5);
-      cursor: pointer; transition: transform 0.2s;
-    }
-    .fab-whatsapp:hover { transform: scale(1.08); }
-    .fab-whatsapp::before {
-      content: ''; position: absolute; inset: -8px; border-radius: 50%;
-      background: rgba(37,211,102,0.4); z-index: -1;
-      animation: ping 1.6s cubic-bezier(0, 0, 0.2, 1) infinite;
-    }
-    @keyframes ping {
-      0% { transform: scale(1); opacity: 0.8; }
-      75%, 100% { transform: scale(1.6); opacity: 0; }
-    }
-    /* ── FLOATING PROMO AD ── */
+    /* ── FLOATING PROMO AD (competitor-style, transparent, no card) ── */
     .fab-promo-ad {
       position: fixed;
-      bottom: 100px; /* sits above the WhatsApp button */
+      bottom: 24px;
       right: 24px;
-      z-index: 91;
-      width: 140px;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(15,31,61,0.35);
-      border: 2px solid var(--gold-bright);
-      background: #fff;
-      animation: floatBob 3s ease-in-out infinite;
+      z-index: 90;
     }
-    .fab-promo-ad img { width: 100%; display: block; cursor: pointer; }
-    .fab-promo-close {
-      position: absolute; top: 4px; right: 4px;
-      width: 22px; height: 22px; border-radius: 50%;
-      background: rgba(5,15,31,0.65); color: #fff;
-      border: none; cursor: pointer; font-size: 12px;
-      display: flex; align-items: center; justify-content: center;
-      z-index: 2;
+    .fab-promo-ad img.sticky {
+      width: 220px;
+      display: block;
+      cursor: pointer;
     }
-    @keyframes floatBob {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-    @media (max-width: 960px) {
-      .fab-promo-ad { bottom: 150px; width: 110px; }
-    }
-    
+    .fab-promo-ad .hidden-mob { display: none; }
+    .fab-promo-ad .hidden-desk { display: block; }
+
     /* ── MOBILE STICKY BAR ── */
     .mobile-sticky {
       display: none;
@@ -832,9 +796,13 @@
       .calc-card { grid-template-columns: 1fr; padding: 28px 22px; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
       .mobile-sticky { display: flex; }
-      .fab-whatsapp { bottom: 78px; }
       body { padding-bottom: 60px; }
       .hero-benefits { grid-template-columns: 1fr; }
+
+      .fab-promo-ad { bottom: 78px; right: 16px; }
+      .fab-promo-ad img.sticky { width: 130px; }
+      .fab-promo-ad .hidden-mob { display: block; }
+      .fab-promo-ad .hidden-desk { display: none; }
     }
     @media (max-width: 520px) {
       .footer-grid { grid-template-columns: 1fr; }
@@ -1380,21 +1348,16 @@
       <div>Hyderabad, Telangana · India</div>
     </div>
     <p class="disclaimer">Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. Insurance is a subject matter of solicitation.</p>
-    </footer>
-  
+  </footer>
+
   <!-- FLOATING PROMO AD -->
-  <div class="fab-promo-ad" id="promoAd" data-testid="fab-promo-ad">
-    <button class="fab-promo-close" onclick="document.getElementById('promoAd').style.display='none'" aria-label="Close ad">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-    <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" data-testid="promo-ad-link">
-      <img src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/e7934f411fa844e3957ab1f2c91bf9f1e67e8c4a/ChatGPT%20Image%20Jul%2031%2C%202026%2C%2010_13_09%20AM.png" alt="Start Investing with PK Alakaapuri Nidhi" />
-    </a>
-  </div>
-    
-  <!-- FLOATING WHATSAPP -->
-  <a href="https://wa.me/919440581363?text=Hello%20PK%20Alakapuri%20Nidhi,%20I%20want%20to%20know%20more." target="_blank" class="fab-whatsapp" data-testid="fab-whatsapp" aria-label="WhatsApp us">
-    <i class="fa-brands fa-whatsapp"></i>
+  <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="fab-promo-ad" data-testid="fab-promo-ad">
+    <div class="hidden-mob">
+      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png" alt="Open a Mutual Fund Account" />
+    </div>
+    <div class="hidden-desk">
+      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png" alt="Open a Mutual Fund Account" />
+    </div>
   </a>
 
   <!-- MOBILE STICKY BAR -->
@@ -1659,9 +1622,6 @@
       setTimeout(() => closeExitModal(), 2400);
     }
     window.submitExitForm = submitExitForm;
-
-    // Also open modal via nav CTA quickly if user clicks "Start Investing" — commented, keeping direct AssetPlus flow
-
   </script>
 
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"7f7b0fd8732c4326aae4b9d58d5c514a","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
