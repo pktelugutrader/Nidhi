@@ -713,7 +713,37 @@
       0% { transform: scale(1); opacity: 0.8; }
       75%, 100% { transform: scale(1.6); opacity: 0; }
     }
-
+    /* ── FLOATING PROMO AD ── */
+    .fab-promo-ad {
+      position: fixed;
+      bottom: 100px; /* sits above the WhatsApp button */
+      right: 24px;
+      z-index: 91;
+      width: 140px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(15,31,61,0.35);
+      border: 2px solid var(--gold-bright);
+      background: #fff;
+      animation: floatBob 3s ease-in-out infinite;
+    }
+    .fab-promo-ad img { width: 100%; display: block; cursor: pointer; }
+    .fab-promo-close {
+      position: absolute; top: 4px; right: 4px;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(5,15,31,0.65); color: #fff;
+      border: none; cursor: pointer; font-size: 12px;
+      display: flex; align-items: center; justify-content: center;
+      z-index: 2;
+    }
+    @keyframes floatBob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    @media (max-width: 960px) {
+      .fab-promo-ad { bottom: 150px; width: 110px; }
+    }
+    
     /* ── MOBILE STICKY BAR ── */
     .mobile-sticky {
       display: none;
@@ -1350,8 +1380,18 @@
       <div>Hyderabad, Telangana · India</div>
     </div>
     <p class="disclaimer">Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. Insurance is a subject matter of solicitation.</p>
-  </footer>
-
+    </footer>
+  
+  <!-- FLOATING PROMO AD -->
+  <div class="fab-promo-ad" id="promoAd" data-testid="fab-promo-ad">
+    <button class="fab-promo-close" onclick="document.getElementById('promoAd').style.display='none'" aria-label="Close ad">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" data-testid="promo-ad-link">
+      <img src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/e7934f411fa844e3957ab1f2c91bf9f1e67e8c4a/ChatGPT%20Image%20Jul%2031%2C%202026%2C%2010_13_09%20AM.png" alt="Start Investing with PK Alakaapuri Nidhi" />
+    </a>
+  </div>
+    
   <!-- FLOATING WHATSAPP -->
   <a href="https://wa.me/919440581363?text=Hello%20PK%20Alakapuri%20Nidhi,%20I%20want%20to%20know%20more." target="_blank" class="fab-whatsapp" data-testid="fab-whatsapp" aria-label="WhatsApp us">
     <i class="fa-brands fa-whatsapp"></i>
