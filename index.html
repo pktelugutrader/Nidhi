@@ -779,10 +779,32 @@
     }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 960px) {
+    /* Nav switches to hamburger earlier than the main content breakpoint —
+       logo + 6 links + CTA button don't fit comfortably below ~1100px. */
+    @media (max-width: 1100px) {
       nav.top-nav { padding: 14px 20px; }
-      .nav-links { display: none; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0; right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        background: rgba(7,21,39,0.98);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(212,168,67,0.18);
+        padding: 14px 24px 20px;
+        max-height: calc(100vh - 64px);
+        overflow-y: auto;
+        z-index: 99;
+      }
+      .nav-links.nav-open { display: flex; }
+      .nav-links a { padding: 10px 0; width: 100%; }
       .hamburger { display: block; }
+    }
+    @media (max-width: 960px) {
       .hero { padding: 110px 20px 60px; }
       .hero-inner { grid-template-columns: 1fr; gap: 40px; }
       .profile-strip { grid-template-columns: 1fr; padding: 60px 24px 40px; gap: 30px; text-align: center; }
@@ -830,7 +852,7 @@
       <li><a href="#cvd" data-testid="nav-cvd">CVD Tool</a></li>
     </ul>
     <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="nav-cta" data-testid="nav-invest-btn">Start Investing</a>
-    <button class="hamburger" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'"><i class="fa-solid fa-bars"></i></button>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('nav-open')"><i class="fa-solid fa-bars"></i></button>
   </nav>
 
   <!-- HERO -->
@@ -1295,6 +1317,13 @@
     });
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Close mobile nav dropdown after tapping a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('nav-open');
+      });
+    });
 
     // ==== SERVICES & LEAD FORM ====
     const ASSETPLUS_URL = "https://www.assetplus.in/mfd/ARN-362567";
