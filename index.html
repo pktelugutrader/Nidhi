@@ -945,124 +945,17 @@
 
   <!-- CALCULATORS -->
   <section class="section-block calc-section" id="calculators">
-    <div class="section-header-center">
-      <span class="section-label center">Interactive Tools</span>
-      <h2 class="section-title" style="color:#fff;">Plan Your <em>Financial Future</em></h2>
-      <p class="section-desc">Estimate what your money can achieve. Adjust the sliders and see instant results.</p>
-    </div>
+  <div class="section-header-center">
+    <span class="section-label center">Interactive Tools</span>
+    <h2 class="section-title" style="color:#fff;">Plan Your <em>Financial Future</em></h2>
+    <p class="section-desc">Estimate what your money can achieve with our advanced financial calculators.</p>
+  </div>
 
-    <div class="calc-tabs">
-      <div class="calc-tab active" data-tab="sip" data-testid="tab-sip"><i class="fa-solid fa-chart-column"></i> SIP Calculator</div>
-      <div class="calc-tab" data-tab="goal" data-testid="tab-goal"><i class="fa-solid fa-bullseye"></i> Goal Planner</div>
-      <div class="calc-tab" data-tab="emi" data-testid="tab-emi"><i class="fa-solid fa-house"></i> EMI Calculator</div>
-    </div>
-
-    <div class="calc-card">
-      <!-- SIP -->
-      <div class="calc-panel active" id="panel-sip">
-        <div class="calc-inputs">
-          <div class="field">
-            <label>Monthly Investment <span>₹<span id="sipAmt">10,000</span></span></label>
-            <input type="range" id="sipAmount" min="500" max="200000" step="500" value="10000" data-testid="sip-amount" />
-          </div>
-          <div class="field">
-            <label>Duration (years) <span id="sipYr">15</span></label>
-            <input type="range" id="sipYears" min="1" max="40" value="15" data-testid="sip-years" />
-          </div>
-          <div class="field">
-            <label>Expected Return (%) <span id="sipRt">12</span></label>
-            <input type="range" id="sipRate" min="4" max="20" step="0.5" value="12" data-testid="sip-rate" />
-          </div>
-        </div>
-        <div class="calc-result">
-          <div class="result-item">
-            <div class="result-label">Total Invested</div>
-            <div class="result-value" id="sipInvested">₹ 18,00,000</div>
-          </div>
-          <div class="result-item">
-            <div class="result-label">Est. Returns</div>
-            <div class="result-value" id="sipReturns">₹ 32,45,760</div>
-          </div>
-          <div class="result-item">
-            <div class="result-label">Future Value</div>
-            <div class="result-value big" id="sipTotal">₹ 50,45,760</div>
-          </div>
-          <div class="calc-cta">
-            <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold" style="width:100%; justify-content:center;" data-testid="sip-invest-btn"><i class="fa-solid fa-rocket"></i> Start SIP Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- GOAL -->
-      <div class="calc-panel" id="panel-goal">
-        <div class="calc-inputs">
-          <div class="field">
-            <label>Target Amount <span>₹<span id="goalAmt">50,00,000</span></span></label>
-            <input type="range" id="goalAmount" min="100000" max="50000000" step="100000" value="5000000" data-testid="goal-amount" />
-          </div>
-          <div class="field">
-            <label>Years to Goal <span id="goalYr">10</span></label>
-            <input type="range" id="goalYears" min="1" max="40" value="10" data-testid="goal-years" />
-          </div>
-          <div class="field">
-            <label>Expected Return (%) <span id="goalRt">12</span></label>
-            <input type="range" id="goalRate" min="4" max="20" step="0.5" value="12" data-testid="goal-rate" />
-          </div>
-        </div>
-        <div class="calc-result">
-          <div class="result-item">
-            <div class="result-label">Required Monthly SIP</div>
-            <div class="result-value big" id="goalSip">₹ 21,741</div>
-          </div>
-          <div class="result-item">
-            <div class="result-label">Total Investment</div>
-            <div class="result-value" id="goalInvest">₹ 26,08,920</div>
-          </div>
-          <div class="result-item">
-            <div class="result-label">Wealth Gained</div>
-            <div class="result-value" id="goalGain">₹ 23,91,080</div>
-          </div>
-          <div class="calc-cta">
-            <a href="#book" class="btn-gold" style="width:100%; justify-content:center;" data-testid="goal-plan-btn"><i class="fa-solid fa-calendar-check"></i> Plan This Goal With Us</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- EMI -->
-      <div class="calc-panel" id="panel-emi">
-        <div class="calc-inputs">
-          <div class="field">
-            <label>Loan Amount <span>₹<span id="emiAmt">25,00,000</span></span></label>
-            <input type="range" id="emiAmount" min="50000" max="20000000" step="50000" value="2500000" data-testid="emi-amount" />
-          </div>
-          <div class="field">
-            <label>Tenure (years) <span id="emiYr">20</span></label>
-            <input type="range" id="emiYears" min="1" max="30" value="20" data-testid="emi-years" />
-          </div>
-          <div class="field">
-            <label>Interest Rate (%) <span id="emiRt">8.5</span></label>
-            <input type="range" id="emiRate" min="6" max="18" step="0.1" value="8.5" data-testid="emi-rate" />
-          </div>
-        </div>
-        <div class="calc-result">
-          <div class="result-item">
-            <div class="result-label">Monthly EMI</div>
-            <div class="result-value big" id="emiMonthly">₹ 21,696</div>
-          </div>
-          <div class="result-item">
-            <div class="result-label">Total Interest</div>
-            <div class="result-value" id="emiInterest">₹ 27,06,940</div>
-          </div>
-          <div class="result-item">
-            <div class="result-label">Total Payable</div>
-            <div class="result-value" id="emiTotal">₹ 52,06,940</div>
-          </div>
-          <div class="calc-cta">
-            <a href="#book" class="btn-gold" style="width:100%; justify-content:center;" data-testid="emi-apply-btn"><i class="fa-solid fa-file-signature"></i> Apply for a Loan</a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="calc-card" style="text-align: center; padding: 40px 20px;">
+    <h3 style="color: #fff; margin-bottom: 15px;">Ready to calculate your returns?</h3>
+    <p style="color: #ccc; margin-bottom: 25px;">Use our dedicated tool to calculate SIP, Lumpsum, and CAGR projections.</p>
+    <a href="calculator.html" class="btn-gold" style="display: inline-block; padding: 12px 28px; text-decoration: none;">Launch Calculator Tool</a>
+  </div>
   </section>
 
   <!-- TESTIMONIALS -->
