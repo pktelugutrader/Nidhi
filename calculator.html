@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Alakaapuri Nidhi Mutual Fund Calculator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --radius: 0.75rem;
+    --background: #f8fafc;
+    --foreground: #0f172a;
+    --card: #ffffff;
+    --navy: #0e1a38;     /* Deep Navy from image */
+    --gold: #b8860b;     /* Gold from image */
+    --green: #1b5e3a;    /* Emerald Green from image */
+    --accent: #d97706;  
+    --secondary: #f1f5f9;
+    --muted: #e2e8f0;
+    --muted-foreground: #64748b;
+    --border: #cbd5e1;
+    --font-heading: "DM Serif Display", Georgia, serif;
+    --font-body: "Fira Sans", Inter, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    font-family: var(--font-body);
+    background: var(--background);
+    color: var(--foreground);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding: 2.5rem 1rem 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* EXACT MATCH TITLE DESIGN WITH SHIMMER ANIMATION */
+  .title-container {
+    text-align: center;
+    max-width: 850px;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+  }
+
+  .title-line-1 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4.2vw, 2.75rem);
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+  }
+
+  /* Animated Gold Text */
+  .text-gold {
+    color: var(--gold);
+    background: linear-gradient(
+      110deg, 
+      #996515 0%, 
+      #d4af37 25%, 
+      #fff8dc 45%, 
+      #d4af37 55%, 
+      #996515 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: goldShimmer 3.5s linear infinite;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .text-navy {
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  .title-line-2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 3.2vw, 2.1rem);
+    color: var(--green);
+    line-height: 1.25;
+    margin-bottom: 0.35rem;
+    letter-spacing: -0.01em;
+  }
+
+  .title-line-3 {
+    font-family: var(--font-body);
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
+    color: #334155;
+    font-weight: 500;
+  }
+
+  @keyframes goldShimmer {
+    to { background-position: -200% center; }
+  }
+  
+  /* Calculator Card */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) + 4px);
+    box-shadow: 0 20px 45px -15px rgba(15, 23, 42, 0.12);
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .card-body { padding: 1.5rem; display: grid; gap: 1.5rem; }
+
+  .field { display: grid; gap: .65rem; }
+  .field-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  label { font-size: .875rem; font-weight: 600; color: #1e293b; }
+  input[type=number] { width: 8rem; text-align: right; padding: .45rem .6rem; border: 1px solid var(--border); border-radius: var(--radius); font: inherit; font-size: .9rem; background: var(--card); color: var(--foreground); }
+  input[type=number]:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+  .suffix { position: relative; width: 6.5rem; }
+  .suffix input { width: 100%; padding-right: 2.2rem; }
+  .suffix span { position: absolute; right: .7rem; top: 50%; transform: translateY(-50%); font-size: .8rem; color: var(--muted-foreground); pointer-events: none; }
+  
+  input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 999px; background: var(--muted); cursor: pointer; }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 999px; background: var(--card); border: 2px solid var(--gold); box-shadow: 0 1px 3px rgba(0,0,0,.2); }
+  input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 999px; background: var(--card); border: 2px solid var(--gold); }
+
+  .grid2 { display: grid; gap: 1.5rem; }
+  @media(min-width: 640px) { .grid2 { grid-template-columns: 1fr 1fr; } }
+
+  .result { background: var(--secondary); border-radius: calc(var(--radius) + 4px); padding: 1.25rem; }
+  .result-top { display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+  @media(min-width: 640px) { .result-top { flex-direction: row; } }
+  .donut { position: relative; width: 190px; height: 190px; flex: none; }
+  .donut svg { transform: rotate(-90deg); width: 100%; height: 100%; }
+  .donut .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .donut .center small { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted-foreground); font-weight: 500; }
+  .donut .center strong { font-family: var(--font-heading); font-size: 1.2rem; color: var(--navy); }
+  .legend { display: grid; gap: .75rem; font-size: .9rem; flex: 1; width: 100%; }
+  .legend div { display: flex; align-items: center; gap: .5rem; }
+  .legend .sw { width: 12px; height: 12px; border-radius: 999px; }
+  .legend .val { margin-left: auto; font-weight: 600; }
+  .totals { display: grid; gap: .75rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+  @media(min-width: 640px) { .totals { grid-template-columns: repeat(3, 1fr); } }
+  .totals p.k { font-size: .75rem; color: var(--muted-foreground); }
+  .totals p.v { font-weight: 600; }
+  .totals p.v.big { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 400; color: var(--navy); }
+  .disclaimer { font-size: .75rem; color: var(--muted-foreground); }
+  .muted { color: var(--muted-foreground); }
+
+  /* FLOATING PROMO AD - TRANSPARENT BACKGROUND */
+  .fab-promo-ad {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    z-index: 9999;
+    display: block;
+    transition: transform 0.25s ease-in-out;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
+  }
+  .fab-promo-ad:hover {
+    transform: translateY(-5px) scale(1.03);
+  }
+  
+  .fab-promo-ad img.sticky {
+    max-width: 210px;
+    height: auto;
+    display: block;
+    mix-blend-mode: multiply; /* Removes white bg */
+  }
+
+  .hidden-mob { display: block; }
+  .hidden-desk { display: none; }
+
+  @media (max-width: 768px) {
+    .hidden-mob { display: none; }
+    .hidden-desk { display: block; }
+    .fab-promo-ad {
+      right: 15px;
+      bottom: 10px;
+    }
+    .fab-promo-ad img.sticky {
+      max-width: 150px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ANIMATED TITLE MATCHING YOUR IMAGE EXACTLY -->
+  <header class="title-container">
+    <h1 class="title-line-1">
+      <span class="text-gold">Discover Wealth</span>
+      <span class="text-navy">with Alakaapuri Nidhi</span>
+    </h1>
+    <h2 class="title-line-2">Personalized Mutual Fund Calculator</h2>
+    <p class="title-line-3">Start Planning Today!</p>
+  </header>
+
+  <!-- CALCULATOR CARD -->
+  <div class="card">
+    <div class="card-body">
+
+      <div class="field" id="lumpsum-field">
+        <div class="field-top">
+          <label for="lumpSum">Lump sum</label>
+          <input id="lumpSum" type="number" min="0" step="10000" value="100000" />
+        </div>
+        <input id="lumpSumRange" type="range" min="0" max="5000000" step="10000" value="100000" />
+      </div>
+
+      <div class="field" id="sip-field">
+        <div class="field-top">
+          <label for="monthlySip">Monthly SIP</label>
+          <input id="monthlySip" type="number" min="0" step="500" value="4000" />
+        </div>
+        <input id="monthlySipRange" type="range" min="0" max="200000" step="500" value="4000" />
+      </div>
+
+      <div class="grid2">
+        <div class="field">
+          <div class="field-top">
+            <label for="annualReturn">Expected return</label>
+            <span class="suffix"><input id="annualReturn" type="number" min="1" max="30" step="0.5" value="15" /><span>%</span></span>
+          </div>
+          <input id="annualReturnRange" type="range" min="1" max="30" step="0.5" value="15" />
+        </div>
+        <div class="field">
+          <div class="field-top">
+            <label for="years">Time period</label>
+            <span class="suffix"><input id="years" type="number" min="1" max="40" step="1" value="10" /><span>yrs</span></span>
+          </div>
+          <input id="yearsRange" type="range" min="1" max="40" step="1" value="10" />
+        </div>
+      </div>
+
+      <div class="result">
+        <div class="result-top">
+          <div class="donut">
+            <svg viewBox="0 0 200 200" aria-hidden="true">
+              <circle cx="100" cy="100" r="80" fill="none" stroke="var(--muted)" stroke-width="24"/>
+              <circle id="arcInvested" cx="100" cy="100" r="80" fill="none" stroke="var(--navy)" stroke-width="24" stroke-linecap="round"/>
+              <circle id="arcReturns" cx="100" cy="100" r="80" fill="none" stroke="var(--gold)" stroke-width="24" stroke-linecap="round"/>
+            </svg>
+            <div class="center"><small>Total Value</small><strong id="donutTotal">—</strong></div>
+          </div>
+          <div class="legend">
+            <div><span class="sw" style="background:var(--navy)"></span><span class="muted">Invested</span><span class="val" id="outInvested">—</span></div>
+            <div><span class="sw" style="background:var(--gold)"></span><span class="muted">Est. returns</span><span class="val" id="outReturns">—</span></div>
+          </div>
+        </div>
+        <div class="totals">
+          <div><p class="k">Total value</p><p class="v big" id="outTotal">—</p></div>
+          <div><p class="k">Lump sum value</p><p class="v" id="outLumpFv">—</p></div>
+          <div><p class="k">SIP value</p><p class="v" id="outSipFv">—</p></div>
+        </div>
+      </div>
+
+      <p class="disclaimer">Projected values assume constant annual returns and monthly SIP contributions at the start of each month. Actual market returns may vary.</p>
+    </div>
+  </div>
+
+  <!-- FLOATING PROMO AD -->
+  <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="fab-promo-ad" data-testid="fab-promo-ad">
+    <div class="hidden-mob">
+      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png" alt="Open a Mutual Fund Account" />
+    </div>
+    <div class="hidden-desk">
+      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png" alt="Open a Mutual Fund Account" />
+    </div>
+  </a>
+
+<script>
+  const inr = new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 });
+  const inrCompact = new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", notation: "compact", maximumFractionDigits: 1 });
+
+  const state = { lumpSum: 100000, monthlySip: 4000, annualReturn: 15, years: 10 };
+
+  function calculate(lumpSum, monthlySip, annualReturn, years) {
+    const monthlyRate = annualReturn / 100 / 12;
+    const months = years * 12;
+    const lumpSumFv = lumpSum * Math.pow(1 + monthlyRate, months);
+    const sipFv = (monthlySip === 0 || monthlyRate === 0)
+      ? monthlySip * months
+      : monthlySip * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) * (1 + monthlyRate);
+    const totalValue = lumpSumFv + sipFv;
+    const totalInvested = lumpSum + monthlySip * months;
+    return { totalValue, totalInvested, totalReturns: totalValue - totalInvested, lumpSumFv, sipFv };
+  }
+
+  function pair(key, numId, rangeId) {
+    const num = document.getElementById(numId);
+    const range = document.getElementById(rangeId);
+    const sync = (v) => {
+      state[key] = Number(v) || 0;
+      num.value = state[key];
+      range.value = state[key];
+      render();
+    };
+    num.addEventListener("input", (e) => { state[key] = Number(e.target.value) || 0; range.value = state[key]; render(); });
+    range.addEventListener("input", (e) => sync(e.target.value));
+  }
+
+  pair("lumpSum", "lumpSum", "lumpSumRange");
+  pair("monthlySip", "monthlySip", "monthlySipRange");
+  pair("annualReturn", "annualReturn", "annualReturnRange");
+  pair("years", "years", "yearsRange");
+
+  const CIRC = 2 * Math.PI * 80;
+
+  function render() {
+    const r = calculate(state.lumpSum, state.monthlySip, state.annualReturn, state.years);
+    const total = r.totalInvested + r.totalReturns;
+    const investedDash = total > 0 ? (r.totalInvested / total) * CIRC : 0;
+    const returnsDash = total > 0 ? (r.totalReturns / total) * CIRC : 0;
+
+    const arcI = document.getElementById("arcInvested");
+    arcI.setAttribute("stroke-dasharray", investedDash + " " + (CIRC - investedDash));
+    const arcR = document.getElementById("arcReturns");
+    arcR.setAttribute("stroke-dasharray", returnsDash + " " + (CIRC - returnsDash));
+    arcR.setAttribute("stroke-dashoffset", String(-investedDash));
+
+    document.getElementById("donutTotal").textContent = inrCompact.format(r.totalValue);
+    document.getElementById("outInvested").textContent = inr.format(r.totalInvested);
+    document.getElementById("outReturns").textContent = inr.format(r.totalReturns);
+    document.getElementById("outTotal").textContent = inr.format(r.totalValue);
+    document.getElementById("outLumpFv").textContent = inr.format(r.lumpSumFv);
+    document.getElementById("outSipFv").textContent = inr.format(r.sipFv);
+  }
+
+  render();
+</script>
+</body>
+</html>
