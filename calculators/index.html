@@ -175,7 +175,7 @@
     .hidden-desk { display: block; }
     .fab-promo-ad {
       right: 15px;
-      bottom: 10px;
+      bottom: 90px; /* sits above mobile sticky bar */
     }
     .fab-promo-ad img.sticky {
       max-width: 150px;
@@ -253,6 +253,60 @@
     .nav-links.nav-open { display: flex; }
     .nav-links a { padding: 10px 0; width: 100%; }
     .hamburger { display: block; }
+  }
+
+  /* ── MOBILE STICKY FOOTER BAR ── */
+  .mobile-sticky {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9998;
+    background: rgba(7,21,39,0.97);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(212,168,67,0.18);
+    padding: 10px 12px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    gap: 10px;
+    justify-content: space-around;
+  }
+
+  .mobile-sticky a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 10px;
+    border-radius: 2px;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .mobile-sticky a:active { transform: scale(0.97); }
+
+  .mobile-sticky a.call {
+    background: linear-gradient(135deg, #b8922e, #d4a843);
+    color: #0f1f3d;
+  }
+  .mobile-sticky a.wa {
+    background: linear-gradient(135deg, #1ebe5d, #25d366);
+    color: #fff;
+  }
+  .mobile-sticky a.book {
+    background: linear-gradient(135deg, #1b5e3a, #2a8f57);
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .mobile-sticky { display: flex; }
   }
 </style>
 </head>
@@ -360,6 +414,13 @@
       <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png" alt="Open a Mutual Fund Account" />
     </div>
   </a>
+
+  <!-- MOBILE STICKY BAR -->
+  <div class="mobile-sticky">
+    <a href="tel:+919440581363" class="call" data-testid="mobile-call"><i class="fa-solid fa-phone"></i> Call</a>
+    <a href="https://wa.me/919440581363?text=Hello%20PK%20Alakapuri%20Nidhi" target="_blank" class="wa" data-testid="mobile-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    <a href="#book" class="book" data-testid="mobile-book"><i class="fa-solid fa-calendar-check"></i> Book</a>
+  </div>
 
 <script>
   // ==== NAV SCROLL ====
