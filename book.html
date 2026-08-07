@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book a free consultation with Praveen Kumar at PK Alakaapuri Nidhi, Hyderabad. Mutual funds, insurance, loans and financial planning." />
+  <title>Book Consultation — PK Alakaapuri Nidhi | Praveen Kumar</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="top-nav" id="topNav">
+    <a href="index.html" class="nav-logo" style="text-decoration:none;">
+      PK Alakaapuri Nidhi
+      <span>Praveen Kumar · Wealth Expert</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="calculators/index.html">Calculator</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="book.html" class="active">Book</a></li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="cvd.html">CVD Tool</a></li>
+    </ul>
+    <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="nav-cta">Start Investing</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('nav-open')"><i class="fa-solid fa-bars"></i></button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <span class="section-label center">Book a Consultation</span>
+    <h2 class="section-title">Talk to Praveen — <em>Free 30 Minutes</em></h2>
+    <p class="section-desc">Pick a date and slot that works for you. We confirm on WhatsApp within minutes.</p>
+  </header>
+
+  <!-- BOOKING -->
+  <section class="section-block booking-section" id="book">
+    <div class="booking-card">
+      <form class="booking-form" id="bookingForm">
+        <div>
+          <label for="bookName">Your Name</label>
+          <input type="text" id="bookName" placeholder="Full Name" required />
+        </div>
+        <div>
+          <label for="bookPhone">Mobile Number</label>
+          <input type="tel" id="bookPhone" placeholder="10-digit mobile" pattern="[0-9]{10}" required />
+        </div>
+        <div>
+          <label for="bookDate">Preferred Date</label>
+          <input type="date" id="bookDate" required />
+        </div>
+        <div>
+          <label for="bookTopic">Topic</label>
+          <select id="bookTopic" required>
+            <option value="">Choose a topic</option>
+            <option>Mutual Fund / SIP Planning</option>
+            <option>Insurance Review</option>
+            <option>Home / Personal Loan</option>
+            <option>Retirement Planning</option>
+            <option>Portfolio Review (Existing)</option>
+            <option>Child Education Planning</option>
+            <option>PMS / SIF / Alternative Investments</option>
+            <option>Tax Saving (ELSS)</option>
+          </select>
+        </div>
+        <div class="full">
+          <label>Preferred Time Slot</label>
+          <div class="slot-grid" id="slotGrid">
+            <div class="slot" data-slot="10:00 AM">10:00 AM</div>
+            <div class="slot" data-slot="11:00 AM">11:00 AM</div>
+            <div class="slot" data-slot="12:00 PM">12:00 PM</div>
+            <div class="slot" data-slot="02:00 PM">02:00 PM</div>
+            <div class="slot" data-slot="04:00 PM">04:00 PM</div>
+            <div class="slot" data-slot="05:00 PM">05:00 PM</div>
+            <div class="slot" data-slot="06:00 PM">06:00 PM</div>
+            <div class="slot" data-slot="07:00 PM">07:00 PM</div>
+          </div>
+        </div>
+        <div class="full">
+          <button type="submit" class="btn-gold" style="width:100%; justify-content:center; font-size:14px;"><i class="fa-brands fa-whatsapp"></i> Confirm Booking on WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <div class="about-strip" style="padding-top:0;">
+    <div>
+      <span class="section-label">Before You Book</span>
+      <h2 class="section-title">Prefer a <em>Direct Call or WhatsApp?</em></h2>
+      <p class="section-desc">
+        No forms needed. Reach out directly and Praveen will personally respond within business hours.
+      </p>
+      <div class="hero-cta-row" style="margin-top:24px;">
+        <a href="tel:+919440581363" class="btn-gold"><i class="fa-solid fa-phone"></i> Call +91 94405 81363</a>
+        <a href="https://wa.me/919440581363?text=Hello%20PK%20Alakapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="btn-outline-light"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+      </div>
+    </div>
+    <div class="contact-block" id="contact">
+      <span class="section-label" style="margin-bottom:20px; display:inline-flex;">Get in Touch</span>
+      <div class="contact-row">
+        <span class="contact-icon"><i class="fa-brands fa-whatsapp"></i></span>
+        <div>
+          <div class="contact-label">WhatsApp / Call</div>
+          <div class="contact-val"><a href="https://wa.me/919440581363?text=Hello%20PK%20Alakapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">+91 94405 81363</a></div>
+          <div class="contact-val" style="margin-top:4px;"><a href="https://wa.me/919550800550?text=Hello%20PK%20Alakapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">+91 95508 00550</a></div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-val"><a href="mailto:alakaapuri@tanidhi.com">alakaapuri@tanidhi.com</a></div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-val">Hyderabad, Telangana</div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon"><i class="fa-solid fa-link"></i></span>
+        <div>
+          <div class="contact-label">Invest Online</div>
+          <div class="contact-val"><a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank">AssetPlus · ARN‑362567</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">PK ALAKAAPURI NIDHI</div>
+        <div class="footer-tag">Wealth Expert · Hyderabad</div>
+        <p class="footer-about">A trusted wealth advisory offering mutual funds, insurance, loans and financial planning — led by Praveen Kumar, AMFI ARN Holder (ARN‑362567).</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="calculators/index.html">Calculator</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="cvd.html">CVD Tool</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Mutual Funds &amp; SIP</a></li>
+          <li><a href="services.html">Insurance</a></li>
+          <li><a href="services.html">Loans</a></li>
+          <li><a href="services.html">PMS &amp; SIF</a></li>
+          <li><a href="services.html">Retirement Planning</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="tel:+919440581363">+91 94405 81363</a></li>
+          <li><a href="mailto:alakaapuri@tanidhi.com">alakaapuri@tanidhi.com</a></li>
+          <li><a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank">Invest Online</a></li>
+          <li><a href="book.html">Book Consultation</a></li>
+        </ul>
+        <div class="footer-social" style="margin-top:14px;">
+          <a href="https://wa.me/919440581363" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:alakaapuri@tanidhi.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="tel:+919440581363" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© <span id="year">2026</span> PK Alakaapuri Nidhi. All rights reserved. · ARN‑362567</div>
+      <div>Hyderabad, Telangana · India</div>
+    </div>
+    <p class="disclaimer">Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. Insurance is a subject matter of solicitation.</p>
+  </footer>
+
+  <!-- FLOATING PROMO AD -->
+  <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="fab-promo-ad">
+    <div class="hidden-mob">
+      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png" alt="Open a Mutual Fund Account" />
+    </div>
+    <div class="hidden-desk">
+      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png" alt="Open a Mutual Fund Account" />
+    </div>
+  </a>
+
+  <!-- MOBILE STICKY BAR -->
+  <div class="mobile-sticky">
+    <a href="tel:+919440581363" class="call"><i class="fa-solid fa-phone"></i> Call</a>
+    <a href="https://wa.me/919440581363?text=Hello%20PK%20Alakapuri%20Nidhi" target="_blank" class="wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    <a href="book.html" class="book"><i class="fa-solid fa-calendar-check"></i> Book</a>
+  </div>
+
+  <script>
+    const nav = document.getElementById('topNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('nav-open');
+      });
+    });
+
+    // ==== BOOKING ====
+    let selectedSlot = "";
+    document.querySelectorAll('.slot').forEach(s => {
+      s.addEventListener('click', () => {
+        document.querySelectorAll('.slot').forEach(x => x.classList.remove('active'));
+        s.classList.add('active');
+        selectedSlot = s.dataset.slot;
+      });
+    });
+
+    const dateInput = document.getElementById('bookDate');
+    dateInput.min = new Date().toISOString().split('T')[0];
+
+    document.getElementById('bookingForm').addEventListener('submit', e => {
+      e.preventDefault();
+      if (!selectedSlot) { alert("Please select a time slot."); return; }
+      const name = document.getElementById('bookName').value.trim();
+      const phone = document.getElementById('bookPhone').value.trim();
+      const date = document.getElementById('bookDate').value;
+      const topic = document.getElementById('bookTopic').value;
+
+      const msg = `Hello PK Alakapuri Nidhi,%0A%0AI would like to book a FREE consultation.%0A%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0ADate: ${encodeURIComponent(date)}%0ATime: ${encodeURIComponent(selectedSlot)}%0ATopic: ${encodeURIComponent(topic)}%0A%0APlease confirm.`;
+      window.open(`https://wa.me/919440581363?text=${msg}`, "_blank");
+      e.target.reset();
+      document.querySelectorAll('.slot').forEach(x => x.classList.remove('active'));
+      selectedSlot = "";
+    });
+  </script>
+</body>
+</html>

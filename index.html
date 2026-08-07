@@ -10,846 +10,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --gold: #a07828;
-      --gold-light: #b8922e;
-      --gold-bright: #d4a843;
-      --gold-shine: #f0c96b;
-      --bg: #ffffff;
-      --bg-cream: #fbf7ef;
-      --bg-section: #f4f7fb;
-      --navy-deep: #071527;
-      --navy: #0f1f3d;
-      --navy-mid: #1a4a7a;
-      --navy-light: #2471a3;
-      --text: #0f1f3d;
-      --text-body: #2c3e5a;
-      --text-muted: #3d5270;
-      --text-faint: #7a8fa8;
-      --line: rgba(15,31,61,0.09);
-    }
-
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      font-family: 'Inter', sans-serif;
-      color: var(--text-body);
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-
-    /* ── Reusable Section Elements ── */
-    .container { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
-    .section-label {
-      font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
-      color: var(--gold-light); font-weight: 700;
-      display: inline-flex; align-items: center; gap: 12px;
-    }
-    .section-label::before, .section-label::after {
-      content: ''; width: 32px; height: 1px; background: var(--gold-bright);
-    }
-    .section-label.center { justify-content: center; }
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(28px, 3.4vw, 44px);
-      font-weight: 700; color: var(--text); line-height: 1.15;
-      margin: 14px 0 14px;
-      letter-spacing: -0.5px;
-    }
-    .section-title em { font-style: italic; color: var(--gold-light); font-weight: 600; }
-    .section-desc { font-size: 15.5px; color: var(--text-muted); line-height: 1.85; font-weight: 400; }
-
-    /* ── NAV ── */
-    nav.top-nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 16px 40px;
-      background: rgba(7,21,39,0.82);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(212,168,67,0.14);
-      transition: padding 0.3s ease, background 0.3s ease;
-    }
-    nav.top-nav.scrolled { padding: 10px 40px; background: rgba(7,21,39,0.95); }
-    .nav-logo {
-      font-family: 'Cinzel', serif; font-size: 20px; font-weight: 700;
-      color: var(--gold-shine); letter-spacing: 2px; line-height: 1.1;
-    }
-    .nav-logo span {
-      display: block; font-size: 9.5px; font-family: 'Inter', sans-serif; font-weight: 500;
-      letter-spacing: 3.5px; text-transform: uppercase;
-      color: rgba(255,255,255,0.55); margin-top: 3px;
-    }
-    .nav-links { display: flex; gap: 30px; list-style: none; align-items: center; }
-    .nav-links a {
-      font-size: 12px; color: rgba(255,255,255,0.85);
-      letter-spacing: 1.4px; text-transform: uppercase; font-weight: 500;
-      transition: color 0.2s; position: relative;
-    }
-    .nav-links a::after {
-      content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 1px;
-      background: var(--gold-bright); transition: width 0.3s;
-    }
-    .nav-links a:hover { color: var(--gold-shine); }
-    .nav-links a:hover::after { width: 100%; }
-    .nav-cta {
-      background: linear-gradient(135deg, var(--gold-light), var(--gold-bright));
-      color: #0f1f3d; font-size: 11.5px; font-weight: 700;
-      padding: 10px 22px; border-radius: 2px;
-      letter-spacing: 1.5px; text-transform: uppercase;
-      border: none; cursor: pointer;
-      box-shadow: 0 4px 18px rgba(212,168,67,0.35);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 22px rgba(212,168,67,0.5); }
-    .hamburger {
-      display: none; background: none; border: none;
-      color: var(--gold-shine); font-size: 22px; cursor: pointer;
-    }
-
-    /* ── HERO (Ultra-premium) ── */
-    .hero {
-      position: relative; min-height: 100vh;
-      background: radial-gradient(circle at 20% 20%, rgba(26,74,122,0.4), transparent 55%),
-                  radial-gradient(circle at 80% 80%, rgba(212,168,67,0.18), transparent 55%),
-                  linear-gradient(135deg, #050f1f 0%, #0f1f3d 55%, #1a4a7a 100%);
-      color: #fff; display: flex; align-items: center;
-      padding: 140px 32px 90px;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: ''; position: absolute; inset: 0;
-      background-image:
-        linear-gradient(rgba(212,168,67,0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(212,168,67,0.06) 1px, transparent 1px);
-      background-size: 60px 60px;
-      mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
-      -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
-      pointer-events: none;
-    }
-    .hero-inner {
-      max-width: 1180px; margin: 0 auto; width: 100%;
-      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 60px;
-      align-items: center; position: relative; z-index: 2;
-    }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: rgba(212,168,67,0.12); border: 1px solid rgba(212,168,67,0.4);
-      color: var(--gold-shine);
-      padding: 8px 18px; border-radius: 30px;
-      font-size: 11.5px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 600;
-    }
-    .hero-eyebrow i { color: var(--gold-bright); }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(38px, 5.2vw, 66px);
-      font-weight: 700; line-height: 1.05; letter-spacing: -1.5px;
-      margin: 22px 0 22px;
-    }
-    .hero h1 em {
-      font-style: italic; color: var(--gold-shine); font-weight: 500;
-      background: linear-gradient(135deg, #f0c96b 0%, #d4a843 50%, #b8922e 100%);
-      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .hero p.lead {
-      font-size: 17px; line-height: 1.75; color: rgba(255,255,255,0.78);
-      max-width: 560px; font-weight: 300;
-    }
-    .hero-benefits {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px;
-      margin: 30px 0 34px; max-width: 560px;
-    }
-    .hero-benefits div {
-      font-size: 14px; color: rgba(255,255,255,0.85); font-weight: 400;
-      display: flex; align-items: center; gap: 10px;
-    }
-    .hero-benefits i {
-      color: var(--gold-shine); font-size: 12px;
-      width: 22px; height: 22px; border-radius: 50%;
-      background: rgba(212,168,67,0.16); display: inline-flex;
-      align-items: center; justify-content: center; flex-shrink: 0;
-    }
-    .hero-cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
-
-    .btn-gold {
-      background: linear-gradient(135deg, #b8922e 0%, #d4a843 50%, #f0c96b 100%);
-      background-size: 200% auto; color: #0f1f3d;
-      font-size: 13px; font-weight: 700; padding: 15px 32px;
-      border: none; border-radius: 2px; cursor: pointer;
-      letter-spacing: 2px; text-transform: uppercase;
-      transition: background-position 0.4s, transform 0.2s, box-shadow 0.3s;
-      box-shadow: 0 8px 24px rgba(212,168,67,0.35);
-      display: inline-flex; align-items: center; gap: 10px;
-    }
-    .btn-gold:hover { background-position: right center; transform: translateY(-2px); box-shadow: 0 12px 30px rgba(212,168,67,0.5); }
-    .btn-outline-light {
-      background: transparent; border: 1.5px solid rgba(255,255,255,0.35); color: #fff;
-      font-size: 13px; font-weight: 600; padding: 13px 30px;
-      border-radius: 2px; cursor: pointer; letter-spacing: 2px; text-transform: uppercase;
-      transition: background 0.2s, border-color 0.2s;
-      display: inline-flex; align-items: center; gap: 10px;
-    }
-    .btn-outline-light:hover { background: rgba(255,255,255,0.08); border-color: var(--gold-shine); color: var(--gold-shine); }
-
-    /* Hero Lead form */
-    .hero-form-card {
-      background: rgba(255,255,255,0.98);
-      color: #0f1f3d;
-      border-radius: 14px;
-      padding: 34px 32px 30px;
-      box-shadow: 0 30px 80px -20px rgba(0,0,0,0.55), 0 0 0 1px rgba(212,168,67,0.35);
-      position: relative;
-      backdrop-filter: blur(20px);
-    }
-    .hero-form-card::before {
-      content: ''; position: absolute; inset: -1px;
-      border-radius: 14px; padding: 1px;
-      background: linear-gradient(135deg, rgba(212,168,67,0.6), transparent 40%, transparent 60%, rgba(212,168,67,0.4));
-      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor; mask-composite: exclude;
-      pointer-events: none;
-    }
-    .form-ribbon {
-      position: absolute; top: -14px; left: 24px;
-      background: linear-gradient(135deg, #b8922e, #d4a843);
-      color: #0f1f3d; font-size: 10.5px; font-weight: 700;
-      padding: 6px 16px; border-radius: 2px; letter-spacing: 2px; text-transform: uppercase;
-      box-shadow: 0 6px 18px rgba(212,168,67,0.4);
-    }
-    .hero-form-card h3 {
-      font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700;
-      color: var(--text); margin: 6px 0 4px; letter-spacing: -0.3px;
-    }
-    .hero-form-card > p { color: var(--text-muted); font-size: 13px; margin-bottom: 18px; }
-    .hero-form-card input, .hero-form-card select {
-      width: 100%; padding: 13px 14px; margin-bottom: 11px;
-      border: 1px solid #d5dfeb; border-radius: 6px;
-      font-size: 14px; font-family: 'Inter', sans-serif;
-      background: #fff; color: var(--text);
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .hero-form-card input:focus, .hero-form-card select:focus {
-      outline: none; border-color: var(--gold-bright);
-      box-shadow: 0 0 0 3px rgba(212,168,67,0.15);
-    }
-    .hero-form-card select:disabled { background: #f5f7fa; color: #9aa5b3; cursor: not-allowed; }
-    .hero-form-card button.submit-btn {
-      width: 100%; padding: 15px; border: none; border-radius: 6px;
-      background: linear-gradient(135deg, #b8922e 0%, #d4a843 50%, #f0c96b 100%);
-      background-size: 200% auto; color: #0f1f3d;
-      font-size: 13.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
-      cursor: pointer;
-      transition: background-position 0.4s, transform 0.2s;
-      box-shadow: 0 8px 22px rgba(212,168,67,0.35);
-    }
-    .hero-form-card button.submit-btn:hover { background-position: right center; transform: translateY(-1px); }
-    #formResponseMsg { margin-top: 12px; font-size: 13px; font-weight: 600; text-align: center; min-height: 18px; }
-    .form-trust {
-      display: flex; align-items: center; gap: 10px;
-      margin-top: 14px; font-size: 11.5px; color: var(--text-muted);
-      justify-content: center;
-    }
-    .form-trust i { color: #10b981; }
-
-    /* ── TRUST BAR ── */
-    .trust-bar {
-      background: linear-gradient(180deg, #ffffff 0%, #fbf7ef 100%);
-      border-bottom: 1px solid var(--line);
-      padding: 42px 24px;
-    }
-    .trust-grid {
-      max-width: 1180px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;
-    }
-    .trust-item { text-align: center; }
-    .trust-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 44px; font-weight: 700; line-height: 1;
-      background: linear-gradient(135deg, #b8922e, #d4a843, #f0c96b);
-      -webkit-background-clip: text; background-clip: text;
-      color: transparent;
-    }
-    .trust-lbl {
-      font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase;
-      color: var(--text-muted); margin-top: 8px; font-weight: 600;
-    }
-    .trust-sub { font-size: 12px; color: var(--text-faint); margin-top: 4px; }
-
-    /* ── PROFILE STRIP ── */
-    .profile-strip {
-      max-width: 1180px; margin: 0 auto;
-      padding: 90px 32px 60px;
-      display: grid; grid-template-columns: 300px 1fr; gap: 60px;
-      align-items: center;
-    }
-    .profile-avatar-wrap {
-      position: relative; width: 300px; height: 300px;
-    }
-    .profile-avatar {
-      width: 300px; height: 300px; border-radius: 50%;
-      border: 3px solid var(--gold-bright);
-      padding: 6px; object-fit: cover; background: #fff;
-      box-shadow: 0 20px 60px -20px rgba(15,31,61,0.35);
-    }
-    .profile-badge-float {
-      position: absolute; bottom: 12px; right: -6px;
-      background: linear-gradient(135deg, #b8922e, #d4a843);
-      color: #0f1f3d; padding: 8px 14px; border-radius: 30px;
-      font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
-      box-shadow: 0 8px 22px rgba(212,168,67,0.45);
-      display: inline-flex; align-items: center; gap: 6px;
-    }
-    .profile-name { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 700; color: var(--text); line-height: 1.05; letter-spacing: -1px; }
-    .profile-title { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--navy-light); margin-top: 10px; font-weight: 600; }
-    .profile-bio { font-size: 15px; color: var(--text-muted); line-height: 1.85; margin-top: 18px; max-width: 640px; }
-    .profile-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-    .badge {
-      background: linear-gradient(135deg, #fbf7ef, #f3ead3);
-      border: 1px solid rgba(184,146,46,0.35);
-      color: #7a5f18; font-size: 11px; font-weight: 700;
-      padding: 7px 14px; border-radius: 3px;
-      letter-spacing: 0.8px; text-transform: uppercase;
-    }
-
-    /* ── SERVICES ── */
-    .section-block { padding: 80px 32px; }
-    .services-section { background: linear-gradient(180deg, #fbf7ef 0%, #ffffff 100%); }
-    .section-header-center { max-width: 720px; margin: 0 auto 54px; text-align: center; }
-
-    .products-grid {
-      max-width: 1180px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px;
-    }
-    .product-card {
-      background: #ffffff; border: 1px solid var(--line);
-      border-radius: 12px; padding: 32px 28px;
-      transition: border-color 0.35s, box-shadow 0.35s, transform 0.25s;
-      box-shadow: 0 2px 10px rgba(15,31,61,0.04);
-      position: relative; overflow: hidden;
-    }
-    .product-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, #b8922e, #d4a843, #f0c96b);
-      opacity: 0; transition: opacity 0.3s;
-    }
-    .product-card:hover { border-color: rgba(212,168,67,0.5); box-shadow: 0 14px 40px -6px rgba(15,31,61,0.14); transform: translateY(-6px); }
-    .product-card:hover::before { opacity: 1; }
-    .product-icon {
-      width: 52px; height: 52px; border-radius: 12px;
-      background: linear-gradient(135deg, #fbf7ef, #f3ead3);
-      color: var(--gold-light);
-      display: inline-flex; align-items: center; justify-content: center;
-      font-size: 22px; margin-bottom: 18px;
-      border: 1px solid rgba(184,146,46,0.25);
-    }
-    .product-title { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--text); margin-bottom: 16px; font-weight: 700; }
-    .product-list { list-style: none; }
-    .product-list li {
-      font-size: 13.5px; color: var(--text-muted); padding: 7px 0;
-      border-bottom: 1px dashed var(--line); font-weight: 400;
-      display: flex; align-items: center; gap: 10px;
-    }
-    .product-list li:last-child { border-bottom: none; }
-    .product-list li i { color: var(--gold-bright); font-size: 10px; }
-
-    /* ── CALCULATORS ── */
-    .calc-section {
-      background: linear-gradient(135deg, #050f1f 0%, #0f1f3d 100%);
-      color: #fff;
-      position: relative; overflow: hidden;
-    }
-    .calc-section::before {
-      content: ''; position: absolute; inset: 0;
-      background-image:
-        radial-gradient(circle at 15% 30%, rgba(212,168,67,0.15), transparent 40%),
-        radial-gradient(circle at 85% 70%, rgba(36,113,163,0.25), transparent 40%);
-      pointer-events: none;
-    }
-    .calc-section .section-title { color: #fff; }
-    .calc-section .section-desc { color: rgba(255,255,255,0.7); }
-    .calc-tabs {
-      display: flex; gap: 8px; justify-content: center; margin: 0 auto 30px;
-      flex-wrap: wrap; position: relative; z-index: 1;
-    }
-    .calc-tab {
-      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);
-      color: rgba(255,255,255,0.75);
-      padding: 12px 22px; border-radius: 40px;
-      font-size: 12.5px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
-      cursor: pointer; transition: all 0.25s;
-      display: inline-flex; align-items: center; gap: 8px;
-    }
-    .calc-tab i { font-size: 13px; }
-    .calc-tab.active {
-      background: linear-gradient(135deg, #b8922e, #d4a843);
-      color: #0f1f3d; border-color: var(--gold-bright);
-      box-shadow: 0 8px 22px rgba(212,168,67,0.4);
-    }
-    .calc-tab:hover:not(.active) { background: rgba(255,255,255,0.1); color: #fff; }
-    .calc-card {
-      max-width: 900px; margin: 0 auto;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(212,168,67,0.22);
-      border-radius: 16px; padding: 38px;
-      backdrop-filter: blur(10px);
-      display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
-      position: relative; z-index: 1;
-    }
-    .calc-panel { display: none; }
-    .calc-panel.active { display: contents; }
-    .calc-inputs .field { margin-bottom: 22px; }
-    .calc-inputs label {
-      display: flex; justify-content: space-between; align-items: center;
-      font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
-      color: rgba(255,255,255,0.75); font-weight: 600; margin-bottom: 10px;
-    }
-    .calc-inputs label span { color: var(--gold-shine); font-family: 'Playfair Display', serif; font-size: 16px; letter-spacing: 0; text-transform: none; font-weight: 700; }
-    .calc-inputs input[type="range"] {
-      width: 100%; appearance: none; height: 4px; border-radius: 2px;
-      background: linear-gradient(to right, var(--gold-bright) 0%, var(--gold-bright) 50%, rgba(255,255,255,0.15) 50%);
-    }
-    .calc-inputs input[type="range"]::-webkit-slider-thumb {
-      appearance: none; width: 20px; height: 20px; border-radius: 50%;
-      background: #fff; border: 3px solid var(--gold-bright); cursor: pointer;
-      box-shadow: 0 4px 12px rgba(212,168,67,0.5);
-    }
-    .calc-inputs input[type="range"]::-moz-range-thumb {
-      width: 20px; height: 20px; border-radius: 50%;
-      background: #fff; border: 3px solid var(--gold-bright); cursor: pointer;
-    }
-    .calc-result {
-      background: linear-gradient(135deg, rgba(212,168,67,0.14), rgba(212,168,67,0.04));
-      border: 1px solid rgba(212,168,67,0.35);
-      border-radius: 12px; padding: 28px;
-      display: flex; flex-direction: column; justify-content: center;
-    }
-    .result-item { padding: 10px 0; border-bottom: 1px dashed rgba(255,255,255,0.12); }
-    .result-item:last-child { border-bottom: none; }
-    .result-label { font-size: 11.5px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.65); font-weight: 600; }
-    .result-value {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px; font-weight: 700; color: var(--gold-shine);
-      margin-top: 4px;
-    }
-    .result-value.big { font-size: 34px; color: #fff; }
-    .calc-cta { margin-top: 18px; }
-
-    /* ── TESTIMONIALS ── */
-    .testimonials-section { background: #fbf7ef; }
-    .testi-grid {
-      max-width: 1180px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 22px;
-    }
-    .testi-card {
-      background: #fff; border-radius: 14px; padding: 32px 28px;
-      border: 1px solid rgba(184,146,46,0.18);
-      position: relative;
-      box-shadow: 0 4px 20px rgba(15,31,61,0.04);
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-    .testi-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -6px rgba(15,31,61,0.12); }
-    .testi-quote {
-      position: absolute; top: 18px; right: 22px;
-      font-family: 'Playfair Display', serif;
-      font-size: 60px; color: rgba(184,146,46,0.18); line-height: 1;
-    }
-    .testi-stars { color: #f5b301; margin-bottom: 14px; font-size: 14px; letter-spacing: 2px; }
-    .testi-text {
-      font-size: 15px; line-height: 1.75; color: var(--text-body); font-style: italic;
-      font-family: 'Playfair Display', serif; font-weight: 400;
-    }
-    .testi-author { display: flex; align-items: center; gap: 14px; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line); }
-    .testi-avatar {
-      width: 46px; height: 46px; border-radius: 50%;
-      background: linear-gradient(135deg, #1a4a7a, #2471a3);
-      color: #fff; display: flex; align-items: center; justify-content: center;
-      font-family: 'Playfair Display', serif; font-weight: 700; font-size: 18px;
-      flex-shrink: 0;
-    }
-    .testi-name { font-weight: 700; color: var(--text); font-size: 14px; }
-    .testi-role { font-size: 12px; color: var(--text-faint); margin-top: 2px; }
-
-    /* ── ABOUT + CONTACT ── */
-    .about-strip {
-      max-width: 1180px; margin: 0 auto; padding: 80px 32px;
-      display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: start;
-    }
-    .contact-block {
-      background: linear-gradient(135deg, #f4f8fd 0%, #ffffff 100%);
-      border: 1px solid rgba(36,113,163,0.15);
-      border-radius: 14px; padding: 36px;
-      box-shadow: 0 12px 40px -12px rgba(15,31,61,0.15);
-    }
-    .contact-row { display: flex; align-items: flex-start; gap: 16px; padding: 16px 0; border-bottom: 1px dashed var(--line); }
-    .contact-row:last-child { border-bottom: none; }
-    .contact-icon {
-      width: 42px; height: 42px; border-radius: 50%;
-      background: linear-gradient(135deg, #fbf7ef, #f3ead3);
-      color: var(--gold-light);
-      display: inline-flex; align-items: center; justify-content: center;
-      font-size: 16px; flex-shrink: 0;
-      border: 1px solid rgba(184,146,46,0.3);
-    }
-    .contact-label { font-size: 10.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--navy-light); margin-bottom: 4px; font-weight: 700; }
-    .contact-val { font-size: 15px; color: var(--text); font-weight: 500; line-height: 1.6; }
-    .contact-val a { color: var(--navy-mid); font-weight: 600; }
-    .contact-val a:hover { color: var(--gold-light); }
-
-    /* ── BOOKING ── */
-    .booking-section { background: linear-gradient(180deg, #ffffff 0%, #fbf7ef 100%); }
-    .booking-card {
-      max-width: 780px; margin: 0 auto;
-      background: #fff; border: 1px solid rgba(184,146,46,0.25);
-      border-radius: 16px; padding: 44px;
-      box-shadow: 0 30px 80px -30px rgba(15,31,61,0.18);
-      position: relative; overflow: hidden;
-    }
-    .booking-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-      background: linear-gradient(90deg, #b8922e, #d4a843, #f0c96b, #d4a843, #b8922e);
-    }
-    .booking-form {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-      margin-top: 24px;
-    }
-    .booking-form .full { grid-column: 1 / -1; }
-    .booking-form label {
-      display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
-      color: var(--text-muted); font-weight: 700; margin-bottom: 8px;
-    }
-    .booking-form input, .booking-form select {
-      width: 100%; padding: 13px 14px; border: 1px solid #d5dfeb;
-      border-radius: 6px; font-size: 14px; font-family: 'Inter', sans-serif;
-      background: #fff; color: var(--text);
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .booking-form input:focus, .booking-form select:focus {
-      outline: none; border-color: var(--gold-bright);
-      box-shadow: 0 0 0 3px rgba(212,168,67,0.15);
-    }
-    .slot-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 4px; }
-    .slot {
-      padding: 10px 6px; border: 1px solid #d5dfeb; border-radius: 6px;
-      font-size: 12.5px; text-align: center; cursor: pointer;
-      color: var(--text-body); background: #fff; font-weight: 600;
-      transition: all 0.2s;
-    }
-    .slot:hover { border-color: var(--gold-bright); color: var(--gold-light); }
-    .slot.active { background: linear-gradient(135deg, #b8922e, #d4a843); color: #0f1f3d; border-color: var(--gold-bright); }
-
-    /* ── WHY US ── */
-    .why-section { background: #ffffff; }
-    .why-grid {
-      max-width: 1180px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px;
-    }
-    .why-card {
-      background: linear-gradient(180deg, #ffffff 0%, #fbf7ef 100%);
-      border: 1px solid var(--line); border-radius: 14px;
-      padding: 36px 28px; text-align: left;
-      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-    }
-    .why-card:hover { transform: translateY(-4px); border-color: rgba(212,168,67,0.5); box-shadow: 0 14px 40px -8px rgba(15,31,61,0.12); }
-    .why-icon {
-      width: 54px; height: 54px; border-radius: 12px;
-      background: linear-gradient(135deg, #0f1f3d, #1a4a7a);
-      color: var(--gold-shine);
-      display: inline-flex; align-items: center; justify-content: center;
-      font-size: 22px; margin-bottom: 20px;
-    }
-    .why-title { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--text); margin-bottom: 10px; font-weight: 700; }
-    .why-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.75; font-weight: 400; }
-
-    /* ── INSIGHTS/BLOG ── */
-    .insights-section { background: #fbf7ef; }
-    .insights-grid {
-      max-width: 1180px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px;
-    }
-    .blog-card {
-      background: #fff; border-radius: 14px; overflow: hidden;
-      border: 1px solid var(--line);
-      transition: transform 0.25s, box-shadow 0.25s;
-      cursor: pointer;
-    }
-    .blog-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -8px rgba(15,31,61,0.14); }
-    .blog-img {
-      height: 180px;
-      background: linear-gradient(135deg, #0f1f3d, #1a4a7a);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--gold-shine); font-size: 46px;
-      position: relative; overflow: hidden;
-    }
-    .blog-img::before {
-      content: ''; position: absolute; inset: 0;
-      background-image:
-        linear-gradient(rgba(212,168,67,0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(212,168,67,0.08) 1px, transparent 1px);
-      background-size: 30px 30px;
-    }
-    .blog-body { padding: 24px 24px 26px; }
-    .blog-tag {
-      display: inline-block; font-size: 10.5px; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--gold-light); font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .blog-title { font-family: 'Playfair Display', serif; font-size: 19px; color: var(--text); line-height: 1.35; font-weight: 700; }
-    .blog-excerpt { font-size: 13.5px; color: var(--text-muted); line-height: 1.7; margin-top: 10px; }
-    .blog-meta { font-size: 12px; color: var(--text-faint); margin-top: 14px; display: flex; justify-content: space-between; }
-    .blog-meta a { color: var(--navy-mid); font-weight: 600; }
-
-    /* ── CTA ── */
-    .cta-section {
-      text-align: center; padding: 90px 32px;
-      background:
-        radial-gradient(circle at 30% 30%, rgba(212,168,67,0.18), transparent 55%),
-        linear-gradient(135deg, #050f1f 0%, #0f1f3d 55%, #1a4a7a 100%);
-      color: #fff; position: relative; overflow: hidden;
-    }
-    .cta-section::before {
-      content: ''; position: absolute; inset: 0;
-      background-image:
-        linear-gradient(rgba(212,168,67,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(212,168,67,0.05) 1px, transparent 1px);
-      background-size: 60px 60px;
-      mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
-      -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
-      pointer-events: none;
-    }
-    .cta-section .section-title { color: #fff; }
-    .cta-section p.section-desc { color: rgba(255,255,255,0.78); max-width: 620px; margin: 0 auto 36px; }
-    .cta-btn-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
-
-    /* ── CVD Banner ── (retained) */
-    .cvd-section { background: #fbf7ef; padding: 80px 24px; display: flex; align-items: center; justify-content: center; }
-    .cvd-banner {
-      max-width: 620px; width: 100%; background: #fff;
-      border: 1.5px solid #d4a017; border-radius: 16px;
-      padding: 44px 32px 32px; text-align: center; position: relative;
-      overflow: hidden; font-family: 'Rajdhani', sans-serif;
-      box-shadow: 0 8px 40px rgba(212,160,23,0.18);
-    }
-    .cvd-banner::before, .cvd-banner::after { content: ''; position: absolute; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, #d4a017, #f5c842, #d4a017, transparent); }
-    .cvd-banner::before { top: 0; } .cvd-banner::after { bottom: 0; }
-    .cvd-corner { position: absolute; width: 22px; height: 22px; border-color: #d4a017; border-style: solid; }
-    .cvd-corner.tl { top: 10px; left: 10px; border-width: 2px 0 0 2px; }
-    .cvd-corner.tr { top: 10px; right: 10px; border-width: 2px 2px 0 0; }
-    .cvd-corner.bl { bottom: 10px; left: 10px; border-width: 0 0 2px 2px; }
-    .cvd-corner.br { bottom: 10px; right: 10px; border-width: 0 2px 2px 0; }
-    .cvd-heading { font-family: 'Cinzel', serif; font-size: 28px; font-weight: 900; color: #8b5e00; letter-spacing: 2px; line-height: 1.2; margin: 0 0 6px; }
-    .cvd-subheading { font-size: 12px; color: #b8860b; letter-spacing: 3.5px; text-transform: uppercase; margin: 0 0 28px; font-weight: 700; }
-    .cvd-qr-wrapper { display: inline-block; position: relative; margin: 0 auto 14px; }
-    .cvd-qr-frame { background: #fffdf5; border: 2px solid #d4a017; border-radius: 12px; padding: 10px; display: inline-block; position: relative; }
-    .cvd-qr-img { display: block; width: 190px; height: 190px; object-fit: cover; border-radius: 6px; }
-    .cvd-qr-label { position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); background: #d4a017; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 2px; padding: 3px 16px; border-radius: 20px; white-space: nowrap; }
-    .cvd-price { display: inline-block; background: linear-gradient(135deg, #b8860b, #d4a017, #e8b923); color: #fff; font-family: 'Cinzel', serif; font-weight: 900; font-size: 20px; letter-spacing: 1px; padding: 7px 28px; border-radius: 30px; margin: 20px 0 24px; }
-    .cvd-instructions { background: #fffbf0; border: 1px solid rgba(212,160,23,0.3); border-radius: 10px; padding: 20px; margin-bottom: 22px; }
-    .cvd-inst-title { color: #8b5e00; font-size: 16px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 16px; }
-    .cvd-steps { display: flex; flex-direction: column; gap: 10px; }
-    .cvd-step { display: flex; align-items: flex-start; gap: 12px; background: #fff; border: 1px solid rgba(212,160,23,0.25); border-radius: 8px; padding: 12px 16px; font-size: 15px; color: #5a4a1a; font-weight: 600; text-align: left; line-height: 1.5; }
-    .cvd-step-num { width: 26px; height: 26px; border-radius: 50%; background: #d4a017; color: #fff; font-size: 14px; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .cvd-wa-btn { display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: #fff; padding: 14px 32px; border-radius: 50px; font-size: 16px; font-weight: 700; margin-top: 12px; transition: background 0.2s, transform 0.2s; box-shadow: 0 3px 12px rgba(37,211,102,0.3); }
-    .cvd-wa-btn:hover { background: #1da851; transform: translateY(-2px); }
-
-    /* ── FOOTER ── */
-    footer.site-footer {
-      background: #050f1f; color: rgba(255,255,255,0.65);
-      padding: 60px 32px 30px;
-    }
-    .footer-grid {
-      max-width: 1180px; margin: 0 auto;
-      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
-      padding-bottom: 40px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .footer-logo { font-family: 'Cinzel', serif; font-size: 20px; color: var(--gold-shine); font-weight: 700; letter-spacing: 2px; }
-    .footer-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin: 6px 0 18px; }
-    .footer-about { font-size: 13.5px; line-height: 1.75; color: rgba(255,255,255,0.6); max-width: 340px; }
-    .footer-col h4 { color: #fff; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 18px; font-weight: 700; }
-    .footer-col ul { list-style: none; }
-    .footer-col li { padding: 6px 0; font-size: 13.5px; }
-    .footer-col a { color: rgba(255,255,255,0.6); transition: color 0.2s; }
-    .footer-col a:hover { color: var(--gold-shine); }
-    .footer-bottom {
-      max-width: 1180px; margin: 24px auto 0;
-      display: flex; justify-content: space-between; align-items: center;
-      gap: 16px; flex-wrap: wrap;
-      font-size: 11.5px; color: rgba(255,255,255,0.45); line-height: 1.7;
-    }
-    .footer-social { display: flex; gap: 10px; }
-    .footer-social a {
-      width: 36px; height: 36px; border-radius: 50%;
-      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.7);
-      display: inline-flex; align-items: center; justify-content: center;
-      transition: background 0.2s, color 0.2s;
-    }
-    .footer-social a:hover { background: var(--gold-bright); color: #0f1f3d; border-color: var(--gold-bright); }
-    .disclaimer { font-size: 11px; color: rgba(255,255,255,0.4); line-height: 1.7; max-width: 900px; margin: 20px auto 0; text-align: center; }
-
-    /* ── FLOATING PROMO AD (competitor-style, transparent, no card) ── */
-    .fab-promo-ad {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      z-index: 90;
-    }
-    .fab-promo-ad img.sticky {
-      width: 220px;
-      display: block;
-      cursor: pointer;
-    }
-    .fab-promo-ad .hidden-mob { display: none; }
-    .fab-promo-ad .hidden-desk { display: block; }
-
-    /* ── MOBILE STICKY BAR ── */
-    .mobile-sticky {
-      display: none;
-      position: fixed; bottom: 0; left: 0; right: 0; z-index: 89;
-      background: #fff; border-top: 1px solid var(--line);
-      box-shadow: 0 -8px 24px rgba(15,31,61,0.12);
-    }
-    .mobile-sticky a {
-      flex: 1; padding: 14px 8px; text-align: center;
-      font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
-      display: flex; flex-direction: column; align-items: center; gap: 3px;
-    }
-    .mobile-sticky a.call { color: var(--navy-mid); }
-    .mobile-sticky a.wa { color: #fff; background: #25D366; }
-    .mobile-sticky a.book { color: #fff; background: linear-gradient(135deg, #b8922e, #d4a843); }
-    .mobile-sticky a i { font-size: 16px; }
-
-    /* ── EXIT-INTENT MODAL ── */
-    .modal-overlay {
-      display: none; position: fixed; inset: 0; z-index: 200;
-      background: rgba(5,15,31,0.82); backdrop-filter: blur(6px);
-      align-items: center; justify-content: center; padding: 20px;
-    }
-    .modal-overlay.show { display: flex; animation: fadeIn 0.3s; }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    .modal-card {
-      background: #fff; border-radius: 16px; padding: 40px 34px 34px;
-      max-width: 460px; width: 100%; position: relative;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.5);
-      animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-      border-top: 5px solid var(--gold-bright);
-    }
-    @keyframes popIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-    .modal-close {
-      position: absolute; top: 12px; right: 16px;
-      width: 32px; height: 32px; border-radius: 50%;
-      background: #f4f6fa; border: none; cursor: pointer;
-      color: var(--text-muted); font-size: 16px;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .modal-close:hover { background: #e5e9f0; }
-    .modal-badge {
-      display: inline-block; background: linear-gradient(135deg, #b8922e, #d4a843);
-      color: #0f1f3d; font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase;
-      font-weight: 700; padding: 5px 14px; border-radius: 30px; margin-bottom: 14px;
-    }
-    .modal-card h3 {
-      font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700;
-      color: var(--text); margin-bottom: 10px; line-height: 1.2;
-    }
-    .modal-card p { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.6; }
-    .modal-card input, .modal-card select {
-      width: 100%; padding: 12px 14px; margin-bottom: 10px;
-      border: 1px solid #d5dfeb; border-radius: 6px; font-size: 14px;
-    }
-    .modal-card button { width: 100%; padding: 14px; }
-    .modal-perks { display: flex; flex-direction: column; gap: 6px; margin: 12px 0 18px; }
-    .modal-perks div { font-size: 13px; color: var(--text-body); display: flex; align-items: center; gap: 8px; }
-    .modal-perks i { color: #10b981; }
-
-    /* ── SUCCESS ── */
-    .success-view { text-align: center; padding: 12px 0; }
-    .success-tick {
-      width: 72px; height: 72px; border-radius: 50%;
-      background: #10b981; color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 36px; margin: 0 auto 18px;
-      animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-
-    /* ── RESPONSIVE ── */
-    /* Nav switches to hamburger earlier than the main content breakpoint —
-       logo + 6 links + CTA button don't fit comfortably below ~1100px. */
-    @media (max-width: 1100px) {
-      nav.top-nav { padding: 14px 20px; }
-      .nav-links {
-        display: none;
-        position: fixed;
-        top: 64px;
-        left: 0; right: 0;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-        background: rgba(7,21,39,0.98);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-        border-bottom: 1px solid rgba(212,168,67,0.18);
-        padding: 14px 24px 20px;
-        max-height: calc(100vh - 64px);
-        overflow-y: auto;
-        z-index: 99;
-      }
-      .nav-links.nav-open { display: flex; }
-      .nav-links a { padding: 10px 0; width: 100%; }
-      .hamburger { display: block; }
-    }
-    @media (max-width: 960px) {
-      .hero { padding: 110px 20px 60px; }
-      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-      .profile-strip { grid-template-columns: 1fr; padding: 60px 24px 40px; gap: 30px; text-align: center; }
-      .profile-avatar-wrap { margin: 0 auto; }
-      .profile-badges { justify-content: center; }
-      .trust-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
-      .about-strip { grid-template-columns: 1fr; padding: 60px 24px; gap: 36px; }
-      .section-block { padding: 60px 20px; }
-      .booking-form { grid-template-columns: 1fr; }
-      .slot-grid { grid-template-columns: repeat(3, 1fr); }
-      .calc-card { grid-template-columns: 1fr; padding: 28px 22px; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-      .mobile-sticky { display: flex; }
-      body { padding-bottom: 60px; }
-      .hero-benefits { grid-template-columns: 1fr; }
-
-      .fab-promo-ad { bottom: 78px; right: 16px; }
-      .fab-promo-ad img.sticky { width: 130px; }
-      .fab-promo-ad .hidden-mob { display: block; }
-      .fab-promo-ad .hidden-desk { display: none; }
-    }
-    @media (max-width: 520px) {
-      .footer-grid { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-      .trust-grid { grid-template-columns: 1fr 1fr; }
-      .booking-card { padding: 30px 22px; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- NAV -->
   <nav class="top-nav" id="topNav">
-    <div class="nav-logo" data-testid="nav-logo">
+    <a href="index.html" class="nav-logo" style="text-decoration:none;">
       PK Alakaapuri Nidhi
       <span>Praveen Kumar · Wealth Expert</span>
-    </div>
+    </a>
     <ul class="nav-links">
-      <li><a href="#about" data-testid="nav-about">About</a></li>
-      <li><a href="#services" data-testid="nav-services">Services</a></li>
+      <li><a href="index.html" class="active" data-testid="nav-home">Home</a></li>
+      <li><a href="about.html" data-testid="nav-about">About</a></li>
+      <li><a href="services.html" data-testid="nav-services">Services</a></li>
       <li><a href="calculators/index.html">Calculator</a></li>
-      <li><a href="#testimonials" data-testid="nav-testimonials">Reviews</a></li>
-      <li><a href="#book" data-testid="nav-book">Book</a></li>
-      <li><a href="#insights" data-testid="nav-insights">Insights</a></li>
-      <li><a href="#cvd" data-testid="nav-cvd">CVD Tool</a></li>
+      <li><a href="reviews.html" data-testid="nav-testimonials">Reviews</a></li>
+      <li><a href="book.html" data-testid="nav-book">Book</a></li>
+      <li><a href="insights.html" data-testid="nav-insights">Insights</a></li>
+      <li><a href="cvd.html" data-testid="nav-cvd">CVD Tool</a></li>
     </ul>
     <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="nav-cta" data-testid="nav-invest-btn">Start Investing</a>
     <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('nav-open')"><i class="fa-solid fa-bars"></i></button>
@@ -870,7 +49,7 @@
         </div>
         <div class="hero-cta-row">
           <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold" data-testid="hero-invest-btn"><i class="fa-solid fa-chart-line"></i> Start Investing Now</a>
-          <a href="#book" class="btn-outline-light" data-testid="hero-book-btn"><i class="fa-regular fa-calendar-check"></i> Book Free Consultation</a>
+          <a href="book.html" class="btn-outline-light" data-testid="hero-book-btn"><i class="fa-regular fa-calendar-check"></i> Book Free Consultation</a>
         </div>
       </div>
 
@@ -922,7 +101,7 @@
     </div>
   </section>
 
-  <!-- PROFILE -->
+  <!-- PROFILE / ABOUT PREVIEW -->
   <div class="profile-strip" id="about">
     <div class="profile-avatar-wrap">
       <img class="profile-avatar" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/profilnewpic.png" alt="Praveen Kumar" />
@@ -943,10 +122,13 @@
         <span class="badge">Derivatives</span>
         <span class="badge">Goal-Based Planning</span>
       </div>
+      <div class="hero-cta-row" style="margin-top:26px;">
+        <a href="about.html" class="btn-gold"><i class="fa-solid fa-user-tie"></i> More About Praveen</a>
+      </div>
     </div>
   </div>
 
-  <!-- SERVICES -->
+  <!-- SERVICES PREVIEW -->
   <section class="section-block services-section" id="services">
     <div class="section-header-center">
       <span class="section-label center">What We Offer</span>
@@ -957,15 +139,28 @@
       <div class="product-card"><div class="product-icon"><i class="fa-solid fa-chart-line"></i></div><div class="product-title">Mutual Funds</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> SIP Investments</li><li><i class="fa-solid fa-diamond"></i> Lumpsum Investments</li><li><i class="fa-solid fa-diamond"></i> Equity, Hybrid &amp; Debt Funds</li><li><i class="fa-solid fa-diamond"></i> ELSS Tax Saving</li><li><i class="fa-solid fa-diamond"></i> Goal-Based Portfolios</li></ul></div>
       <div class="product-card"><div class="product-icon"><i class="fa-solid fa-arrows-turn-to-dots"></i></div><div class="product-title">Specialised Investment Funds</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Hybrid Long Short</li><li><i class="fa-solid fa-diamond"></i> Equity Long Short</li><li><i class="fa-solid fa-diamond"></i> Equity Ex-Top 100</li><li><i class="fa-solid fa-diamond"></i> Portfolio Management (PMS)</li></ul></div>
       <div class="product-card"><div class="product-icon"><i class="fa-solid fa-shield-heart"></i></div><div class="product-title">Life &amp; Health Insurance</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Term Life Insurance</li><li><i class="fa-solid fa-diamond"></i> Health Insurance</li><li><i class="fa-solid fa-diamond"></i> Family Floater Plans</li><li><i class="fa-solid fa-diamond"></i> Critical Illness Cover</li></ul></div>
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-car-side"></i></div><div class="product-title">Motor Insurance</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Bike Insurance</li><li><i class="fa-solid fa-diamond"></i> Car Insurance</li><li><i class="fa-solid fa-diamond"></i> Commercial Vehicle</li></ul></div>
       <div class="product-card"><div class="product-icon"><i class="fa-solid fa-building-columns"></i></div><div class="product-title">Loans &amp; Credit</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Personal Loans</li><li><i class="fa-solid fa-diamond"></i> Business Loans</li><li><i class="fa-solid fa-diamond"></i> Home Loans</li><li><i class="fa-solid fa-diamond"></i> Loan Against Mutual Funds</li></ul></div>
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-piggy-bank"></i></div><div class="product-title">Fixed Income Solutions</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Fixed Deposits (FDs)</li><li><i class="fa-solid fa-diamond"></i> Government Bonds</li><li><i class="fa-solid fa-diamond"></i> Monthly Income Plans</li></ul></div>
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-coins"></i></div><div class="product-title">Alternative Investments</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Gold Funds</li><li><i class="fa-solid fa-diamond"></i> Multi Asset Funds</li><li><i class="fa-solid fa-diamond"></i> Sector &amp; Thematic</li></ul></div>
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-map-location-dot"></i></div><div class="product-title">Financial Planning</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Retirement Planning</li><li><i class="fa-solid fa-diamond"></i> Child Education Planning</li><li><i class="fa-solid fa-diamond"></i> Tax-Efficient Investing</li><li><i class="fa-solid fa-diamond"></i> Portfolio Review</li></ul></div>
+    </div>
+    <div style="text-align:center; margin-top:44px;">
+      <a href="services.html" class="btn-gold"><i class="fa-solid fa-layer-group"></i> View All Services</a>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- WHY US -->
+  <section class="section-block why-section" id="why-us">
+    <div class="section-header-center">
+      <span class="section-label center">Why Choose Us</span>
+      <h2 class="section-title">The <em>Alakaapuri</em> Advantage</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-bullseye"></i></div><div class="why-title">Goal Based Investing</div><p class="why-desc">Every recommendation is anchored to your specific financial goals — not market noise or product commissions.</p></div>
+      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-landmark"></i></div><div class="why-title">All Under One Roof</div><p class="why-desc">Investment, insurance and loans — managed by one advisor who understands your complete financial picture.</p></div>
+      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-seedling"></i></div><div class="why-title">Long-Term Focus</div><p class="why-desc">Disciplined, sustainable strategies built for real wealth creation — not short-term speculation.</p></div>
+      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-handshake"></i></div><div class="why-title">Personalised Service</div><p class="why-desc">Dedicated 1‑on‑1 support with periodic portfolio reviews. You are never just a number here.</p></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS PREVIEW -->
   <section class="section-block testimonials-section" id="testimonials">
     <div class="section-header-center">
       <span class="section-label center">Client Stories</span>
@@ -1010,124 +205,12 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- ABOUT + CONTACT -->
-  <div class="about-strip">
-    <div>
-      <span class="section-label">Why We Exist</span>
-      <h2 class="section-title">Helping You <em>Build, Protect &amp; Grow</em> Wealth</h2>
-      <p class="section-desc">
-        PK Alakaapuri Nidhi is a Hyderabad-based wealth advisory offering comprehensive financial solutions for individuals, families and business owners. From mutual funds and insurance to loans and alternative investments — every recommendation is anchored to your specific life goals.
-      </p>
-      <p class="section-desc" style="margin-top:14px;">
-        Led by Praveen Kumar — AMFI ARN Holder and Derivatives Expert with 10+ years experience — the firm is built on personalised advice, transparent processes and a long-term commitment to your financial well-being.
-      </p>
-    </div>
-    <div class="contact-block" id="contact">
-      <span class="section-label" style="margin-bottom:20px; display:inline-flex;">Get in Touch</span>
-      <div class="contact-row">
-        <span class="contact-icon"><i class="fa-brands fa-whatsapp"></i></span>
-        <div>
-          <div class="contact-label">WhatsApp / Call</div>
-          <div class="contact-val"><a href="https://wa.me/919440581363?text=Hello%20PK%20Alakapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" data-testid="contact-wa-1">+91 94405 81363</a></div>
-          <div class="contact-val" style="margin-top:4px;"><a href="https://wa.me/919550800550?text=Hello%20PK%20Alakapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" data-testid="contact-wa-2">+91 95508 00550</a></div>
-        </div>
-      </div>
-      <div class="contact-row">
-        <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
-        <div>
-          <div class="contact-label">Email</div>
-          <div class="contact-val"><a href="mailto:alakaapuri@tanidhi.com">alakaapuri@tanidhi.com</a></div>
-        </div>
-      </div>
-      <div class="contact-row">
-        <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
-        <div>
-          <div class="contact-label">Location</div>
-          <div class="contact-val">Hyderabad, Telangana</div>
-        </div>
-      </div>
-      <div class="contact-row">
-        <span class="contact-icon"><i class="fa-solid fa-link"></i></span>
-        <div>
-          <div class="contact-label">Invest Online</div>
-          <div class="contact-val"><a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" data-testid="contact-assetplus">AssetPlus · ARN‑362567</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- BOOKING -->
-  <section class="section-block booking-section" id="book">
-    <div class="section-header-center">
-      <span class="section-label center">Book a Consultation</span>
-      <h2 class="section-title">Talk to Praveen — <em>Free 30 Minutes</em></h2>
-      <p class="section-desc">Pick a date and slot that works for you. We confirm on WhatsApp within minutes.</p>
-    </div>
-    <div class="booking-card">
-      <form class="booking-form" id="bookingForm" data-testid="booking-form">
-        <div>
-          <label for="bookName">Your Name</label>
-          <input type="text" id="bookName" placeholder="Full Name" required data-testid="book-name" />
-        </div>
-        <div>
-          <label for="bookPhone">Mobile Number</label>
-          <input type="tel" id="bookPhone" placeholder="10-digit mobile" pattern="[0-9]{10}" required data-testid="book-phone" />
-        </div>
-        <div>
-          <label for="bookDate">Preferred Date</label>
-          <input type="date" id="bookDate" required data-testid="book-date" />
-        </div>
-        <div>
-          <label for="bookTopic">Topic</label>
-          <select id="bookTopic" required data-testid="book-topic">
-            <option value="">Choose a topic</option>
-            <option>Mutual Fund / SIP Planning</option>
-            <option>Insurance Review</option>
-            <option>Home / Personal Loan</option>
-            <option>Retirement Planning</option>
-            <option>Portfolio Review (Existing)</option>
-            <option>Child Education Planning</option>
-            <option>PMS / SIF / Alternative Investments</option>
-            <option>Tax Saving (ELSS)</option>
-          </select>
-        </div>
-        <div class="full">
-          <label>Preferred Time Slot</label>
-          <div class="slot-grid" id="slotGrid">
-            <div class="slot" data-slot="10:00 AM">10:00 AM</div>
-            <div class="slot" data-slot="11:00 AM">11:00 AM</div>
-            <div class="slot" data-slot="12:00 PM">12:00 PM</div>
-            <div class="slot" data-slot="02:00 PM">02:00 PM</div>
-            <div class="slot" data-slot="04:00 PM">04:00 PM</div>
-            <div class="slot" data-slot="05:00 PM">05:00 PM</div>
-            <div class="slot" data-slot="06:00 PM">06:00 PM</div>
-            <div class="slot" data-slot="07:00 PM">07:00 PM</div>
-          </div>
-        </div>
-        <div class="full">
-          <button type="submit" class="btn-gold" style="width:100%; justify-content:center; font-size:14px;" data-testid="booking-submit"><i class="fa-brands fa-whatsapp"></i> Confirm Booking on WhatsApp</button>
-        </div>
-      </form>
+    <div style="text-align:center; margin-top:44px;">
+      <a href="reviews.html" class="btn-gold"><i class="fa-solid fa-star"></i> Read All Reviews</a>
     </div>
   </section>
 
-  <!-- WHY US -->
-  <section class="section-block why-section" id="why-us">
-    <div class="section-header-center">
-      <span class="section-label center">Why Choose Us</span>
-      <h2 class="section-title">The <em>Alakaapuri</em> Advantage</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-bullseye"></i></div><div class="why-title">Goal Based Investing</div><p class="why-desc">Every recommendation is anchored to your specific financial goals — not market noise or product commissions.</p></div>
-      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-landmark"></i></div><div class="why-title">All Under One Roof</div><p class="why-desc">Investment, insurance and loans — managed by one advisor who understands your complete financial picture.</p></div>
-      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-seedling"></i></div><div class="why-title">Long-Term Focus</div><p class="why-desc">Disciplined, sustainable strategies built for real wealth creation — not short-term speculation.</p></div>
-      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-handshake"></i></div><div class="why-title">Personalised Service</div><p class="why-desc">Dedicated 1‑on‑1 support with periodic portfolio reviews. You are never just a number here.</p></div>
-    </div>
-  </section>
-
-  <!-- INSIGHTS / BLOG -->
+  <!-- INSIGHTS PREVIEW -->
   <section class="section-block insights-section" id="insights">
     <div class="section-header-center">
       <span class="section-label center">Insights &amp; Blog</span>
@@ -1141,7 +224,7 @@
           <div class="blog-tag">SIP · Beginner</div>
           <div class="blog-title">How ₹5,000/month SIP Can Build ₹1 Crore</div>
           <p class="blog-excerpt">The power of compounding, explained with real numbers. See how a small monthly SIP grows into a life-changing corpus over 20 years.</p>
-          <div class="blog-meta"><span>5 min read</span><a href="#book">Read on WhatsApp →</a></div>
+          <div class="blog-meta"><span>5 min read</span><a href="book.html">Read on WhatsApp →</a></div>
         </div>
       </div>
       <div class="blog-card">
@@ -1150,7 +233,7 @@
           <div class="blog-tag">Insurance · Essential</div>
           <div class="blog-title">Term Insurance: How Much Cover Do You Actually Need?</div>
           <p class="blog-excerpt">The 15x rule, HLV calculation and common mistakes — everything about buying the right term plan for your family.</p>
-          <div class="blog-meta"><span>4 min read</span><a href="#book">Read on WhatsApp →</a></div>
+          <div class="blog-meta"><span>4 min read</span><a href="book.html">Read on WhatsApp →</a></div>
         </div>
       </div>
       <div class="blog-card">
@@ -1159,9 +242,12 @@
           <div class="blog-tag">Tax · Save More</div>
           <div class="blog-title">Top 5 ELSS Funds to Save Tax in FY 2025-26</div>
           <p class="blog-excerpt">Save up to ₹46,800 in taxes while growing your wealth. A curated shortlist of best-performing ELSS mutual funds.</p>
-          <div class="blog-meta"><span>6 min read</span><a href="#book">Read on WhatsApp →</a></div>
+          <div class="blog-meta"><span>6 min read</span><a href="book.html">Read on WhatsApp →</a></div>
         </div>
       </div>
+    </div>
+    <div style="text-align:center; margin-top:44px;">
+      <a href="insights.html" class="btn-gold"><i class="fa-solid fa-book-open"></i> View All Insights</a>
     </div>
   </section>
 
@@ -1173,30 +259,7 @@
     <div class="cta-btn-row">
       <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold" data-testid="cta-invest"><i class="fa-solid fa-chart-line"></i> Start Investing Online</a>
       <a href="https://wa.me/919440581363?text=Hello%20PK%20Alakapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="btn-outline-light" data-testid="cta-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
-    </div>
-  </div>
-
-  <!-- CVD BANNER -->
-  <div class="cvd-section" id="cvd">
-    <div class="cvd-banner">
-      <div class="cvd-corner tl"></div><div class="cvd-corner tr"></div><div class="cvd-corner bl"></div><div class="cvd-corner br"></div>
-      <h2 class="cvd-heading">Purchase CVD Indicator</h2>
-      <p class="cvd-subheading">TradingView Premium Tool</p>
-      <div class="cvd-qr-wrapper">
-        <div class="cvd-qr-frame">
-          <img class="cvd-qr-img" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/scan2000rupees.jpeg" alt="QR Payment · ₹2000" />
-        </div>
-        <span class="cvd-qr-label">SCAN TO PAY</span>
-      </div>
-      <div><span class="cvd-price">₹ 2000/- Only</span></div>
-      <div class="cvd-instructions">
-        <p class="cvd-inst-title">How to Purchase</p>
-        <div class="cvd-steps">
-          <div class="cvd-step"><div class="cvd-step-num">1</div>Scan the QR code above and complete the payment of ₹2000/-</div>
-          <div class="cvd-step"><div class="cvd-step-num">2</div>Share your TradingView Profile ID and payment screenshot on WhatsApp</div>
-        </div>
-        <a href="https://wa.me/919550800550?text=Hello%20PKTeluguTrader,%20I%20have%20completed%20the%20payment%20for%20the%20CVD%20Indicator.%20My%20TradingView%20ID%20is%20________." target="_blank" class="cvd-wa-btn"><i class="fa-brands fa-whatsapp"></i> Click to Open WhatsApp</a>
-      </div>
+      <a href="book.html" class="btn-outline-light"><i class="fa-regular fa-calendar-check"></i> Book Consultation</a>
     </div>
   </div>
 
@@ -1211,21 +274,23 @@
       <div class="footer-col">
         <h4>Explore</h4>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="calculators/index.html">Calculator</a></li>
-          <li><a href="#testimonials">Reviews</a></li>
-          <li><a href="#insights">Insights</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="cvd.html">CVD Tool</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="#services">Mutual Funds &amp; SIP</a></li>
-          <li><a href="#services">Insurance</a></li>
-          <li><a href="#services">Loans</a></li>
-          <li><a href="#services">PMS &amp; SIF</a></li>
-          <li><a href="#services">Retirement Planning</a></li>
+          <li><a href="services.html">Mutual Funds &amp; SIP</a></li>
+          <li><a href="services.html">Insurance</a></li>
+          <li><a href="services.html">Loans</a></li>
+          <li><a href="services.html">PMS &amp; SIF</a></li>
+          <li><a href="services.html">Retirement Planning</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1234,7 +299,7 @@
           <li><a href="tel:+919440581363">+91 94405 81363</a></li>
           <li><a href="mailto:alakaapuri@tanidhi.com">alakaapuri@tanidhi.com</a></li>
           <li><a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank">Invest Online</a></li>
-          <li><a href="#book">Book Consultation</a></li>
+          <li><a href="book.html">Book Consultation</a></li>
         </ul>
         <div class="footer-social" style="margin-top:14px;">
           <a href="https://wa.me/919440581363" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
@@ -1264,7 +329,7 @@
   <div class="mobile-sticky">
     <a href="tel:+919440581363" class="call" data-testid="mobile-call"><i class="fa-solid fa-phone"></i> Call</a>
     <a href="https://wa.me/919440581363?text=Hello%20PK%20Alakapuri%20Nidhi" target="_blank" class="wa" data-testid="mobile-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-    <a href="#book" class="book" data-testid="mobile-book"><i class="fa-solid fa-calendar-check"></i> Book</a>
+    <a href="book.html" class="book" data-testid="mobile-book"><i class="fa-solid fa-calendar-check"></i> Book</a>
   </div>
 
   <!-- EXIT-INTENT MODAL -->
@@ -1357,7 +422,6 @@
       document.getElementById("formResponseMsg").innerHTML =
         "<span style='color:#10b981;'>✓ Redirecting you to WhatsApp &amp; AssetPlus…</span>";
 
-      // Open both in new tabs
       window.open(waUrl, "_blank");
       setTimeout(() => window.open(ASSETPLUS_URL, "_blank"), 800);
 
@@ -1384,35 +448,6 @@
     }, { threshold: 0.4 });
     counters.forEach(c => io.observe(c));
 
-    // ==== BOOKING ====
-    let selectedSlot = "";
-    document.querySelectorAll('.slot').forEach(s => {
-      s.addEventListener('click', () => {
-        document.querySelectorAll('.slot').forEach(x => x.classList.remove('active'));
-        s.classList.add('active');
-        selectedSlot = s.dataset.slot;
-      });
-    });
-
-    // Set min date = today
-    const dateInput = document.getElementById('bookDate');
-    dateInput.min = new Date().toISOString().split('T')[0];
-
-    document.getElementById('bookingForm').addEventListener('submit', e => {
-      e.preventDefault();
-      if (!selectedSlot) { alert("Please select a time slot."); return; }
-      const name = document.getElementById('bookName').value.trim();
-      const phone = document.getElementById('bookPhone').value.trim();
-      const date = document.getElementById('bookDate').value;
-      const topic = document.getElementById('bookTopic').value;
-
-      const msg = `Hello PK Alakapuri Nidhi,%0A%0AI would like to book a FREE consultation.%0A%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0ADate: ${encodeURIComponent(date)}%0ATime: ${encodeURIComponent(selectedSlot)}%0ATopic: ${encodeURIComponent(topic)}%0A%0APlease confirm.`;
-      window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, "_blank");
-      e.target.reset();
-      document.querySelectorAll('.slot').forEach(x => x.classList.remove('active'));
-      selectedSlot = "";
-    });
-
     // ==== EXIT-INTENT ====
     let exitShown = sessionStorage.getItem('exitShown') === '1';
     function openExitModal() {
@@ -1423,7 +458,6 @@
     }
     function closeExitModal() {
       document.getElementById('exitModal').classList.remove('show');
-      // reset views
       setTimeout(() => {
         document.getElementById('exitFormView').style.display = 'block';
         document.getElementById('exitSuccessView').style.display = 'none';
@@ -1431,11 +465,9 @@
     }
     window.closeExitModal = closeExitModal;
 
-    // Desktop: exit intent
     document.addEventListener('mouseleave', e => {
       if (e.clientY < 10 && !exitShown) openExitModal();
     });
-    // Mobile: after 25s or 60% scroll
     let mobileTriggered = false;
     setTimeout(() => {
       if (!exitShown && window.innerWidth < 900 && !mobileTriggered) {
@@ -1463,7 +495,5 @@
     }
     window.submitExitForm = submitExitForm;
   </script>
-
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"7f7b0fd8732c4326aae4b9d58d5c514a","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
