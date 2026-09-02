@@ -1,221 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="About Praveen Kumar — AMFI ARN Holder, Derivatives Expert and Wealth Advisor at PK Alakaapuri Nidhi, Hyderabad." />
-  <title>About Us — PK Alakaapuri Nidhi | Praveen Kumar, Wealth Advisor</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="About Praveen Kumar — AMFI ARN Holder, Derivatives Expert and Wealth Advisor at Alakaapuri Nidhi, Hyderabad." />
+<title>About Us — Alakaapuri Nidhi | Praveen Kumar, Wealth Advisor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#fbfaf7; --fg:#2a3040; --muted:#6b7285; --card:#ffffff; --border:#e7e3da;
+  --navy:#1f2740; --navy-deep:#151b2e; --gold:#c9a227; --gold-soft:#f3e7c4;
+}
+*{box-sizing:border-box;margin:0;padding:0;border-color:var(--border)}
+body{background:var(--bg);color:var(--fg);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+h1,h2,h3,h4{font-family:"Playfair Display",serif;font-weight:600;line-height:1.2}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1150px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold)}
+.navy{background:linear-gradient(160deg,var(--navy-deep),var(--navy) 60%,#2b3454);color:#f7f5ef}
+.rule{height:1px;width:160px;margin:24px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="../styles.css" />
+/* Header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 20px;max-width:1150px;margin:0 auto}
+.brand b{display:block;font-family:Cinzel,serif;font-weight:700;letter-spacing:.14em;color:var(--navy);font-size:18px}
+.brand span{display:block;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+nav.main{display:flex;align-items:center;gap:2px}
+nav.main a{padding:8px 12px;border-radius:6px;font-size:14px;font-weight:500;color:#3d4459;transition:color .2s}
+nav.main a:hover{color:var(--gold)}
+.dropdown{position:relative}
+.dropdown-menu{position:absolute;left:0;top:100%;min-width:200px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:6px;box-shadow:0 12px 28px rgba(0,0,0,.09);opacity:0;visibility:hidden;transform:translateY(4px);transition:all .18s}
+.dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.dropdown-menu a{display:block;padding:9px 12px}
+.dropdown-menu a:hover{background:#f4f1ea}
+.caret{font-size:10px}
+.burger{display:none;border:1px solid var(--border);background:none;border-radius:6px;padding:8px 10px;font-size:18px;cursor:pointer}
+nav.mobile{display:none;border-top:1px solid var(--border);padding:8px 20px 20px}
+nav.mobile a{display:block;padding:10px 0;font-size:14px;font-weight:500}
+nav.mobile .sub a{padding-left:14px;color:var(--muted)}
+nav.mobile.open{display:block}
+
+/* Sections */
+section{padding:80px 0}
+.hero{text-align:center}
+.hero h1{font-size:44px;margin-top:18px}
+.hero p{max-width:680px;margin:0 auto;color:rgba(247,245,239,.75)}
+.grid-advisor{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+.portrait{position:relative;aspect-ratio:4/5;max-width:360px;width:100%;margin:0 auto;border-radius:18px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;background:linear-gradient(160deg,var(--navy-deep),var(--navy) 60%,#2b3454)}
+.portrait .pk{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:Cinzel,serif;font-size:64px;font-weight:700;color:rgba(201,162,39,.75)}
+.pill-gold{display:inline-block;margin:0 0 24px;background:var(--gold);color:#1c2033;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:9px 16px;border-radius:999px;position:relative;z-index:2}
+.role{font-family:Rajdhani,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-size:14px;margin-top:6px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.tags span{border:1px solid var(--border);background:var(--card);border-radius:999px;padding:8px 15px;font-size:12px;font-weight:500}
+.soft{background:#f5f2ec}
+.center-narrow{max-width:760px;margin:0 auto;text-align:center}
+.center-narrow p{color:var(--muted);margin-top:18px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;transition:box-shadow .2s}
+.card:hover{box-shadow:0 14px 34px rgba(0,0,0,.07)}
+.card .ico{font-size:22px}
+.card h3{font-size:20px;margin-top:14px}
+.card p{font-size:14px;color:var(--muted);margin-top:10px}
+h2.big{font-size:34px;margin-top:10px}
+
+/* Footer */
+footer{padding-top:64px}
+.fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;padding-bottom:44px}
+footer h3{font-family:Cinzel,serif;letter-spacing:.14em;color:var(--gold);font-size:18px}
+footer h4{color:var(--gold);font-size:16px}
+footer p,footer li{color:rgba(247,245,239,.72);font-size:14px}
+footer ul{list-style:none;margin-top:16px;display:grid;gap:8px}
+footer a:hover{color:var(--gold)}
+.fbottom{border-top:1px solid rgba(255,255,255,.12);padding:22px 0 90px;text-align:center;font-size:12px;color:rgba(247,245,239,.6)}
+.fbottom .disc{margin-top:14px;line-height:1.7}
+
+/* Mobile bar */
+.mobilebar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--card);border-top:1px solid var(--border)}
+.mobilebar a{flex:1;text-align:center;padding:14px 0;font-size:14px;font-weight:500}
+.mobilebar a+a{border-left:1px solid var(--border)}
+
+@media (max-width:900px){
+  nav.main{display:none}.burger{display:block}
+  .grid-advisor{grid-template-columns:1fr}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .fgrid{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:34px}h2.big{font-size:28px}
+  .mobilebar{display:flex}
+}
+@media (max-width:560px){.cards,.fgrid{grid-template-columns:1fr}}
+</style>
 </head>
-<body>
+<body id="home">
 
-  <!-- NAV -->
-  <nav class="top-nav" id="topNav">
-    <a href="../index.html" class="nav-logo" style="text-decoration:none;">
-      PK Alakaapuri Nidhi
+<header class="site">
+  <div class="hdr">
+    <a class="brand" href="#home">
+      <b>ALAKAAPURI NIDHI</b>
       <span>Praveen Kumar · Wealth Expert</span>
     </a>
-    <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../about/" class="active">About</a></li>
-      <li><a href="../services/">Services</a></li>
-      <li><a href="../calculators/">Calculator</a></li>
-      <li><a href="../reviews/">Reviews</a></li>
-      <li><a href="../book/">Book</a></li>
-      <li><a href="../insights/">Insights</a></li>
-      <li><a href="../cvd/">CVD Tool</a></li>
-    </ul>
-    <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="nav-cta">Start Investing</a>
-    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('nav-open')"><i class="fa-solid fa-bars"></i></button>
+    <nav class="main">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <div class="dropdown">
+        <a href="#services">Services <span class="caret">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="#mutual-funds">Mutual Funds</a>
+          <a href="#insurance">Insurance</a>
+          <a href="#equity">Equity</a>
+        </div>
+      </div>
+      <a href="#calculator">Calculator</a>
+      <a href="#options-indicator">Options Indicator</a>
+      <a href="#contact">Contact</a>
+      <a href="#testimonials">Testimonials</a>
+    </nav>
+    <button class="burger" aria-label="Toggle menu" onclick="document.getElementById('mnav').classList.toggle('open')">☰</button>
+  </div>
+  <nav class="mobile" id="mnav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <div class="sub">
+      <a href="#mutual-funds">Mutual Funds</a>
+      <a href="#insurance">Insurance</a>
+      <a href="#equity">Equity</a>
+    </div>
+    <a href="#calculator">Calculator</a>
+    <a href="#options-indicator">Options Indicator</a>
+    <a href="#contact">Contact</a>
+    <a href="#testimonials">Testimonials</a>
   </nav>
+</header>
 
-  <!-- PAGE HERO -->
-  <header class="page-hero">
-    <span class="section-label center">About Us</span>
-    <h2 class="section-title">Meet Your <em>Trusted Wealth Advisor</em></h2>
-    <p class="section-desc">A professional wealth management firm built on personalised advice, transparency and a long-term commitment to your financial well-being.</p>
-  </header>
-
-  <!-- PROFILE -->
-  <div class="profile-strip" id="about">
-    <div class="profile-avatar-wrap">
-      <img class="profile-avatar" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/profilnewpic.png" alt="Praveen Kumar" />
-      <span class="profile-badge-float"><i class="fa-solid fa-certificate"></i> AMFI ARN Holder</span>
-    </div>
-    <div>
-      <span class="section-label">Meet Your Advisor</span>
-      <div class="profile-name">Praveen Kumar</div>
-      <div class="profile-title">Derivatives Expert · AMFI ARN Holder · Wealth Advisor</div>
-      <p class="profile-bio">
-        With over a decade in financial markets, Praveen Kumar has helped 500+ families build sustainable wealth through goal-based investing. As an AMFI-registered ARN holder and Derivatives Expert, he combines deep market expertise with personalised, transparent advice — so every rupee you invest works toward your specific life goals.
-      </p>
-      <div class="profile-badges">
-        <span class="badge">Life &amp; Health Insurance</span>
-        <span class="badge">Mutual Fund Distributor</span>
-        <span class="badge">Home &amp; Personal Loans</span>
-        <span class="badge">PMS</span>
-        <span class="badge">Derivatives</span>
-        <span class="badge">Goal-Based Planning</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- WHY WE EXIST -->
-  <div class="about-strip">
-    <div>
-      <span class="section-label">Why We Exist</span>
-      <h2 class="section-title">Helping You <em>Build, Protect &amp; Grow</em> Wealth</h2>
-      <p class="section-desc">
-        PK Alakaapuri Nidhi is a Hyderabad-based wealth advisory offering comprehensive financial solutions for individuals, families and business owners. From mutual funds and insurance to loans and alternative investments — every recommendation is anchored to your specific life goals.
-      </p>
-      <p class="section-desc" style="margin-top:14px;">
-        Led by Praveen Kumar — AMFI ARN Holder and Derivatives Expert with 10+ years experience — the firm is built on personalised advice, transparent processes and a long-term commitment to your financial well-being.
-      </p>
-    </div>
-    <div class="contact-block" id="contact">
-      <span class="section-label" style="margin-bottom:20px; display:inline-flex;">Get in Touch</span>
-      <div class="contact-row">
-        <span class="contact-icon"><i class="fa-brands fa-whatsapp"></i></span>
-        <div>
-          <div class="contact-label">WhatsApp / Call</div>
-          <div class="contact-val"><a href="https://wa.me/919440581363?text=Hello%20PK%20Alakapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">+91 94405 81363</a></div>
-          <div class="contact-val" style="margin-top:4px;"><a href="https://wa.me/919550800550?text=Hello%20PK%20Alakapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">+91 95508 00550</a></div>
-        </div>
-      </div>
-      <div class="contact-row">
-        <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
-        <div>
-          <div class="contact-label">Email</div>
-          <div class="contact-val"><a href="mailto:alakaapuri@tanidhi.com">alakaapuri@tanidhi.com</a></div>
-        </div>
-      </div>
-      <div class="contact-row">
-        <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
-        <div>
-          <div class="contact-label">Location</div>
-          <div class="contact-val">Hyderabad, Telangana</div>
-        </div>
-      </div>
-      <div class="contact-row">
-        <span class="contact-icon"><i class="fa-solid fa-link"></i></span>
-        <div>
-          <div class="contact-label">Invest Online</div>
-          <div class="contact-val"><a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank">AssetPlus · ARN‑362567</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- WHY US -->
-  <section class="section-block why-section" id="why-us">
-    <div class="section-header-center">
-      <span class="section-label center">Why Choose Us</span>
-      <h2 class="section-title">The <em>Alakaapuri</em> Advantage</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-bullseye"></i></div><div class="why-title">Goal Based Investing</div><p class="why-desc">Every recommendation is anchored to your specific financial goals — not market noise or product commissions.</p></div>
-      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-landmark"></i></div><div class="why-title">All Under One Roof</div><p class="why-desc">Investment, insurance and loans — managed by one advisor who understands your complete financial picture.</p></div>
-      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-seedling"></i></div><div class="why-title">Long-Term Focus</div><p class="why-desc">Disciplined, sustainable strategies built for real wealth creation — not short-term speculation.</p></div>
-      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-handshake"></i></div><div class="why-title">Personalised Service</div><p class="why-desc">Dedicated 1‑on‑1 support with periodic portfolio reviews. You are never just a number here.</p></div>
+<main>
+  <section class="navy hero">
+    <div class="wrap">
+      <span class="eyebrow">About Us</span>
+      <h1>Meet Your Trusted Wealth Advisor</h1>
+      <div class="rule"></div>
+      <p>A professional wealth management firm built on personalised advice, transparency and a long-term commitment to your financial well-being.</p>
     </div>
   </section>
 
-  <!-- CTA -->
-  <div class="cta-section">
-    <span class="section-label center">Ready to Begin?</span>
-    <h2 class="section-title">Your Wealth Journey <em>Starts Today</em></h2>
-    <p class="section-desc">Talk to Praveen Kumar — get a personalised plan tailored to your goals, income and life stage.</p>
-    <div class="cta-btn-row">
-      <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold"><i class="fa-solid fa-chart-line"></i> Start Investing Online</a>
-      <a href="../book/" class="btn-outline-light"><i class="fa-regular fa-calendar-check"></i> Book Consultation</a>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-grid">
+  <section id="about">
+    <div class="wrap grid-advisor">
+      <div class="portrait">
+        <span class="pk">PK</span>
+        <span class="pill-gold">✔ AMFI ARN Holder</span>
+      </div>
       <div>
-        <div class="footer-logo">PK ALAKAAPURI NIDHI</div>
-        <div class="footer-tag">Wealth Expert · Hyderabad</div>
-        <p class="footer-about">A trusted wealth advisory offering mutual funds, insurance, loans and financial planning — led by Praveen Kumar, AMFI ARN Holder (ARN‑362567).</p>
-      </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about/">About</a></li>
-          <li><a href="../services/">Services</a></li>
-          <li><a href="../calculators/">Calculator</a></li>
-          <li><a href="../reviews/">Reviews</a></li>
-          <li><a href="../insights/">Insights</a></li>
-          <li><a href="../cvd/">CVD Tool</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="../services/">Mutual Funds &amp; SIP</a></li>
-          <li><a href="../services/">Insurance</a></li>
-          <li><a href="../services/">Loans</a></li>
-          <li><a href="../services/">PMS &amp; SIF</a></li>
-          <li><a href="../services/">Retirement Planning</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Get in Touch</h4>
-        <ul>
-          <li><a href="tel:+919440581363">+91 94405 81363</a></li>
-          <li><a href="mailto:alakaapuri@tanidhi.com">alakaapuri@tanidhi.com</a></li>
-          <li><a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank">Invest Online</a></li>
-          <li><a href="../book/">Book Consultation</a></li>
-        </ul>
-        <div class="footer-social" style="margin-top:14px;">
-          <a href="https://wa.me/919440581363" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="mailto:alakaapuri@tanidhi.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-          <a href="tel:+919440581363" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+        <span class="eyebrow">Meet Your Advisor</span>
+        <h2 class="big">Praveen Kumar</h2>
+        <p class="role">Derivatives Expert · AMFI ARN Holder · Wealth Advisor</p>
+        <p style="margin-top:22px;color:var(--muted)">With over a decade in financial markets, Praveen Kumar has helped 500+ families build sustainable wealth through goal-based investing. As an AMFI-registered ARN holder and Derivatives Expert, he combines deep market expertise with personalised, transparent advice — so every rupee you invest works toward your specific life goals.</p>
+        <div class="tags">
+          <span>Life &amp; Health Insurance</span><span>Mutual Fund Distributor</span><span>Home &amp; Personal Loans</span>
+          <span>PMS</span><span>Derivatives</span><span>Goal-Based Planning</span>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div>© <span id="year">2026</span> PK Alakaapuri Nidhi. All rights reserved. · ARN‑362567</div>
-      <div>Hyderabad, Telangana · India</div>
-    </div>
-    <p class="disclaimer">Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. Insurance is a subject matter of solicitation.</p>
-  </footer>
+  </section>
 
-  <!-- FLOATING PROMO AD -->
-  <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="fab-promo-ad">
-    <div class="hidden-mob">
-      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png" alt="Open a Mutual Fund Account" />
+  <section class="soft">
+    <div class="wrap center-narrow">
+      <span class="eyebrow">Why We Exist</span>
+      <h2 class="big">Helping You Build, Protect &amp; Grow Wealth</h2>
+      <p>Alakaapuri Nidhi is a Hyderabad-based wealth advisory offering comprehensive financial solutions for individuals, families and business owners. From mutual funds and insurance to loans and alternative investments — every recommendation is anchored to your specific life goals.</p>
+      <p>Led by Praveen Kumar — AMFI ARN Holder and Derivatives Expert with 10+ years experience — the firm is built on personalised advice, transparent processes and a long-term commitment to your financial well-being.</p>
     </div>
-    <div class="hidden-desk">
-      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png" alt="Open a Mutual Fund Account" />
-    </div>
-  </a>
+  </section>
 
-  <!-- MOBILE STICKY BAR -->
-  <div class="mobile-sticky">
-    <a href="tel:+919440581363" class="call"><i class="fa-solid fa-phone"></i> Call</a>
-    <a href="https://wa.me/919440581363?text=Hello%20PK%20Alakapuri%20Nidhi" target="_blank" class="wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-    <a href="../book/" class="book"><i class="fa-solid fa-calendar-check"></i> Book</a>
+  <section id="services">
+    <div class="wrap">
+      <div style="text-align:center">
+        <span class="eyebrow">Why Choose Us</span>
+        <h2 class="big">The Alakaapuri Advantage</h2>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div><h3>Goal Based Investing</h3><p>Every recommendation is anchored to your specific financial goals — not market noise or product commissions.</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><path d="M3 10h18"/><path d="M12 3l9 5H3l9-5z"/><path d="M6 10v8M10 10v8M14 10v8M18 10v8"/><path d="M3 21h18"/></svg></div><h3>All Under One Roof</h3><p>Investment, insurance and loans — managed by one advisor who understands your complete financial picture.</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></svg></div><h3>Long-Term Focus</h3><p>Disciplined, sustainable strategies built for real wealth creation — not short-term speculation.</p></article>
+        <article class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><path d="M20.8 8.6a4.6 4.6 0 0 0-6.5-.1L12 10.7 9.7 8.5a4.6 4.6 0 1 0-6.4 6.6l8.7 8 8.8-8a4.6 4.6 0 0 0 0-6.5z"/></svg></div><h3>Personalised Service</h3><p>Dedicated 1-on-1 support with periodic portfolio reviews. You are never just a number here.</p></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="navy" id="contact">
+  <div class="wrap fgrid">
+    <div>
+      <h3>ALAKAAPURI NIDHI</h3>
+      <p style="letter-spacing:.25em;text-transform:uppercase;font-size:11px;margin-top:4px">Wealth Expert · Hyderabad</p>
+      <p style="margin-top:16px">A trusted wealth advisory offering mutual funds, insurance, loans and financial planning — led by Praveen Kumar, AMFI ARN Holder (ARN-362567).</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+        <li><a href="#options-indicator">Options Indicator</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li>Mutual Funds &amp; SIP</li><li>Insurance</li><li>Equity</li><li>Loans</li><li>PMS &amp; SIF</li><li>Retirement Planning</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Reach Us</h4>
+      <ul>
+        <li><a href="tel:+919440581363"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.7" width="15" height="15" style="vertical-align:-2px"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> +91 94405 81363</a></li>
+        <li><a href="mailto:alakaapuri@tanidhi.com"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.7" width="15" height="15" style="vertical-align:-2px"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg> alakaapuri@tanidhi.com</a></li>
+        <li><a href="#book"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.7" width="15" height="15" style="vertical-align:-2px"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg> Book Consultation</a></li>
+      </ul>
+    </div>
   </div>
+  <div class="wrap fbottom">
+    <p>© 2026 Alakaapuri Nidhi. All rights reserved. · ARN-362567</p>
+    <p>Hyderabad, Telangana · India</p>
+    <p class="disc">Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. Insurance is a subject matter of solicitation.</p>
+  </div>
+</footer>
 
-  <script>
-    const nav = document.getElementById('topNav');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 40) nav.classList.add('scrolled');
-      else nav.classList.remove('scrolled');
-    });
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.remove('nav-open');
-      });
-    });
-  </script>
+<div class="mobilebar">
+  <a href="tel:+919440581363">☎ Call</a>
+  <a href="https://wa.me/919440581363">✆ WhatsApp</a>
+</div>
+
 </body>
 </html>
