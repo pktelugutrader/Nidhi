@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Derivatives and Hedging advisory by Praveen Kumar at Alakaapuri Nidhi, Hyderabad. Rule-based Futures and Options strategies, portfolio downside protection, and Cumulative Volume Delta (CVD) tools." />
+  <title>Derivatives &amp; Hedging — Alakaapuri Nidhi | Risk Mitigation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script src="../../animations.js" defer></script>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="top-nav" id="topNav">
+    <a href="../../index.html" class="nav-logo" style="text-decoration:none;">
+      Alakaapuri Nidhi
+      <span>Praveen Kumar · Wealth Expert</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../about/">About</a></li>
+      <li class="dropdown">
+        <a href="../../services/" class="dropdown-toggle active">Services <span class="caret">▾</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="../../services/mutual-funds/">Mutual Funds</a></li>
+          <li><a href="../../services/insurance/">Insurance</a></li>
+          <li><a href="../../services/equity/">Equity</a></li>
+          <li><a href="../../services/derivatives/" class="active">Derivatives</a></li>
+        </ul>
+      </li>
+      <li><a href="../../calculators/">Calculator</a></li>
+      <li><a href="../../Options%20Indicator/">Options Indicator</a></li>
+      <li><a href="../../Contact/">Contact</a></li>
+      <li><a href="../../Testimonials/">Testimonials</a></li>
+    </ul>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('nav-open')"><i
+        class="fa-solid fa-bars"></i></button>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <span class="section-label center">Derivatives &amp; Portfolio Hedging</span>
+    <h1 class="section-title">Institutional Risk Management &amp; <em>Options Strategies</em></h1>
+    <p class="section-desc">Protect your equity holdings against sudden market downturns and deploy rule-based derivatives frameworks engineered for risk mitigation.</p>
+    <div class="hero-cta-row" style="justify-content:center; margin-top:28px;">
+      <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20consult%20about%20Derivatives%20and%20Portfolio%20Hedging."
+        target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> Book Strategy Session</a>
+      <a href="../../Options%20Indicator/" class="btn-outline-light"><i class="fa-solid fa-chart-candlestick"></i> Explore CVD Indicator</a>
+    </div>
+  </header>
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-num" data-count="10" data-suffix=" Yrs+">0</div>
+        <div class="trust-lbl">Derivatives Experience</div>
+        <div class="trust-sub">Futures &amp; Options Specialist</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num" data-count="100" data-suffix="%">0</div>
+        <div class="trust-lbl">Risk-Defined</div>
+        <div class="trust-sub">No Naked Speculation</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num" data-count="24" data-suffix="/7">0</div>
+        <div class="trust-lbl">Volatility Tracking</div>
+        <div class="trust-sub">India VIX &amp; Order Flow</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-num" data-count="500" data-suffix="+">0</div>
+        <div class="trust-lbl">Traders &amp; Investors</div>
+        <div class="trust-sub">Mentored &amp; Advised</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DERIVATIVE PILLARS -->
+  <section class="section-block">
+    <div class="section-header-center">
+      <span class="section-label center">Core Methodologies</span>
+      <h2 class="section-title">Capital Preservation Comes <em>First</em></h2>
+      <p class="section-desc">Derivatives are powerful instruments when used for hedging and defined-risk positioning. We strip away reckless gambling and replace it with mathematical discipline.</p>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card tilt-3d">
+        <div class="product-icon"><i class="fa-solid fa-shield-virus"></i></div>
+        <div class="product-title">Portfolio Downside Hedging</div>
+        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
+          Shield your long-term equity or mutual fund portfolio from major market crashes (Budget, elections, global shocks) using index put options and beta-hedging.
+        </p>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> Insure equity value without selling</li>
+          <li><i class="fa-solid fa-diamond"></i> Avoid capital gains tax triggered by exits</li>
+          <li><i class="fa-solid fa-diamond"></i> Cost-effective insurance against black swans</li>
+        </ul>
+      </div>
+
+      <div class="product-card tilt-3d">
+        <div class="product-icon"><i class="fa-solid fa-chart-line-up"></i></div>
+        <div class="product-title">Defined-Risk Option Spreads</div>
+        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
+          Multi-leg strategies (Bull Call Spreads, Bear Put Spreads, Iron Condors) with strictly pre-defined maximum risk and high probability of profit.
+        </p>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> Capped downside on every trade</li>
+          <li><i class="fa-solid fa-diamond"></i> Exploits implied volatility skew</li>
+          <li><i class="fa-solid fa-diamond"></i> Rule-based entry and exit parameters</li>
+        </ul>
+      </div>
+
+      <div class="product-card tilt-3d">
+        <div class="product-icon"><i class="fa-solid fa-chart-candlestick"></i></div>
+        <div class="product-title">Cumulative Volume Delta (CVD)</div>
+        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
+          Proprietary order-flow analysis tracking institutional buying and selling volume to identify true market direction before breakouts occur.
+        </p>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> Institutional absorption detection</li>
+          <li><i class="fa-solid fa-diamond"></i> Spot divergences between price and volume</li>
+          <li><i class="fa-solid fa-diamond"></i> Available on TradingView</li>
+        </ul>
+      </div>
+
+      <div class="product-card tilt-3d">
+        <div class="product-icon"><i class="fa-solid fa-calculator"></i></div>
+        <div class="product-title">Options Greeks &amp; Volatility Analysis</div>
+        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
+          Deep understanding of Delta, Theta, Gamma and Vega to structure positions that benefit from time decay and volatility contraction.
+        </p>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> India VIX cycle evaluation</li>
+          <li><i class="fa-solid fa-diamond"></i> Non-directional income strategies</li>
+          <li><i class="fa-solid fa-diamond"></i> Continuous risk monitoring</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CVD INDICATOR BANNER PREVIEW -->
+  <section class="section-block" style="background: linear-gradient(180deg, #fdfbf7 0%, #ffffff 100%);">
+    <div class="container" style="max-width:880px; margin:0 auto; text-align:center;">
+      <span class="section-label center">Proprietary Tool</span>
+      <h2 class="section-title">Trade with Institutional <em>Order Flow Clarity</em></h2>
+      <p class="section-desc" style="margin-bottom:28px;">
+        Alakaapuri Nidhi provides proprietary TradingView tools developed by Praveen Kumar to give serious traders an unfair edge in reading market volume delta.
+      </p>
+      <a href="../../Options%20Indicator/" class="btn-gold"><i class="fa-solid fa-qrcode"></i> View CVD Indicator &amp; Pricing</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <span class="section-label center">Hedge Your Capital</span>
+    <h2 class="section-title">Protect Your Portfolio <em>From Market Dips</em></h2>
+    <p class="section-desc">Consult with Praveen Kumar to learn how institutional hedging strategies can safeguard your hard-earned wealth.</p>
+    <div class="cta-btn-row">
+      <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20want%20to%20consult%20on%20Derivatives%20and%20Hedging."
+        target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> WhatsApp Consultation</a>
+      <a href="tel:+919440581363" class="btn-outline-light"><i class="fa-solid fa-phone"></i> Call +91 94405 81363</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">ALAKAAPURI NIDHI</div>
+        <div class="footer-tag">Wealth Expert · Hyderabad</div>
+        <p class="footer-about">A trusted wealth advisory offering mutual funds, insurance, loans and financial planning
+          — led by Praveen Kumar, AMFI ARN Holder (ARN‑362567).</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../about/">About</a></li>
+          <li><a href="../../services/">Services</a></li>
+          <li><a href="../../calculators/">Calculator</a></li>
+          <li><a href="../../Testimonials/">Testimonials</a></li>
+          <li><a href="../../Contact/">Contact</a></li>
+          <li><a href="../../Options%20Indicator/">Options Indicator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../../services/mutual-funds/">Mutual Funds &amp; SIP</a></li>
+          <li><a href="../../services/insurance/">Insurance</a></li>
+          <li><a href="../../services/equity/">Equity &amp; PMS</a></li>
+          <li><a href="../../services/derivatives/">Derivatives</a></li>
+          <li><a href="../../services/">All Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="tel:+919440581363">+91 94405 81363</a></li>
+          <li><a href="mailto:alakaapuri@tanidhi.com">alakaapuri@tanidhi.com</a></li>
+          <li><a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank">Invest Online</a></li>
+          <li><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank">Book Consultation</a></li>
+        </ul>
+        <div class="footer-social" style="margin-top:14px;">
+          <a href="https://wa.me/919440581363" target="_blank" aria-label="WhatsApp"><i
+              class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:alakaapuri@tanidhi.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="tel:+919440581363" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© <span id="year">2026</span> Alakaapuri Nidhi. All rights reserved. · ARN‑362567</div>
+      <div>Derivatives (Futures &amp; Options) carry significant financial risk. Trade responsibly under disciplined risk parameters.</div>
+    </div>
+  </footer>
+
+  <!-- FLOATING PROMO AD -->
+  <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="fab-promo-ad" data-testid="fab-promo-ad">
+    <div class="hidden-mob">
+      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png"
+        alt="Open a Mutual Fund Account" />
+    </div>
+    <div class="hidden-desk">
+      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png"
+        alt="Open a Mutual Fund Account" />
+    </div>
+  </a>
+
+  <!-- MOBILE STICKY -->
+  <div class="mobile-sticky">
+    <a href="tel:+919440581363" class="call"><i class="fa-solid fa-phone"></i> Call</a>
+    <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20Derivatives."
+      target="_blank" class="wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+  </div>
+
+</body>
+</html>

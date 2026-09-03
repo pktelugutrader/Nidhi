@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Alakaapuri Nidhi — Premium wealth advisory in Hyderabad. Mutual Funds, Insurance, Loans, PMS, Retirement & Goal-Based Investing by Praveen Kumar (AMFI ARN Holder)." />
-  <meta name="keywords" content="Mutual Funds Hyderabad, SIP, PMS, Insurance, Home Loan, Praveen Kumar, AMFI ARN, Wealth Advisor" />
+  <meta name="description"
+    content="Alakaapuri Nidhi — Premium wealth advisory in Hyderabad. Mutual Funds, Insurance, Loans, PMS, Retirement & Goal-Based Investing by Praveen Kumar (AMFI ARN Holder)." />
+  <meta name="keywords"
+    content="Mutual Funds Hyderabad, SIP, PMS, Insurance, Home Loan, Praveen Kumar, AMFI ARN, Wealth Advisor" />
   <title>Alakaapuri Nidhi — Praveen Kumar | Premium Wealth Advisor Hyderabad</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="animations.js" defer></script>
 </head>
+
 <body>
 
   <!-- NAV -->
@@ -23,15 +30,22 @@
     <ul class="nav-links">
       <li><a href="index.html" class="active" data-testid="nav-home">Home</a></li>
       <li><a href="about/" data-testid="nav-about">About</a></li>
-      <li><a href="services/" data-testid="nav-services">Services</a></li>
-      <li><a href="calculators/">Calculator</a></li>
-      <li><a href="reviews/" data-testid="nav-testimonials">Reviews</a></li>
-      <li><a href="book/" data-testid="nav-book">Book</a></li>
-      <li><a href="insights/" data-testid="nav-insights">Insights</a></li>
-      <li><a href="cvd/" data-testid="nav-cvd">CVD Tool</a></li>
+      <li class="dropdown">
+        <a href="services/" class="dropdown-toggle" data-testid="nav-services">Services <span class="caret">▾</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="services/mutual-funds/">Mutual Funds</a></li>
+          <li><a href="services/insurance/">Insurance</a></li>
+          <li><a href="services/equity/">Equity</a></li>
+          <li><a href="services/derivatives/">Derivatives</a></li>
+        </ul>
+      </li>
+      <li><a href="calculators/" data-testid="nav-calculator">Calculator</a></li>
+      <li><a href="Options%20Indicator/" data-testid="nav-cvd">Options Indicator</a></li>
+      <li><a href="Contact/" data-testid="nav-contact">Contact</a></li>
+      <li><a href="Testimonials/" data-testid="nav-testimonials">Testimonials</a></li>
     </ul>
-    <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="nav-cta" data-testid="nav-invest-btn">Start Investing</a>
-    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('nav-open')"><i class="fa-solid fa-bars"></i></button>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('nav-open')"><i
+        class="fa-solid fa-bars"></i></button>
   </nav>
 
   <!-- HERO -->
@@ -40,7 +54,8 @@
       <div class="hero-copy">
         <span class="hero-eyebrow"><i class="fa-solid fa-award"></i> AMFI Registered · ARN‑362567</span>
         <h1>Build. Protect. <em>Grow.</em> Your Wealth — <em>The Right Way.</em></h1>
-        <p class="lead">Personalised wealth advisory for individuals, families and business owners in Hyderabad. Mutual Funds, PMS, Insurance, Loans &amp; Retirement Planning — everything under one trusted roof.</p>
+        <p class="lead">Personalised wealth advisory for individuals, families and business owners in Hyderabad. Mutual
+          Funds, PMS, Insurance, Loans &amp; Retirement Planning — everything under one trusted roof.</p>
         <div class="hero-benefits">
           <div><i class="fa-solid fa-check"></i> AMFI-registered advisor</div>
           <div><i class="fa-solid fa-check"></i> 10+ years experience</div>
@@ -48,8 +63,11 @@
           <div><i class="fa-solid fa-check"></i> 500+ happy families</div>
         </div>
         <div class="hero-cta-row">
-          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold" data-testid="hero-invest-btn"><i class="fa-solid fa-chart-line"></i> Start Investing Now</a>
-          <a href="book/" class="btn-outline-light" data-testid="hero-book-btn"><i class="fa-regular fa-calendar-check"></i> Book Free Consultation</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold"
+            data-testid="hero-invest-btn"><i class="fa-solid fa-chart-line"></i> Start Investing Now</a>
+          <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20book%20a%20free%20consultation."
+            target="_blank" class="btn-outline-light" data-testid="hero-book-btn"><i
+              class="fa-regular fa-calendar-check"></i> Book Free Consultation</a>
         </div>
       </div>
 
@@ -60,14 +78,16 @@
         <p>Tell us what you need — Praveen will get back within 24 hours.</p>
         <form id="leadForm" data-testid="lead-form">
           <input type="text" id="name" placeholder="Your Full Name" required data-testid="lead-name" />
-          <input type="tel" id="phone" placeholder="Mobile Number (10 digits)" required pattern="[0-9]{10}" data-testid="lead-phone" />
+          <input type="tel" id="phone" placeholder="Mobile Number (10 digits)" required pattern="[0-9]{10}"
+            data-testid="lead-phone" />
           <select id="section" required data-testid="lead-service">
             <option value="">Select Service</option>
           </select>
           <select id="subsection" required disabled data-testid="lead-plan">
             <option value="">Select Plan</option>
           </select>
-          <button type="submit" class="submit-btn" data-testid="lead-submit"><i class="fa-solid fa-lock"></i> Get My Free Plan</button>
+          <button type="submit" class="submit-btn" data-testid="lead-submit"><i class="fa-solid fa-lock"></i> Get My
+            Free Plan</button>
         </form>
         <p id="formResponseMsg"></p>
         <div class="form-trust"><i class="fa-solid fa-shield-halved"></i> Your data is safe. We never spam.</div>
@@ -104,7 +124,9 @@
   <!-- PROFILE / ABOUT PREVIEW -->
   <div class="profile-strip" id="about">
     <div class="profile-avatar-wrap">
-      <img class="profile-avatar" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/profilnewpic.png" alt="Praveen Kumar" />
+      <img class="profile-avatar"
+        src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/profilnewpic.png"
+        alt="Praveen Kumar" />
       <span class="profile-badge-float"><i class="fa-solid fa-certificate"></i> AMFI ARN Holder</span>
     </div>
     <div>
@@ -112,7 +134,9 @@
       <div class="profile-name">Praveen Kumar</div>
       <div class="profile-title">Derivatives Expert · AMFI ARN Holder · Wealth Advisor</div>
       <p class="profile-bio">
-        With over a decade in financial markets, Praveen Kumar has helped 500+ families build sustainable wealth through goal-based investing. As an AMFI-registered ARN holder and Derivatives Expert, he combines deep market expertise with personalised, transparent advice — so every rupee you invest works toward your specific life goals.
+        With over a decade in financial markets, Praveen Kumar has helped 500+ families build sustainable wealth through
+        goal-based investing. As an AMFI-registered ARN holder and Derivatives Expert, he combines deep market expertise
+        with personalised, transparent advice — so every rupee you invest works toward your specific life goals.
       </p>
       <div class="profile-badges">
         <span class="badge">Life &amp; Health Insurance</span>
@@ -133,13 +157,51 @@
     <div class="section-header-center">
       <span class="section-label center">What We Offer</span>
       <h2 class="section-title">A Complete Suite of <em>Wealth Solutions</em></h2>
-      <p class="section-desc">Investment, protection and credit — all managed by one advisor who knows your complete financial picture.</p>
+      <p class="section-desc">Investment, protection and credit — all managed by one advisor who knows your complete
+        financial picture.</p>
     </div>
     <div class="products-grid">
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-chart-line"></i></div><div class="product-title">Mutual Funds</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> SIP Investments</li><li><i class="fa-solid fa-diamond"></i> Lumpsum Investments</li><li><i class="fa-solid fa-diamond"></i> Equity, Hybrid &amp; Debt Funds</li><li><i class="fa-solid fa-diamond"></i> ELSS Tax Saving</li><li><i class="fa-solid fa-diamond"></i> Goal-Based Portfolios</li></ul></div>
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-arrows-turn-to-dots"></i></div><div class="product-title">Specialised Investment Funds</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Hybrid Long Short</li><li><i class="fa-solid fa-diamond"></i> Equity Long Short</li><li><i class="fa-solid fa-diamond"></i> Equity Ex-Top 100</li><li><i class="fa-solid fa-diamond"></i> Portfolio Management (PMS)</li></ul></div>
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-shield-heart"></i></div><div class="product-title">Life &amp; Health Insurance</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Term Life Insurance</li><li><i class="fa-solid fa-diamond"></i> Health Insurance</li><li><i class="fa-solid fa-diamond"></i> Family Floater Plans</li><li><i class="fa-solid fa-diamond"></i> Critical Illness Cover</li></ul></div>
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-building-columns"></i></div><div class="product-title">Loans &amp; Credit</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Personal Loans</li><li><i class="fa-solid fa-diamond"></i> Business Loans</li><li><i class="fa-solid fa-diamond"></i> Home Loans</li><li><i class="fa-solid fa-diamond"></i> Loan Against Mutual Funds</li></ul></div>
+      <div class="product-card">
+        <div class="product-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="product-title">Mutual Funds</div>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> SIP Investments</li>
+          <li><i class="fa-solid fa-diamond"></i> Lumpsum Investments</li>
+          <li><i class="fa-solid fa-diamond"></i> Equity, Hybrid &amp; Debt Funds</li>
+          <li><i class="fa-solid fa-diamond"></i> ELSS Tax Saving</li>
+          <li><i class="fa-solid fa-diamond"></i> Goal-Based Portfolios</li>
+        </ul>
+      </div>
+      <div class="product-card">
+        <div class="product-icon"><i class="fa-solid fa-arrows-turn-to-dots"></i></div>
+        <div class="product-title">Specialised Investment Funds</div>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> Hybrid Long Short</li>
+          <li><i class="fa-solid fa-diamond"></i> Equity Long Short</li>
+          <li><i class="fa-solid fa-diamond"></i> Equity Ex-Top 100</li>
+          <li><i class="fa-solid fa-diamond"></i> Portfolio Management (PMS)</li>
+        </ul>
+      </div>
+      <div class="product-card">
+        <div class="product-icon"><i class="fa-solid fa-shield-heart"></i></div>
+        <div class="product-title">Life &amp; Health Insurance</div>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> Term Life Insurance</li>
+          <li><i class="fa-solid fa-diamond"></i> Health Insurance</li>
+          <li><i class="fa-solid fa-diamond"></i> Family Floater Plans</li>
+          <li><i class="fa-solid fa-diamond"></i> Critical Illness Cover</li>
+        </ul>
+      </div>
+      <div class="product-card">
+        <div class="product-icon"><i class="fa-solid fa-building-columns"></i></div>
+        <div class="product-title">Loans &amp; Credit</div>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> Personal Loans</li>
+          <li><i class="fa-solid fa-diamond"></i> Business Loans</li>
+          <li><i class="fa-solid fa-diamond"></i> Home Loans</li>
+          <li><i class="fa-solid fa-diamond"></i> Loan Against Mutual Funds</li>
+        </ul>
+      </div>
     </div>
     <div style="text-align:center; margin-top:44px;">
       <a href="services/" class="btn-gold"><i class="fa-solid fa-layer-group"></i> View All Services</a>
@@ -153,10 +215,30 @@
       <h2 class="section-title">The <em>Alakaapuri</em> Advantage</h2>
     </div>
     <div class="why-grid">
-      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-bullseye"></i></div><div class="why-title">Goal Based Investing</div><p class="why-desc">Every recommendation is anchored to your specific financial goals — not market noise or product commissions.</p></div>
-      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-landmark"></i></div><div class="why-title">All Under One Roof</div><p class="why-desc">Investment, insurance and loans — managed by one advisor who understands your complete financial picture.</p></div>
-      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-seedling"></i></div><div class="why-title">Long-Term Focus</div><p class="why-desc">Disciplined, sustainable strategies built for real wealth creation — not short-term speculation.</p></div>
-      <div class="why-card"><div class="why-icon"><i class="fa-solid fa-handshake"></i></div><div class="why-title">Personalised Service</div><p class="why-desc">Dedicated 1‑on‑1 support with periodic portfolio reviews. You are never just a number here.</p></div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <div class="why-title">Goal Based Investing</div>
+        <p class="why-desc">Every recommendation is anchored to your specific financial goals — not market noise or
+          product commissions.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fa-solid fa-landmark"></i></div>
+        <div class="why-title">All Under One Roof</div>
+        <p class="why-desc">Investment, insurance and loans — managed by one advisor who understands your complete
+          financial picture.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fa-solid fa-seedling"></i></div>
+        <div class="why-title">Long-Term Focus</div>
+        <p class="why-desc">Disciplined, sustainable strategies built for real wealth creation — not short-term
+          speculation.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fa-solid fa-handshake"></i></div>
+        <div class="why-title">Personalised Service</div>
+        <p class="why-desc">Dedicated 1‑on‑1 support with periodic portfolio reviews. You are never just a number here.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -170,8 +252,10 @@
     <div class="testi-grid">
       <div class="testi-card">
         <div class="testi-quote">"</div>
-        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-        <p class="testi-text">Praveen sir helped me plan my daughter's education with a disciplined SIP strategy. In 6 years, my corpus has grown beyond expectations. Truly transparent and always available.</p>
+        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="testi-text">Praveen sir helped me plan my daughter's education with a disciplined SIP strategy. In 6
+          years, my corpus has grown beyond expectations. Truly transparent and always available.</p>
         <div class="testi-author">
           <div class="testi-avatar">RS</div>
           <div>
@@ -182,8 +266,10 @@
       </div>
       <div class="testi-card">
         <div class="testi-quote">"</div>
-        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-        <p class="testi-text">From term insurance to a home loan and mutual funds — everything under one advisor. Praveen explains complex products in simple terms. Zero pushy sales.</p>
+        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="testi-text">From term insurance to a home loan and mutual funds — everything under one advisor.
+          Praveen explains complex products in simple terms. Zero pushy sales.</p>
         <div class="testi-author">
           <div class="testi-avatar">SK</div>
           <div>
@@ -194,8 +280,10 @@
       </div>
       <div class="testi-card">
         <div class="testi-quote">"</div>
-        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-        <p class="testi-text">As a business owner, I needed proper retirement planning. Praveen designed a plan blending PMS + SIF + insurance. Best financial decision I made in the last 5 years.</p>
+        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="testi-text">As a business owner, I needed proper retirement planning. Praveen designed a plan blending
+          PMS + SIF + insurance. Best financial decision I made in the last 5 years.</p>
         <div class="testi-author">
           <div class="testi-avatar">MK</div>
           <div>
@@ -206,7 +294,7 @@
       </div>
     </div>
     <div style="text-align:center; margin-top:44px;">
-      <a href="reviews/" class="btn-gold"><i class="fa-solid fa-star"></i> Read All Reviews</a>
+      <a href="Testimonials/" class="btn-gold"><i class="fa-solid fa-star"></i> Read All Reviews</a>
     </div>
   </section>
 
@@ -215,7 +303,8 @@
     <div class="section-header-center">
       <span class="section-label center">Insights &amp; Blog</span>
       <h2 class="section-title">Learn to <em>Invest Smarter</em></h2>
-      <p class="section-desc">Actionable insights on SIPs, taxes, insurance and wealth-building — written in simple language.</p>
+      <p class="section-desc">Actionable insights on SIPs, taxes, insurance and wealth-building — written in simple
+        language.</p>
     </div>
     <div class="insights-grid">
       <div class="blog-card">
@@ -223,8 +312,9 @@
         <div class="blog-body">
           <div class="blog-tag">SIP · Beginner</div>
           <div class="blog-title">How ₹5,000/month SIP Can Build ₹1 Crore</div>
-          <p class="blog-excerpt">The power of compounding, explained with real numbers. See how a small monthly SIP grows into a life-changing corpus over 20 years.</p>
-          <div class="blog-meta"><span>5 min read</span><a href="book/">Read on WhatsApp →</a></div>
+          <p class="blog-excerpt">The power of compounding, explained with real numbers. See how a small monthly SIP
+            grows into a life-changing corpus over 20 years.</p>
+          <div class="blog-meta"><span>5 min read</span><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20SIP%20investing." target="_blank">Read on WhatsApp →</a></div>
         </div>
       </div>
       <div class="blog-card">
@@ -232,8 +322,9 @@
         <div class="blog-body">
           <div class="blog-tag">Insurance · Essential</div>
           <div class="blog-title">Term Insurance: How Much Cover Do You Actually Need?</div>
-          <p class="blog-excerpt">The 15x rule, HLV calculation and common mistakes — everything about buying the right term plan for your family.</p>
-          <div class="blog-meta"><span>4 min read</span><a href="book/">Read on WhatsApp →</a></div>
+          <p class="blog-excerpt">The 15x rule, HLV calculation and common mistakes — everything about buying the right
+            term plan for your family.</p>
+          <div class="blog-meta"><span>4 min read</span><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20term%20insurance." target="_blank">Read on WhatsApp →</a></div>
         </div>
       </div>
       <div class="blog-card">
@@ -241,8 +332,9 @@
         <div class="blog-body">
           <div class="blog-tag">Tax · Save More</div>
           <div class="blog-title">Top 5 ELSS Funds to Save Tax in FY 2025-26</div>
-          <p class="blog-excerpt">Save up to ₹46,800 in taxes while growing your wealth. A curated shortlist of best-performing ELSS mutual funds.</p>
-          <div class="blog-meta"><span>6 min read</span><a href="book/">Read on WhatsApp →</a></div>
+          <p class="blog-excerpt">Save up to ₹46,800 in taxes while growing your wealth. A curated shortlist of
+            best-performing ELSS mutual funds.</p>
+          <div class="blog-meta"><span>6 min read</span><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20ELSS%20tax%20saving." target="_blank">Read on WhatsApp →</a></div>
         </div>
       </div>
     </div>
@@ -255,22 +347,27 @@
   <div class="cta-section">
     <span class="section-label center">Ready to Begin?</span>
     <h2 class="section-title">Your Wealth Journey <em>Starts Today</em></h2>
-    <p class="section-desc">Talk to Praveen Kumar — get a personalised plan tailored to your goals, income and life stage.</p>
+    <p class="section-desc">Talk to Praveen Kumar — get a personalised plan tailored to your goals, income and life
+      stage.</p>
     <div class="cta-btn-row">
-      <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold" data-testid="cta-invest"><i class="fa-solid fa-chart-line"></i> Start Investing Online</a>
-      <a href="https://wa.me/919440581363?text=Hello%20Alakapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" class="btn-outline-light" data-testid="cta-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
-      <a href="book/" class="btn-outline-light"><i class="fa-regular fa-calendar-check"></i> Book Consultation</a>
+      <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold" data-testid="cta-invest"><i
+          class="fa-solid fa-chart-line"></i> Start Investing Online</a>
+      <a href="https://wa.me/919440581363?text=Hello%20Alakapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+        target="_blank" class="btn-outline-light" data-testid="cta-whatsapp"><i class="fa-brands fa-whatsapp"></i>
+        WhatsApp Us</a>
+      <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" class="btn-outline-light"><i class="fa-regular fa-calendar-check"></i> Book Consultation</a>
     </div>
   </div>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7688443169764345"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="site-footer" id="contact">
     <div class="footer-grid">
       <div>
         <div class="footer-logo">ALAKAAPURI NIDHI</div>
         <div class="footer-tag">Wealth Expert · Hyderabad</div>
-        <p class="footer-about">A trusted wealth advisory offering mutual funds, insurance, loans and financial planning — led by Praveen Kumar, AMFI ARN Holder (ARN‑362567).</p>
+        <p class="footer-about">A trusted wealth advisory offering mutual funds, insurance, loans and financial planning
+          — led by Praveen Kumar, AMFI ARN Holder (ARN‑362567).</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
@@ -279,9 +376,9 @@
           <li><a href="about/">About</a></li>
           <li><a href="services/">Services</a></li>
           <li><a href="calculators/">Calculator</a></li>
-          <li><a href="reviews/">Reviews</a></li>
+          <li><a href="Testimonials/">Testimonials</a></li>
           <li><a href="insights/">Insights</a></li>
-          <li><a href="cvd/">CVD Tool</a></li>
+          <li><a href="Options%20Indicator/">Options Indicator</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -297,13 +394,16 @@
       <div class="footer-col">
         <h4>Get in Touch</h4>
         <ul>
-          <li><a href="tel:+919440581363">+91 94405 81363</a></li>
-          <li><a href="mailto:alakaapuri@tanidhi.com">alakaapuri@tanidhi.com</a></li>
-          <li><a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank">Invest Online</a></li>
-          <li><a href="book/">Book Consultation</a></li>
+          <li><a href="tel:+919440581363"><i class="fa-solid fa-phone"></i> +91 94405 81363</a></li>
+          <li><a href="mailto:alakaapuri@tanidhi.com"><i class="fa-solid fa-envelope"></i> alakaapuri@tanidhi.com</a>
+          </li>
+          <li><a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i> Invest Online</a></li>
+          <li><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank"><i class="fa-solid fa-calendar"></i> Book Consultation</a></li>
         </ul>
         <div class="footer-social" style="margin-top:14px;">
-          <a href="https://wa.me/919440581363" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://wa.me/919440581363" target="_blank" aria-label="WhatsApp"><i
+              class="fa-brands fa-whatsapp"></i></a>
           <a href="mailto:alakaapuri@tanidhi.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
           <a href="tel:+919440581363" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
         </div>
@@ -313,43 +413,52 @@
       <div>© <span id="year">2026</span> Alakaapuri Nidhi. All rights reserved. · ARN‑362567</div>
       <div>Hyderabad, Telangana · India</div>
     </div>
-    <p class="disclaimer">Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. Insurance is a subject matter of solicitation.</p>
+    <p class="disclaimer">Mutual Fund investments are subject to market risks. Please read all scheme-related documents
+      carefully before investing. Past performance is not indicative of future returns. Insurance is a subject matter of
+      solicitation.</p>
   </footer>
 
   <!-- FLOATING PROMO AD -->
   <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="fab-promo-ad" data-testid="fab-promo-ad">
     <div class="hidden-mob">
-      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png" alt="Open a Mutual Fund Account" />
+      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png"
+        alt="Open a Mutual Fund Account" />
     </div>
     <div class="hidden-desk">
-      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png" alt="Open a Mutual Fund Account" />
+      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png"
+        alt="Open a Mutual Fund Account" />
     </div>
   </a>
 
   <!-- MOBILE STICKY BAR -->
   <div class="mobile-sticky">
     <a href="tel:+919440581363" class="call" data-testid="mobile-call"><i class="fa-solid fa-phone"></i> Call</a>
-    <a href="https://wa.me/919440581363?text=Hello%20Alakapuri%20Nidhi" target="_blank" class="wa" data-testid="mobile-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-    <a href="book/" class="book" data-testid="mobile-book"><i class="fa-solid fa-calendar-check"></i> Book</a>
+    <a href="https://wa.me/919440581363?text=Hello%20Alakapuri%20Nidhi" target="_blank" class="wa"
+      data-testid="mobile-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
   </div>
 
   <!-- EXIT-INTENT MODAL -->
   <div class="modal-overlay" id="exitModal" data-testid="exit-modal">
     <div class="modal-card">
-      <button class="modal-close" onclick="closeExitModal()" data-testid="exit-close"><i class="fa-solid fa-xmark"></i></button>
+      <button class="modal-close" onclick="closeExitModal()" data-testid="exit-close"><i
+          class="fa-solid fa-xmark"></i></button>
       <div id="exitFormView">
         <span class="modal-badge"><i class="fa-solid fa-gift"></i> Free Offer · Today Only</span>
         <h3>Wait! Get a FREE Financial Health Check</h3>
-        <p>Get a personalised 20-minute portfolio review with Praveen Kumar — completely free. Discover hidden gaps in your investments &amp; insurance.</p>
+        <p>Get a personalised 20-minute portfolio review with Praveen Kumar — completely free. Discover hidden gaps in
+          your investments &amp; insurance.</p>
         <div class="modal-perks">
           <div><i class="fa-solid fa-check"></i> Portfolio &amp; SIP review</div>
           <div><i class="fa-solid fa-check"></i> Tax-saving suggestions</div>
           <div><i class="fa-solid fa-check"></i> Insurance gap analysis</div>
         </div>
         <input type="text" id="exitName" placeholder="Your Name" required data-testid="exit-name" />
-        <input type="tel" id="exitPhone" placeholder="Mobile Number (10 digits)" required pattern="[0-9]{10}" data-testid="exit-phone" />
-        <button class="btn-gold" style="width:100%; justify-content:center;" onclick="submitExitForm()" data-testid="exit-submit"><i class="fa-solid fa-gift"></i> Claim My Free Review</button>
-        <p style="font-size:11.5px; color:var(--text-faint); text-align:center; margin-top:12px;"><i class="fa-solid fa-shield-halved"></i> 100% confidential · No spam</p>
+        <input type="tel" id="exitPhone" placeholder="Mobile Number (10 digits)" required pattern="[0-9]{10}"
+          data-testid="exit-phone" />
+        <button class="btn-gold" style="width:100%; justify-content:center;" onclick="submitExitForm()"
+          data-testid="exit-submit"><i class="fa-solid fa-gift"></i> Claim My Free Review</button>
+        <p style="font-size:11.5px; color:var(--text-faint); text-align:center; margin-top:12px;"><i
+            class="fa-solid fa-shield-halved"></i> 100% confidential · No spam</p>
       </div>
       <div id="exitSuccessView" class="success-view" style="display:none;">
         <div class="success-tick"><i class="fa-solid fa-check"></i></div>
@@ -430,24 +539,6 @@
       populateSubsection("");
     });
 
-    // ==== TRUST COUNTER ANIMATION ====
-    const counters = document.querySelectorAll('.trust-num');
-    const animate = (el) => {
-      const target = parseFloat(el.dataset.count);
-      const decimals = parseInt(el.dataset.decimals || "0");
-      const suffix = el.dataset.suffix || (decimals ? "" : "+");
-      let cur = 0;
-      const step = target / 60;
-      const t = setInterval(() => {
-        cur += step;
-        if (cur >= target) { cur = target; clearInterval(t); }
-        el.textContent = decimals ? cur.toFixed(decimals) : Math.floor(cur).toLocaleString() + (suffix || "");
-      }, 22);
-    };
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { animate(e.target); io.unobserve(e.target); } });
-    }, { threshold: 0.4 });
-    counters.forEach(c => io.observe(c));
 
     // ==== EXIT-INTENT ====
     let exitShown = sessionStorage.getItem('exitShown') === '1';
@@ -497,13 +588,14 @@
     window.submitExitForm = submitExitForm;
   </script>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K63FNJCYNJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K63FNJCYNJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-K63FNJCYNJ');
-</script>
+    gtag('config', 'G-K63FNJCYNJ');
+  </script>
 </body>
+
 </html>

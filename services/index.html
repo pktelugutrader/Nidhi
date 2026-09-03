@@ -1,56 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Services of PK Alakaapuri Nidhi — Mutual Funds, SIP, PMS, Insurance, Loans, Fixed Income and Financial Planning in Hyderabad." />
-  <title>Services — PK Alakaapuri Nidhi | Wealth Management Hyderabad</title>
+  <meta name="description"
+    content="Services of Alakaapuri Nidhi — Mutual Funds, SIP, PMS, Insurance, Loans, Fixed Income and Financial Planning in Hyderabad." />
+  <title>Services — Alakaapuri Nidhi | Wealth Management Hyderabad</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="../styles.css" />
+  <script src="../animations.js" defer></script>
 </head>
+
 <body>
 
   <!-- NAV -->
   <nav class="top-nav" id="topNav">
     <a href="../index.html" class="nav-logo" style="text-decoration:none;">
-      PK Alakaapuri Nidhi
+      Alakaapuri Nidhi
       <span>Praveen Kumar · Wealth Expert</span>
     </a>
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="../about/">About</a></li>
-      <li><a href="../services/" class="active">Services</a></li>
+      <li class="dropdown">
+        <a href="../services/" class="dropdown-toggle active">Services <span class="caret">▾</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="mutual-funds/">Mutual Funds</a></li>
+          <li><a href="insurance/">Insurance</a></li>
+          <li><a href="equity/">Equity</a></li>
+          <li><a href="derivatives/">Derivatives</a></li>
+        </ul>
+      </li>
       <li><a href="../calculators/">Calculator</a></li>
-      <li><a href="../reviews/">Reviews</a></li>
-      <li><a href="../book/">Book</a></li>
-      <li><a href="../insights/">Insights</a></li>
-      <li><a href="../cvd/">CVD Tool</a></li>
+      <li><a href="../Options%20Indicator/">Options Indicator</a></li>
+      <li><a href="../Contact/">Contact</a></li>
+      <li><a href="../Testimonials/">Testimonials</a></li>
     </ul>
-    <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="nav-cta">Start Investing</a>
-    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('nav-open')"><i class="fa-solid fa-bars"></i></button>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('nav-open')"><i
+        class="fa-solid fa-bars"></i></button>
   </nav>
 
   <!-- PAGE HERO -->
   <header class="page-hero">
     <span class="section-label center">What We Offer</span>
     <h2 class="section-title">A Complete Suite of <em>Wealth Solutions</em></h2>
-    <p class="section-desc">Investment, protection and credit — all managed by one advisor who knows your complete financial picture.</p>
+    <p class="section-desc">Investment, protection and credit — all managed by one advisor who knows your complete
+      financial picture.</p>
   </header>
 
   <!-- SERVICES GRID -->
   <section class="section-block services-section" id="services">
     <div class="products-grid">
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-chart-line"></i></div><div class="product-title">Mutual Funds</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> SIP Investments</li><li><i class="fa-solid fa-diamond"></i> Lumpsum Investments</li><li><i class="fa-solid fa-diamond"></i> Equity, Hybrid &amp; Debt Funds</li><li><i class="fa-solid fa-diamond"></i> ELSS Tax Saving</li><li><i class="fa-solid fa-diamond"></i> Goal-Based Portfolios</li></ul></div>
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-arrows-turn-to-dots"></i></div><div class="product-title">Specialised Investment Funds</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Hybrid Long Short</li><li><i class="fa-solid fa-diamond"></i> Equity Long Short</li><li><i class="fa-solid fa-diamond"></i> Equity Ex-Top 100</li><li><i class="fa-solid fa-diamond"></i> Portfolio Management (PMS)</li></ul></div>
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-shield-heart"></i></div><div class="product-title">Life &amp; Health Insurance</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Term Life Insurance</li><li><i class="fa-solid fa-diamond"></i> Health Insurance</li><li><i class="fa-solid fa-diamond"></i> Family Floater Plans</li><li><i class="fa-solid fa-diamond"></i> Critical Illness Cover</li></ul></div>
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-car-side"></i></div><div class="product-title">Motor Insurance</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Bike Insurance</li><li><i class="fa-solid fa-diamond"></i> Car Insurance</li><li><i class="fa-solid fa-diamond"></i> Commercial Vehicle</li></ul></div>
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-building-columns"></i></div><div class="product-title">Loans &amp; Credit</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Personal Loans</li><li><i class="fa-solid fa-diamond"></i> Business Loans</li><li><i class="fa-solid fa-diamond"></i> Home Loans</li><li><i class="fa-solid fa-diamond"></i> Loan Against Mutual Funds</li></ul></div>
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-piggy-bank"></i></div><div class="product-title">Fixed Income Solutions</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Fixed Deposits (FDs)</li><li><i class="fa-solid fa-diamond"></i> Government Bonds</li><li><i class="fa-solid fa-diamond"></i> Monthly Income Plans</li></ul></div>
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-coins"></i></div><div class="product-title">Alternative Investments</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Gold Funds</li><li><i class="fa-solid fa-diamond"></i> Multi Asset Funds</li><li><i class="fa-solid fa-diamond"></i> Sector &amp; Thematic</li></ul></div>
-      <div class="product-card"><div class="product-icon"><i class="fa-solid fa-map-location-dot"></i></div><div class="product-title">Financial Planning</div><ul class="product-list"><li><i class="fa-solid fa-diamond"></i> Retirement Planning</li><li><i class="fa-solid fa-diamond"></i> Child Education Planning</li><li><i class="fa-solid fa-diamond"></i> Tax-Efficient Investing</li><li><i class="fa-solid fa-diamond"></i> Portfolio Review</li></ul></div>
+      <div class="product-card" id="mutual-funds">
+        <div class="product-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="product-title">Mutual Funds</div>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> SIP Investments</li>
+          <li><i class="fa-solid fa-diamond"></i> Lumpsum Investments</li>
+          <li><i class="fa-solid fa-diamond"></i> Equity, Hybrid &amp; Debt Funds</li>
+          <li><i class="fa-solid fa-diamond"></i> ELSS Tax Saving</li>
+          <li><i class="fa-solid fa-diamond"></i> Goal-Based Portfolios</li>
+        </ul>
+        <div style="margin-top:16px;"><a href="mutual-funds/" class="btn-gold" style="font-size:12px; padding:7px 18px; display:inline-block;"><i class="fa-solid fa-arrow-right"></i> Explore Mutual Funds</a></div>
+      </div>
+      <div class="product-card" id="equity">
+        <div class="product-icon"><i class="fa-solid fa-arrows-turn-to-dots"></i></div>
+        <div class="product-title">Specialised Investment Funds &amp; Equity</div>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> Hybrid Long Short</li>
+          <li><i class="fa-solid fa-diamond"></i> Equity Long Short</li>
+          <li><i class="fa-solid fa-diamond"></i> Equity Ex-Top 100</li>
+          <li><i class="fa-solid fa-diamond"></i> Portfolio Management (PMS)</li>
+        </ul>
+        <div style="margin-top:16px;"><a href="equity/" class="btn-gold" style="font-size:12px; padding:7px 18px; display:inline-block;"><i class="fa-solid fa-arrow-right"></i> Explore Equity &amp; PMS</a></div>
+      </div>
+      <div class="product-card" id="insurance">
+        <div class="product-icon"><i class="fa-solid fa-shield-heart"></i></div>
+        <div class="product-title">Life &amp; Health Insurance</div>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> Term Life Insurance</li>
+          <li><i class="fa-solid fa-diamond"></i> Health Insurance</li>
+          <li><i class="fa-solid fa-diamond"></i> Family Floater Plans</li>
+          <li><i class="fa-solid fa-diamond"></i> Critical Illness Cover</li>
+        </ul>
+        <div style="margin-top:16px;"><a href="insurance/" class="btn-gold" style="font-size:12px; padding:7px 18px; display:inline-block;"><i class="fa-solid fa-arrow-right"></i> Explore Insurance</a></div>
+      </div>
+      <div class="product-card" id="derivatives">
+        <div class="product-icon"><i class="fa-solid fa-chart-candlestick"></i></div>
+        <div class="product-title">Derivatives &amp; Hedging</div>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> Futures &amp; Options Strategies</li>
+          <li><i class="fa-solid fa-diamond"></i> Portfolio Hedging Strategies</li>
+          <li><i class="fa-solid fa-diamond"></i> Cumulative Volume Delta (CVD)</li>
+          <li><i class="fa-solid fa-diamond"></i> Risk-Defined Option Spreads</li>
+          <li><i class="fa-solid fa-diamond"></i> Volatility Analysis</li>
+        </ul>
+        <div style="margin-top:16px;"><a href="derivatives/" class="btn-gold" style="font-size:12px; padding:7px 18px; display:inline-block;"><i class="fa-solid fa-arrow-right"></i> Explore Derivatives</a></div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon"><i class="fa-solid fa-car-side"></i></div>
+        <div class="product-title">Motor Insurance</div>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> Bike Insurance</li>
+          <li><i class="fa-solid fa-diamond"></i> Car Insurance</li>
+          <li><i class="fa-solid fa-diamond"></i> Commercial Vehicle</li>
+        </ul>
+      </div>
+      <div class="product-card">
+        <div class="product-icon"><i class="fa-solid fa-building-columns"></i></div>
+        <div class="product-title">Loans &amp; Credit</div>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> Personal Loans</li>
+          <li><i class="fa-solid fa-diamond"></i> Business Loans</li>
+          <li><i class="fa-solid fa-diamond"></i> Home Loans</li>
+          <li><i class="fa-solid fa-diamond"></i> Loan Against Mutual Funds</li>
+        </ul>
+      </div>
+      <div class="product-card">
+        <div class="product-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+        <div class="product-title">Fixed Income Solutions</div>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> Fixed Deposits (FDs)</li>
+          <li><i class="fa-solid fa-diamond"></i> Government Bonds</li>
+          <li><i class="fa-solid fa-diamond"></i> Monthly Income Plans</li>
+        </ul>
+      </div>
+      <div class="product-card">
+        <div class="product-icon"><i class="fa-solid fa-coins"></i></div>
+        <div class="product-title">Alternative Investments</div>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> Gold Funds</li>
+          <li><i class="fa-solid fa-diamond"></i> Multi Asset Funds</li>
+          <li><i class="fa-solid fa-diamond"></i> Sector &amp; Thematic</li>
+        </ul>
+      </div>
+      <div class="product-card">
+        <div class="product-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+        <div class="product-title">Financial Planning</div>
+        <ul class="product-list">
+          <li><i class="fa-solid fa-diamond"></i> Retirement Planning</li>
+          <li><i class="fa-solid fa-diamond"></i> Child Education Planning</li>
+          <li><i class="fa-solid fa-diamond"></i> Tax-Efficient Investing</li>
+          <li><i class="fa-solid fa-diamond"></i> Portfolio Review</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -58,20 +157,23 @@
   <div class="cta-section">
     <span class="section-label center">Ready to Begin?</span>
     <h2 class="section-title">Your Wealth Journey <em>Starts Today</em></h2>
-    <p class="section-desc">Talk to Praveen Kumar — get a personalised plan tailored to your goals, income and life stage.</p>
+    <p class="section-desc">Talk to Praveen Kumar — get a personalised plan tailored to your goals, income and life
+      stage.</p>
     <div class="cta-btn-row">
-      <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold"><i class="fa-solid fa-chart-line"></i> Start Investing Online</a>
-      <a href="../book/" class="btn-outline-light"><i class="fa-regular fa-calendar-check"></i> Book Consultation</a>
+      <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold"><i
+          class="fa-solid fa-chart-line"></i> Start Investing Online</a>
+      <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" class="btn-outline-light"><i class="fa-regular fa-calendar-check"></i> Book Consultation</a>
     </div>
   </div>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="site-footer" id="contact">
     <div class="footer-grid">
       <div>
-        <div class="footer-logo">PK ALAKAAPURI NIDHI</div>
+        <div class="footer-logo">ALAKAAPURI NIDHI</div>
         <div class="footer-tag">Wealth Expert · Hyderabad</div>
-        <p class="footer-about">A trusted wealth advisory offering mutual funds, insurance, loans and financial planning — led by Praveen Kumar, AMFI ARN Holder (ARN‑362567).</p>
+        <p class="footer-about">A trusted wealth advisory offering mutual funds, insurance, loans and financial planning
+          — led by Praveen Kumar, AMFI ARN Holder (ARN‑362567).</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
@@ -80,9 +182,9 @@
           <li><a href="../about/">About</a></li>
           <li><a href="../services/">Services</a></li>
           <li><a href="../calculators/">Calculator</a></li>
-          <li><a href="../reviews/">Reviews</a></li>
+          <li><a href="../Testimonials/">Testimonials</a></li>
           <li><a href="../insights/">Insights</a></li>
-          <li><a href="../cvd/">CVD Tool</a></li>
+          <li><a href="../Options%20Indicator/">Options Indicator</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -101,37 +203,42 @@
           <li><a href="tel:+919440581363">+91 94405 81363</a></li>
           <li><a href="mailto:alakaapuri@tanidhi.com">alakaapuri@tanidhi.com</a></li>
           <li><a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank">Invest Online</a></li>
-          <li><a href="../book/">Book Consultation</a></li>
+          <li><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank">Book Consultation</a></li>
         </ul>
         <div class="footer-social" style="margin-top:14px;">
-          <a href="https://wa.me/919440581363" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://wa.me/919440581363" target="_blank" aria-label="WhatsApp"><i
+              class="fa-brands fa-whatsapp"></i></a>
           <a href="mailto:alakaapuri@tanidhi.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
           <a href="tel:+919440581363" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© <span id="year">2026</span> PK Alakaapuri Nidhi. All rights reserved. · ARN‑362567</div>
+      <div>© <span id="year">2026</span> Alakaapuri Nidhi. All rights reserved. · ARN‑362567</div>
       <div>Hyderabad, Telangana · India</div>
     </div>
-    <p class="disclaimer">Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. Insurance is a subject matter of solicitation.</p>
+    <p class="disclaimer">Mutual Fund investments are subject to market risks. Please read all scheme-related documents
+      carefully before investing. Past performance is not indicative of future returns. Insurance is a subject matter of
+      solicitation.</p>
   </footer>
 
   <!-- FLOATING PROMO AD -->
   <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="fab-promo-ad">
     <div class="hidden-mob">
-      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png" alt="Open a Mutual Fund Account" />
+      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png"
+        alt="Open a Mutual Fund Account" />
     </div>
     <div class="hidden-desk">
-      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png" alt="Open a Mutual Fund Account" />
+      <img class="sticky" src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/lead.png"
+        alt="Open a Mutual Fund Account" />
     </div>
   </a>
 
   <!-- MOBILE STICKY BAR -->
   <div class="mobile-sticky">
     <a href="tel:+919440581363" class="call"><i class="fa-solid fa-phone"></i> Call</a>
-    <a href="https://wa.me/919440581363?text=Hello%20PK%20Alakapuri%20Nidhi" target="_blank" class="wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-    <a href="../book/" class="book"><i class="fa-solid fa-calendar-check"></i> Book</a>
+    <a href="https://wa.me/919440581363?text=Hello%20PK%20Alakapuri%20Nidhi" target="_blank" class="wa"><i
+        class="fa-brands fa-whatsapp"></i> WhatsApp</a>
   </div>
 
   <script>
@@ -148,4 +255,5 @@
     });
   </script>
 </body>
+
 </html>
