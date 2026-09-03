@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
   <script src="animations.js" defer></script>
+  <script src="three.min.js"></script>
+  <script src="three-globe-orbit.js" defer></script>
 </head>
 
 <body>
@@ -48,8 +50,32 @@
         class="fa-solid fa-bars"></i></button>
   </nav>
 
+  <!-- 3D INTERACTIVE WEALTH UNIVERSE (HERO) -->
+  <section class="globe-universe-section" id="home">
+    <div class="section-header-center" style="margin-bottom: 24px;">
+      <span class="section-label center"><i class="fa-solid fa-earth-americas"></i> Interactive 3D Ecosystem</span>
+      <h2 class="section-title">Explore Our <em>3D Wealth Universe</em></h2>
+    </div>
+
+    <!-- 3D Stage & Floating HUD Card -->
+    <div class="globe-stage-wrapper">
+      <div id="globe3dContainer" class="globe-canvas-box" title="Drag horizontally to orbit"></div>
+
+      <!-- Real-time Active Service HUD Card -->
+      <div class="globe-hud-card" id="globeHudCard">
+        <span class="globe-hud-badge" id="globeHudBadge">Wealth Compounding</span>
+        <h3 class="globe-hud-title" id="globeHudTitle">Mutual Funds</h3>
+        <p class="globe-hud-desc" id="globeHudDesc">Goal-based SIPs, lumpsum equity funds, and ELSS tax-saving portfolios with AMFI ARN-362567 advisory.</p>
+        <div class="globe-hud-action">
+          <a href="services/mutual-funds/" class="btn-gold" id="globeHudLink"><i class="fa-solid fa-arrow-right"></i> Explore Service Page</a>
+        </div>
+        <div class="globe-hud-hint"><i class="fa-solid fa-computer-mouse"></i> Scroll down or drag to orbit</div>
+      </div>
+    </div>
+  </section>
+
   <!-- HERO -->
-  <header class="hero" id="home">
+  <header class="hero" id="overview">
     <div class="hero-inner">
       <div class="hero-copy">
         <span class="hero-eyebrow"><i class="fa-solid fa-award"></i> AMFI Registered · ARN‑362567</span>
@@ -125,8 +151,8 @@
   <div class="profile-strip" id="about">
     <div class="profile-avatar-wrap">
       <img class="profile-avatar"
-        src="https://raw.githubusercontent.com/pktelugutrader/Nidhi/refs/heads/main/profilnewpic.png"
-        alt="Praveen Kumar" />
+        src="profilnewpic.png"
+        alt="Praveen Kumar · Alakaapuri Nidhi" />
       <span class="profile-badge-float"><i class="fa-solid fa-certificate"></i> AMFI ARN Holder</span>
     </div>
     <div>
