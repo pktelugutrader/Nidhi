@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Alakaapuri Nidhi — Realistic 3D Wealth Journey | Start. Invest. Build.</title>
+  <meta name="description" content="A cinematic, realistic 3D financial wealth journey. Follow the real story of disciplined equity investing, overcoming market volatility, and achieving lifelong financial goals with Alakaapuri Nidhi." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Premium Brand Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="journey-3d.css" />
+</head>
+<body class="wealth-journey-body">
+
+  <!-- Cinematic Loader -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-content">
+      <div class="loader-emblem">
+        <div class="crest-ring"></div>
+        <div class="crest-inner">
+          <img src="main-logo.png" alt="Alakaapuri Nidhi Logo" class="loader-logo-img" />
+        </div>
+      </div>
+      <div class="loader-title">
+        <img src="brand-name-white.png" alt="ALAKAAPURI NIDHI" class="loader-brand-img" />
+      </div>
+      <p class="loader-subtitle">Loading Realistic 3D Wealth Experience...</p>
+      <div class="loader-bar-wrap">
+        <div id="loader-bar" class="loader-bar"></div>
+      </div>
+      <span class="loader-hint">Start Investing · Stay Disciplined · Build Your Wealth</span>
+    </div>
+  </div>
+
+  <!-- Ambient Sound Control -->
+  <div class="audio-control" id="audioToggle" title="Toggle Ambient Audio Experience">
+    <div class="sound-bars" id="soundBars">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <span class="audio-label">AUDIO: <b id="audioStatus">OFF</b></span>
+  </div>
+
+  <!-- Top Luxury Glass Navigation -->
+  <header class="luxury-nav">
+    <a href="index.html" class="brand-badge">
+      <div class="brand-crest">
+        <img src="main-logo.png" alt="Alakaapuri Nidhi Logo" class="brand-badge-logo-img" />
+      </div>
+      <div class="brand-text">
+        <img src="brand-name-white.png" alt="ALAKAAPURI NIDHI" class="brand-badge-brand-img" />
+        <span class="brand-tag">WEALTH CREATION · ADVISORY</span>
+      </div>
+    </a>
+
+    <div class="nav-center-pill">
+      <span class="pulse-dot"></span>
+      <span class="pill-text" id="navSceneTitle">SCENE 01 · THE DECISION TO INVEST</span>
+    </div>
+
+    <div class="nav-right-actions">
+      <a href="index.html" class="nav-btn ghost-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Main Website</span>
+      </a>
+      <a href="Contact/" class="nav-btn gold-btn">
+        <i class="fa-solid fa-user-tie"></i>
+        <span>Talk to Advisor</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- WebGL 3D Canvas Viewport -->
+  <div id="webgl-container" class="webgl-canvas-container"></div>
+
+  <!-- Interactive 3D Orbit & Mouse Tilt Hint -->
+  <div class="interactive-hint" id="interactiveHint">
+    <i class="fa-solid fa-compass"></i>
+    <span>Move cursor to inspect 3D scene &bull; Scroll to travel through 25-year financial journey</span>
+  </div>
+
+  <!-- Right-Side Floating Journey Progress Rail (14 Chapters) -->
+  <aside class="journey-rail" aria-label="14-Stage Wealth Journey Rail">
+    <div class="rail-header">
+      <span class="rail-title">WEALTH JOURNEY</span>
+      <span class="rail-counter" id="railCounter">01 / 14</span>
+    </div>
+    <div class="rail-track">
+      <div class="rail-fill" id="railFill"></div>
+      <button class="rail-step active" data-step="0" title="Scene 1: The Decision to Invest">
+        <span class="step-num">01</span>
+        <span class="step-label">Decision</span>
+        <span class="step-dot"></span>
+      </button>
+      <button class="rail-step" data-step="1" title="Scene 2: Proper Guidance">
+        <span class="step-num">02</span>
+        <span class="step-label">Guidance</span>
+        <span class="step-dot"></span>
+      </button>
+      <button class="rail-step" data-step="2" title="Scene 3: Start Investing">
+        <span class="step-num">03</span>
+        <span class="step-label">First Step</span>
+        <span class="step-dot"></span>
+      </button>
+      <button class="rail-step" data-step="3" title="Scene 4: Disciplined Investing">
+        <span class="step-num">04</span>
+        <span class="step-label">Discipline</span>
+        <span class="step-dot"></span>
+      </button>
+      <button class="rail-step" data-step="4" title="Scene 5: Market Ups & Downs">
+        <span class="step-num">05</span>
+        <span class="step-label">Cycles</span>
+        <span class="step-dot"></span>
+      </button>
+      <button class="rail-step" data-step="5" title="Scene 6: Wealth Growth">
+        <span class="step-num">06</span>
+        <span class="step-label">Growth</span>
+        <span class="step-dot"></span>
+      </button>
+      <button class="rail-step" data-step="6" title="Scene 7: Beating Inflation">
+        <span class="step-num">07</span>
+        <span class="step-label">Inflation</span>
+        <span class="step-dot"></span>
+      </button>
+      <button class="rail-step" data-step="7" title="Scene 8: Child's Education">
+        <span class="step-num">08</span>
+        <span class="step-label">Education</span>
+        <span class="step-dot"></span>
+      </button>
+      <button class="rail-step" data-step="8" title="Scene 9: Child's Marriage">
+        <span class="step-num">09</span>
+        <span class="step-label">Milestones</span>
+        <span class="step-dot"></span>
+      </button>
+      <button class="rail-step" data-step="9" title="Scene 10: Home & Wealth">
+        <span class="step-num">10</span>
+        <span class="step-label">Home</span>
+        <span class="step-dot"></span>
+      </button>
+      <button class="rail-step" data-step="10" title="Scene 11: Retirement">
+        <span class="step-num">11</span>
+        <span class="step-label">Retirement</span>
+        <span class="step-dot"></span>
+      </button>
+      <button class="rail-step" data-step="11" title="Scene 12: Every Goal Needs A Plan">
+        <span class="step-num">12</span>
+        <span class="step-label">Goal Matrix</span>
+        <span class="step-dot"></span>
+      </button>
+      <button class="rail-step" data-step="12" title="Scene 13: Role of Guidance">
+        <span class="step-num">13</span>
+        <span class="step-label">Rebalancing</span>
+        <span class="step-dot"></span>
+      </button>
+      <button class="rail-step" data-step="13" title="Scene 14: The Wealth Journey">
+        <span class="step-num">14</span>
+        <span class="step-label">Freedom</span>
+        <span class="step-dot"></span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Bottom Scroll Indicator -->
+  <div class="scroll-cue" id="scrollCue">
+    <div class="mouse-icon">
+      <div class="mouse-wheel"></div>
+    </div>
+    <span class="cue-text">SCROLL TO EXPERIENCE</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+
+  <!-- 14 Realistic Storytelling Overlay Stage Cards -->
+  <main class="story-overlay-container" id="storyOverlayContainer">
+
+    <!-- SCENE 1 — THE DECISION TO INVEST -->
+    <section class="story-section scene-1 active" id="scene-1" data-scene="0">
+      <div class="story-card glass-panel left-aligned scene1-card">
+        <div class="card-badge">
+          <span class="badge-icon"><i class="fa-solid fa-laptop"></i></span>
+          <span class="badge-text">SCENE 01 &bull; EARLY CAREER DECISION</span>
+        </div>
+        <h1 class="card-title">
+          Your Financial Future Starts With <span class="gold-gradient">A Decision.</span>
+        </h1>
+        <p class="card-subtitle-lead">
+          Start investing for the future you want to build.
+        </p>
+
+        <!-- Realistic Laptop Dashboard Simulation -->
+        <div class="screen-simulation-box">
+          <div class="sim-header">
+            <div class="sim-dots"><span></span><span></span><span></span></div>
+            <span class="sim-title">Equity Portfolio Console &bull; Live Preview</span>
+            <span class="sim-tag-zero">Account Inactive</span>
+          </div>
+          <div class="sim-body">
+            <div class="sim-metric-row">
+              <div class="sim-metric">
+                <span class="sim-lbl">Portfolio Value</span>
+                <span class="sim-val zero-val">₹0.00</span>
+              </div>
+              <div class="sim-metric">
+                <span class="sim-lbl">Monthly SIP</span>
+                <span class="sim-val">₹0</span>
+              </div>
+              <div class="sim-metric">
+                <span class="sim-lbl">Asset Allocation</span>
+                <span class="sim-val">Unallocated</span>
+              </div>
+            </div>
+            <p class="sim-note">
+              An evening at home. Thoughtful about career, family aspirations, buying a future home, and long-term security. The camera moves toward the screen—where everything begins.
+            </p>
+          </div>
+        </div>
+
+        <div class="life-aspirations-list">
+          <span class="asp-pill"><i class="fa-solid fa-user-tie"></i> Career Growth</span>
+          <span class="asp-pill"><i class="fa-solid fa-house"></i> Future Home</span>
+          <span class="asp-pill"><i class="fa-solid fa-graduation-cap"></i> Child's Dreams</span>
+          <span class="asp-pill"><i class="fa-solid fa-umbrella-beach"></i> Peaceful Retirement</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 2 — PROPER GUIDANCE -->
+    <section class="story-section scene-2" id="scene-2" data-scene="1">
+      <div class="story-card glass-panel right-aligned scene2-card">
+        <div class="card-badge">
+          <span class="badge-icon"><i class="fa-solid fa-handshake-angle"></i></span>
+          <span class="badge-text">SCENE 02 &bull; PROFESSIONAL FINANCIAL ADVISORY</span>
+        </div>
+        <h2 class="card-title">
+          The Right <span class="gold-gradient">Guidance Matters.</span>
+        </h2>
+        <p class="card-subtitle-lead">
+          A disciplined investment strategy begins with understanding where you are and where you want to go.
+        </p>
+
+        <!-- Digital Financial Planning Dashboard -->
+        <div class="screen-simulation-box advisory-screen">
+          <div class="sim-header">
+            <div class="sim-dots"><span></span><span></span><span></span></div>
+            <span class="sim-title">Alakaapuri Nidhi &bull; Comprehensive Financial Assessment</span>
+            <span class="sim-advisor-tag">AMFI Registered Advisor</span>
+          </div>
+          <div class="advisor-matrix-grid">
+            <div class="matrix-item">
+              <i class="fa-solid fa-wallet"></i>
+              <div class="m-text">
+                <span class="m-lbl">Current Income</span>
+                <span class="m-val">Analyzed & Mapped</span>
+              </div>
+            </div>
+            <div class="matrix-item">
+              <i class="fa-solid fa-piggy-bank"></i>
+              <div class="m-text">
+                <span class="m-lbl">Existing Savings</span>
+                <span class="m-val">Structured & Optimized</span>
+              </div>
+            </div>
+            <div class="matrix-item">
+              <i class="fa-solid fa-bullseye"></i>
+              <div class="m-text">
+                <span class="m-lbl">Financial Goals</span>
+                <span class="m-val">Education, Home, Retirement</span>
+              </div>
+            </div>
+            <div class="matrix-item">
+              <i class="fa-solid fa-gauge-high"></i>
+              <div class="m-text">
+                <span class="m-lbl">Risk Profile</span>
+                <span class="m-val">Moderate-Aggressive</span>
+              </div>
+            </div>
+          </div>
+          <div class="advisor-quote-strip">
+            <i class="fa-solid fa-quote-left"></i>
+            <span>“Invest according to your goals, time horizon and risk profile.”</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 3 — START INVESTING -->
+    <section class="story-section scene-3" id="scene-3" data-scene="2">
+      <div class="story-card glass-panel left-aligned scene3-card">
+        <div class="card-badge">
+          <span class="badge-icon"><i class="fa-solid fa-mobile-screen-button"></i></span>
+          <span class="badge-text">SCENE 03 &bull; THE FIRST ALLOCATION</span>
+        </div>
+        <h2 class="card-title">
+          Start Early. <span class="gold-gradient">Start With What You Can.</span>
+        </h2>
+        <p class="card-subtitle-lead">
+          You don't need to wait until you have a large amount of money to begin building your investment journey.
+        </p>
+
+        <!-- Smartphone Investment Confirmation Simulation -->
+        <div class="smartphone-preview-card">
+          <div class="phone-status-bar">
+            <span>09:45 AM</span>
+            <span class="net-status"><i class="fa-solid fa-wifi"></i> 5G</span>
+          </div>
+          <div class="phone-body">
+            <div class="check-circle-anim">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h4 class="conf-title">Investment Completed</h4>
+            <span class="conf-subtitle">Equity Portfolio &bull; Regular Investment Mandate</span>
+            <div class="conf-amount-box">
+              <span class="amt-label">Initial Investment</span>
+              <span class="amt-number" id="phoneAmtDisplay">₹10,000</span>
+              <div class="sip-quick-select" id="sipQuickSelect">
+                <button type="button" class="sip-pill-btn active" data-amt="₹10,000">₹10,000</button>
+                <button type="button" class="sip-pill-btn" data-amt="₹25,000">₹25,000</button>
+                <button type="button" class="sip-pill-btn" data-amt="₹50,000">₹50,000</button>
+                <button type="button" class="sip-pill-btn" data-amt="₹1,00,000">₹1 Lakh</button>
+              </div>
+            </div>
+            <div class="conf-breakdown">
+              <div class="break-row">
+                <span>Asset Class:</span>
+                <b>Diversified Equity</b>
+              </div>
+              <div class="break-row">
+                <span>Mode:</span>
+                <b>Monthly SIP / Disciplined Equity</b>
+              </div>
+              <div class="break-row">
+                <span>Objective:</span>
+                <b>Long-Term Capital Appreciation</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="realistic-disclaimer-micro">
+          *Illustrative example. No guaranteed returns. The key visual is that the investor has taken action.
+        </p>
+      </div>
+    </section>
+
+    <!-- SCENE 4 — DISCIPLINED INVESTING -->
+    <section class="story-section scene-4" id="scene-4" data-scene="3">
+      <div class="story-card glass-panel right-aligned wide-card scene4-card">
+        <div class="card-badge">
+          <span class="badge-icon"><i class="fa-solid fa-calendar-days"></i></span>
+          <span class="badge-text">SCENE 04 &bull; CONSISTENCY IN ACTION</span>
+        </div>
+        <h2 class="card-title">
+          Markets Move. <span class="gold-gradient">Discipline Keeps You Moving.</span>
+        </h2>
+        <p class="card-subtitle-lead">
+          Long-term investing requires patience, discipline and the ability to stay focused on your goals.
+        </p>
+
+        <!-- Time Passing Timeline Grid -->
+        <div class="time-progression-track">
+          <div class="time-step active"><span class="t-month">Month 1</span><span class="t-amt">₹10k</span></div>
+          <div class="t-line active"></div>
+          <div class="time-step active"><span class="t-month">Month 12</span><span class="t-amt">₹1.2L</span></div>
+          <div class="t-line active"></div>
+          <div class="time-step active"><span class="t-month">Year 2</span><span class="t-amt">₹2.4L+</span></div>
+          <div class="t-line active"></div>
+          <div class="time-step active"><span class="t-month">Year 5</span><span class="t-amt">Disciplined</span></div>
+          <div class="t-line"></div>
+          <div class="time-step"><span class="t-month">Year 10</span><span class="t-amt">Compounding</span></div>
+          <div class="t-line"></div>
+          <div class="time-step"><span class="t-month">Year 15</span><span class="t-amt">Substantial</span></div>
+        </div>
+
+        <div class="dashboard-activity-log">
+          <div class="log-item">
+            <span class="log-badge green"><i class="fa-solid fa-arrow-down-long"></i> Contribution</span>
+            <span class="log-desc">Monthly Recurring Investment Added</span>
+            <span class="log-status">Systematic Process</span>
+          </div>
+          <div class="log-item">
+            <span class="log-badge blue"><i class="fa-solid fa-chart-line"></i> Market Cycle</span>
+            <span class="log-desc">Accumulating during both high and low market valuations</span>
+            <span class="log-status">Rupee Cost Averaging</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 5 — MARKET UPS AND DOWNS -->
+    <section class="story-section scene-5" id="scene-5" data-scene="4">
+      <div class="story-card glass-panel center-aligned scene5-card">
+        <div class="card-badge badge-warning">
+          <span class="badge-icon"><i class="fa-solid fa-chart-candlestick"></i></span>
+          <span class="badge-text">SCENE 05 &bull; VOLATILITY & MARKET CYCLES</span>
+        </div>
+        <h2 class="card-title">
+          Don't Let Short-Term Noise <span class="gold-gradient">Change Your Long-Term Vision.</span>
+        </h2>
+        <p class="card-subtitle-lead">
+          Equity investing involves natural cycles of growth and correction. Volatility is not a risk to fear—it is the price of long-term opportunity.
+        </p>
+
+        <!-- Candlestick Visualizer HUD -->
+        <div class="market-cycle-panel">
+          <div class="market-status-bar">
+            <div class="m-status-left">
+              <span class="market-indicator red"><i class="fa-solid fa-circle-down"></i> Market Correction (-14.2%)</span>
+              <span class="market-tag">Short-Term Downturn</span>
+            </div>
+            <div class="m-status-right">
+              <span class="advisor-alert"><i class="fa-solid fa-shield"></i> Advisor Communication Active</span>
+            </div>
+          </div>
+
+          <div class="candlestick-chart-box">
+            <svg class="candlestick-svg" viewBox="0 0 500 120" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="bullGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#10b981" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#059669" stop-opacity="0.2"/>
+                </linearGradient>
+                <linearGradient id="bearGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#ef4444" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#dc2626" stop-opacity="0.2"/>
+                </linearGradient>
+              </defs>
+              <!-- Market Cycle Wave Line -->
+              <path class="wave-path" d="M 0 70 Q 50 30 100 45 T 180 85 T 260 95 T 340 50 T 420 30 T 500 20" fill="none" stroke="rgba(212,175,55,0.8)" stroke-width="2.5" />
+              <!-- Candles -->
+              <line x1="40" y1="25" x2="40" y2="65" stroke="#10b981" stroke-width="1.5"/>
+              <rect x="36" y="32" width="8" height="22" fill="#10b981" rx="1.5"/>
+
+              <line x1="90" y1="35" x2="90" y2="70" stroke="#10b981" stroke-width="1.5"/>
+              <rect x="86" y="40" width="8" height="20" fill="#10b981" rx="1.5"/>
+
+              <!-- Pullback Red Candles -->
+              <line x1="160" y1="50" x2="160" y2="90" stroke="#ef4444" stroke-width="1.5"/>
+              <rect x="156" y="58" width="8" height="26" fill="#ef4444" rx="1.5"/>
+
+              <line x1="210" y1="65" x2="210" y2="105" stroke="#ef4444" stroke-width="1.5"/>
+              <rect x="206" y="75" width="8" height="24" fill="#ef4444" rx="1.5"/>
+
+              <!-- Recovery Green Candles -->
+              <line x1="310" y1="38" x2="310" y2="78" stroke="#10b981" stroke-width="1.5"/>
+              <rect x="306" y="44" width="8" height="26" fill="#10b981" rx="1.5"/>
+
+              <line x1="410" y1="20" x2="410" y2="58" stroke="#10b981" stroke-width="1.5"/>
+              <rect x="406" y="24" width="8" height="22" fill="#10b981" rx="1.5"/>
+
+              <line x1="470" y1="12" x2="470" y2="45" stroke="#10b981" stroke-width="1.5"/>
+              <rect x="466" y="15" width="8" height="20" fill="#10b981" rx="1.5"/>
+            </svg>
+          </div>
+
+          <div class="advisor-reminder-callout">
+            <div class="advisor-avatar-icon"><i class="fa-solid fa-user-check"></i></div>
+            <div class="reminder-text">
+              <b>Advisor Reminder:</b> “Focus on the plan. Don't let short-term market movements decide your long-term goals.”
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 6 — WEALTH GROWTH -->
+    <section class="story-section scene-6" id="scene-6" data-scene="5">
+      <div class="story-card glass-panel left-aligned scene6-card">
+        <div class="card-badge">
+          <span class="badge-icon"><i class="fa-solid fa-arrow-trend-up"></i></span>
+          <span class="badge-text">SCENE 06 &bull; LONG-TERM PATIENCE REWARDED</span>
+        </div>
+        <h2 class="card-title">
+          Give Your Wealth <span class="gold-gradient">Time To Grow.</span>
+        </h2>
+        <p class="card-subtitle-lead">
+          Long-term equity investing can provide an opportunity to participate in the growth of businesses and build wealth over time.
+        </p>
+
+        <!-- Realistic Growth Comparison Metrics -->
+        <div class="portfolio-growth-hud">
+          <div class="growth-metric-card">
+            <span class="g-lbl">Total Invested (Disciplined SIP)</span>
+            <span class="g-val">Consistent Capital Added</span>
+            <span class="g-sub">Cumulative monthly contributions</span>
+          </div>
+          <div class="growth-metric-card highlight">
+            <span class="g-lbl">Current Portfolio Value</span>
+            <span class="g-val gold-gradient">Substantial Long-Term Base</span>
+            <span class="g-sub">Powered by business expansion & time</span>
+          </div>
+        </div>
+
+        <div class="growth-insight-bullet">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Natural market fluctuations smoothed over multi-year horizon. No unrealistic return promises—just the arithmetic of disciplined compounding.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 7 — BEATING INFLATION -->
+    <section class="story-section scene-7" id="scene-7" data-scene="6">
+      <div class="story-card glass-panel right-aligned wide-card scene7-card">
+        <div class="card-badge">
+          <span class="badge-icon"><i class="fa-solid fa-scale-balanced"></i></span>
+          <span class="badge-text">SCENE 07 &bull; PURCHASING POWER DYNAMICS</span>
+        </div>
+        <h2 class="card-title">
+          Your Money Has <span class="gold-gradient">A Future Too.</span>
+        </h2>
+        <p class="card-subtitle-lead">
+          Financial planning should consider inflation so that your future goals remain achievable in tomorrow's money.
+        </p>
+
+        <!-- Realistic Side-by-Side Inflation Comparison -->
+        <div class="inflation-dual-container">
+          <div class="inflation-box today-box">
+            <div class="inf-header">
+              <i class="fa-solid fa-calendar-check"></i>
+              <span>Cost Today</span>
+            </div>
+            <div class="inf-item">
+              <span class="inf-label">Child's Higher Education</span>
+              <span class="inf-val">₹10 Lakh</span>
+            </div>
+            <span class="inf-note">Present purchasing power requirement</span>
+          </div>
+
+          <div class="inflation-vs-divider">
+            <span>INFLATION</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+
+          <div class="inflation-box future-box">
+            <div class="inf-header">
+              <i class="fa-solid fa-hourglass-half"></i>
+              <span>Future Estimated Cost (12-15 Yrs)</span>
+            </div>
+            <div class="inf-item">
+              <span class="inf-label">Child's Higher Education</span>
+              <span class="inf-val red-bold">₹25 Lakh+</span>
+            </div>
+            <span class="inf-note">Factoring higher education inflation (~7-9% p.a.)</span>
+          </div>
+        </div>
+
+        <div class="inflation-toggle-row" id="inflationToggleRow">
+          <span class="inf-toggle-label"><i class="fa-solid fa-sliders"></i> Test Inflation Rate:</span>
+          <button type="button" class="inf-rate-btn" data-rate="6%" data-cost="₹19.5 Lakh">6% Conservative</button>
+          <button type="button" class="inf-rate-btn active" data-rate="8%" data-cost="₹25.8 Lakh+">8% Education Avg</button>
+          <button type="button" class="inf-rate-btn" data-rate="10%" data-cost="₹34.2 Lakh+">10% Higher Costs</button>
+        </div>
+
+        <div class="inflation-takeaway">
+          <i class="fa-solid fa-bullseye"></i>
+          <span>The goal is to build wealth that has the potential to outpace inflation over the long term.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 8 — CHILD'S EDUCATION -->
+    <section class="story-section scene-8" id="scene-8" data-scene="7">
+      <div class="story-card glass-panel left-aligned scene8-card">
+        <div class="card-badge">
+          <span class="badge-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          <span class="badge-text">SCENE 08 &bull; GOAL 01: CHILD'S EDUCATION</span>
+        </div>
+        <h2 class="card-title">
+          Today's Investments Can Help <span class="gold-gradient">Fund Tomorrow's Dreams.</span>
+        </h2>
+        <p class="card-subtitle-lead">
+          As your child approaches higher education, a dedicated goal fund protects family aspirations from financial strain.
+        </p>
+
+        <!-- Goal 01 Digital Dashboard -->
+        <div class="goal-dedicated-card">
+          <div class="goal-header">
+            <div class="goal-title-group">
+              <span class="goal-tag">GOAL 01</span>
+              <h4 class="goal-name">Premier Higher Education</h4>
+            </div>
+            <span class="goal-status-badge on-track"><i class="fa-solid fa-check"></i> On Track</span>
+          </div>
+          <div class="goal-metrics-row">
+            <div class="g-metric">
+              <span class="gm-lbl">Target Requirement</span>
+              <span class="gm-val">₹30 Lakh</span>
+            </div>
+            <div class="g-metric">
+              <span class="gm-lbl">Years Remaining</span>
+              <span class="gm-val">3 Years</span>
+            </div>
+            <div class="g-metric">
+              <span class="gm-lbl">Funding Ratio</span>
+              <span class="gm-val gold">88% Achieved</span>
+            </div>
+          </div>
+          <div class="goal-progress-bar-wrap">
+            <div class="goal-bar-fill" style="width: 88%;"></div>
+          </div>
+          <p class="goal-footnote">
+            Campus admissions, tuition, and lodging prepared without compromising other household financial needs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 9 — CHILD'S MARRIAGE / FAMILY GOALS -->
+    <section class="story-section scene-9" id="scene-9" data-scene="8">
+      <div class="story-card glass-panel right-aligned scene9-card">
+        <div class="card-badge">
+          <span class="badge-icon"><i class="fa-solid fa-champagne-glasses"></i></span>
+          <span class="badge-text">SCENE 09 &bull; GOAL 02: FAMILY CELEBRATIONS</span>
+        </div>
+        <h2 class="card-title">
+          Plan For The Milestones <span class="gold-gradient">That Matter.</span>
+        </h2>
+        <p class="card-subtitle-lead">
+          Big financial goals become easier to approach when you start early and invest with discipline.
+        </p>
+
+        <!-- Goal 02 Digital Dashboard -->
+        <div class="goal-dedicated-card">
+          <div class="goal-header">
+            <div class="goal-title-group">
+              <span class="goal-tag">GOAL 02</span>
+              <h4 class="goal-name">Child's Marriage & Milestone</h4>
+            </div>
+            <span class="goal-status-badge on-track"><i class="fa-solid fa-check"></i> Structured Planning</span>
+          </div>
+          <div class="goal-metrics-row">
+            <div class="g-metric">
+              <span class="gm-lbl">Milestone Horizon</span>
+              <span class="gm-val">Planned 10 Yrs Ahead</span>
+            </div>
+            <div class="g-metric">
+              <span class="gm-lbl">Funding Strategy</span>
+              <span class="gm-val">Equities &bull; Hybrid</span>
+            </div>
+            <div class="g-metric">
+              <span class="gm-lbl">Family Impact</span>
+              <span class="gm-val gold">Zero Debt Strain</span>
+            </div>
+          </div>
+          <p class="goal-footnote">
+            Celebrating life's proudest moments with dignity and joy, backed by systematic planning years in advance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 10 — HOME / WEALTH CREATION -->
+    <section class="story-section scene-10" id="scene-10" data-scene="9">
+      <div class="story-card glass-panel left-aligned scene10-card">
+        <div class="card-badge">
+          <span class="badge-icon"><i class="fa-solid fa-building-columns"></i></span>
+          <span class="badge-text">SCENE 10 &bull; THE WEALTH ECOSYSTEM</span>
+        </div>
+        <h2 class="card-title">
+          Build More Than <span class="gold-gradient">A Portfolio.</span>
+        </h2>
+        <p class="card-subtitle-lead">
+          Build a financial foundation for your family's future.
+        </p>
+
+        <!-- Holistic Wealth Ecosystem Categories -->
+        <div class="wealth-ecosystem-grid">
+          <div class="eco-card">
+            <div class="eco-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="eco-content">
+              <span class="eco-title">Equity Investments</span>
+              <span class="eco-desc">Primary growth engine for long-term appreciation</span>
+            </div>
+          </div>
+          <div class="eco-card">
+            <div class="eco-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <div class="eco-content">
+              <span class="eco-title">Mutual Funds & PMS</span>
+              <span class="eco-desc">Broad diversification across sectors & market caps</span>
+            </div>
+          </div>
+          <div class="eco-card">
+            <div class="eco-icon"><i class="fa-solid fa-shield-heart"></i></div>
+            <div class="eco-content">
+              <span class="eco-title">Emergency Reserves</span>
+              <span class="eco-desc">Liquidity cushion for family peace of mind</span>
+            </div>
+          </div>
+          <div class="eco-card">
+            <div class="eco-icon"><i class="fa-solid fa-house-chimney"></i></div>
+            <div class="eco-content">
+              <span class="eco-title">Upgraded Family Home</span>
+              <span class="eco-desc">Living comfort supported by balanced capital</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 11 — RETIREMENT -->
+    <section class="story-section scene-11" id="scene-11" data-scene="10">
+      <div class="story-card glass-panel right-aligned scene11-card">
+        <div class="card-badge">
+          <span class="badge-icon"><i class="fa-solid fa-sun"></i></span>
+          <span class="badge-text">SCENE 11 &bull; GOAL 03: FINANCIAL FREEDOM</span>
+        </div>
+        <h2 class="card-title">
+          Invest For The Life You Want <span class="gold-gradient">After Your Career.</span>
+        </h2>
+        <p class="card-subtitle-lead">
+          A younger self sat at a laptop years ago. Today, that discipline blossoms into a tranquil, dignified retirement.
+        </p>
+
+        <!-- Goal 03 Digital Dashboard -->
+        <div class="goal-dedicated-card retirement-panel">
+          <div class="goal-header">
+            <div class="goal-title-group">
+              <span class="goal-tag">GOAL 03</span>
+              <h4 class="goal-name">Retirement Independence</h4>
+            </div>
+            <span class="goal-status-badge freedom-badge"><i class="fa-solid fa-certificate"></i> Fully Funded</span>
+          </div>
+          <div class="retirement-features-grid">
+            <div class="ret-feat">
+              <i class="fa-solid fa-person-walking"></i>
+              <span>Peaceful Lifestyle</span>
+            </div>
+            <div class="ret-feat">
+              <i class="fa-solid fa-plane-departure"></i>
+              <span>Travel Aspirations</span>
+            </div>
+            <div class="ret-feat">
+              <i class="fa-solid fa-heart-pulse"></i>
+              <span>Healthcare Cushion</span>
+            </div>
+            <div class="ret-feat">
+              <i class="fa-solid fa-infinity"></i>
+              <span>Sustainable Cashflow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 12 — EVERY GOAL NEEDS A PLAN -->
+    <section class="story-section scene-12" id="scene-12" data-scene="11">
+      <div class="story-card glass-panel center-aligned wide-card scene12-card">
+        <div class="card-badge">
+          <span class="badge-icon"><i class="fa-solid fa-diagram-project"></i></span>
+          <span class="badge-text">SCENE 12 &bull; THE INTEGRATED MATRIX</span>
+        </div>
+        <h2 class="card-title">
+          Every Goal Needs A Plan. <span class="gold-gradient">Every Plan Needs Discipline.</span>
+        </h2>
+        <p class="card-subtitle-lead">
+          Financial life is not one single bucket. An organized investment strategy connects every dream into a coordinated roadmap.
+        </p>
+
+        <!-- Complete 7-Goal Digital Planning Matrix -->
+        <div class="goals-matrix-container">
+          <div class="matrix-pill"><i class="fa-solid fa-graduation-cap"></i> Child Education</div>
+          <div class="matrix-pill"><i class="fa-solid fa-heart"></i> Child Marriage</div>
+          <div class="matrix-pill"><i class="fa-solid fa-house"></i> Dream Home</div>
+          <div class="matrix-pill"><i class="fa-solid fa-chart-pie"></i> Wealth Creation</div>
+          <div class="matrix-pill"><i class="fa-solid fa-umbrella-beach"></i> Retirement</div>
+          <div class="matrix-pill"><i class="fa-solid fa-kit-medical"></i> Emergency Fund</div>
+          <div class="matrix-pill"><i class="fa-solid fa-compass"></i> Travel & Freedom</div>
+        </div>
+
+        <div class="unified-strategy-bar">
+          <i class="fa-solid fa-link"></i>
+          <span>Organized into one unified, disciplined investment architecture by <b>Alakaapuri Nidhi</b>.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 13 — THE ROLE OF GUIDANCE -->
+    <section class="story-section scene-13" id="scene-13" data-scene="12">
+      <div class="story-card glass-panel left-aligned scene13-card">
+        <div class="card-badge">
+          <span class="badge-icon"><i class="fa-solid fa-compass-drafting"></i></span>
+          <span class="badge-text">SCENE 13 &bull; REBALANCING & ONGOING ADVICE</span>
+        </div>
+        <h2 class="card-title">
+          Your Life Changes. <span class="gold-gradient">Your Financial Plan Should Too.</span>
+        </h2>
+        <p class="card-subtitle-lead">
+          Professional guidance can help you stay focused, disciplined and aligned with your goals across life's phases.
+        </p>
+
+        <!-- Periodic Review Consultation Card -->
+        <div class="rebalance-review-box">
+          <div class="review-header">
+            <span class="rev-tag">ALAKAAPURI ADVISORY PROTOCOL</span>
+            <span class="rev-badge">Annual & Milestone Reviews</span>
+          </div>
+          <div class="review-points-grid">
+            <div class="rev-point">
+              <i class="fa-solid fa-sliders"></i>
+              <b>Asset Rebalancing:</b> Adjusting equity-to-debt mix as goals approach.
+            </div>
+            <div class="rev-point">
+              <i class="fa-solid fa-shield"></i>
+              <b>Risk Modulation:</b> Protecting accumulated capital from late-stage volatility.
+            </div>
+            <div class="rev-point">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <b>Goal Horizon Shifts:</b> Adapting allocations when priorities evolve.
+            </div>
+            <div class="rev-point">
+              <i class="fa-solid fa-user-shield"></i>
+              <b>Behavioral Coaching:</b> Keeping emotional panic away during market pullbacks.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL SCENE — THE WEALTH JOURNEY -->
+    <section class="story-section scene-14" id="scene-14" data-scene="13">
+      <div class="story-card glass-panel finale-card scene14-card">
+        <div class="finale-crest">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <div class="journey-recap-ribbon">
+          <span class="j-step">START</span>
+          <i class="fa-solid fa-arrow-right"></i>
+          <span class="j-step">INVEST</span>
+          <i class="fa-solid fa-arrow-right"></i>
+          <span class="j-step">STAY DISCIPLINED</span>
+          <i class="fa-solid fa-arrow-right"></i>
+          <span class="j-step">NAVIGATE CYCLES</span>
+          <i class="fa-solid fa-arrow-right"></i>
+          <span class="j-step">GROW WEALTH</span>
+          <i class="fa-solid fa-arrow-right"></i>
+          <span class="j-step">FUND GOALS</span>
+          <i class="fa-solid fa-arrow-right"></i>
+          <span class="j-step active-gold">BUILD YOUR FUTURE</span>
+        </div>
+
+        <h1 class="card-title finale-title">
+          Your Goals Are Different.<br>
+          <span class="gold-gradient">Your Investment Journey Is Personal.</span>
+        </h1>
+
+        <p class="finale-subtext">
+          Start Investing. Stay Disciplined. Keep Moving Toward Your Goals.
+        </p>
+
+        <!-- Alakaapuri Nidhi Brand Showcase -->
+        <div class="brand-showcase">
+          <img src="main-logo.png" alt="Alakaapuri Nidhi Logo" class="brand-showcase-logo" />
+          <img src="brand-name-white.png" alt="ALAKAAPURI NIDHI" class="brand-showcase-name" />
+          <p class="nidhi-tagline">WEALTH CREATION &bull; GROWTH &bull; PROSPERITY</p>
+          <p class="advisor-line">
+            Professional Advisory Guided by <b>Praveen Kumar</b> &bull; AMFI Registered Mutual Fund Distributor
+          </p>
+        </div>
+
+        <blockquote class="emotional-quote">
+          “You work for your money today. Let your investments work toward your future.”<br>
+          <span class="em-bold">Start Early. Invest Regularly. Stay Disciplined. Grow With Time.</span>
+        </blockquote>
+
+        <!-- High-Impact Action CTAs -->
+        <div class="finale-actions">
+          <a href="https://wa.me/919959639555?text=Hello%20Praveen%20Kumar,%20I%20want%20to%20start%20my%20disciplined%20wealth%20investment%20journey%20with%20Alakaapuri%20Nidhi." target="_blank" class="cta-primary gold-glow-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>START YOUR INVESTMENT JOURNEY</span>
+          </a>
+          <a href="Contact/" class="cta-secondary ghost-glow-btn">
+            <i class="fa-solid fa-user-tie"></i>
+            <span>TALK TO A FINANCIAL ADVISOR</span>
+          </a>
+          <a href="calculators/" class="cta-tertiary">
+            <i class="fa-solid fa-calculator"></i>
+            <span>Goal Calculators</span>
+          </a>
+        </div>
+
+        <!-- Statutory Financial Disclaimer -->
+        <div class="finale-footer">
+          <p class="disclaimer-text">
+            <strong>Financial Disclaimer:</strong> Investments in securities market are subject to market risks. Read all the related documents carefully before investing. Past performance does not guarantee future results.
+          </p>
+          <a href="index.html" class="back-home-link">
+            <i class="fa-solid fa-arrow-left"></i> Return to Alakaapuri Nidhi Main Website
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Virtual Scroll Track (Calculated dynamically for smooth scroll progression) -->
+  <div id="scroll-wrapper" class="scroll-wrapper"></div>
+
+  <!-- Three.js + GSAP + ScrollTrigger Libraries -->
+  <script src="three.min.js"></script>
+  <script>
+    if (typeof THREE === 'undefined') {
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Journey 3D Engine Script -->
+  <script src="journey-3d.js"></script>
+
+</body>
+</html>
