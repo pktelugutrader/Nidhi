@@ -481,33 +481,130 @@
       data-testid="mobile-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
   </div>
 
-  <!-- EXIT-INTENT MODAL -->
-  <div class="modal-overlay" id="exitModal" data-testid="exit-modal">
-    <div class="modal-card">
-      <button class="modal-close" onclick="closeExitModal()" data-testid="exit-close"><i
-          class="fa-solid fa-xmark"></i></button>
-      <div id="exitFormView">
-        <span class="modal-badge"><i class="fa-solid fa-gift"></i> Free Offer · Today Only</span>
-        <h3>Wait! Get a FREE Financial Health Check</h3>
-        <p>Get a personalised 20-minute portfolio review with Praveen Kumar — completely free. Discover hidden gaps in
-          your investments &amp; insurance.</p>
-        <div class="modal-perks">
-          <div><i class="fa-solid fa-check"></i> Portfolio &amp; SIP review</div>
-          <div><i class="fa-solid fa-check"></i> Tax-saving suggestions</div>
-          <div><i class="fa-solid fa-check"></i> Insurance gap analysis</div>
+  <!-- EXIT-INTENT FINANCIAL PRESCRIPTION CLIPBOARD MODAL -->
+  <div class="modal-overlay" id="exitModal" data-testid="exit-modal" onclick="if(event.target===this)closeExitModal()">
+    <div class="rx-clipboard">
+      <!-- Top Brass Clip Assembly -->
+      <div class="rx-clip-assembly" aria-hidden="true">
+        <div class="rx-clip-loop"></div>
+        <div class="rx-clip-body">
+          <span class="rx-clip-rivet"></span>
+          <div class="rx-clip-wire"></div>
+          <span class="rx-clip-rivet"></span>
         </div>
-        <input type="text" id="exitName" placeholder="Your Name" required data-testid="exit-name" />
-        <input type="tel" id="exitPhone" placeholder="Mobile Number (10 digits)" required pattern="[0-9]{10}"
-          data-testid="exit-phone" />
-        <button class="btn-gold" style="width:100%; justify-content:center;" onclick="submitExitForm()"
-          data-testid="exit-submit"><i class="fa-solid fa-gift"></i> Claim My Free Review</button>
-        <p style="font-size:11.5px; color:var(--text-faint); text-align:center; margin-top:12px;"><i
-            class="fa-solid fa-shield-halved"></i> 100% confidential · No spam</p>
+        <div class="rx-clip-shadow"></div>
       </div>
-      <div id="exitSuccessView" class="success-view" style="display:none;">
-        <div class="success-tick"><i class="fa-solid fa-check"></i></div>
-        <h3>Thank You!</h3>
-        <p>Redirecting you to WhatsApp — Praveen will get in touch shortly.</p>
+
+      <!-- Brass Bottom Corners -->
+      <div class="rx-corner bottom-left" aria-hidden="true"></div>
+      <div class="rx-corner bottom-right" aria-hidden="true"></div>
+
+      <!-- Close Button -->
+      <button class="modal-close rx-modal-close" onclick="closeExitModal()" data-testid="exit-close" title="Close" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Prescription Pad Paper -->
+      <div class="rx-paper">
+        <div class="rx-paper-inner">
+          
+          <!-- Prescription Series Tabs -->
+          <div class="rx-series-tabs" id="rxSeriesTabs">
+            <button type="button" class="rx-tab-pill active" onclick="selectRxTheme('investment')">
+              🩺 Investment Health Scan
+            </button>
+            <button type="button" class="rx-tab-pill" onclick="selectRxTheme('fitness')">
+              💊 Financial Fitness
+            </button>
+            <button type="button" class="rx-tab-pill" onclick="selectRxTheme('insurance')">
+              💼 Insurance Immunity
+            </button>
+          </div>
+
+          <!-- Form View -->
+          <div id="exitFormView">
+            <!-- Prescription Heading -->
+            <div class="rx-header-block">
+              <span class="rx-head-italic" id="rxHeadItalic">Wait! Get Your FREE</span>
+              <span class="rx-head-main" id="rxHeadMain">Investment Health Scan.</span>
+            </div>
+
+            <!-- Medical Caduceus & Diagnostic Bullet Grid -->
+            <div class="rx-diagnostic-box">
+              <div class="rx-caduceus-wrap">
+                <svg class="rx-caduceus-svg" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Medical Financial Caduceus">
+                  <!-- Wing Left -->
+                  <path d="M 60 38 C 46 28 20 22 4 35 C 16 42 30 46 44 48 C 30 52 16 60 10 70 C 26 66 42 63 52 58 C 40 68 32 80 28 92 C 40 82 52 74 60 62 Z" fill="#2E1C0F" opacity="0.88"/>
+                  <!-- Wing Right -->
+                  <path d="M 60 38 C 74 28 100 22 116 35 C 104 42 90 46 76 48 C 90 52 104 60 110 70 C 94 66 78 63 68 58 C 80 68 88 80 92 92 C 80 82 68 74 60 62 Z" fill="#2E1C0F" opacity="0.88"/>
+                  <!-- Central Wand / Staff -->
+                  <circle cx="60" cy="18" r="8" fill="#5B3819" stroke="#2E1C0F" stroke-width="2"/>
+                  <path d="M 58 26 L 58 132 L 62 132 L 62 26 Z" fill="#2E1C0F"/>
+                  <circle cx="60" cy="133" r="3.5" fill="#5B3819"/>
+                  <!-- Serpents -->
+                  <path d="M 50 36 C 42 36 39 44 46 51 C 58 61 73 68 73 78 C 73 88 54 94 48 102 C 42 110 56 122 60 126" stroke="#2E1C0F" stroke-width="4.2" stroke-linecap="round" fill="none"/>
+                  <path d="M 70 36 C 78 36 81 44 74 51 C 62 61 47 68 47 78 C 47 88 66 94 72 102 C 78 110 64 122 60 126" stroke="#2E1C0F" stroke-width="4.2" stroke-linecap="round" fill="none"/>
+                  <!-- Serpent Heads -->
+                  <path d="M 48 35 C 51 32 56 34 57 37 C 56 40 51 40 48 35 Z" fill="#2E1C0F"/>
+                  <path d="M 72 35 C 69 32 64 34 63 37 C 64 40 69 40 72 35 Z" fill="#2E1C0F"/>
+                </svg>
+              </div>
+
+              <div class="rx-perks-wrap">
+                <div class="rx-intro-row">
+                  <div class="rx-intro-text" id="rxIntroText">Check the pulse of your investments with a detailed examination.</div>
+                </div>
+                <div class="rx-perk-item">
+                  <span class="rx-perk-badge" id="rxBadge1"><i class="fa-solid fa-stethoscope"></i></span>
+                  <span class="rx-perk-label" id="rxPerk1">Portfolio check-up.</span>
+                </div>
+                <div class="rx-perk-item">
+                  <span class="rx-perk-badge" id="rxBadge2"><i class="fa-solid fa-shield-heart"></i></span>
+                  <span class="rx-perk-label" id="rxPerk2">Risk diagnostics.</span>
+                </div>
+                <div class="rx-perk-item">
+                  <span class="rx-perk-badge" id="rxBadge3"><i class="fa-solid fa-chart-line"></i></span>
+                  <span class="rx-perk-label" id="rxPerk3">Future growth analysis.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prescription Input Fields -->
+            <div class="rx-form-fields">
+              <div class="rx-field-group">
+                <span class="rx-field-icon"><i class="fa-solid fa-user"></i></span>
+                <input type="text" id="exitName" class="rx-field-input" placeholder="Name" required data-testid="exit-name" />
+              </div>
+              <div class="rx-field-group">
+                <span class="rx-field-icon"><i class="fa-solid fa-phone"></i></span>
+                <span class="rx-field-prefix">+91 <span>|</span></span>
+                <input type="tel" id="exitPhone" class="rx-field-input" placeholder="10-digit Mobile Number" required pattern="[0-9]{10}" data-testid="exit-phone" />
+              </div>
+            </div>
+
+            <!-- Brushed Gold CTA Button -->
+            <button type="button" class="btn-prescription-gold" onclick="submitExitForm()" data-testid="exit-submit" id="rxSubmitBtn">
+              <i class="fa-solid fa-stethoscope" id="rxBtnIcon"></i>
+              <span id="rxBtnText">GET YOUR INVESTMENT REPORT</span>
+            </button>
+
+            <!-- Confidentiality Note -->
+            <div class="rx-footer-note">
+              <i class="fa-solid fa-shield-halved" style="color:var(--gold-dark); font-size:10px;"></i>
+              100% confidential · No spam
+            </div>
+          </div>
+
+          <!-- Success View inside Prescription Sheet -->
+          <div id="exitSuccessView" class="rx-success-box" style="display:none;">
+            <div class="rx-success-seal"><i class="fa-solid fa-check"></i></div>
+            <h3>Prescription Issued!</h3>
+            <p>Your diagnostic request has been received. Redirecting you to WhatsApp so Praveen Kumar can review your portfolio.</p>
+          </div>
+
+        </div>
+        <!-- Dog-ear Folded Corner at Bottom Right -->
+        <div class="rx-paper-corner" aria-hidden="true"></div>
       </div>
     </div>
   </div>
@@ -617,17 +714,97 @@
       }
     });
 
+    // Prescription Series Definition
+    const RX_THEMES = {
+      investment: {
+        headItalic: "Wait! Get Your FREE",
+        headMain: "Investment Health Scan.",
+        intro: "Check the pulse of your investments with a detailed examination.",
+        badge1: '<i class="fa-solid fa-stethoscope"></i>',
+        perk1: "Portfolio check-up.",
+        badge2: '<i class="fa-solid fa-shield-heart"></i>',
+        perk2: "Risk diagnostics.",
+        badge3: '<i class="fa-solid fa-chart-line"></i>',
+        perk3: "Future growth analysis.",
+        btnIcon: "fa-solid fa-stethoscope",
+        btnText: "GET YOUR INVESTMENT REPORT",
+        waTopic: "FREE Investment Health Scan"
+      },
+      fitness: {
+        headItalic: "Wait! Get Your FREE",
+        headMain: "Financial Fitness Check-Up.",
+        intro: "Prescribe a healthier path for your annual wealth & savings goals.",
+        badge1: '<i class="fa-solid fa-calendar-check"></i>',
+        perk1: "Annual financial review.",
+        badge2: '<i class="fa-solid fa-receipt"></i>',
+        perk2: "SIP & expense health audit.",
+        badge3: '<i class="fa-solid fa-bullseye"></i>',
+        perk3: "Retirement milestone check.",
+        btnIcon: "fa-solid fa-notes-medical",
+        btnText: "GET YOUR FITNESS REPORT",
+        waTopic: "FREE Financial Fitness Check-Up"
+      },
+      insurance: {
+        headItalic: "Wait! Get Your FREE",
+        headMain: "Insurance Immunity Booster.",
+        intro: "Strengthen your family shield against critical health & life risks.",
+        badge1: '<i class="fa-solid fa-shield-halved"></i>',
+        perk1: "Term & health coverage audit.",
+        badge2: '<i class="fa-solid fa-heart-pulse"></i>',
+        perk2: "Critical illness gap scan.",
+        badge3: '<i class="fa-solid fa-file-shield"></i>',
+        perk3: "Claim settlement safety review.",
+        btnIcon: "fa-solid fa-briefcase-medical",
+        btnText: "GET YOUR IMMUNITY REPORT",
+        waTopic: "FREE Insurance Immunity Booster"
+      }
+    };
+
+    let activeRxTheme = "investment";
+
+    function selectRxTheme(themeKey) {
+      if (!RX_THEMES[themeKey]) return;
+      activeRxTheme = themeKey;
+
+      const t = RX_THEMES[themeKey];
+      const keys = ['investment', 'fitness', 'insurance'];
+      document.querySelectorAll('.rx-tab-pill').forEach((pill, idx) => {
+        if (keys[idx] === themeKey) pill.classList.add('active');
+        else pill.classList.remove('active');
+      });
+
+      document.getElementById('rxHeadItalic').textContent = t.headItalic;
+      document.getElementById('rxHeadMain').textContent = t.headMain;
+      document.getElementById('rxIntroText').textContent = t.intro;
+
+      document.getElementById('rxBadge1').innerHTML = t.badge1;
+      document.getElementById('rxPerk1').textContent = t.perk1;
+      document.getElementById('rxBadge2').innerHTML = t.badge2;
+      document.getElementById('rxPerk2').textContent = t.perk2;
+      document.getElementById('rxBadge3').innerHTML = t.badge3;
+      document.getElementById('rxPerk3').textContent = t.perk3;
+
+      document.getElementById('rxBtnIcon').className = t.btnIcon;
+      document.getElementById('rxBtnText').textContent = t.btnText;
+    }
+    window.selectRxTheme = selectRxTheme;
+
     function submitExitForm() {
       const name = document.getElementById('exitName').value.trim();
       const phone = document.getElementById('exitPhone').value.trim();
-      if (!name || !phone || !/^[0-9]{10}$/.test(phone)) { alert('Please enter your name and a valid 10-digit mobile.'); return; }
-      const msg = `Hello Alakapuri Nidhi,%0A%0AI want to claim my FREE Financial Health Check.%0A%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}`;
+      if (!name || !phone || !/^[0-9]{10}$/.test(phone)) {
+        alert('Please enter your name and a valid 10-digit mobile number.');
+        return;
+      }
+      const t = RX_THEMES[activeRxTheme] || RX_THEMES.investment;
+      const msg = `Hello Alakapuri Nidhi,%0A%0AI want to claim my ${encodeURIComponent(t.waTopic)}.%0A%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}`;
+
       document.getElementById('exitFormView').style.display = 'none';
       document.getElementById('exitSuccessView').style.display = 'block';
       setTimeout(() => {
         window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, "_blank");
       }, 900);
-      setTimeout(() => closeExitModal(), 2400);
+      setTimeout(() => closeExitModal(), 2800);
     }
     window.submitExitForm = submitExitForm;
   </script>

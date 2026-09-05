@@ -921,62 +921,548 @@
     .mobile-sticky a i { font-size: 16px; }
 
     /* ── EXIT-INTENT MODAL ── */
+    /* ── EXIT-INTENT FINANCIAL PRESCRIPTION CLIPBOARD MODAL ── */
     .modal-overlay {
       display: none; position: fixed; inset: 0; z-index: 200;
-      background: rgba(7, 26, 47, 0.7); backdrop-filter: blur(8px);
-      align-items: center; justify-content: center; padding: 20px;
+      background: rgba(7, 26, 47, 0.78); backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      align-items: center; justify-content: center; padding: 26px 14px;
+      overflow-y: auto;
     }
-    .modal-overlay.show { display: flex; animation: fadeIn 0.3s; }
+    .modal-overlay.show { display: flex; animation: fadeIn 0.3s ease; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    .modal-card {
-      background: #FFFFFF; border-radius: 16px; padding: 40px 34px 34px;
-      max-width: 460px; width: 100%; position: relative;
-      box-shadow: 0 30px 80px rgba(180, 150, 90, 0.25), 0 0 0 1.5px var(--gold-primary);
-      animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-      border-top: 5px solid var(--gold-primary);
-    }
-    @keyframes popIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-    .modal-close {
-      position: absolute; top: 12px; right: 16px;
-      width: 32px; height: 32px; border-radius: 50%;
-      background: #FAF1DF; border: 1px solid rgba(201, 162, 39, 0.3); cursor: pointer;
-      color: var(--navy-deep); font-size: 16px;
-      display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s;
-    }
-    .modal-close:hover { background: #F3E4C6; }
-    .modal-badge {
-      display: inline-block; background: linear-gradient(135deg, var(--mahogany), var(--gold-primary));
-      color: #FFFFFF; font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase;
-      font-weight: 700; padding: 5px 14px; border-radius: 30px; margin-bottom: 14px;
-    }
-    .modal-card h3 {
-      font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700;
-      color: var(--navy-deep); margin-bottom: 10px; line-height: 1.2;
-    }
-    .modal-card p { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.6; }
-    .modal-card input, .modal-card select {
-      width: 100%; padding: 12px 14px; margin-bottom: 10px;
-      border: 1px solid rgba(201, 162, 39, 0.3); border-radius: 6px; font-size: 14px;
-      background: #FDFBF7; color: var(--navy-deep);
-    }
-    .modal-card input:focus {
-      outline: none; border-color: var(--gold-primary);
-      box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.25);
-    }
-    .modal-card button { width: 100%; padding: 14px; }
-    .modal-perks { display: flex; flex-direction: column; gap: 6px; margin: 12px 0 18px; }
-    .modal-perks div { font-size: 13px; color: var(--text-body); display: flex; align-items: center; gap: 8px; }
-    .modal-perks i { color: #10b981; }
+    @keyframes popIn { from { transform: scale(0.88); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
-    /* ── SUCCESS ── */
-    .success-view { text-align: center; padding: 12px 0; }
-    .success-tick {
-      width: 72px; height: 72px; border-radius: 50%;
-      background: #10b981; color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 36px; margin: 0 auto 18px;
-      animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    /* The Saddle Brown Leather Clipboard */
+    .rx-clipboard {
+      position: relative;
+      width: 100%;
+      max-width: 446px;
+      background: #5B2B14;
+      background-image: 
+        radial-gradient(ellipse at 50% 0%, rgba(142, 72, 38, 0.6) 0%, transparent 70%),
+        linear-gradient(160deg, #6B3419 0%, #4D2310 50%, #361709 100%);
+      border-radius: 18px;
+      padding: 34px 14px 22px;
+      box-shadow: 
+        0 30px 80px rgba(0, 0, 0, 0.6),
+        0 8px 24px rgba(0, 0, 0, 0.4),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2),
+        inset 0 0 0 1px rgba(0, 0, 0, 0.5);
+      border: 1px solid #7D4021;
+      animation: popIn 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-sizing: border-box;
+      margin: auto;
+    }
+
+    /* Stitched Leather Edge Detail */
+    .rx-clipboard::before {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border: 1px dashed rgba(224, 185, 120, 0.38);
+      border-radius: 14px;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Metallic Brass Corner Brackets at Bottom */
+    .rx-corner {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      pointer-events: none;
+      z-index: 5;
+    }
+    .rx-corner.bottom-left {
+      bottom: 4px;
+      left: 4px;
+      border-bottom: 3.5px solid #E6CA65;
+      border-left: 3.5px solid #E6CA65;
+      border-bottom-left-radius: 14px;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+    }
+    .rx-corner.bottom-right {
+      bottom: 4px;
+      right: 4px;
+      border-bottom: 3.5px solid #E6CA65;
+      border-right: 3.5px solid #E6CA65;
+      border-bottom-right-radius: 14px;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+    }
+    .rx-corner.bottom-left::after,
+    .rx-corner.bottom-right::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #7D5208;
+      box-shadow: inset 0 1px 1px #FFF;
+    }
+    .rx-corner.bottom-left::after { bottom: 4px; left: 4px; }
+    .rx-corner.bottom-right::after { bottom: 4px; right: 4px; }
+
+    /* The Brass Clipboard Top Clamp / Clip */
+    .rx-clip-assembly {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 170px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .rx-clip-loop {
+      width: 34px;
+      height: 14px;
+      border: 3.5px solid #C9A227;
+      border-bottom: none;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      background: transparent;
+      box-shadow: 0 -2px 4px rgba(0,0,0,0.3);
+    }
+    .rx-clip-body {
+      width: 160px;
+      height: 32px;
+      background: linear-gradient(180deg, #FBF1C7 0%, #D4AF37 25%, #AA7C11 75%, #6B4E08 100%);
+      border-radius: 6px;
+      border: 1px solid #FFEAA5;
+      box-shadow: 
+        0 6px 14px rgba(0, 0, 0, 0.45),
+        inset 0 1px 1px rgba(255, 255, 255, 0.8),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.5);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      box-sizing: border-box;
+    }
+    .rx-clip-rivet {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #FFF 0%, #B8860B 45%, #4A3305 100%);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    }
+    .rx-clip-wire {
+      width: 74px;
+      height: 10px;
+      border: 3px solid #755208;
+      border-top: none;
+      border-radius: 0 0 14px 14px;
+      margin: 0 auto;
+      box-shadow: inset 0 1px 1px #EED888;
+    }
+    .rx-clip-shadow {
+      width: 154px;
+      height: 6px;
+      background: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0.45) 0%, transparent 80%);
+      margin-top: -2px;
+    }
+
+    /* Modal Close Button */
+    .modal-close.rx-modal-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(45, 20, 8, 0.75);
+      border: 1px solid rgba(224, 185, 120, 0.45);
+      color: #E6CA65;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 20;
+      transition: background 0.2s, transform 0.15s, color 0.2s;
+    }
+    .modal-close.rx-modal-close:hover {
+      background: #7D4021;
+      color: #FFF;
+      transform: scale(1.08);
+    }
+
+    /* The Prescription Stationery Pad Paper */
+    .rx-paper {
+      position: relative;
+      background: #FCF9F1;
+      background-image: 
+        radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.8) 0%, transparent 40%),
+        linear-gradient(180deg, #FAF6EC 0%, #F6F0E0 100%);
+      border-radius: 4px;
+      padding: 14px 16px 18px;
+      box-shadow: 
+        0 4px 18px rgba(0, 0, 0, 0.28),
+        0 1px 3px rgba(0, 0, 0, 0.15);
+      border: 1px solid #C5A15C;
+      z-index: 3;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+    /* Inner hairline double border */
+    .rx-paper-inner {
+      border: 1px solid rgba(197, 161, 92, 0.5);
+      padding: 12px 14px 14px;
+      position: relative;
+    }
+
+    /* Dog-ear folded corner at bottom right */
+    .rx-paper-corner {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 28px 28px;
+      border-color: transparent transparent #5B2B14 transparent;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .rx-paper-corner::before {
+      content: '';
+      position: absolute;
+      bottom: -28px;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 28px 28px 0 0;
+      border-color: #E2D3B8 transparent transparent transparent;
+      box-shadow: -2px -2px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Prescription Series Theme Tabs */
+    .rx-series-tabs {
+      display: flex;
+      gap: 5px;
+      justify-content: center;
+      margin-bottom: 11px;
+      flex-wrap: wrap;
+    }
+    .rx-tab-pill {
+      background: #EFE8D6;
+      border: 1px solid #CBB895;
+      color: #5A4730;
+      font-family: 'Rajdhani', 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      padding: 4px 9px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .rx-tab-pill:hover {
+      background: #E5DAC0;
+      color: #271904;
+    }
+    .rx-tab-pill.active {
+      background: linear-gradient(135deg, #4A2310 0%, #1A2837 100%);
+      color: #F8E6B6;
+      border-color: #B8860B;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+    }
+
+    /* Prescription Heading */
+    .rx-header-block {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .rx-head-italic {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 22px;
+      font-weight: 700;
+      color: #172432;
+      line-height: 1.15;
+      display: block;
+    }
+    .rx-head-main {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 23px;
+      font-weight: 800;
+      color: #172432;
+      line-height: 1.18;
+      display: block;
+      letter-spacing: -0.2px;
+    }
+
+    /* Medical Caduceus & Diagnostic Grid */
+    .rx-diagnostic-box {
+      display: grid;
+      grid-template-columns: 82px 1fr;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .rx-caduceus-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-right: 4px;
+    }
+    .rx-caduceus-svg {
+      width: 78px;
+      height: 94px;
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.12));
+    }
+
+    .rx-perks-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .rx-intro-row {
+      border-bottom: 1px solid #D5C7B0;
+      padding-bottom: 5px;
+      margin-bottom: 2px;
+    }
+    .rx-intro-text {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 13px;
+      line-height: 1.35;
+      color: #273444;
+      font-weight: 600;
+    }
+
+    .rx-perk-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid #DFD5C2;
+      padding-bottom: 4px;
+    }
+    .rx-perk-badge {
+      width: 23px;
+      height: 23px;
+      min-width: 23px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #354454 0%, #152230 100%);
+      border: 1px solid #A8863A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ECC858;
+      font-size: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.22);
+    }
+    .rx-perk-label {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 12.8px;
+      font-weight: 600;
+      color: #172432;
+      white-space: nowrap;
+    }
+
+    /* Form Fields */
+    .rx-form-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .rx-field-group {
+      background: #F8F4EA;
+      border: 1.5px solid #C4AC82;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      height: 40px;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .rx-field-group:focus-within {
+      border-color: #A37A15;
+      box-shadow: 0 0 0 2.5px rgba(184, 134, 11, 0.22);
+      background: #FAF7F0;
+    }
+    .rx-field-icon {
+      color: #715738;
+      font-size: 13px;
+      width: 18px;
+      text-align: center;
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+    .rx-field-prefix {
+      font-size: 13px;
+      font-weight: 700;
+      color: #433320;
+      margin-right: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Inter', sans-serif;
+    }
+    .rx-field-prefix span {
+      color: #B8A27E;
+      font-weight: 400;
+    }
+    .rx-field-input {
+      flex: 1;
+      border: none !important;
+      outline: none !important;
+      background: transparent !important;
+      font-size: 13px;
+      color: #162432;
+      font-family: 'Inter', sans-serif;
+      padding: 0 !important;
+      margin: 0 !important;
+      box-shadow: none !important;
+      height: 100%;
+    }
+    .rx-field-input::placeholder {
+      color: #92826F;
+      font-style: italic;
+    }
+
+    /* Brushed Gold Embossed CTA Button */
+    .btn-prescription-gold {
+      width: 100%;
+      background: linear-gradient(180deg, #F3D97B 0%, #D8B23C 35%, #BC8E1C 70%, #9F720F 100%);
+      border: 1px solid #FFEAA5;
+      border-bottom: 2.5px solid #6E4C05;
+      border-radius: 8px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #261702;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 12.5px;
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 
+        0 6px 18px rgba(159, 114, 15, 0.38),
+        inset 0 1px 1px rgba(255, 255, 255, 0.85);
+      transition: all 0.18s ease;
+      box-sizing: border-box;
+    }
+    .btn-prescription-gold:hover {
+      background: linear-gradient(180deg, #FAEB9A 0%, #E6C24F 35%, #C99A24 70%, #AB7C12 100%);
+      box-shadow: 0 8px 24px rgba(159, 114, 15, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+      transform: translateY(-1px);
+    }
+    .btn-prescription-gold:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 8px rgba(159, 114, 15, 0.4);
+    }
+    .btn-prescription-gold i {
+      font-size: 15px;
+      color: #261702;
+    }
+
+    /* Prescription Footer Note */
+    .rx-footer-note {
+      font-size: 11px;
+      color: #6E5C49;
+      text-align: center;
+      margin-top: 8px;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* Success View inside Prescription Sheet */
+    .rx-success-box {
+      text-align: center;
+      padding: 22px 8px 18px;
+    }
+    .rx-success-seal {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #22C55E 0%, #15803D 100%);
+      border: 3px solid #FDFBF5;
+      box-shadow: 0 6px 20px rgba(21, 128, 61, 0.4);
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 14px;
+      animation: popIn 0.4s ease;
+    }
+    .rx-success-box h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 23px;
+      color: #172432;
+      margin-bottom: 8px;
+    }
+    .rx-success-box p {
+      font-size: 13.5px;
+      color: #4A3B2A;
+      line-height: 1.55;
+    }
+
+    /* Responsive adjustments for mobile */
+    @media (max-width: 460px) {
+      .rx-clipboard {
+        padding: 30px 10px 18px;
+        border-radius: 14px;
+      }
+      .rx-paper {
+        padding: 12px 10px 14px;
+      }
+      .rx-paper-inner {
+        padding: 10px 8px 12px;
+      }
+      .rx-diagnostic-box {
+        grid-template-columns: 66px 1fr;
+        gap: 8px;
+      }
+      .rx-caduceus-svg {
+        width: 62px;
+        height: 78px;
+      }
+      .rx-head-italic {
+        font-size: 18px;
+      }
+      .rx-head-main {
+        font-size: 19px;
+      }
+      .rx-intro-text {
+        font-size: 12px;
+      }
+      .rx-perk-label {
+        font-size: 12px;
+      }
+      .rx-clip-assembly {
+        width: 140px;
+        top: -14px;
+      }
+      .rx-clip-body {
+        width: 130px;
+        height: 28px;
+      }
+      .btn-prescription-gold {
+        font-size: 11px;
+        padding: 11px 8px;
+        letter-spacing: 0.5px;
+      }
     }
 
     /* ── RESPONSIVE ── */
