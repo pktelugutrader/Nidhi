@@ -5,19 +5,437 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Direct Equity Advisory, Portfolio Management Services (PMS) and SIFs by Praveen Kumar at Alakaapuri Nidhi, Hyderabad. Fundamental stock research and disciplined long-term wealth building." />
-  <title>Equity &amp; PMS Advisory — Alakaapuri Nidhi | Wealth Building</title>
+    content="Direct Equity, Portfolio Management Services (PMS), and Specialised Investment Funds (SIF) distribution by Praveen Kumar at Alakaapuri Nidhi, Hyderabad. Fundamental research-backed wealth creation." />
+  <meta name="keywords"
+    content="Direct Equity Hyderabad, PMS Hyderabad, Portfolio Management Services, SEBI PMS, Praveen Kumar, Alakaapuri Nidhi, SIF Funds, Multi-Cap Compounders, Wealth Management" />
+  <title>Direct Equity &amp; PMS Services — Alakaapuri Nidhi | High-Conviction Wealth</title>
   <link rel="icon" type="image/png" href="../../favicon.png" />
-
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@500;700;900&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700;800&family=Cinzel:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Orbitron:wght@600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="../../styles.css" />
   <script src="../../animations.js" defer></script>
+
+  <style>
+    /* ==========================================================================
+       LUXURY EQUITY & PMS STYLING — WARM IVORY & EXECUTIVE GOLD PALETTE
+       ========================================================================== */
+
+    .equity-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 20px;
+      border-radius: 50px;
+      background: rgba(201, 162, 39, 0.14);
+      border: 1px solid rgba(201, 162, 39, 0.45);
+      color: var(--gold-dark);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 14px rgba(201, 162, 39, 0.15);
+    }
+
+    .hero-split-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+      padding-top: 10px;
+    }
+
+    .hero-image-frame {
+      position: relative;
+      border-radius: 24px;
+      padding: 10px;
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.4) 0%, rgba(7, 26, 47, 0.2) 100%);
+      box-shadow: 0 20px 48px rgba(7, 26, 47, 0.12);
+      border: 1.5px solid rgba(201, 162, 39, 0.35);
+    }
+
+    .hero-image-frame img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(7, 26, 47, 0.18);
+    }
+
+    .hero-floating-stat {
+      position: absolute;
+      bottom: -18px;
+      left: 20px;
+      background: #FFFFFF;
+      border: 2px solid var(--gold-primary);
+      border-radius: 16px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 12px 32px rgba(7, 26, 47, 0.15);
+    }
+
+    .hero-floating-stat .stat-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #FAF1DF 0%, #FFF2C2 100%);
+      color: var(--gold-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      border: 1px solid rgba(201, 162, 39, 0.4);
+    }
+
+    .hero-floating-stat .stat-text h4 {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--navy-deep);
+      line-height: 1.2;
+    }
+
+    .hero-floating-stat .stat-text p {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin: 0;
+      font-weight: 600;
+    }
+
+    /* Vehicles Grid */
+    .vehicles-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .vehicle-card {
+      background: #FFFFFF;
+      border: 1.5px solid rgba(201, 162, 39, 0.32);
+      border-radius: 18px;
+      padding: 28px 22px;
+      box-shadow: 0 8px 24px rgba(7, 26, 47, 0.05);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vehicle-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #996515, #C9A227, #E5C158);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .vehicle-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 18px 40px rgba(7, 26, 47, 0.12), 0 0 16px rgba(201, 162, 39, 0.15);
+    }
+
+    .vehicle-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .vehicle-icon-box {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #FAF1DF 0%, #FFF2C2 100%);
+      color: var(--gold-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(201, 162, 39, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .vehicle-card:hover .vehicle-icon-box {
+      transform: scale(1.12) rotate(3deg);
+    }
+
+    .vehicle-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--navy-deep);
+      margin-bottom: 8px;
+      line-height: 1.25;
+    }
+
+    .vehicle-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .vehicle-feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+      border-top: 1px dashed rgba(201, 162, 39, 0.25);
+      padding-top: 14px;
+    }
+
+    .vehicle-feature-list li {
+      font-size: 12.5px;
+      color: var(--text-body);
+      margin-bottom: 7px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .vehicle-feature-list li i {
+      color: var(--gold-dark);
+      font-size: 11px;
+    }
+
+    /* 4-Pillar Selection Framework */
+    .framework-section {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF1DF 100%);
+      border-top: 1px solid rgba(201, 162, 39, 0.25);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+      padding: 70px 20px;
+    }
+
+    .framework-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: 36px auto 0 auto;
+    }
+
+    .framework-card {
+      background: #FFFFFF;
+      border: 1.5px solid rgba(201, 162, 39, 0.3);
+      border-radius: 16px;
+      padding: 24px;
+      position: relative;
+      box-shadow: 0 6px 20px rgba(7, 26, 47, 0.04);
+      transition: all 0.3s ease;
+    }
+
+    .framework-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 14px 30px rgba(7, 26, 47, 0.1);
+    }
+
+    .framework-num {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      font-family: var(--font-brand);
+      font-size: 26px;
+      font-weight: 900;
+      color: rgba(201, 162, 39, 0.2);
+    }
+
+    .framework-heading {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--navy-deep);
+      margin-bottom: 8px;
+    }
+
+    .framework-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* Comparison Table */
+    .compare-section {
+      background: #FFFFFF;
+      padding: 70px 20px;
+    }
+
+    .compare-table-wrap {
+      max-width: 1140px;
+      margin: 36px auto 0 auto;
+      overflow-x: auto;
+      border-radius: 16px;
+      border: 1.5px solid rgba(201, 162, 39, 0.35);
+      box-shadow: 0 10px 30px rgba(7, 26, 47, 0.05);
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13.5px;
+    }
+
+    .compare-table th {
+      background: var(--navy-deep);
+      color: #FFFFFF;
+      padding: 18px 20px;
+      font-weight: 700;
+      border-bottom: 2px solid var(--gold-primary);
+    }
+
+    .compare-table th.highlight-col {
+      background: #0D2945;
+      color: #FFE58F;
+      border-left: 2px solid var(--gold-primary);
+      border-right: 2px solid var(--gold-primary);
+    }
+
+    .compare-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+      color: var(--text-body);
+    }
+
+    .compare-table tr:nth-child(even) td {
+      background: #FEF7E9;
+    }
+
+    .compare-table td.highlight-col {
+      background: #FFFDF5;
+      font-weight: 700;
+      color: var(--navy-deep);
+      border-left: 2px solid rgba(201, 162, 39, 0.35);
+      border-right: 2px solid rgba(201, 162, 39, 0.35);
+    }
+
+    /* Calculator Section */
+    .equity-calc-section {
+      background: #071A2F;
+      color: #FFFFFF;
+      padding: 70px 20px;
+      position: relative;
+    }
+
+    .equity-calc-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #996515, #C9A227, #E5C158, #C9A227, #996515);
+    }
+
+    .equity-calc-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .equity-calc-card {
+      background: rgba(13, 41, 69, 0.85);
+      border: 1.5px solid rgba(201, 162, 39, 0.35);
+      border-radius: 20px;
+      padding: 32px 28px;
+    }
+
+    .slider-row {
+      margin-bottom: 24px;
+    }
+
+    .slider-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #E2E8F0;
+    }
+
+    .slider-val {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 800;
+      color: #FFE58F;
+    }
+
+    .calc-slider {
+      width: 100%;
+      height: 8px;
+      border-radius: 5px;
+      background: #153B5B;
+      outline: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+
+    .calc-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--gold-primary);
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 0 10px rgba(201, 162, 39, 0.6);
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+
+    .equity-result-card {
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.12) 0%, rgba(13, 41, 69, 0.6) 100%);
+      border: 2px solid var(--gold-primary);
+      border-radius: 20px;
+      padding: 34px 30px;
+      text-align: center;
+    }
+
+    .equity-corpus-display {
+      font-family: var(--font-heading);
+      font-size: 46px;
+      font-weight: 900;
+      color: #FFE58F;
+      line-height: 1.1;
+      margin: 12px 0;
+      text-shadow: 0 4px 16px rgba(201, 162, 39, 0.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-split-wrapper { grid-template-columns: 1fr; }
+      .vehicles-grid { grid-template-columns: repeat(2, 1fr); }
+      .framework-grid { grid-template-columns: repeat(2, 1fr); }
+      .equity-calc-container { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .vehicles-grid { grid-template-columns: 1fr; }
+      .framework-grid { grid-template-columns: 1fr; }
+      .hero-floating-stat { position: static; margin-top: 16px; }
+      .equity-corpus-display { font-size: 36px; }
+    }
+  </style>
 </head>
 
 <body>
@@ -28,7 +446,7 @@
       <img src="../../main-logo.png" alt="Alakaapuri Nidhi Logo" class="nav-logo-img" />
       <div class="nav-logo-text">
         <img src="../../brand-name-original.png" alt="Alakaapuri Nidhi" class="nav-brand-img" />
-        <span>Praveen Kumar · Wealth Advisory</span>
+        <span>Praveen Kumar · AMFI-Registered MFD (ARN-362567)</span>
       </div>
     </a>
     <ul class="nav-links">
@@ -53,14 +471,45 @@
   </nav>
 
   <!-- PAGE HERO -->
-  <header class="page-hero">
-    <span class="section-label center">Equity &amp; High-Growth Portfolios</span>
-    <h1 class="section-title">Disciplined Equity Advisory for <em>Substantial Compounding</em></h1>
-    <p class="section-desc">Direct Equity, Portfolio Management Services (PMS), and Specialised Investment Funds (SIFs) built on rigorous fundamental research and market expertise.</p>
-    <div class="hero-cta-row" style="justify-content:center; margin-top:28px;">
-      <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20would%20like%20to%20consult%20regarding%20Equity%20and%20PMS%20investments."
-        target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> Book Equity Consultation</a>
-      <a href="tel:+919440581363" class="btn-outline-light"><i class="fa-solid fa-phone"></i> Call Praveen Kumar</a>
+  <header class="page-hero" style="padding-bottom: 50px;">
+    <div class="hero-split-wrapper">
+      <div>
+        <span class="equity-hero-badge"><i class="fa-solid fa-gem"></i> DIRECT EQUITY · SEBI PMS · SIF MANDATES</span>
+        <h1 class="section-title" style="text-align: left; margin-bottom: 18px;">
+          Institutional Research &amp; High-Conviction <em>Equity Solutions</em>
+        </h1>
+        <p class="section-desc" style="text-align: left; max-width: 600px; margin-bottom: 26px;">
+          Direct Equity, Portfolio Management Services (PMS), and Specialised Investment Funds (SIF) engineered for serious wealth accumulators. We focus on durable economic moats, clean corporate governance, and compounding leaders.
+        </p>
+
+        <div class="hero-cta-row" style="justify-content: flex-start; gap: 14px;">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20would%20like%20to%20consult%20regarding%20Equity%20and%20PMS%20investments."
+            target="_blank" class="btn-gold">
+            <i class="fa-brands fa-whatsapp"></i> Consult with Praveen
+          </a>
+          <a href="tel:+919440581363" class="btn-outline-light">
+            <i class="fa-solid fa-phone"></i> Direct Call
+          </a>
+        </div>
+
+        <div style="margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px;">
+          <span class="meta-tag"><i class="fa-solid fa-shield-halved" style="color:var(--gold-dark);"></i> 100% Direct Demat Ownership</span>
+          <span class="meta-tag"><i class="fa-solid fa-scale-balanced" style="color:var(--gold-dark);"></i> SEBI-Regulated PMS (₹50L Min)</span>
+          <span class="meta-tag"><i class="fa-solid fa-check-double" style="color:var(--gold-dark);"></i> Zero Speculative Gambling</span>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="hero-image-frame">
+        <img src="equity_hero.jpg" alt="Institutional Direct Equity and PMS Research Visual" />
+        <div class="hero-floating-stat">
+          <div class="stat-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <div class="stat-text">
+            <h4>Institutional Alpha</h4>
+            <p>15–25 Stock Focused Portfolios</p>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -68,125 +517,294 @@
   <section class="trust-bar">
     <div class="trust-grid">
       <div class="trust-item">
-        <div class="trust-num" data-count="10" data-suffix=" Yrs+">0</div>
+        <div class="trust-num" data-count="10" data-suffix=" Yrs+">10 Yrs+</div>
         <div class="trust-lbl">Market Experience</div>
-        <div class="trust-sub">Active Market Participation</div>
+        <div class="trust-sub">Fundamental &amp; Technical Research</div>
       </div>
       <div class="trust-item">
-        <div class="trust-num" data-count="50" data-suffix=" Lakh+">0</div>
+        <div class="trust-num" data-count="50" data-suffix=" Lakh+">₹50 Lakh+</div>
         <div class="trust-lbl">PMS Minimum</div>
         <div class="trust-sub">SEBI Regulated Portfolios</div>
       </div>
       <div class="trust-item">
-        <div class="trust-num" data-count="100" data-suffix="%">0</div>
-        <div class="trust-lbl">Transparency</div>
-        <div class="trust-sub">Direct Demat Ownership</div>
+        <div class="trust-num" data-count="100" data-suffix="%">100%</div>
+        <div class="trust-lbl">Demat Transparency</div>
+        <div class="trust-sub">Shares Held Directly by Client</div>
       </div>
       <div class="trust-item">
-        <div class="trust-num" data-count="500" data-suffix="+">0</div>
-        <div class="trust-lbl">Families Advised</div>
+        <div class="trust-num" data-count="500" data-suffix="+">500+</div>
+        <div class="trust-lbl">Families Guided</div>
         <div class="trust-sub">Across Hyderabad &amp; India</div>
       </div>
     </div>
   </section>
 
-  <!-- EQUITY & PMS SOLUTIONS -->
-  <section class="section-block">
+  <!-- EQUITY & PMS SOLUTIONS (4 VEHICLES) -->
+  <section class="section-block" style="background:#FFFFFF;">
     <div class="section-header-center">
-      <span class="section-label center">Investment Vehicles</span>
+      <span class="section-label center"><i class="fa-solid fa-layer-group"></i> Sophisticated Investment Vehicles</span>
       <h2 class="section-title">Institutional-Grade Solutions for <em>Individual Wealth</em></h2>
-      <p class="section-desc">Designed for investors looking for focused alpha generation, sector tailwinds, and professional portfolio management.</p>
+      <p class="section-desc">Tailored mandates designed for high-net-worth investors seeking alpha beyond broad indices.</p>
     </div>
 
-    <div class="products-grid">
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
-        <div class="product-title">Direct Equity Portfolios</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          High-conviction stock selection anchored to earnings growth, clean governance, capital efficiency, and fair valuations.
-        </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> Large &amp; Midcap compounders</li>
-          <li><i class="fa-solid fa-diamond"></i> Periodic rebalancing alerts</li>
-          <li><i class="fa-solid fa-diamond"></i> Zero emotional trading pitfalls</li>
+    <div class="vehicles-grid">
+      <!-- 1. Direct Equity Baskets -->
+      <div class="vehicle-card tilt-3d">
+        <div class="vehicle-icon-box"><i class="fa-solid fa-chart-line"></i></div>
+        <h3 class="vehicle-title">Direct Equity Baskets</h3>
+        <p class="vehicle-desc">Curated multi-cap stock portfolios held directly in your personal Demat account. No fund manager lock-ins; 100% ownership transparency.</p>
+        <ul class="vehicle-feature-list">
+          <li><i class="fa-solid fa-check"></i> High-conviction Large &amp; Midcaps</li>
+          <li><i class="fa-solid fa-check"></i> Direct dividend credits to bank</li>
+          <li><i class="fa-solid fa-check"></i> Periodic rebalancing alerts</li>
         </ul>
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Direct%20Equity%20Baskets." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Discuss Direct Stocks</a>
       </div>
 
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-briefcase"></i></div>
-        <div class="product-title">Portfolio Management Services (PMS)</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          Tailored equity mandates managed by India's premier fund houses with SEBI-regulated minimums of ₹50 Lakh.
-        </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> Direct stock holding in client demat</li>
-          <li><i class="fa-solid fa-diamond"></i> Concentrated 15-25 stock portfolios</li>
-          <li><i class="fa-solid fa-diamond"></i> Granular performance reporting</li>
+      <!-- 2. PMS -->
+      <div class="vehicle-card tilt-3d">
+        <div class="vehicle-icon-box"><i class="fa-solid fa-briefcase"></i></div>
+        <h3 class="vehicle-title">Portfolio Management (PMS)</h3>
+        <p class="vehicle-desc">SEBI-regulated discretionary mandates managed by India's top fund houses. Concentrated 15–25 stock portfolios built for outperformance.</p>
+        <ul class="vehicle-feature-list">
+          <li><i class="fa-solid fa-check"></i> ₹50 Lakh SEBI minimum ticket</li>
+          <li><i class="fa-solid fa-check"></i> Dedicated fund manager access</li>
+          <li><i class="fa-solid fa-check"></i> Tailored HNI tax reporting</li>
         </ul>
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20SEBI%20PMS%20Mandates." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Explore PMS Strategies</a>
       </div>
 
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-arrows-turn-to-dots"></i></div>
-        <div class="product-title">Specialised Investment Funds (SIF)</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          Advanced multi-strategy solutions, including Long-Short strategies and Pre-IPO / Unlisted growth opportunities.
-        </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> Hybrid Long Short strategies</li>
-          <li><i class="fa-solid fa-diamond"></i> Equity Ex-Top 100 alpha seekers</li>
-          <li><i class="fa-solid fa-diamond"></i> Hedged market downside risk</li>
+      <!-- 3. SIF -->
+      <div class="vehicle-card tilt-3d">
+        <div class="vehicle-icon-box"><i class="fa-solid fa-arrows-turn-to-dots"></i></div>
+        <h3 class="vehicle-title">Specialised Funds (SIF)</h3>
+        <p class="vehicle-desc">Advanced alternate strategies including Long-Short, Sector Rotations, and structured equity mandates for sophisticated family offices.</p>
+        <ul class="vehicle-feature-list">
+          <li><i class="fa-solid fa-check"></i> Hedged market-neutral upside</li>
+          <li><i class="fa-solid fa-check"></i> Dynamic derivatives overlay</li>
+          <li><i class="fa-solid fa-check"></i> Institutional risk mitigation</li>
         </ul>
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Specialised%20Investment%20Funds%20(SIF)." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> SIF Information</a>
       </div>
 
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-stethoscope"></i></div>
-        <div class="product-title">Existing Portfolio Health Check</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          Holding 40+ stocks or underperforming funds? We diagnose your current portfolio to eliminate redundancies and style drift.
-        </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> Overlap &amp; concentration analysis</li>
-          <li><i class="fa-solid fa-diamond"></i> Exit strategy for loss-making stocks</li>
-          <li><i class="fa-solid fa-diamond"></i> Actionable restructuring blueprint</li>
+      <!-- 4. Unlisted & Pre-IPO -->
+      <div class="vehicle-card tilt-3d">
+        <div class="vehicle-icon-box"><i class="fa-solid fa-building-flag"></i></div>
+        <h3 class="vehicle-title">Unlisted &amp; Pre-IPO Equity</h3>
+        <p class="vehicle-desc">Early-stage participation in high-growth late-stage private companies and future unicorns before their official public exchange listings.</p>
+        <ul class="vehicle-feature-list">
+          <li><i class="fa-solid fa-check"></i> Direct Demat share transfer</li>
+          <li><i class="fa-solid fa-check"></i> Pre-listing valuation discount</li>
+          <li><i class="fa-solid fa-check"></i> Multi-year growth runway</li>
         </ul>
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20explore%20Unlisted%20and%20Pre-IPO%20shares." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Pre-IPO Access</a>
       </div>
     </div>
   </section>
 
-  <!-- PHILOSOPHY -->
-  <section class="section-block" style="background: #0D2945; border-top: 1px solid var(--mahogany); border-bottom: 1px solid var(--mahogany);">
+  <!-- 4-PILLAR STOCK SELECTION FRAMEWORK -->
+  <section class="framework-section">
     <div class="section-header-center">
-      <span class="section-label center">Our Approach</span>
-      <h2 class="section-title">The <em>Alakaapuri</em> Equity Discipline</h2>
+      <span class="section-label center"><i class="fa-solid fa-microscope"></i> Research Philosophy</span>
+      <h2 class="section-title">The Alakaapuri <em>Stock Selection Framework</em></h2>
+      <p class="section-desc">We avoid speculative tips, operators, and penny stocks. Every recommendation passes through 4 strict institutional filters.</p>
     </div>
 
-    <div class="why-grid">
-      <div class="why-card tilt-3d">
-        <div class="why-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-        <div class="why-title">Fundamental Rigor</div>
-        <p class="why-desc">We evaluate companies through ROCE, free cash flow generation, and durable competitive moats.</p>
+    <div class="framework-grid">
+      <div class="framework-card">
+        <div class="framework-num">01</div>
+        <div class="framework-heading">Economic Moat &amp; Pricing Power</div>
+        <p class="framework-text">Companies with durable competitive advantages, brand monopolies, or high switching costs that protect profit margins from inflation.</p>
       </div>
-      <div class="why-card tilt-3d">
-        <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
-        <div class="why-title">Risk Asymmetry</div>
-        <p class="why-desc">Prioritising downside protection first. We only take risks where the reward potential is multiples higher.</p>
+
+      <div class="framework-card">
+        <div class="framework-num">02</div>
+        <div class="framework-heading">Clean Promoter Governance</div>
+        <p class="framework-text">Pristine corporate integrity, transparent capital allocation, zero auditor red flags, and low or zero promoter share pledges.</p>
       </div>
-      <div class="why-card tilt-3d">
-        <div class="why-icon"><i class="fa-solid fa-hourglass-half"></i></div>
-        <div class="why-title">Patience &amp; Compounding</div>
-        <p class="why-desc">Great businesses compound over years, not days. We filter out intraday noise to capture secular megatrends.</p>
+
+      <div class="framework-card">
+        <div class="framework-num">03</div>
+        <div class="framework-heading">High Capital Efficiency (ROCE > 18%)</div>
+        <p class="framework-text">Consistent Return on Capital Employed (ROCE) and Free Cash Flow generation that fuels debt-free organic expansion.</p>
+      </div>
+
+      <div class="framework-card">
+        <div class="framework-num">04</div>
+        <div class="framework-heading">Margin of Safety &amp; Valuation</div>
+        <p class="framework-text">Buying industry leaders at reasonable multiples relative to their growth runway — safeguarding capital against market drawdowns.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE: MUTUAL FUNDS VS PMS VS DIRECT EQUITY -->
+  <section class="compare-section">
+    <div class="section-header-center">
+      <span class="section-label center"><i class="fa-solid fa-code-compare"></i> Strategic Comparison</span>
+      <h2 class="section-title">Mutual Funds vs PMS vs <em>Direct Equity</em></h2>
+      <p class="section-desc">Understand how each vehicle aligns with your net worth, ticket size, and wealth objectives.</p>
+    </div>
+
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Mutual Funds</th>
+            <th class="highlight-col">Portfolio Management (PMS)</th>
+            <th>Direct Equity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Minimum Ticket Size</strong></td>
+            <td>₹500 / month (SIP)</td>
+            <td class="highlight-col">₹50 Lakhs (SEBI Mandated)</td>
+            <td>No Minimum (Share price based)</td>
+          </tr>
+          <tr>
+            <td><strong>Stock Concentration</strong></td>
+            <td>40 to 80+ stocks (Broadly diversified)</td>
+            <td class="highlight-col">15 to 25 stocks (High Conviction Alpha)</td>
+            <td>User Choice (typically 10–20)</td>
+          </tr>
+          <tr>
+            <td><strong>Ownership Structure</strong></td>
+            <td>Units of Fund NAV</td>
+            <td class="highlight-col">Direct Stocks in Client Demat</td>
+            <td>Direct Stocks in Client Demat</td>
+          </tr>
+          <tr>
+            <td><strong>Customization Level</strong></td>
+            <td>Zero (Fixed scheme mandate)</td>
+            <td class="highlight-col">High (Bespoke model portfolios)</td>
+            <td>100% Customized by Investor</td>
+          </tr>
+          <tr>
+            <td><strong>Fund Manager Interaction</strong></td>
+            <td>None</td>
+            <td class="highlight-col">Direct quarterly reviews with fund team</td>
+            <td>None (Guided by Praveen Kumar)</td>
+          </tr>
+          <tr>
+            <td><strong>Best Suited For</strong></td>
+            <td>Salaried wealth builders &amp; SIP investors</td>
+            <td class="highlight-col">HNIs seeking concentrated wealth alpha</td>
+            <td>Active long-term direct stock investors</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE LONG-TERM COMPOUNDING CALCULATOR -->
+  <section class="equity-calc-section">
+    <div class="equity-calc-container">
+      <div>
+        <span class="section-label" style="color:#FFE58F;"><i class="fa-solid fa-calculator"></i> Wealth Compounding Simulator</span>
+        <h2 class="section-title" style="color:#FFFFFF; text-align:left; margin: 10px 0 16px 0;">
+          Simulate Your High-Conviction <em>Wealth Growth</em>
+        </h2>
+        <p style="color:#CBD5E1; font-size:14.5px; line-height:1.6; margin-bottom: 26px;">
+          India's leading businesses routinely compound earnings between 15% to 22% CAGR. See what high-conviction allocation yields over 3, 5, 10, or 15 years.
+        </p>
+
+        <div class="equity-calc-card">
+          <div class="slider-row">
+            <div class="slider-header">
+              <span>Capital Amount</span>
+              <span class="slider-val" id="equityPrincipalDisplay">₹25,00,000</span>
+            </div>
+            <input type="range" id="equityPrincipalSlider" class="calc-slider" min="500000" max="20000000" step="500000" value="2500000" oninput="calculateEquityGrowth()" />
+            <div style="display:flex; justify-content:space-between; font-size:11px; color:#94A3B8; margin-top:6px;">
+              <span>₹5 Lakhs</span>
+              <span>₹1 Crore</span>
+              <span>₹2 Crores</span>
+            </div>
+          </div>
+
+          <div class="slider-row">
+            <div class="slider-header">
+              <span>Time Horizon</span>
+              <span class="slider-val" id="equityYearsDisplay">7 Years</span>
+            </div>
+            <input type="range" id="equityYearsSlider" class="calc-slider" min="3" max="20" step="1" value="7" oninput="calculateEquityGrowth()" />
+            <div style="display:flex; justify-content:space-between; font-size:11px; color:#94A3B8; margin-top:6px;">
+              <span>3 Years</span>
+              <span>10 Years</span>
+              <span>20 Years</span>
+            </div>
+          </div>
+
+          <div class="slider-row" style="margin-bottom:0;">
+            <div class="slider-header">
+              <span>Expected Annual Compounding (CAGR)</span>
+              <span class="slider-val" id="equityRateDisplay">16.0%</span>
+            </div>
+            <input type="range" id="equityRateSlider" class="calc-slider" min="10" max="24" step="0.5" value="16" oninput="calculateEquityGrowth()" />
+            <div style="display:flex; justify-content:space-between; font-size:11px; color:#94A3B8; margin-top:6px;">
+              <span>10% (Conservative)</span>
+              <span>16% (Focused Alpha)</span>
+              <span>24% (Aggressive Compounder)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Result Card -->
+      <div class="equity-result-card">
+        <span class="result-ribbon" style="background:var(--gold-primary); color:#071A2F; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:1px; padding:5px 16px; border-radius:20px; display:inline-block; margin-bottom:12px;"><i class="fa-solid fa-trophy"></i> Projected Equity Corpus</span>
+        <div class="equity-corpus-display" id="equityCorpusDisplay">₹70.65 Lakhs</div>
+        <p style="color:#E2E8F0; font-size:13.5px;">Estimated maturity value on lump sum compounding</p>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:24px 0; padding:16px 0; border-top:1px solid rgba(201,162,39,0.3); border-bottom:1px solid rgba(201,162,39,0.3);">
+          <div>
+            <h5 style="font-size:12px; color:#94A3B8; text-transform:uppercase; margin-bottom:4px;">Initial Capital</h5>
+            <p id="equityInitialDisplay" style="font-family:var(--font-heading); font-size:20px; font-weight:700; color:#FFFFFF; margin:0;">₹25.00 Lakhs</p>
+          </div>
+          <div>
+            <h5 style="font-size:12px; color:#94A3B8; text-transform:uppercase; margin-bottom:4px;">Estimated Gain</h5>
+            <p id="equityGainsDisplay" style="font-family:var(--font-heading); font-size:20px; font-weight:700; color:#86EFAC; margin:0;">+₹45.65 Lakhs</p>
+          </div>
+        </div>
+
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20discuss%20an%20Equity/PMS%20portfolio%20allocation." target="_blank" class="btn-gold" style="width:100%; justify-content:center;">
+          <i class="fa-brands fa-whatsapp"></i> Structure My Equity Portfolio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE CAS / DEMAT AUDIT HOOK -->
+  <section class="section-block" style="background:#FAF1DF;">
+    <div class="audit-box-wrap" style="background:#FFFFFF; border:2px solid var(--gold-primary); border-radius:20px; padding:40px; display:grid; grid-template-columns:1.2fr 0.8fr; gap:30px; align-items:center; max-width:1140px; margin:0 auto; box-shadow:0 16px 40px rgba(7,26,47,0.08);">
+      <div>
+        <span style="font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--gold-dark);"><i class="fa-solid fa-stethoscope"></i> Demat Portfolio Scan</span>
+        <h3 style="font-family:var(--font-heading); font-size:26px; font-weight:800; color:var(--navy-deep); margin-bottom:10px;">Already Holding Direct Stocks? Get an Objective Portfolio Review</h3>
+        <p style="font-size:14.5px; color:var(--text-body); line-height:1.6; margin-bottom:16px;">Most retail portfolios are cluttered with 30+ speculative small-caps, dying legacy companies, and high sector concentration. Share your holding snapshot for a confidential institutional health scan.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <span class="meta-tag"><i class="fa-solid fa-check" style="color:var(--gold-dark);"></i> Clean Out Penny Stocks</span>
+          <span class="meta-tag"><i class="fa-solid fa-check" style="color:var(--gold-dark);"></i> Balance Sheet Solvency Check</span>
+          <span class="meta-tag"><i class="fa-solid fa-check" style="color:var(--gold-dark);"></i> ROCE &amp; Earnings Quality</span>
+        </div>
+      </div>
+      <div style="text-align:center;">
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20would%20like%20a%20FREE%20review%20of%20my%20Demat%20stock%20holdings." target="_blank" class="btn-gold" style="width:100%; justify-content:center; padding: 14px 20px;">
+          <i class="fa-brands fa-whatsapp"></i> Request Demat Holding Audit
+        </a>
+        <p style="font-size:11.5px; color:var(--text-muted); margin-top:8px;">100% Confidential · Personal review by Praveen Kumar</p>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
   <div class="cta-section">
-    <span class="section-label center">Take the Next Step</span>
-    <h2 class="section-title">Ready for <em>Professional Equity Advisory?</em></h2>
-    <p class="section-desc">Schedule a private session with Praveen Kumar to review your equity exposure and discover bespoke PMS strategies.</p>
+    <span class="section-label center">Institutional Direct Wealth</span>
+    <h2 class="section-title">Participate in India's <em>Decade of Growth</em></h2>
+    <p class="section-desc">Direct Equity, PMS and SIF mandates backed by seasoned research and disciplined risk management.</p>
     <div class="cta-btn-row">
-      <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20discuss%20Equity%20and%20PMS."
-        target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> WhatsApp Consultation</a>
+      <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20book%20an%20Equity%20PMS%20consultation."
+        target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> Book Consultation</a>
       <a href="tel:+919440581363" class="btn-outline-light"><i class="fa-solid fa-phone"></i> Call +91 94405 81363</a>
     </div>
   </div>
@@ -201,9 +819,8 @@
             <img src="../../brand-name-original.png" alt="Alakaapuri Nidhi" class="footer-brand-img" />
           </div>
         </a>
-        <div class="footer-tag">Wealth Expert · AMFI Registered ARN-362567</div>
-        <p class="footer-about">A trusted wealth advisory offering mutual funds, insurance, loans and financial planning
-          — led by Praveen Kumar, AMFI ARN Holder (ARN‑362567).</p>
+        <div class="footer-tag">AMFI Registered MFD · ARN-362567</div>
+        <p class="footer-about">A premier financial distribution firm offering mutual funds, insurance, loans, PMS facilitation and wealth planning assistance — led by Praveen Kumar, AMFI-Registered Mutual Fund Distributor (ARN-362567).</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
@@ -223,7 +840,7 @@
           <li><a href="../../services/mutual-funds/">Mutual Funds &amp; SIP</a></li>
           <li><a href="../../services/insurance/">Insurance</a></li>
           <li><a href="../../services/equity/">Equity &amp; PMS</a></li>
-          <li><a href="../../services/derivatives/">Derivatives</a></li>
+          <li><a href="../../services/derivatives/">Derivatives &amp; Commodities</a></li>
           <li><a href="../../services/">All Services</a></li>
         </ul>
       </div>
@@ -245,19 +862,20 @@
     </div>
     <div class="footer-bottom">
       <div>© <span id="year">2026</span> Alakaapuri Nidhi. All rights reserved. · ARN‑362567</div>
-      <div>Equities and PMS are subject to market risks. Past performance does not guarantee future results.</div>
+      <div>Hyderabad, Telangana · India</div>
     </div>
+    <p class="disclaimer">Equity investments are subject to market risks. Past performance does not guarantee future results. PMS and SIF distribution is facilitated through SEBI-registered portfolio managers and asset management companies. Alakaapuri Nidhi acts as a distributor and does not provide guaranteed return schemes. Please read all disclosure documents carefully before investing.</p>
   </footer>
 
   <!-- FLOATING PROMO AD -->
   <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="fab-promo-ad" data-testid="fab-promo-ad">
     <div class="hidden-mob">
       <img class="sticky" src="../../lead.png"
-        alt="Open a Mutual Fund Account" />
+        alt="Open an Investment Account" />
     </div>
     <div class="hidden-desk">
       <img class="sticky" src="../../lead.png"
-        alt="Open a Mutual Fund Account" />
+        alt="Open an Investment Account" />
     </div>
   </a>
 
@@ -267,6 +885,41 @@
     <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20Equity%20and%20PMS."
       target="_blank" class="wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
   </div>
+
+  <script>
+    function calculateEquityGrowth() {
+      const P = parseFloat(document.getElementById('equityPrincipalSlider').value);
+      const years = parseFloat(document.getElementById('equityYearsSlider').value);
+      const rate = parseFloat(document.getElementById('equityRateSlider').value);
+
+      document.getElementById('equityPrincipalDisplay').innerText = '₹' + P.toLocaleString('en-IN');
+      document.getElementById('equityYearsDisplay').innerText = years + (years === 1 ? ' Year' : ' Years');
+      document.getElementById('equityRateDisplay').innerText = rate.toFixed(1) + '%';
+
+      // Lump sum compounding: A = P * (1 + r)^t
+      const r = rate / 100;
+      const A = P * Math.pow(1 + r, years);
+      const gains = A - P;
+
+      function formatIndian(amount) {
+        if (amount >= 10000000) {
+          return '₹' + (amount / 10000000).toFixed(2) + ' Crores';
+        } else if (amount >= 100000) {
+          return '₹' + (amount / 100000).toFixed(2) + ' Lakhs';
+        } else {
+          return '₹' + Math.round(amount).toLocaleString('en-IN');
+        }
+      }
+
+      document.getElementById('equityCorpusDisplay').innerText = formatIndian(A);
+      document.getElementById('equityInitialDisplay').innerText = formatIndian(P);
+      document.getElementById('equityGainsDisplay').innerText = '+' + formatIndian(gains);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      calculateEquityGrowth();
+    });
+  </script>
 
 </body>
 </html>

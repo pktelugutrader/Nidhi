@@ -5,10 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Life and Health Insurance advisory by Praveen Kumar at Alakaapuri Nidhi, Hyderabad. Pure Term Insurance, Family Health Floaters, Critical Illness and Motor Insurance with 100% claim assistance." />
-  <title>Life &amp; Health Insurance — Alakaapuri Nidhi | Protect What Matters Most</title>
+    content="Comprehensive Life, Health, Commercial, and General Insurance advisory by Praveen Kumar at Alakaapuri Nidhi, Hyderabad. Pure Term Insurance, Term+ULIP, Health, Motor, Marine Cargo, Property, Casualty, and Corporate Coverage with 100% claim assistance." />
+  <title>Insurance Solutions — Alakaapuri Nidhi | Term, Term+ULIP, Health, Commercial & Specialty</title>
   <link rel="icon" type="image/png" href="../../favicon.png" />
-
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +17,555 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="../../styles.css" />
   <script src="../../animations.js" defer></script>
+
+  <style>
+    /* ==========================================================================
+       LUXURY INSURANCE PORTFOLIO — PREMIUM VISUAL STYLES (WARM IVORY & GOLD THEME)
+       ========================================================================== */
+
+    .ins-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 20px;
+      border-radius: 50px;
+      background: rgba(201, 162, 39, 0.14);
+      border: 1px solid rgba(201, 162, 39, 0.4);
+      color: var(--gold-dark);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 14px rgba(201, 162, 39, 0.15);
+    }
+
+    /* Quick Hero Metrics */
+    .hero-metrics-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .hero-metric-pill {
+      background: #FFFFFF;
+      border: 1px solid rgba(201, 162, 39, 0.35);
+      border-radius: 30px;
+      padding: 6px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy-deep);
+      box-shadow: 0 6px 16px rgba(7, 26, 47, 0.05);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-metric-pill i {
+      color: var(--gold-dark);
+    }
+
+    /* Flagship Solutions (Term, Term+ULIP, Health) */
+    .flagship-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .flagship-card {
+      background: #FFFFFF;
+      border: 1.5px solid rgba(201, 162, 39, 0.35);
+      border-radius: 20px;
+      padding: 34px 28px;
+      box-shadow: 0 14px 34px rgba(7, 26, 47, 0.06);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .flagship-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #996515, #C9A227, #E5C158, #C9A227, #996515);
+    }
+
+    .flagship-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 48px rgba(7, 26, 47, 0.14);
+      border-color: var(--gold-primary);
+    }
+
+    .flagship-card.featured {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF5 100%);
+      border: 2.5px solid var(--gold-primary);
+      box-shadow: 0 18px 42px rgba(201, 162, 39, 0.22);
+      transform: scale(1.02);
+    }
+
+    .flagship-card.featured:hover {
+      transform: scale(1.02) translateY(-8px);
+    }
+
+    .flagship-ribbon {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: linear-gradient(135deg, #C9A227 0%, #996515 100%);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(153, 101, 21, 0.35);
+    }
+
+    .flagship-icon-box {
+      width: 62px;
+      height: 62px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #FAF1DF 0%, #FFF2C2 100%);
+      border: 1.5px solid rgba(201, 162, 39, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: var(--navy-deep);
+      margin-bottom: 20px;
+      box-shadow: 0 8px 18px rgba(201, 162, 39, 0.18);
+    }
+
+    .flagship-title {
+      font-family: var(--font-heading);
+      font-size: 23px;
+      font-weight: 700;
+      color: var(--navy-deep);
+      margin-bottom: 10px;
+    }
+
+    .flagship-desc {
+      font-size: 14px;
+      color: var(--text-body);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .flagship-points {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 24px;
+    }
+
+    .flagship-points li {
+      font-size: 13.5px;
+      color: var(--text-body);
+      padding: 7px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px dashed rgba(201, 162, 39, 0.22);
+    }
+
+    .flagship-points li:last-child {
+      border-bottom: none;
+    }
+
+    .flagship-points li i {
+      color: var(--gold-dark);
+      font-size: 14px;
+    }
+
+    .btn-flagship-inquire {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--navy-deep);
+      color: #FFFFFF;
+      padding: 13px 22px;
+      border-radius: 12px;
+      font-size: 14.5px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(7, 26, 47, 0.15);
+    }
+
+    .btn-flagship-inquire:hover {
+      background: var(--gold-primary);
+      color: #071A2F;
+      box-shadow: 0 8px 22px rgba(201, 162, 39, 0.35);
+    }
+
+    /* Comparison Table: Term vs Term+ULIP */
+    .comparison-section {
+      max-width: 1100px;
+      margin: 50px auto 30px auto;
+      padding: 0 20px;
+    }
+
+    .comparison-table-wrap {
+      background: #FFFFFF;
+      border: 1.5px solid rgba(201, 162, 39, 0.35);
+      border-radius: 18px;
+      overflow-x: auto;
+      box-shadow: 0 14px 34px rgba(7, 26, 47, 0.05);
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      min-width: 680px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+      font-size: 14px;
+    }
+
+    .comparison-table th {
+      background: #071A2F;
+      color: #FFF2C2;
+      font-family: var(--font-heading);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .comparison-table th.highlight-col {
+      background: #0D2945;
+      color: #FFE58F;
+      border-left: 2px solid var(--gold-primary);
+      border-right: 2px solid var(--gold-primary);
+    }
+
+    .comparison-table td.highlight-col {
+      background: #FFFDF7;
+      border-left: 2px solid rgba(201, 162, 39, 0.3);
+      border-right: 2px solid rgba(201, 162, 39, 0.3);
+      font-weight: 700;
+      color: var(--navy-deep);
+    }
+
+    /* 16 Products Catalog Grid */
+    .services-catalog-section {
+      background: linear-gradient(180deg, #FEF7E9 0%, #FAF1DF 100%);
+      border-top: 1px solid rgba(201, 162, 39, 0.25);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+      padding: 65px 20px 75px 20px;
+    }
+
+    .catalog-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Category Filter Tabs */
+    .catalog-filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+
+    .filter-pill {
+      background: #FFFFFF;
+      border: 1px solid rgba(201, 162, 39, 0.35);
+      color: var(--navy-deep);
+      padding: 9px 20px;
+      border-radius: 30px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 10px rgba(7, 26, 47, 0.03);
+    }
+
+    .filter-pill:hover,
+    .filter-pill.active {
+      background: var(--navy-deep);
+      color: #FFF2C2;
+      border-color: var(--navy-deep);
+      box-shadow: 0 6px 18px rgba(7, 26, 47, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .catalog-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    /* Enhanced Graphical Product Card (Exact Match to User's Image Categories with High Aesthetics) */
+    .catalog-card-rich {
+      background: #FFFFFF;
+      border: 1.5px solid rgba(201, 162, 39, 0.28);
+      border-radius: 16px;
+      padding: 22px 20px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      box-shadow: 0 8px 24px rgba(7, 26, 47, 0.04);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .catalog-card-rich::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gold-primary);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .catalog-card-rich:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(7, 26, 47, 0.12), 0 0 18px rgba(201, 162, 39, 0.15);
+      border-color: var(--gold-primary);
+    }
+
+    .catalog-card-rich:hover::after {
+      transform: scaleX(1);
+    }
+
+    /* Specialized Duotone Icon Badges Matching Image Colors */
+    .card-icon-emblem {
+      width: 56px;
+      height: 56px;
+      flex-shrink: 0;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .catalog-card-rich:hover .card-icon-emblem {
+      transform: scale(1.1) rotate(2deg);
+    }
+
+    /* Themed Emblem Colors */
+    .emblem-blue { background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); color: #1D4ED8; border: 1px solid #BFDBFE; }
+    .emblem-amber { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); color: #B45309; border: 1px solid #FDE68A; }
+    .emblem-green { background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%); color: #047857; border: 1px solid #A7F3D0; }
+    .emblem-cyan { background: linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 100%); color: #0E7490; border: 1px solid #A5F3FC; }
+    .emblem-marine { background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); color: #0369A1; border: 1px solid #BAE6FD; }
+    .emblem-red { background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%); color: #DC2626; border: 1px solid #FECACA; }
+    .emblem-orange { background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%); color: #C2410C; border: 1px solid #FED7AA; }
+    .emblem-sky { background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); color: #0284C7; border: 1px solid #BAE6FD; }
+    .emblem-gold { background: linear-gradient(135deg, #FAF1DF 0%, #FFF2C2 100%); color: #854D0E; border: 1px solid #FDE047; }
+    .emblem-purple { background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%); color: #6B21A8; border: 1px solid #E9D5FF; }
+    .emblem-combo { background: linear-gradient(135deg, #FDF4FF 0%, #FAE8FF 100%); color: #A21CAF; border: 1px solid #F5D0FE; }
+
+    .card-meta-wrap {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .card-product-title {
+      font-family: var(--font-heading);
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--navy-deep);
+      margin-bottom: 4px;
+      line-height: 1.25;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-sub-info {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-count-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--navy-deep);
+      background: #FAF1DF;
+      border: 1px solid rgba(201, 162, 39, 0.3);
+      padding: 3px 10px;
+      border-radius: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .catalog-card-rich:hover .card-count-pill {
+      background: var(--gold-primary);
+      color: #071A2F;
+      font-weight: 800;
+    }
+
+    .card-action-chevron {
+      color: var(--gold-dark);
+      font-size: 14px;
+      opacity: 0.3;
+      transform: translateX(-4px);
+      transition: all 0.25s ease;
+    }
+
+    .catalog-card-rich:hover .card-action-chevron {
+      opacity: 1;
+      transform: translateX(0);
+      color: var(--navy-deep);
+    }
+
+    /* Policy Audit & Advisory Banner */
+    .audit-banner-section {
+      max-width: 1060px;
+      margin: 60px auto 40px auto;
+      padding: 0 20px;
+    }
+
+    .audit-card {
+      background: linear-gradient(135deg, #071A2F 0%, #0D2945 100%);
+      border: 2px solid var(--gold-primary);
+      border-radius: 22px;
+      padding: 42px 38px;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      box-shadow: 0 24px 60px rgba(7, 26, 47, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .audit-card::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      right: -15%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(201, 162, 39, 0.22) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .audit-content h3 {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      color: #FFF2C2;
+      margin-bottom: 10px;
+    }
+
+    .audit-content p {
+      font-size: 14.5px;
+      color: #E2E8F0;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+
+    .btn-audit-gold {
+      background: linear-gradient(135deg, #FFE58F 0%, #C9A227 50%, #996515 100%);
+      color: #071A2F;
+      font-size: 15px;
+      font-weight: 800;
+      padding: 16px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      white-space: nowrap;
+      box-shadow: 0 10px 26px rgba(201, 162, 39, 0.4);
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .btn-audit-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 34px rgba(201, 162, 39, 0.5);
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 1100px) {
+      .catalog-grid-4 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .flagship-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .flagship-card.featured {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .catalog-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .flagship-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .audit-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 22px;
+      }
+
+      .audit-content p {
+        margin: 0 auto;
+      }
+
+      .btn-audit-gold {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .catalog-grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .catalog-card-rich {
+        padding: 18px 16px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -28,7 +576,7 @@
       <img src="../../main-logo.png" alt="Alakaapuri Nidhi Logo" class="nav-logo-img" />
       <div class="nav-logo-text">
         <img src="../../brand-name-original.png" alt="Alakaapuri Nidhi" class="nav-brand-img" />
-        <span>Praveen Kumar · Wealth Advisory</span>
+        <span>Praveen Kumar · AMFI-Registered MFD (ARN-362567)</span>
       </div>
     </a>
     <ul class="nav-links">
@@ -48,19 +596,45 @@
       <li><a href="../../Contact/">Contact</a></li>
       <li><a href="../../Testimonials/">Testimonials</a></li>
     </ul>
-    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('nav-open')"><i
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('nav-open')" aria-label="Toggle navigation menu"><i
         class="fa-solid fa-bars"></i></button>
   </nav>
 
   <!-- PAGE HERO -->
   <header class="page-hero">
-    <span class="section-label center">Protection &amp; Risk Cover</span>
-    <h1 class="section-title">Complete Financial Security for <em>Your Loved Ones</em></h1>
-    <p class="section-desc">Protect your family's lifestyle and assets with optimal Term Insurance, Health Floaters, and Critical Illness coverage backed by dedicated claim assistance.</p>
-    <div class="hero-cta-row" style="justify-content:center; margin-top:28px;">
-      <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20review%20my%20Life%20and%20Health%20Insurance."
-        target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> Get Free Insurance Quote</a>
-      <a href="tel:+919440581363" class="btn-outline-light"><i class="fa-solid fa-phone"></i> Speak with Praveen</a>
+    <div class="ins-hero-badge">
+      <span>🛡️ Comprehensive Risk &amp; Wealth Protection Suite 🛡️</span>
+    </div>
+    <h1 class="section-title">Complete Financial Security for <em>Life, Family &amp; Business</em></h1>
+    <p class="section-desc">
+      From high-value Pure Term Insurance and market-linked Term+ULIP wealth builders to complete Health, Marine Cargo, Property, Casualty, and Corporate Specialty lines — customized by Praveen Kumar with 100% dedicated claim assistance.
+    </p>
+
+    <!-- FLOATING HERO METRIC CHIPS -->
+    <div class="hero-metrics-pill-row">
+      <div class="hero-metric-pill">
+        <i class="fa-solid fa-shield-heart"></i>
+        <span>₹1 Cr to ₹10 Cr Term Protection</span>
+      </div>
+      <div class="hero-metric-pill">
+        <i class="fa-solid fa-seedling"></i>
+        <span>Term + ULIP Tax-Free Wealth</span>
+      </div>
+      <div class="hero-metric-pill">
+        <i class="fa-solid fa-hospital-user"></i>
+        <span>10,000+ Cashless Hospitals</span>
+      </div>
+      <div class="hero-metric-pill">
+        <i class="fa-solid fa-award"></i>
+        <span>99.3% Claim Settlement Ratio</span>
+      </div>
+    </div>
+
+    <div class="hero-cta-row" style="justify-content:center; margin-top:30px;">
+      <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20review%20my%20Insurance%20coverage%20(Term,%20ULIP,%20Health%20or%20Commercial)."
+        target="_blank" rel="noopener noreferrer" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> Get Free Insurance Review 💬</a>
+      <a href="tel:+919440581363" class="btn-outline-light"><i class="fa-solid fa-phone"></i> Call +91 94405 81363 📞</a>
+      <a href="#full-insurance-catalog" class="btn-outline-light" style="border-color:var(--gold-primary); color:var(--gold-dark);"><i class="fa-solid fa-layer-group"></i> Explore All 16 Product Lines ↓</a>
     </div>
   </header>
 
@@ -68,123 +642,453 @@
   <section class="trust-bar">
     <div class="trust-grid">
       <div class="trust-item">
-        <div class="trust-num" data-count="100" data-suffix="%">0</div>
-        <div class="trust-lbl">Claim Support</div>
-        <div class="trust-sub">Dedicated Personal Assistance</div>
+        <div class="trust-num" data-count="100" data-suffix="%">100%</div>
+        <div class="trust-lbl">Claim Assistance</div>
+        <div class="trust-sub">Direct Personal Support</div>
       </div>
       <div class="trust-item">
-        <div class="trust-num" data-count="20" data-suffix="x+">0</div>
+        <div class="trust-num" data-count="20" data-suffix="x+">20x+</div>
         <div class="trust-lbl">Income Cover</div>
         <div class="trust-sub">Optimal Term Protection</div>
       </div>
       <div class="trust-item">
-        <div class="trust-num" data-count="10000" data-suffix="+">0</div>
+        <div class="trust-num" data-count="10000" data-suffix="+">10,000+</div>
         <div class="trust-lbl">Cashless Hospitals</div>
         <div class="trust-sub">Top Network Across India</div>
       </div>
       <div class="trust-item">
-        <div class="trust-num" data-count="0" data-suffix="Hassle">0</div>
-        <div class="trust-lbl">Unbiased Advice</div>
+        <div class="trust-num" data-count="16" data-suffix="+ Lines">16+ Lines</div>
+        <div class="trust-lbl">Retail &amp; Corporate Cover</div>
         <div class="trust-sub">Zero Sales Pressure</div>
       </div>
     </div>
   </section>
 
-  <!-- INSURANCE CATEGORIES -->
-  <section class="section-block">
+  <!-- FLAGSHIP SOLUTIONS SECTION: TERM, TERM+ULIP & HEALTH -->
+  <section class="section-block" style="padding-top:50px; padding-bottom:40px;">
     <div class="section-header-center">
-      <span class="section-label center">Insurance Solutions</span>
-      <h2 class="section-title">Comprehensive Coverage for <em>Every Life Stage</em></h2>
-      <p class="section-desc">We analyse policy clauses, exclusions, waiting periods and claim settlement ratios so you never face a surprise during a medical emergency.</p>
+      <span class="section-label center">Primary Family &amp; Wealth Shields</span>
+      <h2 class="section-title">Core Protection &amp; <em>Wealth Creation Plans</em></h2>
+      <p class="section-desc">
+        Designed to safeguard your family's future lifestyle, children's higher education, and protect your lifetime savings against unforeseen medical and business emergencies.
+      </p>
     </div>
 
-    <div class="products-grid">
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-shield-halved"></i></div>
-        <div class="product-title">Pure Term Life Insurance</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          High-value life cover at affordable premiums. Ensures your family's future, mortgage, and children's education remain fully funded.
+    <div class="flagship-grid">
+      
+      <!-- CARD 1: PURE TERM INSURANCE -->
+      <div class="flagship-card">
+        <div class="flagship-icon-box">
+          <i class="fa-solid fa-umbrella"></i>
+        </div>
+        <h3 class="flagship-title">Pure Term Insurance</h3>
+        <p class="flagship-desc">
+          The ultimate income-replacement foundation. Secures massive multi-crore life protection at affordable premiums, ensuring your family's mortgage, lifestyle, and commitments stay 100% funded.
         </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> ₹1 Crore to ₹5 Crore covers</li>
-          <li><i class="fa-solid fa-diamond"></i> Critical illness &amp; disability riders</li>
-          <li><i class="fa-solid fa-diamond"></i> 99%+ claim settlement track record</li>
+        <ul class="flagship-points">
+          <li><i class="fa-solid fa-circle-check"></i> ₹1 Crore to ₹10 Crore High-Value Life Covers</li>
+          <li><i class="fa-solid fa-circle-check"></i> Critical Illness &amp; Accidental Disability Riders</li>
+          <li><i class="fa-solid fa-circle-check"></i> 99.3% Claim Settlement Ratio Track Record</li>
+          <li><i class="fa-solid fa-circle-check"></i> Locked Premiums for Entire Tenure (Up to Age 85)</li>
         </ul>
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20would%20like%20to%20get%20quotes%20and%20advice%20for%20Pure%20Term%20Insurance."
+          target="_blank" rel="noopener noreferrer" class="btn-flagship-inquire">
+          <i class="fa-brands fa-whatsapp"></i> Get Term Insurance Quote 💬
+        </a>
       </div>
 
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-        <div class="product-title">Health Insurance &amp; Family Floaters</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          Shield your lifetime savings from surging healthcare costs with zero room-rent capping and restoration of sum insured.
+      <!-- CARD 2: TERM + ULIP (WEALTH + PROTECTION) -->
+      <div class="flagship-card featured">
+        <span class="flagship-ribbon">⭐ Wealth + Protection</span>
+        <div class="flagship-icon-box" style="background:linear-gradient(135deg, #FFF2C2 0%, #FFE58F 100%);">
+          <i class="fa-solid fa-seedling" style="color:#071A2F;"></i>
+        </div>
+        <h3 class="flagship-title">Term + ULIP Solutions</h3>
+        <p class="flagship-desc">
+          The dual-power synergy of substantial life insurance cover combined with professional equity market fund growth. Accumulate a multi-crore corpus while guaranteeing complete family protection.
         </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> Cashless hospitalisation nationwide</li>
-          <li><i class="fa-solid fa-diamond"></i> Pre and post-hospitalisation cover</li>
-          <li><i class="fa-solid fa-diamond"></i> Annual complimentary health checkups</li>
+        <ul class="flagship-points">
+          <li><i class="fa-solid fa-circle-check"></i> High Life Protection + 12–15% Equity CAGR Potential</li>
+          <li><i class="fa-solid fa-circle-check"></i> 100% Tax-Free Maturity Payouts under Section 10(10D)</li>
+          <li><i class="fa-solid fa-circle-check"></i> Free Unlimited Fund Switching (Equity &harr; Debt)</li>
+          <li><i class="fa-solid fa-circle-check"></i> Wealth Creation Engine for Retirement &amp; Child Future</li>
         </ul>
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20interested%20in%20a%20Term%20%2B%20ULIP%20Wealth%20%2B%20Protection%20Plan.%20Please%20guide%20me."
+          target="_blank" rel="noopener noreferrer" class="btn-flagship-inquire" style="background:linear-gradient(135deg, #071A2F 0%, #153B5B 100%); color:#FFE58F;">
+          <i class="fa-brands fa-whatsapp"></i> Plan Term + ULIP Combo 🚀
+        </a>
       </div>
 
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-square-plus"></i></div>
-        <div class="product-title">Critical Illness &amp; Super Top-Up</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          Lump-sum payouts upon diagnosis of serious illnesses (cancer, heart attack, stroke) and high-deductible super top-ups for pocket-friendly high cover.
+      <!-- CARD 3: HEALTH FLOATER & SUPER TOP-UP -->
+      <div class="flagship-card">
+        <div class="flagship-icon-box">
+          <i class="fa-solid fa-heart-pulse" style="color:#E53E3E;"></i>
+        </div>
+        <h3 class="flagship-title">Health Floater &amp; Critical Illness</h3>
+        <p class="flagship-desc">
+          Insulate your lifetime investments against spiraling medical inflation. Comprehensive hospitalization coverage with zero room-rent sub-limits, recharge benefits, and global medical treatments.
         </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> ₹50 Lakh cover for minimal extra cost</li>
-          <li><i class="fa-solid fa-diamond"></i> Payout on first diagnosis</li>
-          <li><i class="fa-solid fa-diamond"></i> Covers loss of active income</li>
+        <ul class="flagship-points">
+          <li><i class="fa-solid fa-circle-check"></i> 100% Cashless Treatment across 10,000+ Hospitals</li>
+          <li><i class="fa-solid fa-circle-check"></i> Zero Room Rent Limits &amp; Unlimited Restoration</li>
+          <li><i class="fa-solid fa-circle-check"></i> High-Cover Super Top-Ups at Pocket-Friendly Rates</li>
+          <li><i class="fa-solid fa-circle-check"></i> Lumpsum Critical Illness Payout on First Diagnosis</li>
         </ul>
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20want%20to%20review%20or%20upgrade%20my%20Family%20Health%20Insurance."
+          target="_blank" rel="noopener noreferrer" class="btn-flagship-inquire">
+          <i class="fa-brands fa-whatsapp"></i> Review Health Floater 🩺
+        </a>
       </div>
 
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-car-side"></i></div>
-        <div class="product-title">Motor &amp; Vehicle Insurance</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          Comprehensive car and bike protection with zero depreciation, engine protect, and 24x7 roadside assistance.
-        </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> Instant paperless renewal</li>
-          <li><i class="fa-solid fa-diamond"></i> Zero-depreciation add-on</li>
-          <li><i class="fa-solid fa-diamond"></i> Cashless garage repairs</li>
-        </ul>
-      </div>
     </div>
   </section>
 
-  <!-- CLAIM COMMITMENT -->
+  <!-- COMPARISON TABLE: TERM VS TERM+ULIP -->
+  <section class="comparison-section">
+    <div class="section-header-center" style="margin-bottom:24px;">
+      <span class="section-label center">Strategic Comparison</span>
+      <h2 class="section-title">Pure Term Insurance vs. <em>Term + ULIP</em></h2>
+      <p class="section-desc">Understand which vehicle fits your financial goals, liquidity needs, and tax planning.</p>
+    </div>
+
+    <div class="comparison-table-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature / Parameter</th>
+            <th>Pure Term Insurance</th>
+            <th class="highlight-col">⭐ Term + ULIP (Wealth + Protection)</th>
+            <th>Old Traditional Endowment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Primary Objective</strong></td>
+            <td>100% Family Income Replacement</td>
+            <td class="highlight-col">High Life Cover + Market Wealth Growth</td>
+            <td>Low Returns Forced Savings</td>
+          </tr>
+          <tr>
+            <td><strong>Life Coverage Amount</strong></td>
+            <td>20x – 30x Annual Income (₹1 Cr – ₹10 Cr)</td>
+            <td class="highlight-col">10x – 20x Premium + Accumulated Fund Value</td>
+            <td>Low Cover (Only 5x – 7x Premium)</td>
+          </tr>
+          <tr>
+            <td><strong>Wealth Creation Potential</strong></td>
+            <td>None (Pure Financial Risk Protection)</td>
+            <td class="highlight-col">12% – 15% CAGR (Equity &amp; Large-Cap Funds)</td>
+            <td>Poor 4% – 5% (Eaten by Inflation)</td>
+          </tr>
+          <tr>
+            <td><strong>Tax Treatment</strong></td>
+            <td>Sec 80C Deductions</td>
+            <td class="highlight-col">Sec 80C + 100% Tax-Free Maturity Sec 10(10D)</td>
+            <td>Taxable if above limits</td>
+          </tr>
+          <tr>
+            <td><strong>Investment Flexibility</strong></td>
+            <td>Fixed Annual Premium</td>
+            <td class="highlight-col">Free Unlimited Switches (Equity &harr; Debt)</td>
+            <td>Zero Control Over Asset Allocation</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- FULL INSURANCE SERVICES CATALOG (ALL 16 SERVICES FROM USER IMAGE) -->
+  <section class="services-catalog-section" id="full-insurance-catalog">
+    <div class="catalog-wrapper">
+      
+      <div class="section-header-center" style="margin-bottom:30px;">
+        <span class="section-label center">Full Portfolio Spectrum</span>
+        <h2 class="section-title">Browse Our <em>16 Specialized Insurance Lines</em></h2>
+        <p class="section-desc">
+          Click on any insurance line below to view cover details, product variants, and receive an instant custom quote on WhatsApp.
+        </p>
+      </div>
+
+      <!-- CATEGORY FILTER BUTTONS -->
+      <div class="catalog-filter-bar">
+        <button class="filter-pill active" onclick="filterInsurance('all', this)"><i class="fa-solid fa-border-all"></i> All Products (16 Categories)</button>
+        <button class="filter-pill" onclick="filterInsurance('personal', this)"><i class="fa-solid fa-user-shield"></i> Personal &amp; Family</button>
+        <button class="filter-pill" onclick="filterInsurance('commercial', this)"><i class="fa-solid fa-building"></i> Commercial &amp; Corporate</button>
+        <button class="filter-pill" onclick="filterInsurance('transit', this)"><i class="fa-solid fa-plane-departure"></i> Transit, Marine &amp; Travel</button>
+        <button class="filter-pill" onclick="filterInsurance('specialty', this)"><i class="fa-solid fa-certificate"></i> Specialty &amp; Warranty</button>
+      </div>
+
+      <!-- 16-CARD GRID (MATCHING THE USER'S IMAGE PRODUCTS AND COUNTS) -->
+      <div class="catalog-grid-4" id="insuranceGrid">
+
+        <!-- 1. AIG Combined (6 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20AIG%20Combined%20Insurance%20(6%20Products)."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="commercial">
+          <div class="card-icon-emblem emblem-blue">
+            <i class="fa-solid fa-industry"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">AIG Combined</div>
+            <div class="card-sub-info">Industrial Multi-Peril Cover</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 6 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- 2. Personal Lines (1 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20Personal%20Lines%20Insurance."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="personal">
+          <div class="card-icon-emblem emblem-amber">
+            <i class="fa-solid fa-house-chimney-user"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">Personal Lines</div>
+            <div class="card-sub-info">Tailored Individual Shield</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 1 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- 3. LTA (2 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20LTA%20Insurance%20(2%20Products)."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="personal transit">
+          <div class="card-icon-emblem emblem-green">
+            <i class="fa-solid fa-person-hiking"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">LTA</div>
+            <div class="card-sub-info">Leave Travel &amp; Trip Accident</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 2 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- 4. Property & Energy (3 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20Property%20%26%20Energy%20Insurance%20(3%20Products)."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="commercial">
+          <div class="card-icon-emblem emblem-cyan">
+            <i class="fa-solid fa-bolt-lightning"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">Property &amp; Energy</div>
+            <div class="card-sub-info">Commercial Assets &amp; Power</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 3 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- 5. Marine Cargo (3 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20Marine%20Cargo%20Insurance%20(3%20Products)."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="transit commercial">
+          <div class="card-icon-emblem emblem-marine">
+            <i class="fa-solid fa-ship"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">Marine Cargo</div>
+            <div class="card-sub-info">Ocean, Air &amp; Inland Transit</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 3 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- 6. Health (7 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20Health%20Insurance%20(7%20Products)."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="personal">
+          <div class="card-icon-emblem emblem-red">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">Health</div>
+            <div class="card-sub-info">Cashless Hospitalization</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 7 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- 7. Motor (5 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20Motor%20Insurance%20(5%20Products)."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="personal commercial">
+          <div class="card-icon-emblem emblem-orange">
+            <i class="fa-solid fa-car-side"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">Motor</div>
+            <div class="card-sub-info">Car, Bike &amp; Commercial Fleet</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 5 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- 8. Personal Accident (6 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20Personal%20Accident%20Insurance%20(6%20Products)."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="personal">
+          <div class="card-icon-emblem emblem-red">
+            <i class="fa-solid fa-crutch"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">Personal Accident</div>
+            <div class="card-sub-info">Disability &amp; Income Protection</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 6 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- 9. Aviation (1 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20Aviation%20Insurance%20(1%20Products)."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="transit commercial">
+          <div class="card-icon-emblem emblem-sky">
+            <i class="fa-solid fa-plane-departure"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">Aviation</div>
+            <div class="card-sub-info">Aircraft Hull &amp; Operations</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 1 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- 10. Home (4 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20Home%20Insurance%20(4%20Products)."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="personal">
+          <div class="card-icon-emblem emblem-amber">
+            <i class="fa-solid fa-house-chimney"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">Home</div>
+            <div class="card-sub-info">Structure, Fire &amp; Burglary</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 4 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- 11. Travel (3 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20Travel%20Insurance%20(3%20Products)."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="personal transit">
+          <div class="card-icon-emblem emblem-blue">
+            <i class="fa-solid fa-suitcase-rolling"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">Travel</div>
+            <div class="card-sub-info">Schengen, US &amp; Domestic Trips</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 3 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- 12. FinancialLine (3 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20FinancialLine%20Insurance%20(3%20Products)."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="commercial specialty">
+          <div class="card-icon-emblem emblem-gold">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">FinancialLine</div>
+            <div class="card-sub-info">D&amp;O, Cyber &amp; E&amp;O Liability</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 3 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- 13. Trade Credit/Surety Insurance (2 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20Trade%20Credit%20and%20Surety%20Insurance%20(2%20Products)."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="commercial specialty">
+          <div class="card-icon-emblem emblem-purple">
+            <i class="fa-solid fa-credit-card"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">Trade Credit/Surety</div>
+            <div class="card-sub-info">Insolvency &amp; Contract Bonds</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 2 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- 14. Casualty (2 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20Casualty%20Insurance%20(2%20Products)."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="commercial">
+          <div class="card-icon-emblem emblem-orange">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">Casualty</div>
+            <div class="card-sub-info">Public &amp; Product Liabilities</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 2 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- 15. Warranty Products (5 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20Warranty%20Products%20Insurance%20(5%20Products)."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="specialty">
+          <div class="card-icon-emblem emblem-green">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">Warranty Products</div>
+            <div class="card-sub-info">Extended Equipment Protection</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 5 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+        <!-- 16. Combo (1 Products) -->
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20am%20inquiring%20about%20Combo%20Bundled%20Insurance%20Packages."
+          target="_blank" rel="noopener noreferrer" class="catalog-card-rich" data-category="personal specialty">
+          <div class="card-icon-emblem emblem-combo">
+            <i class="fa-solid fa-cubes"></i>
+          </div>
+          <div class="card-meta-wrap">
+            <div class="card-product-title">Combo Packages</div>
+            <div class="card-sub-info">All-in-One Family &amp; Business</div>
+            <span class="card-count-pill"><i class="fa-solid fa-box-archive"></i> 1 Products</span>
+          </div>
+          <div class="card-action-chevron"><i class="fa-solid fa-chevron-right"></i></div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CLAIM COMMITMENT & PROMISE -->
   <section class="section-block" style="background: #0D2945; border-top: 1px solid var(--mahogany); border-bottom: 1px solid var(--mahogany);">
-    <div class="container" style="max-width:880px; margin:0 auto; text-align:center;">
-      <span class="section-label center">Our Promise</span>
-      <h2 class="section-title">The <em>Claim Assistance</em> Guarantee</h2>
-      <p class="section-desc" style="margin-bottom:24px;">
-        Anyone can sell an insurance policy — but true value is proven at the time of claim. When an unforeseen event occurs, Praveen Kumar and the Alakaapuri Nidhi team stand with your family to handle paperwork, liaison with the insurer, and ensure speedy claim clearance.
+    <div class="container" style="max-width:920px; margin:0 auto; text-align:center; color:#FFFFFF;">
+      <span class="section-label center" style="color:#FFE58F;">Our Promise</span>
+      <h2 class="section-title" style="color:#FFFFFF;">The <em>Claim Assistance</em> Guarantee</h2>
+      <p class="section-desc" style="margin-bottom:28px; color:#E2E8F0;">
+        Anyone can sell an insurance policy — but true value is proven at the time of claim. When an unforeseen event occurs, Praveen Kumar and the Alakaapuri Nidhi team stand with you and your family to handle paperwork, liaison with the insurer, and ensure speedy, rightful clearance.
       </p>
       <div class="why-grid" style="text-align:left; margin-top:30px;">
-        <div class="why-card tilt-3d">
-          <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
-          <div class="why-title">Priority Claim Desk</div>
-          <p class="why-desc">Direct hotline assistance for intimation, hospital coordination and cashless approval.</p>
+        <div class="why-card tilt-3d" style="background:rgba(255,255,255,0.06); border-color:rgba(201,162,39,0.3); color:#FFFFFF;">
+          <div class="why-icon" style="color:#FFE58F;"><i class="fa-solid fa-headset"></i></div>
+          <div class="why-title" style="color:#FFF2C2;">Priority Claim Desk</div>
+          <p class="why-desc" style="color:#D1D5DB;">Direct hotline assistance for hospital cashless coordination, emergency intimation, and surveyor liaison.</p>
         </div>
-        <div class="why-card tilt-3d">
-          <div class="why-icon"><i class="fa-solid fa-file-circle-check"></i></div>
-          <div class="why-title">Document Verification</div>
-          <p class="why-desc">Pre-scrutiny of hospital bills and diagnosis records to avoid repudiations.</p>
+        <div class="why-card tilt-3d" style="background:rgba(255,255,255,0.06); border-color:rgba(201,162,39,0.3); color:#FFFFFF;">
+          <div class="why-icon" style="color:#FFE58F;"><i class="fa-solid fa-file-circle-check"></i></div>
+          <div class="why-title" style="color:#FFF2C2;">Pre-Scrutiny &amp; Compliance</div>
+          <p class="why-desc" style="color:#D1D5DB;">Pre-scrutiny of bills, discharge summaries, and diagnostics to eliminate common rejection loopholes.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <div class="cta-section">
-    <span class="section-label center">Review Your Existing Coverage</span>
-    <h2 class="section-title">Are You <em>Adequately Protected?</em></h2>
-    <p class="section-desc">Get a complimentary audit of your current life and health policies to spot hidden exclusions and coverage gaps.</p>
-    <div class="cta-btn-row">
-      <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20a%20free%20audit%20of%20my%20Insurance%20policies."
-        target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> WhatsApp Policy Audit</a>
-      <a href="tel:+919440581363" class="btn-outline-light"><i class="fa-solid fa-phone"></i> Call +91 94405 81363</a>
+  <!-- POLICY AUDIT CALLOUT BANNER -->
+  <div class="audit-banner-section">
+    <div class="audit-card">
+      <div class="audit-content">
+        <span style="font-size:12px; color:var(--gold-primary); font-weight:800; text-transform:uppercase; letter-spacing:1px;">
+          🔍 Free Coverage Diagnosis
+        </span>
+        <h3>Are You Adequately Protected Against Hidden Clauses?</h3>
+        <p>
+          Send your current Life, Health, or Commercial policy documents for an unbiased diagnostic. We identify room-rent sub-limits, disease co-pays, waiting periods, and duplicate covers at zero cost.
+        </p>
+      </div>
+      <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20would%20like%20a%20Free%20Audit%20of%20my%20existing%20Insurance%20policies."
+        target="_blank" rel="noopener noreferrer" class="btn-audit-gold">
+        <i class="fa-brands fa-whatsapp"></i> Audit My Policies Free 📋
+      </a>
     </div>
   </div>
 
@@ -198,9 +1102,8 @@
             <img src="../../brand-name-original.png" alt="Alakaapuri Nidhi" class="footer-brand-img" />
           </div>
         </a>
-        <div class="footer-tag">Wealth Expert · AMFI Registered ARN-362567</div>
-        <p class="footer-about">A trusted wealth advisory offering mutual funds, insurance, loans and financial planning
-          — led by Praveen Kumar, AMFI ARN Holder (ARN‑362567).</p>
+        <div class="footer-tag">AMFI Registered MFD · ARN-362567</div>
+        <p class="footer-about">A premier financial distribution firm offering mutual funds, insurance, loans and wealth planning assistance — led by Praveen Kumar, AMFI-Registered Mutual Fund Distributor (ARN-362567).</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
@@ -210,8 +1113,8 @@
           <li><a href="../../services/">Services</a></li>
           <li><a href="../../calculators/">Calculator</a></li>
           <li><a href="../../Testimonials/">Testimonials</a></li>
-          <li><a href="../../Contact/">Contact</a></li>
           <li><a href="../../Options%20Indicator/">Options Indicator</a></li>
+          <li><a href="../../Contact/">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -229,11 +1132,11 @@
         <ul>
           <li><a href="tel:+919440581363">+91 94405 81363</a></li>
           <li><a href="mailto:alakaapuri@tanidhi.com">alakaapuri@tanidhi.com</a></li>
-          <li><a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank">Invest Online</a></li>
-          <li><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank">Book Consultation</a></li>
+          <li><a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" rel="noopener noreferrer">Invest Online</a></li>
+          <li><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20book%20an%20Insurance%20consultation." target="_blank" rel="noopener noreferrer">Book Consultation</a></li>
         </ul>
         <div class="footer-social" style="margin-top:14px;">
-          <a href="https://wa.me/919440581363" target="_blank" aria-label="WhatsApp"><i
+          <a href="https://wa.me/919440581363" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
               class="fa-brands fa-whatsapp"></i></a>
           <a href="mailto:alakaapuri@tanidhi.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
           <a href="tel:+919440581363" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
@@ -242,12 +1145,13 @@
     </div>
     <div class="footer-bottom">
       <div>© <span id="year">2026</span> Alakaapuri Nidhi. All rights reserved. · ARN‑362567</div>
-      <div>Insurance is a subject matter of solicitation. Policy terms and conditions apply.</div>
+      <div>Hyderabad, Telangana · India</div>
     </div>
+    <p class="disclaimer">Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. Alakaapuri Nidhi operates as an AMFI-Registered Mutual Fund Distributor (ARN-362567). We do not provide SEBI-registered investment advisory services. Insurance is a subject matter of solicitation.</p>
   </footer>
 
   <!-- FLOATING PROMO AD -->
-  <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="fab-promo-ad" data-testid="fab-promo-ad">
+  <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" rel="noopener noreferrer" class="fab-promo-ad" data-testid="fab-promo-ad" aria-label="Open Mutual Fund Account">
     <div class="hidden-mob">
       <img class="sticky" src="../../lead.png"
         alt="Open a Mutual Fund Account" />
@@ -260,10 +1164,44 @@
 
   <!-- MOBILE STICKY -->
   <div class="mobile-sticky">
-    <a href="tel:+919440581363" class="call"><i class="fa-solid fa-phone"></i> Call</a>
-    <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20Insurance."
-      target="_blank" class="wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    <a href="tel:+919440581363" class="call"><i class="fa-solid fa-phone"></i> Call 📞</a>
+    <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20Insurance%20plans."
+      target="_blank" rel="noopener noreferrer" class="wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp 💬</a>
   </div>
+
+  <script>
+    const nav = document.getElementById('topNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('nav-open');
+      });
+    });
+
+    // Insurance Category Filtering
+    function filterInsurance(category, btn) {
+      document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.catalog-card-rich');
+      cards.forEach(card => {
+        if (category === 'all') {
+          card.style.display = 'flex';
+        } else {
+          const cats = card.getAttribute('data-category') || '';
+          if (cats.includes(category)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>

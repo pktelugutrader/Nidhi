@@ -5,19 +5,761 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Mutual Funds & SIP Advisory by Praveen Kumar (AMFI ARN-362567) at Alakaapuri Nidhi, Hyderabad. Goal-based SIPs, tax-saving ELSS, equity, debt and hybrid portfolios." />
-  <title>Mutual Funds &amp; SIP Advisory — Alakaapuri Nidhi | AMFI ARN-362567</title>
+    content="Comprehensive Mutual Fund Solutions by Praveen Kumar (AMFI ARN-362567) at Alakaapuri Nidhi, Hyderabad. Goal-based Equity, Debt, Hybrid, Solution-Oriented, and Index Fund portfolios curated across 35+ SEBI categories." />
+  <meta name="keywords"
+    content="Mutual Funds Hyderabad, Equity Mutual Funds, Debt Funds, Hybrid Funds, Balanced Advantage, Large Cap, Small Cap, ELSS Tax Saving, Solution Oriented Retirement Funds, Index Funds, ETFs, AMFI ARN-362567, Praveen Kumar" />
+  <title>Mutual Funds &amp; Wealth Solutions — Alakaapuri Nidhi | AMFI ARN-362567</title>
   <link rel="icon" type="image/png" href="../../favicon.png" />
-
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@500;700;900&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700;800&family=Cinzel:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Orbitron:wght@600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="../../styles.css" />
   <script src="../../animations.js" defer></script>
+
+  <style>
+    /* ==========================================================================
+       LUXURY MUTUAL FUNDS STYLING — WARM IVORY & GOLD ARCHITECTURE
+       ========================================================================== */
+
+    .mf-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 20px;
+      border-radius: 50px;
+      background: rgba(201, 162, 39, 0.14);
+      border: 1px solid rgba(201, 162, 39, 0.45);
+      color: var(--gold-dark);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 14px rgba(201, 162, 39, 0.15);
+    }
+
+    .hero-split-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+      padding-top: 10px;
+    }
+
+    .hero-image-frame {
+      position: relative;
+      border-radius: 24px;
+      padding: 10px;
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.4) 0%, rgba(7, 26, 47, 0.2) 100%);
+      box-shadow: 0 20px 48px rgba(7, 26, 47, 0.12);
+      border: 1.5px solid rgba(201, 162, 39, 0.35);
+    }
+
+    .hero-image-frame img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(7, 26, 47, 0.18);
+    }
+
+    .hero-floating-stat {
+      position: absolute;
+      bottom: -18px;
+      left: 20px;
+      background: #FFFFFF;
+      border: 2px solid var(--gold-primary);
+      border-radius: 16px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 12px 32px rgba(7, 26, 47, 0.15);
+    }
+
+    .hero-floating-stat .stat-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #FAF1DF 0%, #FFF2C2 100%);
+      color: var(--gold-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      border: 1px solid rgba(201, 162, 39, 0.4);
+    }
+
+    .hero-floating-stat .stat-text h4 {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--navy-deep);
+      line-height: 1.2;
+    }
+
+    .hero-floating-stat .stat-text p {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin: 0;
+      font-weight: 600;
+    }
+
+    /* 5 Pillars Decision Matrix Banner */
+    .decision-matrix-section {
+      background: #FFFFFF;
+      border-top: 1px solid rgba(201, 162, 39, 0.25);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+      padding: 60px 20px;
+    }
+
+    .matrix-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      margin-top: 36px;
+    }
+
+    .pillar-card {
+      background: #FEF7E9;
+      border: 1.5px solid rgba(201, 162, 39, 0.35);
+      border-radius: 18px;
+      padding: 24px 18px;
+      text-align: center;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pillar-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gold-primary);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .pillar-card:hover,
+    .pillar-card.active-pillar {
+      transform: translateY(-6px);
+      background: #FFFFFF;
+      border-color: var(--gold-primary);
+      box-shadow: 0 14px 34px rgba(7, 26, 47, 0.12);
+    }
+
+    .pillar-card:hover::before,
+    .pillar-card.active-pillar::before {
+      opacity: 1;
+    }
+
+    .pillar-icon-wrap {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    .pillar-card:hover .pillar-icon-wrap {
+      transform: scale(1.12);
+    }
+
+    .pillar-growth .pillar-icon-wrap { background: #ECFDF5; color: #047857; border: 1px solid #A7F3D0; }
+    .pillar-stability .pillar-icon-wrap { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
+    .pillar-balance .pillar-icon-wrap { background: #FFFBEB; color: #B45309; border: 1px solid #FDE68A; }
+    .pillar-goals .pillar-icon-wrap { background: #FAF5FF; color: #7E22CE; border: 1px solid #E9D5FF; }
+    .pillar-passive .pillar-icon-wrap { background: #ECFEFF; color: #0E7490; border: 1px solid #A5F3FC; }
+
+    .pillar-title {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--navy-deep);
+      margin-bottom: 4px;
+    }
+
+    .pillar-arrow-label {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--gold-dark);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .pillar-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 14px;
+      flex-grow: 1;
+    }
+
+    .pillar-badge {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: #FAF1DF;
+      color: var(--navy-deep);
+      border: 1px solid rgba(201, 162, 39, 0.3);
+    }
+
+    /* CATALOG SECTION (35 CATEGORIES) */
+    .catalog-section {
+      background: linear-gradient(180deg, #FEF7E9 0%, #FAF1DF 100%);
+      padding: 70px 20px;
+    }
+
+    .catalog-header-bar {
+      max-width: 1200px;
+      margin: 0 auto 36px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .catalog-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .cat-btn {
+      background: #FFFFFF;
+      border: 1.5px solid rgba(201, 162, 39, 0.35);
+      padding: 9px 20px;
+      border-radius: 30px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--navy-deep);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 10px rgba(7, 26, 47, 0.04);
+    }
+
+    .cat-btn:hover,
+    .cat-btn.active {
+      background: var(--navy-deep);
+      color: #FFF2C2;
+      border-color: var(--navy-deep);
+      box-shadow: 0 6px 18px rgba(7, 26, 47, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .catalog-search-wrap {
+      width: 100%;
+      max-width: 460px;
+      position: relative;
+    }
+
+    .catalog-search-input {
+      width: 100%;
+      padding: 12px 20px 12px 44px;
+      border-radius: 30px;
+      border: 1.5px solid rgba(201, 162, 39, 0.4);
+      background: #FFFFFF;
+      font-size: 14px;
+      color: var(--navy-deep);
+      outline: none;
+      box-shadow: 0 4px 14px rgba(7, 26, 47, 0.05);
+      transition: border-color 0.2s;
+    }
+
+    .catalog-search-input:focus {
+      border-color: var(--gold-primary);
+      box-shadow: 0 6px 20px rgba(201, 162, 39, 0.2);
+    }
+
+    .catalog-search-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gold-dark);
+      font-size: 15px;
+    }
+
+    .catalog-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .scheme-card {
+      background: #FFFFFF;
+      border: 1.5px solid rgba(201, 162, 39, 0.3);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(7, 26, 47, 0.05);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scheme-card::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3.5px;
+      background: linear-gradient(90deg, #996515, #C9A227, #E5C158);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .scheme-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 16px 36px rgba(7, 26, 47, 0.12), 0 0 18px rgba(201, 162, 39, 0.15);
+    }
+
+    .scheme-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .card-top-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .scheme-emblem {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      transition: transform 0.3s ease;
+    }
+
+    .scheme-card:hover .scheme-emblem {
+      transform: scale(1.1) rotate(3deg);
+    }
+
+    /* Emblem Color Palettes */
+    .emblem-equity { background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%); color: #047857; border: 1px solid #A7F3D0; }
+    .emblem-debt { background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); color: #1D4ED8; border: 1px solid #BFDBFE; }
+    .emblem-hybrid { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); color: #B45309; border: 1px solid #FDE68A; }
+    .emblem-goal { background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%); color: #7E22CE; border: 1px solid #E9D5FF; }
+    .emblem-passive { background: linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 100%); color: #0E7490; border: 1px solid #A5F3FC; }
+
+    .scheme-header-info {
+      flex-grow: 1;
+      min-width: 0;
+    }
+
+    .scheme-category-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .badge-equity { color: #047857; }
+    .badge-debt { color: #1D4ED8; }
+    .badge-hybrid { color: #B45309; }
+    .badge-goal { color: #7E22CE; }
+    .badge-passive { color: #0E7490; }
+
+    .scheme-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--navy-deep);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .scheme-summary {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .scheme-tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(201, 162, 39, 0.25);
+    }
+
+    .meta-tag {
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 12px;
+      background: #FAF1DF;
+      color: var(--navy-deep);
+      border: 1px solid rgba(201, 162, 39, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .meta-tag.risk-high { background: #FEF2F2; color: #991B1B; border-color: #FECACA; }
+    .meta-tag.risk-mod { background: #FFFBEB; color: #92400E; border-color: #FDE68A; }
+    .meta-tag.risk-low { background: #EFF6FF; color: #1E40AF; border-color: #BFDBFE; }
+
+    .scheme-action-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 12px;
+    }
+
+    .scheme-btn-consult {
+      flex-grow: 1;
+      background: #FAF1DF;
+      border: 1.5px solid rgba(201, 162, 39, 0.4);
+      color: var(--navy-deep);
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      transition: all 0.2s ease;
+    }
+
+    .scheme-btn-consult:hover {
+      background: var(--gold-primary);
+      color: #071A2F;
+      border-color: var(--gold-primary);
+      box-shadow: 0 4px 12px rgba(201, 162, 39, 0.25);
+    }
+
+    .scheme-btn-invest {
+      background: var(--navy-deep);
+      color: #FFF2C2;
+      border: 1.5px solid var(--navy-deep);
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .scheme-btn-invest:hover {
+      background: var(--gold-primary);
+      color: var(--navy-deep);
+      border-color: var(--gold-primary);
+    }
+
+    /* ==========================================================================
+       SIP COMPOUNDING SIMULATOR (INTERACTIVE TOOL)
+       ========================================================================== */
+    .sip-sim-section {
+      background: #071A2F;
+      color: #FFFFFF;
+      padding: 70px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sip-sim-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #996515, #C9A227, #E5C158, #C9A227, #996515);
+    }
+
+    .sip-sim-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .sip-controls-card {
+      background: rgba(13, 41, 69, 0.85);
+      border: 1.5px solid rgba(201, 162, 39, 0.35);
+      border-radius: 20px;
+      padding: 32px 28px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .control-group {
+      margin-bottom: 24px;
+    }
+
+    .control-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #E2E8F0;
+    }
+
+    .control-value-display {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 800;
+      color: #FFE58F;
+    }
+
+    .sip-slider {
+      width: 100%;
+      height: 8px;
+      border-radius: 5px;
+      background: #153B5B;
+      outline: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+
+    .sip-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--gold-primary);
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 0 10px rgba(201, 162, 39, 0.6);
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+
+    .sip-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+    }
+
+    .sip-result-card {
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.12) 0%, rgba(13, 41, 69, 0.6) 100%);
+      border: 2px solid var(--gold-primary);
+      border-radius: 20px;
+      padding: 34px 30px;
+      text-align: center;
+      position: relative;
+    }
+
+    .result-ribbon {
+      display: inline-block;
+      background: var(--gold-primary);
+      color: #071A2F;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 5px 16px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+
+    .result-corpus-total {
+      font-family: var(--font-heading);
+      font-size: 46px;
+      font-weight: 900;
+      color: #FFE58F;
+      line-height: 1.1;
+      margin-bottom: 10px;
+      text-shadow: 0 4px 16px rgba(201, 162, 39, 0.3);
+    }
+
+    .result-stats-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+      padding: 16px 0;
+      border-top: 1px solid rgba(201, 162, 39, 0.3);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+    }
+
+    .split-stat-item h5 {
+      font-size: 12px;
+      color: #94A3B8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .split-stat-item p {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin: 0;
+    }
+
+    /* ==========================================================================
+       DEEP DIVE EXPLAINERS (ACCORDION / FEATURE SECTIONS)
+       ========================================================================== */
+    .pillar-feature-section {
+      background: #FFFFFF;
+      padding: 70px 20px;
+      border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+    }
+
+    .feature-wrapper {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .equity-pyramid-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .pyramid-card {
+      background: #FEF7E9;
+      border: 1.5px solid rgba(201, 162, 39, 0.3);
+      border-radius: 16px;
+      padding: 24px;
+      position: relative;
+    }
+
+    .pyramid-rank {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 8px;
+    }
+
+    .pyramid-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--navy-deep);
+      margin-bottom: 8px;
+    }
+
+    .pyramid-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0 0;
+    }
+
+    .pyramid-card li {
+      font-size: 13px;
+      color: var(--text-body);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .pyramid-card li i {
+      color: var(--gold-dark);
+      font-size: 11px;
+      margin-top: 4px;
+    }
+
+    /* Free Audit Banner */
+    .audit-box-wrap {
+      background: linear-gradient(135deg, #FAF1DF 0%, #FFF2C2 100%);
+      border: 2px solid var(--gold-primary);
+      border-radius: 20px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 30px;
+      align-items: center;
+      max-width: 1140px;
+      margin: 60px auto 0 auto;
+      box-shadow: 0 16px 40px rgba(7, 26, 47, 0.08);
+    }
+
+    .audit-box-wrap h3 {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--navy-deep);
+      margin-bottom: 10px;
+    }
+
+    .audit-box-wrap p {
+      font-size: 14.5px;
+      color: var(--text-body);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-split-wrapper { grid-template-columns: 1fr; }
+      .pillars-grid { grid-template-columns: repeat(3, 1fr); }
+      .catalog-grid { grid-template-columns: repeat(2, 1fr); }
+      .sip-sim-container { grid-template-columns: 1fr; }
+      .audit-box-wrap { grid-template-columns: 1fr; padding: 28px; }
+    }
+
+    @media (max-width: 768px) {
+      .pillars-grid { grid-template-columns: 1fr; }
+      .catalog-grid { grid-template-columns: 1fr; }
+      .equity-pyramid-grid { grid-template-columns: 1fr; }
+      .hero-floating-stat { position: static; margin-top: 16px; }
+      .result-corpus-total { font-size: 36px; }
+    }
+  </style>
 </head>
 
 <body>
@@ -28,7 +770,7 @@
       <img src="../../main-logo.png" alt="Alakaapuri Nidhi Logo" class="nav-logo-img" />
       <div class="nav-logo-text">
         <img src="../../brand-name-original.png" alt="Alakaapuri Nidhi" class="nav-brand-img" />
-        <span>Praveen Kumar · Wealth Advisory</span>
+        <span>Praveen Kumar · AMFI-Registered MFD (ARN-362567)</span>
       </div>
     </a>
     <ul class="nav-links">
@@ -53,15 +795,45 @@
   </nav>
 
   <!-- PAGE HERO -->
-  <header class="page-hero">
-    <span class="section-label center">Mutual Funds &amp; Wealth Creation</span>
-    <h1 class="section-title">Disciplined Investing for <em>Long-Term Wealth</em></h1>
-    <p class="section-desc">From your first ₹1,000 monthly SIP to curated multi-asset wealth portfolios — guided by Praveen Kumar, AMFI ARN Holder (ARN-362567).</p>
-    <div class="hero-cta-row" style="justify-content:center; margin-top:28px;">
-      <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold"><i
-          class="fa-solid fa-chart-line"></i> Start Investing Online</a>
-      <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20start%20a%20Mutual%20Fund%20SIP."
-        target="_blank" class="btn-outline-light"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+  <header class="page-hero" style="padding-bottom: 50px;">
+    <div class="hero-split-wrapper">
+      <div>
+        <span class="mf-hero-badge"><i class="fa-solid fa-certificate"></i> AMFI-REGISTERED MFD · ARN-362567</span>
+        <h1 class="section-title" style="text-align: left; margin-bottom: 18px;">
+          Strategic Mutual Fund Portfolios for <em>Generational Wealth</em>
+        </h1>
+        <p class="section-desc" style="text-align: left; max-width: 600px; margin-bottom: 26px;">
+          Invest with clarity across 35+ SEBI-regulated mutual fund categories. Whether your focus is aggressive equity growth, capital stability, all-weather hybrid rebalancing, or milestone goals — Praveen Kumar provides research-backed allocation anchored to your family's milestones.
+        </p>
+
+        <div class="hero-cta-row" style="justify-content: flex-start; gap: 14px;">
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold">
+            <i class="fa-solid fa-chart-line"></i> Start Investing Online
+          </a>
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20review%20and%20start%20my%20Mutual%20Fund%20portfolio."
+            target="_blank" class="btn-outline-light">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+
+        <div style="margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px;">
+          <span class="meta-tag"><i class="fa-solid fa-shield-halved" style="color:var(--gold-dark);"></i> AMFI Registered ARN-362567</span>
+          <span class="meta-tag"><i class="fa-solid fa-percent" style="color:var(--gold-dark);"></i> Zero Advisory Surcharge</span>
+          <span class="meta-tag"><i class="fa-solid fa-building-columns" style="color:var(--gold-dark);"></i> 40+ Top AMCs</span>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="hero-image-frame">
+        <img src="mutual_funds_hero.jpg" alt="Mutual Funds Wealth Compounding and Asset Allocation" />
+        <div class="hero-floating-stat">
+          <div class="stat-icon"><i class="fa-solid fa-vault"></i></div>
+          <div class="stat-text">
+            <h4>₹150 Cr+ AUM Guided</h4>
+            <p>500+ Families Across India</p>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -69,131 +841,1125 @@
   <section class="trust-bar">
     <div class="trust-grid">
       <div class="trust-item">
-        <div class="trust-num" data-count="500">0</div>
+        <div class="trust-num" data-count="500" data-suffix="+">500+</div>
         <div class="trust-lbl">Families Guided</div>
         <div class="trust-sub">Across Hyderabad &amp; India</div>
       </div>
       <div class="trust-item">
-        <div class="trust-num" data-count="150" data-suffix="Cr+">0</div>
-        <div class="trust-lbl">AUM Advised</div>
-        <div class="trust-sub">Wealth Under Advisory</div>
+        <div class="trust-num" data-count="150" data-suffix=" Cr+">₹150 Cr+</div>
+        <div class="trust-lbl">Assets Facilitated</div>
+        <div class="trust-sub">Mutual Funds &amp; Equities</div>
       </div>
       <div class="trust-item">
-        <div class="trust-num" data-count="0" data-suffix="Fee">0</div>
-        <div class="trust-lbl">Zero Advisory Fee</div>
-        <div class="trust-sub">100% Free Consultation</div>
+        <div class="trust-num" data-count="35" data-suffix="+">35+</div>
+        <div class="trust-lbl">SEBI Categories</div>
+        <div class="trust-sub">Equity, Debt, Hybrid &amp; Passive</div>
       </div>
       <div class="trust-item">
-        <div class="trust-num" data-count="100" data-suffix="%">0</div>
+        <div class="trust-num" data-count="100" data-suffix="%">100%</div>
         <div class="trust-lbl">Digital &amp; Paperless</div>
-        <div class="trust-sub">Fast Onboarding</div>
+        <div class="trust-sub">Instant KYC Onboarding</div>
       </div>
     </div>
   </section>
 
-  <!-- MUTUAL FUND CATEGORIES -->
-  <section class="section-block">
-    <div class="section-header-center">
-      <span class="section-label center">Portfolio Solutions</span>
-      <h2 class="section-title">Mutual Fund Strategies Tailored to <em>Your Goals</em></h2>
-      <p class="section-desc">We do not believe in one-size-fits-all. Every portfolio is structured based on your investment horizon and risk comfort.</p>
-    </div>
-
-    <div class="products-grid">
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-coins"></i></div>
-        <div class="product-title">Systematic Investment Plan (SIP)</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          Build disciplined investing habits with automatic monthly debits. Harness the power of compounding and rupee-cost averaging.
-        </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> Start with as low as ₹500/month</li>
-          <li><i class="fa-solid fa-diamond"></i> Auto step-up SIP options yearly</li>
-          <li><i class="fa-solid fa-diamond"></i> Ideal for salaried professionals</li>
-        </ul>
+  <!-- 5 PILLARS CLIENT SEGMENTATION -->
+  <section class="decision-matrix-section" id="segmentation">
+    <div class="matrix-container">
+      <div class="section-header-center">
+        <span class="section-label center"><i class="fa-solid fa-sitemap"></i> Client Discussion Framework</span>
+        <h2 class="section-title">An Easier Way to Understand <em>Your Investments</em></h2>
+        <p class="section-desc">We simplify the complex universe of mutual funds into 5 goal-oriented strategic pillars so every rupee has a clear purpose.</p>
       </div>
 
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-receipt"></i></div>
-        <div class="product-title">Tax-Saving Funds (ELSS)</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          Save up to ₹46,800 under Section 80C with the shortest lock-in period among all tax-saving investments (just 3 years).
-        </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> 3-Year Lock-In vs 15-Year PPF</li>
-          <li><i class="fa-solid fa-diamond"></i> High equity wealth potential</li>
-          <li><i class="fa-solid fa-diamond"></i> Tax deduction up to ₹1.5 Lakh</li>
-        </ul>
-      </div>
+      <div class="pillars-grid">
+        <!-- Pillar 1: Growth -->
+        <div class="pillar-card pillar-growth active-pillar" onclick="filterCatalog('equity', this)">
+          <div class="pillar-icon-wrap"><i class="fa-solid fa-arrow-trend-up"></i></div>
+          <div class="pillar-title">Growth</div>
+          <div class="pillar-arrow-label">→ Equity Funds</div>
+          <p class="pillar-desc">Engine for long-term compounding and beating inflation. High growth potential with market volatility.</p>
+          <span class="pillar-badge">12 SEBI Categories</span>
+        </div>
 
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-chart-pie"></i></div>
-        <div class="product-title">Large, Mid &amp; Flexi Cap Equity</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          Invest in India's top companies and high-growth midcap leaders to generate inflation-beating long-term returns.
-        </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> Top 100 blue-chip stability</li>
-          <li><i class="fa-solid fa-diamond"></i> Dynamic Flexi-cap allocation</li>
-          <li><i class="fa-solid fa-diamond"></i> Handpicked fund managers</li>
-        </ul>
-      </div>
+        <!-- Pillar 2: Stability -->
+        <div class="pillar-card pillar-stability" onclick="filterCatalog('debt', this)">
+          <div class="pillar-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="pillar-title">Stability</div>
+          <div class="pillar-arrow-label">→ Debt Funds</div>
+          <p class="pillar-desc">Capital preservation and predictable income. Lower volatility than equity; superior liquidity.</p>
+          <span class="pillar-badge">11 SEBI Categories</span>
+        </div>
 
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-        <div class="product-title">Balanced Advantage &amp; Hybrid</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          Dynamic asset allocation that automatically buys low and sells high between equity and debt, cushioning market volatility.
-        </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> Smoother ride in volatile markets</li>
-          <li><i class="fa-solid fa-diamond"></i> Optimal equity taxation benefits</li>
-          <li><i class="fa-solid fa-diamond"></i> Ideal for conservative investors</li>
-        </ul>
+        <!-- Pillar 3: Balance -->
+        <div class="pillar-card pillar-balance" onclick="filterCatalog('hybrid', this)">
+          <div class="pillar-icon-wrap"><i class="fa-solid fa-scale-balanced"></i></div>
+          <div class="pillar-title">Balance</div>
+          <div class="pillar-arrow-label">→ Hybrid Funds</div>
+          <p class="pillar-desc">Blend of Equity + Debt. Dynamic asset allocation cushions falls while participating in market rallies.</p>
+          <span class="pillar-badge">7 SEBI Categories</span>
+        </div>
+
+        <!-- Pillar 4: Specific Goals -->
+        <div class="pillar-card pillar-goals" onclick="filterCatalog('solution', this)">
+          <div class="pillar-icon-wrap"><i class="fa-solid fa-bullseye"></i></div>
+          <div class="pillar-title">Specific Goals</div>
+          <div class="pillar-arrow-label">→ Solution-Oriented</div>
+          <p class="pillar-desc">Purpose-built funds with mandatory lock-ins designed exclusively for retirement or children's higher education.</p>
+          <span class="pillar-badge">2 SEBI Categories</span>
+        </div>
+
+        <!-- Pillar 5: Passive -->
+        <div class="pillar-card pillar-passive" onclick="filterCatalog('passive', this)">
+          <div class="pillar-icon-wrap"><i class="fa-solid fa-satellite-dish"></i></div>
+          <div class="pillar-title">Passive</div>
+          <div class="pillar-arrow-label">→ Index &amp; ETFs</div>
+          <p class="pillar-desc">Transparent, ultra-low-cost benchmark tracking (Nifty 50, Sensex) and specialized global Fund of Funds.</p>
+          <span class="pillar-badge">3 SEBI Categories</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- HOW TO BEGIN -->
+  <!-- INTERACTIVE 35-CATEGORY CATALOG -->
+  <section class="catalog-section" id="catalog">
+    <div class="catalog-header-bar">
+      <div class="section-header-center" style="margin-bottom: 0;">
+        <span class="section-label center"><i class="fa-solid fa-layer-group"></i> Complete Fund Universe</span>
+        <h2 class="section-title">Explore All <em>35+ SEBI Categories</em></h2>
+        <p class="section-desc">Click a strategic pillar or search to find the exact scheme type matching your investment objective.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="catalog-filters">
+        <button class="cat-btn active" onclick="filterCatalog('all', this)"><i class="fa-solid fa-border-all"></i> All Categories (35)</button>
+        <button class="cat-btn" onclick="filterCatalog('equity', this)"><i class="fa-solid fa-chart-line"></i> Growth · Equity (12)</button>
+        <button class="cat-btn" onclick="filterCatalog('debt', this)"><i class="fa-solid fa-building-columns"></i> Stability · Debt (11)</button>
+        <button class="cat-btn" onclick="filterCatalog('hybrid', this)"><i class="fa-solid fa-arrows-split-up-and-left"></i> Balance · Hybrid (7)</button>
+        <button class="cat-btn" onclick="filterCatalog('solution', this)"><i class="fa-solid fa-graduation-cap"></i> Goals (2)</button>
+        <button class="cat-btn" onclick="filterCatalog('passive', this)"><i class="fa-solid fa-cubes"></i> Passive &amp; FoF (3)</button>
+      </div>
+
+      <!-- Search Input -->
+      <div class="catalog-search-wrap">
+        <i class="fa-solid fa-magnifying-glass catalog-search-icon"></i>
+        <input type="text" id="schemeSearch" class="catalog-search-input" placeholder="Search categories e.g. 'ELSS', 'Liquid', 'Small Cap', 'Retirement'..." onkeyup="searchSchemes()" />
+      </div>
+    </div>
+
+    <!-- CARDS GRID -->
+    <div class="catalog-grid" id="schemesGrid">
+
+      <!-- ================= 1. EQUITY MUTUAL FUNDS (12) ================= -->
+      <!-- 1. Large Cap -->
+      <div class="scheme-card" data-category="equity" data-keywords="large cap top 100 bluechip blue chip stable growth reliance tcs infosys">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-equity"><i class="fa-solid fa-crown"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-equity">Growth · Equity</span>
+            <h3 class="scheme-title">Large Cap Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Mandatory minimum 80% investment in India's top 100 established blue-chip giants. Provides steady compound growth with the highest resilience among equity funds.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 5+ Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-gem"></i> Top 100 Companies</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Large%20Cap%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 2. Large & Mid Cap -->
+      <div class="scheme-card" data-category="equity" data-keywords="large and mid cap 35% large 35% mid balanced growth leaders">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-equity"><i class="fa-solid fa-chart-column"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-equity">Growth · Equity</span>
+            <h3 class="scheme-title">Large &amp; Mid Cap</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Blends minimum 35% in large caps for stability and minimum 35% in mid caps for aggressive growth. The sweet spot of market leadership + expansion.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 5+ Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-shuffle"></i> 35:35 Dual Engine</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Large%20and%20Mid%20Cap%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 3. Mid Cap -->
+      <div class="scheme-card" data-category="equity" data-keywords="mid cap 101 to 250 high growth emerging leaders compounding">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-equity"><i class="fa-solid fa-rocket"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-equity">Growth · Equity</span>
+            <h3 class="scheme-title">Mid Cap Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Invests at least 65% in companies ranked 101st to 250th by market cap. High growth potential as emerging businesses scale into industry titans.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 7+ Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-bolt"></i> High Growth Scalers</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Mid%20Cap%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 4. Small Cap -->
+      <div class="scheme-card" data-category="equity" data-keywords="small cap 251+ multibagger exponential volatility wealth creation">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-equity"><i class="fa-solid fa-seedling"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-equity">Growth · Equity</span>
+            <h3 class="scheme-title">Small Cap Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Allocates minimum 65% in companies ranked 251st and beyond. Ideal for patient, long-term investors seeking multibagger compounding through disciplined SIPs.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 7–10 Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-chart-line-up"></i> Multibagger Potential</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Small%20Cap%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 5. Flexi Cap -->
+      <div class="scheme-card" data-category="equity" data-keywords="flexi cap flexible dynamic allocation all market caps parag parikh ppfas">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-equity"><i class="fa-solid fa-compass"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-equity">Growth · Equity</span>
+            <h3 class="scheme-title">Flexi Cap Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Dynamic flexibility to invest across large, mid, and small cap stocks without any category caps. The fund manager maneuvers capital to where valuations are best.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 5+ Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-sliders"></i> Go-Anywhere Mandate</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Flexi%20Cap%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 6. Multi Cap -->
+      <div class="scheme-card" data-category="equity" data-keywords="multi cap 25% large 25% mid 25% small disciplined allocation">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-equity"><i class="fa-solid fa-cubes-stacked"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-equity">Growth · Equity</span>
+            <h3 class="scheme-title">Multi Cap Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Strict SEBI mandate requiring at least 25% in Large Cap, 25% in Mid Cap, and 25% in Small Cap at all times. True cross-market diversification in one fund.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 5+ Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-pie-chart"></i> 25:25:25 Rule</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Multi%20Cap%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 7. Value -->
+      <div class="scheme-card" data-category="equity" data-keywords="value funds undervalued intrinsic margin of safety buffet style">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-equity"><i class="fa-solid fa-tag"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-equity">Growth · Equity</span>
+            <h3 class="scheme-title">Value Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Follows a value investing philosophy: buying fundamentally strong companies trading below their intrinsic worth. Offers a built-in margin of safety.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 5+ Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-shield"></i> Margin of Safety</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Value%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 8. Contra -->
+      <div class="scheme-card" data-category="equity" data-keywords="contra contrarian against the tide turnaround out of favour">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-equity"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-equity">Growth · Equity</span>
+            <h3 class="scheme-title">Contra Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Invests contrarily by picking temporarily neglected or beaten-down sectors/stocks expected to stage dramatic long-term turnaround rallies.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 5+ Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-arrows-rotate"></i> Contrarian Alpha</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Contra%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 9. Dividend Yield -->
+      <div class="scheme-card" data-category="equity" data-keywords="dividend yield cash flow high dividend psu cash rich companies">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-equity"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-equity">Growth · Equity</span>
+            <h3 class="scheme-title">Dividend Yield Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Allocates at least 65% in high dividend-yielding companies with robust cash generation and disciplined capital returns. Great for lower downside drawdown.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 3–5 Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-money-bill-wave"></i> Cash-Rich Stocks</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Dividend%20Yield%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 10. ELSS / Tax Saving -->
+      <div class="scheme-card" data-category="equity" data-keywords="elss tax saving 80c 3 year lock in deduction 1.5 lakh 46800">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-equity"><i class="fa-solid fa-receipt"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-equity">Growth · Equity</span>
+            <h3 class="scheme-title">ELSS / Tax Saving</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Qualifies for up to ₹1.5 Lakh tax deduction under Section 80C. Features the shortest lock-in period (3 years) of all 80C instruments, with high equity wealth generation.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-lock"></i> 3-Year Lock-In</span>
+          <span class="meta-tag"><i class="fa-solid fa-file-invoice-dollar"></i> Section 80C Tax Saver</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20save%20tax%20with%20ELSS%20Mutual%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 11. Focused -->
+      <div class="scheme-card" data-category="equity" data-keywords="focused fund max 30 stocks high conviction concentrated portfolio">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-equity"><i class="fa-solid fa-crosshairs"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-equity">Growth · Equity</span>
+            <h3 class="scheme-title">Focused Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Strictly limited to a maximum of 30 high-conviction stocks. Cuts portfolio dilution and aims for substantial alpha from the fund manager's best ideas.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 5+ Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-bullseye"></i> Max 30 Stocks</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Focused%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 12. Sectoral / Thematic -->
+      <div class="scheme-card" data-category="equity" data-keywords="sectoral thematic banking pharma it technology infrastructure manufacturing psu defense">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-equity"><i class="fa-solid fa-industry"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-equity">Growth · Equity</span>
+            <h3 class="scheme-title">Sectoral / Thematic</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Concentrates 80%+ in a single sector or theme (e.g. Banking, Pharma, Tech, Infrastructure, Manufacturing, Defense). High-reward tactical satellite portfolio allocation.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> Cyclical (3–5 Yrs)</span>
+          <span class="meta-tag"><i class="fa-solid fa-network-wired"></i> Focused Theme</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Sectoral%20and%20Thematic%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+
+      <!-- ================= 2. DEBT MUTUAL FUNDS (11) ================= -->
+      <!-- 13. Overnight -->
+      <div class="scheme-card" data-category="debt" data-keywords="overnight fund 1 day maturity zero interest rate risk corporate cash parking">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-debt"><i class="fa-solid fa-moon"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-debt">Stability · Debt</span>
+            <h3 class="scheme-title">Overnight Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Invests in securities with a maturity of just 1 day. Virtually zero interest rate or credit risk. Ideal for corporate cash parking and ultra-short liquidity.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-low"><i class="fa-solid fa-shield"></i> Low Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-clock"></i> 1 Day</span>
+          <span class="meta-tag"><i class="fa-solid fa-check"></i> Highest Safety</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Overnight%20Debt%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 14. Liquid -->
+      <div class="scheme-card" data-category="debt" data-keywords="liquid funds 91 days emergency fund bank fd alternative instant withdrawal">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-debt"><i class="fa-solid fa-droplet"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-debt">Stability · Debt</span>
+            <h3 class="scheme-title">Liquid Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Invests in debt securities with up to 91 days maturity. The gold standard for emergency funds and contingency reserves — offers better efficiency than savings accounts.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-low"><i class="fa-solid fa-shield"></i> Low to Mod Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-clock"></i> Up to 91 Days</span>
+          <span class="meta-tag"><i class="fa-solid fa-wallet"></i> Emergency Reserve</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20park%20emergency%20funds%20in%20Liquid%20Mutual%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 15. Ultra Short Duration -->
+      <div class="scheme-card" data-category="debt" data-keywords="ultra short duration 3 to 6 months short term surplus treasury">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-debt"><i class="fa-solid fa-hourglass-start"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-debt">Stability · Debt</span>
+            <h3 class="scheme-title">Ultra Short Duration</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Invests in debt and money market instruments with Macaulay duration between 3 to 6 months. Perfect for money needed in the near term with minimal interest risk.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-low"><i class="fa-solid fa-shield"></i> Low to Mod Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-clock"></i> 3–6 Months</span>
+          <span class="meta-tag"><i class="fa-solid fa-coins"></i> Short-Term Parking</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Ultra%20Short%20Duration%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 16. Low Duration -->
+      <div class="scheme-card" data-category="debt" data-keywords="low duration 6 to 12 months conservative income yield">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-debt"><i class="fa-solid fa-hourglass-half"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-debt">Stability · Debt</span>
+            <h3 class="scheme-title">Low Duration Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Macaulay duration of 6 to 12 months. Suitable for investors seeking stable accrual yield with modest interest rate sensitivity over a 1-year horizon.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-low"><i class="fa-solid fa-shield"></i> Low to Mod Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-clock"></i> 6–12 Months</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar"></i> 1-Year Horizon</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Low%20Duration%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 17. Money Market -->
+      <div class="scheme-card" data-category="debt" data-keywords="money market commercial paper certificate of deposit treasury bills up to 1 year">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-debt"><i class="fa-solid fa-landmark-dome"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-debt">Stability · Debt</span>
+            <h3 class="scheme-title">Money Market Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Invests exclusively in high-grade money market instruments like Commercial Papers (CPs), Certificates of Deposit (CDs), and T-Bills with maturity up to 1 year.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-low"><i class="fa-solid fa-shield"></i> Low to Mod Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-clock"></i> Up to 1 Year</span>
+          <span class="meta-tag"><i class="fa-solid fa-certificate"></i> Premium Liquidity</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Money%20Market%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 18. Short Duration -->
+      <div class="scheme-card" data-category="debt" data-keywords="short duration 1 to 3 years steady yield accrual bank fd replacement">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-debt"><i class="fa-solid fa-calendar-days"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-debt">Stability · Debt</span>
+            <h3 class="scheme-title">Short Duration Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Macaulay duration between 1 to 3 years. Balanced combination of steady interest accrual and moderate duration yield. A popular conservative portfolio staple.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-mod"><i class="fa-solid fa-shield-halved"></i> Moderate Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-clock"></i> 1–3 Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-scale-balanced"></i> Stable Accrual</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Short%20Duration%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 19. Medium Duration -->
+      <div class="scheme-card" data-category="debt" data-keywords="medium duration 3 to 4 years rate cycle capital gains">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-debt"><i class="fa-solid fa-clock-rotate-left"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-debt">Stability · Debt</span>
+            <h3 class="scheme-title">Medium Duration Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Macaulay duration between 3 to 4 years. Positioned to capture capital appreciation during falling interest rate cycles alongside regular coupon yields.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-mod"><i class="fa-solid fa-shield-halved"></i> Moderate Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-clock"></i> 3–4 Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-chart-area"></i> Rate Cycle Capital Gains</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Medium%20Duration%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 20. Corporate Bond -->
+      <div class="scheme-card" data-category="debt" data-keywords="corporate bond aaa rated 80% highest safety corporate debt">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-debt"><i class="fa-solid fa-building"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-debt">Stability · Debt</span>
+            <h3 class="scheme-title">Corporate Bond Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Invests at least 80% in the highest-rated (AAA &amp; equivalent) corporate bonds. Offers superior safety among corporate credits with attractive post-tax returns.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-mod"><i class="fa-solid fa-shield-halved"></i> Moderate Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-clock"></i> 2–3+ Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-star"></i> 80% AAA Rated</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Corporate%20Bond%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 21. Banking & PSU Debt -->
+      <div class="scheme-card" data-category="debt" data-keywords="banking psu debt government backed quasi sovereign safe yield">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-debt"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-debt">Stability · Debt</span>
+            <h3 class="scheme-title">Banking &amp; PSU Debt</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Mandatory minimum 80% allocation in debt issued by Public Sector Undertakings (PSUs), banks, and public financial institutions. Quasi-sovereign credit safety.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-low"><i class="fa-solid fa-shield"></i> Low to Mod Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-clock"></i> 2–3 Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-landmark"></i> PSU &amp; Bank Backing</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Banking%20and%20PSU%20Debt%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 22. Gilt -->
+      <div class="scheme-card" data-category="debt" data-keywords="gilt funds government securities rbi sovereign zero credit risk">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-debt"><i class="fa-solid fa-gem"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-debt">Stability · Debt</span>
+            <h3 class="scheme-title">Gilt Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Invests at least 80% in Central and State Government securities. Features absolute zero credit/default risk, backed by the sovereign authority of the Government of India.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-mod"><i class="fa-solid fa-shield-halved"></i> Mod (Duration Sensitive)</span>
+          <span class="meta-tag"><i class="fa-solid fa-clock"></i> 3–5+ Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-flag"></i> 100% Sovereign Safety</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Gilt%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 23. Credit Risk -->
+      <div class="scheme-card" data-category="debt" data-keywords="credit risk high yield aa rated rating upgrade corporate debt">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-debt"><i class="fa-solid fa-shield-virus"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-debt">Stability · Debt</span>
+            <h3 class="scheme-title">Credit Risk Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Invests minimum 65% in corporate bonds rated AA and below. Aims for higher yields through coupon income and potential rating upgrade capital appreciation.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-clock"></i> 3–5 Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-arrow-up-right-dots"></i> High Coupon Yield</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Credit%20Risk%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+
+      <!-- ================= 3. HYBRID MUTUAL FUNDS (7) ================= -->
+      <!-- 24. Conservative Hybrid -->
+      <div class="scheme-card" data-category="hybrid" data-keywords="conservative hybrid 75% debt 10-25% equity monthly income retiree">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-hybrid"><i class="fa-solid fa-shield-heart"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-hybrid">Balance · Hybrid</span>
+            <h3 class="scheme-title">Conservative Hybrid</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Allocates 75% to 90% in debt instruments and 10% to 25% in equities. Delivers bond-like stability with an equity booster to protect purchasing power against inflation.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-mod"><i class="fa-solid fa-shield-halved"></i> Moderate Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 3+ Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-percent"></i> 75–90% Debt Shield</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Conservative%20Hybrid%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 25. Balanced Hybrid -->
+      <div class="scheme-card" data-category="hybrid" data-keywords="balanced hybrid 40 to 60 equity debt no arbitrage equal balance">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-hybrid"><i class="fa-solid fa-scale-unbalanced"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-hybrid">Balance · Hybrid</span>
+            <h3 class="scheme-title">Balanced Hybrid</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Maintains 40% to 60% in equities and 40% to 60% in debt with zero arbitrage. Delivers genuine balanced exposure without heavy equity tilt.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-mod"><i class="fa-solid fa-shield-halved"></i> Mod to High</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 3–5 Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-equals"></i> True 50:50 Balance</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Balanced%20Hybrid%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 26. Aggressive Hybrid -->
+      <div class="scheme-card" data-category="hybrid" data-keywords="aggressive hybrid 65 to 80 equity 20 to 35 debt equity taxation wealth creation">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-hybrid"><i class="fa-solid fa-fire"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-hybrid">Balance · Hybrid</span>
+            <h3 class="scheme-title">Aggressive Hybrid</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Allocates 65% to 80% in equities and 20% to 35% in debt. Combines wealth creation with regular debt cushion and favorable equity taxation benefits.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 5+ Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-file-invoice"></i> Equity Tax Status</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Aggressive%20Hybrid%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 27. Dynamic Asset Allocation / Balanced Advantage -->
+      <div class="scheme-card" data-category="hybrid" data-keywords="dynamic asset allocation balanced advantage baf daa auto buy low sell high volatility cushion">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-hybrid"><i class="fa-solid fa-sliders"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-hybrid">Balance · Hybrid</span>
+            <h3 class="scheme-title">Balanced Advantage (BAF)</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Dynamically manages equity between 0% to 100% using disciplined valuation models (P/E, P/B). Automatically books profits at market highs and buys aggressive dips.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-mod"><i class="fa-solid fa-shield-halved"></i> Moderate Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 3+ Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-robot"></i> Algorithmic Rebalancing</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Balanced%20Advantage%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 28. Multi Asset Allocation -->
+      <div class="scheme-card" data-category="hybrid" data-keywords="multi asset allocation gold equity debt silver 3 asset classes all weather">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-hybrid"><i class="fa-solid fa-circle-nodes"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-hybrid">Balance · Hybrid</span>
+            <h3 class="scheme-title">Multi Asset Allocation</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Mandatory minimum 10% allocation in at least 3 distinct asset classes: Equity, Debt, and Gold/Silver/Commodities. The ultimate all-weather hedge against stagflation.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-mod"><i class="fa-solid fa-shield-halved"></i> Mod to High</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 3–5 Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-coins"></i> Equity + Debt + Gold</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Multi%20Asset%20Allocation%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 29. Equity Savings -->
+      <div class="scheme-card" data-category="hybrid" data-keywords="equity savings 65% gross equity arbitrage debt conservative return">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-hybrid"><i class="fa-solid fa-piggy-bank"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-hybrid">Balance · Hybrid</span>
+            <h3 class="scheme-title">Equity Savings Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Combines unhedged equity (for growth), equity arbitrage (hedged risk-free yield), and debt. Enjoys equity tax treatment with much lower volatility than pure equity.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-low"><i class="fa-solid fa-shield"></i> Low to Mod Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 1–3 Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-shield-halved"></i> Hedged Arbitrage Buffer</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Equity%20Savings%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 30. Arbitrage -->
+      <div class="scheme-card" data-category="hybrid" data-keywords="arbitrage funds cash futures spread zero directional risk equity taxation alternative to liquid">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-hybrid"><i class="fa-solid fa-scale-balanced"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-hybrid">Balance · Hybrid</span>
+            <h3 class="scheme-title">Arbitrage Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Captures price discrepancies between the cash and futures markets (minimum 65% hedged equity). Zero directional market risk with favorable equity tax treatment.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-low"><i class="fa-solid fa-shield"></i> Low Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 3–6+ Months</span>
+          <span class="meta-tag"><i class="fa-solid fa-file-invoice"></i> Equity Taxation Advantage</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Arbitrage%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+
+      <!-- ================= 4. SOLUTION-ORIENTED FUNDS (2) ================= -->
+      <!-- 31. Retirement Funds -->
+      <div class="scheme-card" data-category="solution" data-keywords="retirement funds pension 5 year lock in post retirement swp goal oriented">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-goal"><i class="fa-solid fa-umbrella-beach"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-goal">Specific Goals · Purpose-Locked</span>
+            <h3 class="scheme-title">Retirement Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Designed specifically to accumulate a lifelong pension corpus. Features a mandatory 5-year lock-in (or until retirement age) to instill unbreakable compounding discipline.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-lock"></i> 5-Yr Lock-In</span>
+          <span class="meta-tag"><i class="fa-solid fa-person-cane"></i> Retirement Milestone</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20plan%20my%20Retirement%20Corpus." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 32. Children's Funds -->
+      <div class="scheme-card" data-category="solution" data-keywords="children fund higher education marriage child milestone 5 year lock in">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-goal"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-goal">Specific Goals · Purpose-Locked</span>
+            <h3 class="scheme-title">Children’s Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Earmarked strictly for a child's future higher education or marriage. Enforces a 5-year lock-in (or until the child attains majority) to protect funds from emotional withdrawals.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-lock"></i> 5-Yr Lock-In</span>
+          <span class="meta-tag"><i class="fa-solid fa-child"></i> Education &amp; Milestone</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20plan%20a%20Children%20Higher%20Education%20Fund." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+
+      <!-- ================= 5. OTHER / SPECIALIZED CATEGORIES (3) ================= -->
+      <!-- 33. Index Funds -->
+      <div class="scheme-card" data-category="passive" data-keywords="index funds passive investing nifty 50 sensex nifty next 50 low expense ratio">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-passive"><i class="fa-solid fa-cubes"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-passive">Passive · Benchmark Tracking</span>
+            <h3 class="scheme-title">Index Funds</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Passively replicates benchmark indices (Nifty 50, Sensex, Nifty Next 50) in exact proportions. Zero human manager bias with rock-bottom expense ratios.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 5+ Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-percent"></i> Low Expense Ratio</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Index%20Funds." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 34. ETFs (Exchange Traded Funds) -->
+      <div class="scheme-card" data-category="passive" data-keywords="etfs exchange traded funds real time demat trading gold etf nifty etf banketf">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-passive"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-passive">Passive · Real-Time Traded</span>
+            <h3 class="scheme-title">Exchange Traded Funds (ETFs)</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Traded real-time on stock exchanges (NSE/BSE) like individual equities. Provides intraday liquidity, tight tracking, and access to Gold, Silver, and index baskets.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> V. High / Mod (Gold)</span>
+          <span class="meta-tag"><i class="fa-solid fa-bolt"></i> Real-Time Liquidity</span>
+          <span class="meta-tag"><i class="fa-solid fa-id-card"></i> Demat Based</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20ETFs%20and%20Gold%20ETFs." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+      <!-- 35. Fund of Funds (FoF) -->
+      <div class="scheme-card" data-category="passive" data-keywords="fund of funds fof overseas international global us equity nasdaq tech fof">
+        <div class="card-top-row">
+          <div class="scheme-emblem emblem-passive"><i class="fa-solid fa-globe"></i></div>
+          <div class="scheme-header-info">
+            <span class="scheme-category-badge badge-passive">Specialized · Global &amp; Multi-Manager</span>
+            <h3 class="scheme-title">Fund of Funds (FoF)</h3>
+          </div>
+        </div>
+        <p class="scheme-summary">
+          Invests in a basket of other domestic or international mutual fund schemes. Unlocks hassle-free geographical diversification into US markets (Nasdaq, S&amp;P 500) and global themes.
+        </p>
+        <div class="scheme-tags-row">
+          <span class="meta-tag risk-high"><i class="fa-solid fa-triangle-exclamation"></i> Very High Risk</span>
+          <span class="meta-tag"><i class="fa-solid fa-calendar-check"></i> 5+ Years</span>
+          <span class="meta-tag"><i class="fa-solid fa-earth-americas"></i> Global &amp; US Markets</span>
+        </div>
+        <div class="scheme-action-row">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Fund%20of%20Funds%20and%20Overseas%20Investing." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Ask Praveen</a>
+          <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="scheme-btn-invest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Invest</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE SIP COMPOUNDING SIMULATOR -->
+  <section class="sip-sim-section" id="sip-simulator">
+    <div class="sip-sim-container">
+      <div>
+        <span class="section-label" style="color:#FFE58F;"><i class="fa-solid fa-calculator"></i> Wealth Compounding Engine</span>
+        <h2 class="section-title" style="color:#FFFFFF; text-align:left; margin: 10px 0 16px 0;">
+          See How Small SIPs Create <em>Substantial Crores</em>
+        </h2>
+        <p style="color:#CBD5E1; font-size:14.5px; line-height:1.6; margin-bottom: 26px;">
+          Disciplined rupee-cost averaging combined with India's long-term economic growth engine transforms modest monthly savings into life-changing generational wealth.
+        </p>
+
+        <!-- Controls -->
+        <div class="sip-controls-card">
+          <div class="control-group">
+            <div class="control-label-row">
+              <span>Monthly SIP Amount</span>
+              <span class="control-value-display" id="sipAmountDisplay">₹10,000</span>
+            </div>
+            <input type="range" id="sipAmountSlider" class="sip-slider" min="1000" max="100000" step="1000" value="10000" oninput="calculateSIP()" />
+            <div style="display:flex; justify-content:space-between; font-size:11px; color:#94A3B8; margin-top:6px;">
+              <span>₹1,000</span>
+              <span>₹50,000</span>
+              <span>₹1,00,000</span>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="control-label-row">
+              <span>Investment Horizon</span>
+              <span class="control-value-display" id="sipYearsDisplay">15 Years</span>
+            </div>
+            <input type="range" id="sipYearsSlider" class="sip-slider" min="3" max="30" step="1" value="15" oninput="calculateSIP()" />
+            <div style="display:flex; justify-content:space-between; font-size:11px; color:#94A3B8; margin-top:6px;">
+              <span>3 Years</span>
+              <span>15 Years</span>
+              <span>30 Years</span>
+            </div>
+          </div>
+
+          <div class="control-group" style="margin-bottom:0;">
+            <div class="control-label-row">
+              <span>Expected Annual Return (CAGR)</span>
+              <span class="control-value-display" id="sipRateDisplay">12.0%</span>
+            </div>
+            <input type="range" id="sipRateSlider" class="sip-slider" min="8" max="16" step="0.5" value="12" oninput="calculateSIP()" />
+            <div style="display:flex; justify-content:space-between; font-size:11px; color:#94A3B8; margin-top:6px;">
+              <span>8% (Debt/Conservative)</span>
+              <span>12% (Equity Historical)</span>
+              <span>16% (Aggressive)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Result Card -->
+      <div class="sip-result-card">
+        <span class="result-ribbon"><i class="fa-solid fa-trophy"></i> Projected Wealth Corpus</span>
+        <div class="result-corpus-total" id="sipCorpusDisplay">₹50.46 Lakhs</div>
+        <p style="color:#E2E8F0; font-size:13.5px;">At maturity based on disciplined regular compounding</p>
+
+        <div class="result-stats-split">
+          <div class="split-stat-item">
+            <h5>Total Invested</h5>
+            <p id="sipInvestedDisplay">₹18.00 Lakhs</p>
+          </div>
+          <div class="split-stat-item">
+            <h5>Estimated Gain</h5>
+            <p id="sipGainsDisplay" style="color:#86EFAC;">+₹32.46 Lakhs</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 10px;">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20start%20a%20monthly%20SIP%20with%20you." target="_blank" class="btn-gold" style="width:100%; justify-content:center;">
+            <i class="fa-solid fa-bolt"></i> Start This SIP Plan with Praveen
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEEP DIVE: STRATEGIC ASSET ALLOCATION ARCHITECTURE -->
+  <section class="pillar-feature-section">
+    <div class="feature-wrapper">
+      <div class="section-header-center">
+        <span class="section-label center"><i class="fa-solid fa-pyramid"></i> Strategic Allocation</span>
+        <h2 class="section-title">The Alakaapuri <em>Asset Allocation Blueprint</em></h2>
+        <p class="section-desc">Why 90% of your long-term returns are determined by your asset allocation rather than trying to time daily market headlines.</p>
+      </div>
+
+      <div class="equity-pyramid-grid">
+        <div class="pyramid-card">
+          <div class="pyramid-rank">Core Foundation · 50–60%</div>
+          <h3 class="pyramid-title">Large Cap &amp; Flexi Cap Anchor</h3>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.5;">The bedrock of your wealth engine. Provides steady capital compounding with proven resilience through multiple economic cycles.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> High institutional ownership</li>
+            <li><i class="fa-solid fa-check"></i> Market-leading corporate governance</li>
+            <li><i class="fa-solid fa-check"></i> Reliable shock absorption during bear markets</li>
+          </ul>
+        </div>
+
+        <div class="pyramid-card">
+          <div class="pyramid-rank">Growth Accelerators · 20–30%</div>
+          <h3 class="pyramid-title">Mid &amp; Small Cap High Alpha</h3>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.5;">High-conviction exposure to fast-scaling business models, specialized export leaders, and manufacturing disruptors.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Outpaces inflation by substantial margins</li>
+            <li><i class="fa-solid fa-check"></i> Best captured via 7+ year monthly SIPs</li>
+            <li><i class="fa-solid fa-check"></i> Rebalanced periodically to lock in gains</li>
+          </ul>
+        </div>
+
+        <div class="pyramid-card">
+          <div class="pyramid-rank">Capital Shield · 15–20%</div>
+          <h3 class="pyramid-title">Hybrid, Debt &amp; Sovereign Gilts</h3>
+          <p style="font-size:13px; color:var(--text-muted); line-height:1.5;">Your financial safety net. Ensures immediate liquidity, eliminates emotional selling during market corrections, and funds short-term goals.</p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Emergency reserves in Liquid / Overnight</li>
+            <li><i class="fa-solid fa-check"></i> BAF dynamic counter-cyclical buying</li>
+            <li><i class="fa-solid fa-check"></i> Tax-efficient Arbitrage cash yields</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FREE AUDIT BANNER -->
+      <div class="audit-box-wrap">
+        <div>
+          <span style="font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--gold-dark);"><i class="fa-solid fa-stethoscope"></i> Zero-Cost Portfolio Health Check</span>
+          <h3>Already Holding Mutual Funds? Get an Objective Portfolio Scan</h3>
+          <p>Over 70% of retail portfolios suffer from severe stock overlap (owning the same 5 companies across 8 different funds), poor debt selection, or hidden direct/regular mismatch. Send us your CAS statement for a complimentary 100% confidential diagnostic audit.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <span class="meta-tag"><i class="fa-solid fa-circle-check" style="color:var(--gold-dark);"></i> Check Stock Overlap</span>
+            <span class="meta-tag"><i class="fa-solid fa-circle-check" style="color:var(--gold-dark);"></i> Expense Ratio Audit</span>
+            <span class="meta-tag"><i class="fa-solid fa-circle-check" style="color:var(--gold-dark);"></i> Category Rebalancing</span>
+          </div>
+        </div>
+        <div style="text-align:center;">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20would%20like%20a%20FREE%20Portfolio%20Health%20Check%20for%20my%20existing%20mutual%20funds." target="_blank" class="btn-gold" style="width:100%; justify-content:center; padding: 14px 20px;">
+            <i class="fa-brands fa-whatsapp"></i> Request Free CAS Review
+          </a>
+          <p style="font-size:11.5px; color:var(--text-muted); margin-top:8px;">100% Confidential · No Spam · Praveen will review personally</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW WE ADVISE -->
   <section class="section-block" style="background: #0D2945; border-top: 1px solid var(--mahogany); border-bottom: 1px solid var(--mahogany);">
     <div class="section-header-center">
-      <span class="section-label center">Step-By-Step</span>
-      <h2 class="section-title">Start In <em>3 Simple Steps</em></h2>
+      <span class="section-label center" style="color:#FFE58F;">Seamless Execution</span>
+      <h2 class="section-title" style="color:#FFFFFF;">Start Your Wealth Journey in <em>3 Steps</em></h2>
     </div>
 
     <div class="why-grid">
-      <div class="why-card tilt-3d">
-        <div class="why-icon"><i class="fa-solid fa-clipboard-check"></i></div>
-        <div class="why-title">1. Free Goal Assessment</div>
-        <p class="why-desc">We analyse your financial goals, monthly cash flows, and time horizons to choose the right fund mix.</p>
+      <div class="why-card tilt-3d" style="background:#071A2F; border-color:rgba(201, 162, 39, 0.35);">
+        <div class="why-icon" style="background:#153B5B; color:#FFE58F;"><i class="fa-solid fa-clipboard-check"></i></div>
+        <div class="why-title" style="color:#FFFFFF;">1. Goal Mapping &amp; Risk Profiling</div>
+        <p class="why-desc" style="color:#CBD5E1;">We evaluate your family's time horizon, tax slab, and monthly cash flow to establish your personalized 5-Pillar allocation.</p>
       </div>
-      <div class="why-card tilt-3d">
-        <div class="why-icon"><i class="fa-solid fa-id-card"></i></div>
-        <div class="why-title">2. Paperless KYC</div>
-        <p class="why-desc">Instant online account activation via Aadhaar &amp; PAN. Completely safe, paperless and secure.</p>
+      <div class="why-card tilt-3d" style="background:#071A2F; border-color:rgba(201, 162, 39, 0.35);">
+        <div class="why-icon" style="background:#153B5B; color:#FFE58F;"><i class="fa-solid fa-id-card"></i></div>
+        <div class="why-title" style="color:#FFFFFF;">2. Instant Paperless KYC</div>
+        <p class="why-desc" style="color:#CBD5E1;">Zero paperwork. Seamless online onboarding powered by AssetPlus using Aadhaar &amp; PAN in less than 5 minutes.</p>
       </div>
-      <div class="why-card tilt-3d">
-        <div class="why-icon"><i class="fa-solid fa-rocket"></i></div>
-        <div class="why-title">3. Regular Portfolio Reviews</div>
-        <p class="why-desc">Quarterly reviews with Praveen Kumar to rebalance and keep your investments on track.</p>
+      <div class="why-card tilt-3d" style="background:#071A2F; border-color:rgba(201, 162, 39, 0.35);">
+        <div class="why-icon" style="background:#153B5B; color:#FFE58F;"><i class="fa-solid fa-chart-pie"></i></div>
+        <div class="why-title" style="color:#FFFFFF;">3. Annual Review &amp; Rebalancing</div>
+        <p class="why-desc" style="color:#CBD5E1;">Dedicated 1-on-1 consultations with Praveen Kumar to reallocate, weed out underperformers, and stay aligned with life goals.</p>
       </div>
     </div>
 
     <div style="text-align:center; margin-top:40px;">
-      <a href="../../calculators/" class="btn-gold"><i class="fa-solid fa-calculator"></i> Try Our SIP Calculator</a>
+      <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold">
+        <i class="fa-solid fa-rocket"></i> Open Account on AssetPlus
+      </a>
     </div>
   </section>
 
   <!-- CTA -->
   <div class="cta-section">
-    <span class="section-label center">Ready to Invest?</span>
-    <h2 class="section-title">Build Your <em>₹1 Crore Corpus</em></h2>
-    <p class="section-desc">Talk to Praveen Kumar today for a free portfolio review and personalised mutual fund plan.</p>
+    <span class="section-label center">Ready to Take Action?</span>
+    <h2 class="section-title">Turn Idle Savings into a <em>Thriving Wealth Engine</em></h2>
+    <p class="section-desc">Partner with Praveen Kumar, AMFI-Registered Mutual Fund Distributor (ARN-362567), and invest with total confidence.</p>
     <div class="cta-btn-row">
-      <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold"><i
-          class="fa-solid fa-chart-line"></i> Start Investing Online</a>
+      <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold">
+        <i class="fa-solid fa-chart-line"></i> Start Investing Online
+      </a>
       <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20consult%20about%20Mutual%20Funds."
-        target="_blank" class="btn-outline-light"><i class="fa-brands fa-whatsapp"></i> WhatsApp Consultation</a>
+        target="_blank" class="btn-outline-light">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp Consultation
+      </a>
     </div>
   </div>
 
@@ -207,9 +1973,8 @@
             <img src="../../brand-name-original.png" alt="Alakaapuri Nidhi" class="footer-brand-img" />
           </div>
         </a>
-        <div class="footer-tag">Wealth Expert · AMFI Registered ARN-362567</div>
-        <p class="footer-about">A trusted wealth advisory offering mutual funds, insurance, loans and financial planning
-          — led by Praveen Kumar, AMFI ARN Holder (ARN‑362567).</p>
+        <div class="footer-tag">AMFI Registered MFD · ARN-362567</div>
+        <p class="footer-about">A premier financial distribution firm offering mutual funds, insurance, loans and wealth planning assistance — led by Praveen Kumar, AMFI-Registered Mutual Fund Distributor (ARN-362567).</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
@@ -251,8 +2016,9 @@
     </div>
     <div class="footer-bottom">
       <div>© <span id="year">2026</span> Alakaapuri Nidhi. All rights reserved. · ARN‑362567</div>
-      <div>Mutual fund investments are subject to market risks. Read all scheme related documents carefully.</div>
+      <div>Hyderabad, Telangana · India</div>
     </div>
+    <p class="disclaimer">Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. Alakaapuri Nidhi operates as an AMFI-Registered Mutual Fund Distributor (ARN-362567). We do not provide SEBI-registered investment advisory services. Insurance is a subject matter of solicitation.</p>
   </footer>
 
   <!-- FLOATING PROMO AD -->
@@ -273,6 +2039,117 @@
     <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20Mutual%20Funds."
       target="_blank" class="wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
   </div>
+
+  <!-- INTERACTIVE LOGIC SCRIPT -->
+  <script>
+    // 1. Interactive Catalog Filtering
+    function filterCatalog(category, clickedElement) {
+      // Update Filter button active states
+      const filterButtons = document.querySelectorAll('.cat-btn');
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      
+      if (clickedElement && clickedElement.classList.contains('cat-btn')) {
+        clickedElement.classList.add('active');
+      } else {
+        // Find matching cat-btn if clicked from 5-pillars
+        filterButtons.forEach(btn => {
+          if (category === 'all' && btn.textContent.includes('All')) btn.classList.add('active');
+          if (category === 'equity' && btn.textContent.includes('Equity')) btn.classList.add('active');
+          if (category === 'debt' && btn.textContent.includes('Debt')) btn.classList.add('active');
+          if (category === 'hybrid' && btn.textContent.includes('Hybrid')) btn.classList.add('active');
+          if (category === 'solution' && btn.textContent.includes('Goals')) btn.classList.add('active');
+          if (category === 'passive' && btn.textContent.includes('Passive')) btn.classList.add('active');
+        });
+      }
+
+      // Update 5-pillar active state
+      const pillarCards = document.querySelectorAll('.pillar-card');
+      pillarCards.forEach(p => p.classList.remove('active-pillar'));
+      if (clickedElement && clickedElement.classList.contains('pillar-card')) {
+        clickedElement.classList.add('active-pillar');
+      }
+
+      // Clear search input on category filter click
+      const searchInput = document.getElementById('schemeSearch');
+      if (searchInput) searchInput.value = '';
+
+      // Filter cards
+      const cards = document.querySelectorAll('.scheme-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Smooth scroll if clicked from top segmentation pillars
+      if (clickedElement && clickedElement.classList.contains('pillar-card')) {
+        const catalogSec = document.getElementById('catalog');
+        if (catalogSec) {
+          catalogSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+
+    // 2. Real-Time Search Filter
+    function searchSchemes() {
+      const input = document.getElementById('schemeSearch').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.scheme-card');
+
+      cards.forEach(card => {
+        const title = card.querySelector('.scheme-title')?.innerText.toLowerCase() || '';
+        const summary = card.querySelector('.scheme-summary')?.innerText.toLowerCase() || '';
+        const keywords = card.getAttribute('data-keywords') || '';
+        const category = card.getAttribute('data-category') || '';
+
+        if (title.includes(input) || summary.includes(input) || keywords.includes(input) || category.includes(input)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 3. Interactive SIP Compounding Calculator
+    function calculateSIP() {
+      const P = parseFloat(document.getElementById('sipAmountSlider').value);
+      const years = parseFloat(document.getElementById('sipYearsSlider').value);
+      const rate = parseFloat(document.getElementById('sipRateSlider').value);
+
+      // Update UI slider labels
+      document.getElementById('sipAmountDisplay').innerText = '₹' + P.toLocaleString('en-IN');
+      document.getElementById('sipYearsDisplay').innerText = years + (years === 1 ? ' Year' : ' Years');
+      document.getElementById('sipRateDisplay').innerText = rate.toFixed(1) + '%';
+
+      // Monthly SIP Compounding Formula: M = P * ({[1 + i]^n - 1} / i) * (1 + i)
+      const i = (rate / 100) / 12;
+      const n = years * 12;
+      const M = P * ((Math.pow(1 + i, n) - 1) / i) * (1 + i);
+      const totalInvested = P * n;
+      const totalGains = M - totalInvested;
+
+      // Format currency in Indian notation (Lakhs / Crores)
+      function formatIndian(amount) {
+        if (amount >= 10000000) {
+          return '₹' + (amount / 10000000).toFixed(2) + ' Crores';
+        } else if (amount >= 100000) {
+          return '₹' + (amount / 100000).toFixed(2) + ' Lakhs';
+        } else {
+          return '₹' + Math.round(amount).toLocaleString('en-IN');
+        }
+      }
+
+      document.getElementById('sipCorpusDisplay').innerText = formatIndian(M);
+      document.getElementById('sipInvestedDisplay').innerText = formatIndian(totalInvested);
+      document.getElementById('sipGainsDisplay').innerText = '+' + formatIndian(totalGains);
+    }
+
+    // Run on load
+    window.addEventListener('DOMContentLoaded', () => {
+      calculateSIP();
+    });
+  </script>
 
 </body>
 </html>

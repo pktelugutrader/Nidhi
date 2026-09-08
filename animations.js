@@ -183,14 +183,16 @@
       let prefix = el.getAttribute('data-prefix') || '';
       let decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
 
+      // Ensure suffix/prefix are captured from text or attributes
+      if (!suffix && text.includes('+')) suffix = '+';
+      if (!suffix && text.includes('Cr+')) suffix = ' Cr+';
+      if (!suffix && text.includes('%')) suffix = '%';
+      if (!prefix && text.includes('₹')) prefix = '₹';
+
       // Fallback parsing if data-count is not explicitly set
       if (isNaN(target)) {
         const cleaned = text.replace(/[^0-9.]/g, '');
         target = parseFloat(cleaned);
-        if (text.includes('+') && !suffix) suffix = '+';
-        if (text.includes('Cr') && !suffix) suffix = ' Cr+';
-        if (text.includes('%') && !suffix) suffix = '%';
-        if (text.includes('₹') && !prefix) prefix = '₹';
         if (cleaned.includes('.')) {
           decimals = (cleaned.split('.')[1] || '').length;
         }
@@ -203,7 +205,8 @@
         return;
       }
 
-      const duration = 1800; // ms
+      let hasAnimated = false;
+      const duration = 1600; // ms
       const startTime = performance.now();
 
       const updateCount = (now) => {
@@ -237,7 +240,7 @@
             obs.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.3 });
+      }, { threshold: 0.1 });
 
       counterElements.forEach(el => counterObserver.observe(el));
     } else {

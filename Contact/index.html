@@ -5,10 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Contact Praveen Kumar at Alakaapuri Nidhi, Hyderabad. AMFI ARN Holder (ARN-362567). Mutual funds, insurance, loans and wealth advisory consultation." />
-  <title>Contact Us — Alakaapuri Nidhi | Praveen Kumar, Wealth Advisor</title>
+    content="Contact Praveen Kumar at Alakaapuri Nidhi, Hyderabad. AMFI-Registered Mutual Fund Distributor (ARN-362567). Connect for mutual funds, SIP planning, portfolio diagnostics, insurance, and office visits." />
+  <title>Contact Us — Alakaapuri Nidhi | Praveen Kumar, AMFI-Registered MFD (ARN-362567)</title>
   <link rel="icon" type="image/png" href="../favicon.png" />
-
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
@@ -17,6 +16,711 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="../styles.css" />
   <script src="../animations.js" defer></script>
+
+  <style>
+    /* Scoped Graphical Enhancements for Contact Page */
+    .contact-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 50px;
+      background: rgba(201, 162, 39, 0.12);
+      border: 1px solid rgba(201, 162, 39, 0.35);
+      color: var(--gold-dark);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    /* Executive Consultant Spotlight Card */
+    .consultant-spotlight-card {
+      max-width: 1100px;
+      margin: -20px auto 40px auto;
+      background: linear-gradient(135deg, #ffffff 0%, #fffcf5 100%);
+      border: 1px solid rgba(201, 162, 39, 0.35);
+      border-radius: 20px;
+      padding: 32px 36px;
+      box-shadow: 0 16px 36px rgba(7, 26, 47, 0.08), 0 0 0 1px rgba(201, 162, 39, 0.15);
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .consultant-spotlight-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #996515, #C9A227, #E5C158, #C9A227, #996515);
+    }
+
+    .consultant-avatar-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .consultant-avatar-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffffff;
+      box-shadow: 0 8px 20px rgba(7, 26, 47, 0.18), 0 0 0 2px rgba(201, 162, 39, 0.5);
+    }
+
+    .live-status-pill {
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #071A2F;
+      color: #ffffff;
+      border: 1px solid #25D366;
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 8px #25D366;
+      animation: pulse-dot 1.8s infinite;
+    }
+
+    @keyframes pulse-dot {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(37, 211, 102, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    .consultant-info {
+      flex: 1;
+    }
+
+    .consultant-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .consultant-name {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--navy-deep);
+      font-family: var(--font-heading);
+      margin: 0;
+    }
+
+    .consultant-title {
+      font-size: 14px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .consultant-bio {
+      font-size: 14px;
+      color: var(--text-body);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .consultant-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .c-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #FAF1DF;
+      border: 1px solid rgba(201, 162, 39, 0.3);
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--navy-deep);
+    }
+
+    /* 6-Grid Graphical Cards */
+    .contact-grid-6 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .contact-card-premium {
+      background: #ffffff;
+      border: 1px solid rgba(201, 162, 39, 0.25);
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: 0 10px 24px rgba(7, 26, 47, 0.04);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card-premium:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(7, 26, 47, 0.12);
+      border-color: var(--gold-primary);
+    }
+
+    .card-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .card-emoji-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #FAF1DF 0%, #FFF2C2 100%);
+      border: 1px solid rgba(201, 162, 39, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+
+    .card-status-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    .badge-green {
+      background: rgba(37, 211, 102, 0.12);
+      color: #1a8a42;
+      border: 1px solid rgba(37, 211, 102, 0.3);
+    }
+
+    .badge-gold {
+      background: rgba(201, 162, 39, 0.12);
+      color: var(--gold-dark);
+      border: 1px solid rgba(201, 162, 39, 0.35);
+    }
+
+    .badge-blue {
+      background: rgba(13, 41, 69, 0.08);
+      color: var(--navy-mid);
+      border: 1px solid rgba(13, 41, 69, 0.2);
+    }
+
+    .card-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--navy-deep);
+      margin-bottom: 8px;
+      font-family: var(--font-heading);
+    }
+
+    .card-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .card-highlight-value {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      word-break: break-word;
+    }
+
+    .card-highlight-value a {
+      text-decoration: none;
+      color: var(--navy-deep);
+      transition: color 0.2s ease;
+    }
+
+    .card-highlight-value a:hover {
+      color: var(--gold-deep);
+    }
+
+    .card-subtext {
+      font-size: 12px;
+      color: var(--text-faint);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-card-phone {
+      background: var(--navy-deep);
+      color: #ffffff;
+    }
+
+    .btn-card-phone:hover {
+      background: var(--navy-mid);
+      color: #ffffff;
+    }
+
+    .btn-card-whatsapp {
+      background: #25D366;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    }
+
+    .btn-card-whatsapp:hover {
+      background: #1eb855;
+      color: #ffffff;
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-card-email {
+      background: #FAF1DF;
+      color: var(--navy-deep);
+      border: 1px solid rgba(201, 162, 39, 0.4);
+    }
+
+    .btn-card-email:hover {
+      background: var(--gold-primary);
+      color: #ffffff;
+    }
+
+    .btn-card-map {
+      background: linear-gradient(135deg, #071A2F 0%, #153B5B 100%);
+      color: #ffffff;
+    }
+
+    .btn-card-map:hover {
+      background: linear-gradient(135deg, #153B5B 0%, #071A2F 100%);
+      color: #FFE58F;
+    }
+
+    /* Interactive Office & Google Maps Showcase */
+    .location-showcase-section {
+      background: linear-gradient(180deg, #FEF7E9 0%, #FAF1DF 100%);
+      border-top: 1px solid rgba(201, 162, 39, 0.25);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+      padding: 60px 20px;
+    }
+
+    .location-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .office-info-pane {
+      background: #ffffff;
+      border: 1px solid rgba(201, 162, 39, 0.3);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(7, 26, 47, 0.08);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .office-img-banner {
+      position: relative;
+      height: 210px;
+      overflow: hidden;
+    }
+
+    .office-img-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .office-info-pane:hover .office-img-banner img {
+      transform: scale(1.04);
+    }
+
+    .office-img-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(7, 26, 47, 0.85) 0%, transparent 100%);
+      padding: 20px 20px 12px 20px;
+      color: #ffffff;
+    }
+
+    .office-tag-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--gold-primary);
+      color: #071A2F;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .office-details-body {
+      padding: 24px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .address-highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .address-icon {
+      font-size: 22px;
+      color: #E53E3E;
+      margin-top: 2px;
+    }
+
+    .address-text h4 {
+      font-size: 17px;
+      color: var(--navy-deep);
+      margin-bottom: 4px;
+      font-family: var(--font-heading);
+    }
+
+    .address-text p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .location-feature-list {
+      list-style: none;
+      margin-bottom: 24px;
+      padding: 0;
+    }
+
+    .location-feature-list li {
+      font-size: 13.5px;
+      color: var(--text-body);
+      padding: 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px dashed rgba(201, 162, 39, 0.2);
+    }
+
+    .location-feature-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* Main Google Maps Directions Action */
+    .btn-google-directions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #1A73E8 0%, #1557B0 100%);
+      color: #ffffff;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(26, 115, 232, 0.35);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .btn-google-directions:hover {
+      background: linear-gradient(135deg, #1557B0 0%, #0F3E85 100%);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(26, 115, 232, 0.45);
+    }
+
+    /* Map Iframe Container */
+    .map-embed-pane {
+      background: #ffffff;
+      border: 1px solid rgba(201, 162, 39, 0.3);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(7, 26, 47, 0.08);
+      display: flex;
+      flex-direction: column;
+      min-height: 460px;
+      position: relative;
+    }
+
+    .map-header-bar {
+      background: #071A2F;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #ffffff;
+      border-bottom: 2px solid var(--gold-primary);
+    }
+
+    .map-header-title {
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #FFF2C2;
+    }
+
+    .map-header-action a {
+      font-size: 12px;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 4px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .map-header-action a:hover {
+      background: var(--gold-primary);
+      color: #071A2F;
+    }
+
+    .map-frame-wrapper {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      position: relative;
+    }
+
+    .map-frame-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .map-floating-prompt {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      background: rgba(7, 26, 47, 0.92);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 12.5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid rgba(201, 162, 39, 0.4);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      z-index: 5;
+    }
+
+    .map-floating-prompt a {
+      color: #E5C158;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    /* Consultation Callback Form */
+    .callback-form-section {
+      padding: 60px 20px 70px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .callback-card {
+      background: #ffffff;
+      border: 1px solid rgba(201, 162, 39, 0.35);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 16px 40px rgba(7, 26, 47, 0.08);
+      position: relative;
+    }
+
+    .callback-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .form-group-full {
+      grid-column: span 2;
+    }
+
+    .callback-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      margin-bottom: 6px;
+    }
+
+    .callback-input,
+    .callback-select,
+    .callback-textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid rgba(21, 59, 91, 0.25);
+      border-radius: 10px;
+      font-size: 14px;
+      color: var(--text-body);
+      background: #FAF1DF;
+      transition: all 0.2s ease;
+      font-family: var(--font-body);
+    }
+
+    .callback-input:focus,
+    .callback-select:focus,
+    .callback-textarea:focus {
+      outline: none;
+      border-color: var(--gold-primary);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.18);
+    }
+
+    .callback-actions {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .btn-submit-callback {
+      background: linear-gradient(135deg, #C9A227 0%, #996515 100%);
+      color: #ffffff;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 20px rgba(153, 101, 21, 0.3);
+      transition: all 0.25s ease;
+    }
+
+    .btn-submit-callback:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(153, 101, 21, 0.4);
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 960px) {
+      .contact-grid-6 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .location-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .consultant-spotlight-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 20px;
+      }
+
+      .consultant-chips {
+        justify-content: center;
+      }
+
+      .consultant-header {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .contact-grid-6 {
+        grid-template-columns: 1fr;
+      }
+
+      .callback-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group-full {
+        grid-column: span 1;
+      }
+
+      .callback-card {
+        padding: 24px 18px;
+      }
+
+      .callback-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-submit-callback {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .map-floating-prompt {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -27,7 +731,7 @@
       <img src="../main-logo.png" alt="Alakaapuri Nidhi Logo" class="nav-logo-img" />
       <div class="nav-logo-text">
         <img src="../brand-name-original.png" alt="Alakaapuri Nidhi" class="nav-brand-img" />
-        <span>Praveen Kumar · Wealth Advisory</span>
+        <span>Praveen Kumar · AMFI-Registered MFD (ARN-362567)</span>
       </div>
     </a>
     <ul class="nav-links">
@@ -47,142 +751,360 @@
       <li><a href="../Contact/" class="active">Contact</a></li>
       <li><a href="../Testimonials/">Testimonials</a></li>
     </ul>
-    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('nav-open')"><i
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('nav-open')" aria-label="Toggle navigation menu"><i
         class="fa-solid fa-bars"></i></button>
   </nav>
 
   <!-- PAGE HERO -->
   <header class="page-hero">
-    <span class="section-label center">Get In Touch</span>
+    <div class="contact-hero-badge">
+      <span>✨ Certified AMFI Financial Advisory ✨</span>
+    </div>
     <h1 class="section-title">Contact <em>Alakaapuri Nidhi</em></h1>
-    <p class="section-desc">Connect with Praveen Kumar for personalised wealth advisory, mutual fund portfolios, insurance planning and market consultations.</p>
+    <p class="section-desc">
+      Have questions about mutual fund portfolios, goal-based SIPs, term insurance health checks, or visiting our Hyderabad office? Speak directly with Praveen Kumar.
+    </p>
     <div class="hero-cta-row" style="justify-content:center; margin-top:28px;">
-      <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20would%20like%20to%20connect%20with%20Alakaapuri%20Nidhi."
-        target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
-      <a href="tel:+919440581363" class="btn-outline-light"><i class="fa-solid fa-phone"></i> Call +91 94405 81363</a>
+      <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20would%20like%20to%20get%20a%20Free%20Financial%20Health%20Check."
+        target="_blank" rel="noopener noreferrer" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp 💬</a>
+      <a href="tel:+919440581363" class="btn-outline-light"><i class="fa-solid fa-phone"></i> Call +91 94405 81363 📞</a>
+      <a href="#location-map-section" class="btn-outline-light" style="border-color:var(--gold-primary); color:var(--gold-dark);"><i class="fa-solid fa-location-dot"></i> View On Map 🗺️</a>
     </div>
   </header>
 
-  <!-- DIRECT CONTACT CARDS -->
-  <section class="section-block" style="padding-top:40px; padding-bottom:40px;">
-    <div class="products-grid">
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-phone"></i></div>
-        <div class="product-title">Phone Consultation</div>
-        <p style="font-size:14px; color:var(--text-muted); margin-bottom:12px;">Speak directly with Praveen Kumar.</p>
-        <p><a href="tel:+919440581363" style="font-size:16px; font-weight:700; color:var(--gold-deep); text-decoration:none;">+91 94405 81363</a></p>
-        <p style="font-size:12px; color:var(--text-muted); margin-top:6px;">Mon – Sat: 9:00 AM – 7:30 PM</p>
+  <!-- MAIN CONTACT CONTENT AREA -->
+  <main class="section-block" style="padding-top:20px; padding-bottom:40px;">
+
+    <!-- EXECUTIVE CONSULTANT PROFILE CARD -->
+    <div class="consultant-spotlight-card">
+      <div class="consultant-avatar-wrap">
+        <img src="../profilnewpic.png" alt="Praveen Kumar - AMFI Registered MFD" class="consultant-avatar-img" />
+        <div class="live-status-pill">
+          <span class="live-dot"></span>
+          <span>Online &amp; Active</span>
+        </div>
+      </div>
+      <div class="consultant-info">
+        <div class="consultant-header">
+          <div>
+            <h2 class="consultant-name">Praveen Kumar</h2>
+            <div class="consultant-title">AMFI-Registered Mutual Fund Distributor · ARN-362567</div>
+          </div>
+          <div style="font-size:13px; color:var(--gold-deep); font-weight:700; display:flex; align-items:center; gap:4px;">
+            ⭐⭐⭐⭐⭐ <span>4.9/5.0 Client Rating</span>
+          </div>
+        </div>
+        <p class="consultant-bio">
+          "I partner with salaried professionals, business owners, and NRIs to construct personalized wealth accumulation blueprints, optimize taxes with ELSS, and audit existing portfolio health with zero bias."
+        </p>
+        <div class="consultant-chips">
+          <span class="c-chip">🛡️ AMFI Verified (ARN-362567)</span>
+          <span class="c-chip">💼 10+ Years Experience</span>
+          <span class="c-chip">⚡ Quick Turnaround (&lt;15 mins)</span>
+          <span class="c-chip">📍 Hyderabad &amp; PAN-India</span>
+          <span class="c-chip">🤝 100% Client-First Guidance</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 RICH GRAPHICAL CONTACT CARDS -->
+    <div class="section-header-center" style="margin-bottom:32px;">
+      <span class="section-label center">Direct Touchpoints</span>
+      <h2 class="section-title">How Can We <em>Help You Today?</em></h2>
+      <p class="section-desc">Choose the channel that is most convenient for you — we respond promptly across all desks.</p>
+    </div>
+
+    <div class="contact-grid-6">
+      
+      <!-- CARD 1: PHONE -->
+      <div class="contact-card-premium">
+        <div class="card-top-row">
+          <div class="card-emoji-icon">📞</div>
+          <span class="card-status-badge badge-blue">Direct Line</span>
+        </div>
+        <div class="card-title">Phone Consultation</div>
+        <p class="card-desc">
+          Speak directly with Praveen Kumar for portfolio inquiries, goal planning, and urgent financial queries.
+        </p>
+        <div class="card-highlight-value">
+          <a href="tel:+919440581363">+91 94405 81363</a>
+        </div>
+        <div class="card-subtext">
+          <span>⏰</span> Mon – Sat: 9:00 AM – 7:30 PM IST
+        </div>
+        <a href="tel:+919440581363" class="card-action-btn btn-card-phone">
+          <i class="fa-solid fa-phone"></i> Call Directly Now 📞
+        </a>
       </div>
 
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-brands fa-whatsapp"></i></div>
-        <div class="product-title">WhatsApp Desk</div>
-        <p style="font-size:14px; color:var(--text-muted); margin-bottom:12px;">Fast query resolution &amp; portfolio updates.</p>
-        <p><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi" target="_blank" style="font-size:16px; font-weight:700; color:#25D366; text-decoration:none;"><i class="fa-brands fa-whatsapp"></i> +91 94405 81363</a></p>
-        <p style="font-size:12px; color:var(--text-muted); margin-top:6px;">Instant response during market hours</p>
+      <!-- CARD 2: WHATSAPP -->
+      <div class="contact-card-premium">
+        <div class="card-top-row">
+          <div class="card-emoji-icon">💬</div>
+          <span class="card-status-badge badge-green">🟢 Instant Active</span>
+        </div>
+        <div class="card-title">WhatsApp Desk</div>
+        <p class="card-desc">
+          Quick queries, SIP calculation assistance, PDF statement review, and real-time market updates.
+        </p>
+        <div class="card-highlight-value">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20would%20like%20to%20connect%20with%20you%20regarding%20financial%20planning." target="_blank" rel="noopener noreferrer" style="color:#1b8e46;">
+            +91 94405 81363
+          </a>
+        </div>
+        <div class="card-subtext">
+          <span>⚡</span> Typically replies within 15 minutes
+        </div>
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20would%20like%20to%20connect%20with%20you%20regarding%20financial%20planning." target="_blank" rel="noopener noreferrer" class="card-action-btn btn-card-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp 💬
+        </a>
       </div>
 
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-envelope"></i></div>
-        <div class="product-title">Email Advisory</div>
-        <p style="font-size:14px; color:var(--text-muted); margin-bottom:12px;">Send portfolio statements or detailed queries.</p>
-        <p><a href="mailto:alakaapuri@tanidhi.com" style="font-size:16px; font-weight:700; color:var(--gold-deep); text-decoration:none;">alakaapuri@tanidhi.com</a></p>
-        <p style="font-size:12px; color:var(--text-muted); margin-top:6px;">Response within 24 business hours</p>
+      <!-- CARD 3: EMAIL -->
+      <div class="contact-card-premium">
+        <div class="card-top-row">
+          <div class="card-emoji-icon">✉️</div>
+          <span class="card-status-badge badge-gold">Official Desk</span>
+        </div>
+        <div class="card-title">Email Desk</div>
+        <p class="card-desc">
+          Submit CAMS / Karvy consolidated account statements (CAS) or detailed queries for in-depth analysis.
+        </p>
+        <div class="card-highlight-value">
+          <a href="mailto:alakaapuri@tanidhi.com">alakaapuri@tanidhi.com</a>
+        </div>
+        <div class="card-subtext">
+          <span>📬</span> Response within 24 business hours
+        </div>
+        <a href="mailto:alakaapuri@tanidhi.com" class="card-action-btn btn-card-email">
+          <i class="fa-solid fa-envelope"></i> Send an Email ✉️
+        </a>
       </div>
 
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-location-dot"></i></div>
-        <div class="product-title">Location &amp; Registration</div>
-        <p style="font-size:14px; color:var(--text-muted); margin-bottom:12px;">Hyderabad, Telangana, India.</p>
-        <p style="font-size:14px; font-weight:700; color:var(--text-body);">AMFI ARN-362567</p>
-        <p style="font-size:12px; color:var(--text-muted); margin-top:6px;">Serving clients across India &amp; NRIs</p>
+      <!-- CARD 4: OFFICE LOCATION -->
+      <div class="contact-card-premium">
+        <div class="card-top-row">
+          <div class="card-emoji-icon">📍</div>
+          <span class="card-status-badge badge-gold">Hyderabad, IN</span>
+        </div>
+        <div class="card-title">Office Location</div>
+        <p class="card-desc">
+          Alakaapuri Nidhi, Hyderabad, Telangana. In-person consultation available with prior appointment.
+        </p>
+        <div class="card-highlight-value" style="font-size:14px; color:var(--text-body);">
+          Alakaapuri Nidhi, Hyderabad
+        </div>
+        <div class="card-subtext">
+          <span>🧭</span> 17.5284662° N, 78.4241994° E
+        </div>
+        <a href="https://www.google.com/maps/place/Alakaapuri+Nidhi/@17.5284713,78.4216245,17z/data=!4m14!1m7!3m6!1s0x3bcb8fbbe11db253:0x5928856cdc3b83ac!2sAlakaapuri+Nidhi!8m2!3d17.5284662!4d78.4241994!16s%2Fg%2F11zwm4yn3_!3m5!1s0x3bcb8fbbe11db253:0x5928856cdc3b83ac!8m2!3d17.5284662!4d78.4241994!16s%2Fg%2F11zwm4yn3_?authuser=0&entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank" rel="noopener noreferrer" class="card-action-btn btn-card-map">
+          <i class="fa-solid fa-location-arrow"></i> Get Driving Route 🚗
+        </a>
       </div>
+
+      <!-- CARD 5: AMFI & REGISTRATION -->
+      <div class="contact-card-premium">
+        <div class="card-top-row">
+          <div class="card-emoji-icon">🛡️</div>
+          <span class="card-status-badge badge-blue">Regulated</span>
+        </div>
+        <div class="card-title">AMFI Registration</div>
+        <p class="card-desc">
+          AMFI-Registered Mutual Fund Distributor. Completely transparent, SEBI-compliant execution via AssetPlus.
+        </p>
+        <div class="card-highlight-value" style="color:var(--gold-dark);">
+          ARN-362567
+        </div>
+        <div class="card-subtext">
+          <span>🔒</span> Verified Distributor Status
+        </div>
+        <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" rel="noopener noreferrer" class="card-action-btn btn-card-email">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Invest Online Portal 💻
+        </a>
+      </div>
+
+      <!-- CARD 6: CONSULTATION TIMINGS -->
+      <div class="contact-card-premium">
+        <div class="card-top-row">
+          <div class="card-emoji-icon">⏰</div>
+          <span class="card-status-badge badge-green">Active Schedule</span>
+        </div>
+        <div class="card-title">Working Hours</div>
+        <p class="card-desc">
+          Structured consultation hours to accommodate busy professionals, business executives, and NRI time zones.
+        </p>
+        <div class="card-highlight-value" style="font-size:15px; color:var(--navy-deep);">
+          Mon – Sat: 9:00 AM – 7:30 PM
+        </div>
+        <div class="card-subtext">
+          <span>🌍</span> Sunday: By Advance Appointment
+        </div>
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20would%20like%20to%20schedule%20a%20consultation%20slot." target="_blank" rel="noopener noreferrer" class="card-action-btn btn-card-phone">
+          <i class="fa-solid fa-calendar-check"></i> Book Consultation Slot 📅
+        </a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- INTERACTIVE GOOGLE MAP & OFFICE SHOWCASE SECTION -->
+  <section class="location-showcase-section" id="location-map-section">
+    <div class="section-header-center" style="margin-bottom:36px;">
+      <span class="section-label center">Find Us in Hyderabad</span>
+      <h2 class="section-title">Visit Our <em>Hyderabad Office</em></h2>
+      <p class="section-desc">
+        Click below to open our exact location in Google Maps for live driving directions, route planning, and navigation.
+      </p>
+    </div>
+
+    <div class="location-wrapper">
+      
+      <!-- LEFT PANE: OFFICE PHOTO & DETAILS -->
+      <div class="office-info-pane">
+        <div class="office-img-banner">
+          <img src="office-building.jpg" alt="Alakaapuri Nidhi Corporate Office Hyderabad" />
+          <div class="office-img-overlay">
+            <span class="office-tag-pill">🏢 Head Office</span>
+            <div style="font-weight:700; font-size:16px;">Alakaapuri Nidhi</div>
+          </div>
+        </div>
+
+        <div class="office-details-body">
+          <div>
+            <div class="address-highlight">
+              <i class="fa-solid fa-location-dot address-icon"></i>
+              <div class="address-text">
+                <h4>Alakaapuri Nidhi</h4>
+                <p>Hyderabad, Telangana, India.</p>
+                <p style="font-size:12.5px; color:var(--gold-dark); font-weight:600; margin-top:2px;">
+                  Praveen Kumar · ARN-362567
+                </p>
+              </div>
+            </div>
+
+            <ul class="location-feature-list">
+              <li>
+                <span>🚗</span>
+                <span><strong>Instant GPS Routing:</strong> One-tap navigation via Google Maps</span>
+              </li>
+              <li>
+                <span>🅿️</span>
+                <span><strong>Convenient Parking:</strong> Dedicated visitor parking space available</span>
+              </li>
+              <li>
+                <span>🤝</span>
+                <span><strong>In-Person Advisory:</strong> Portfolio review &amp; retirement blueprint sessions</span>
+              </li>
+              <li>
+                <span>☕</span>
+                <span><strong>Comfortable Environment:</strong> Professional, private consultation desk</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- PRIMARY GOOGLE MAPS CTA BUTTON -->
+          <a href="https://www.google.com/maps/place/Alakaapuri+Nidhi/@17.5284713,78.4216245,17z/data=!4m14!1m7!3m6!1s0x3bcb8fbbe11db253:0x5928856cdc3b83ac!2sAlakaapuri+Nidhi!8m2!3d17.5284662!4d78.4241994!16s%2Fg%2F11zwm4yn3_!3m5!1s0x3bcb8fbbe11db253:0x5928856cdc3b83ac!8m2!3d17.5284662!4d78.4241994!16s%2Fg%2F11zwm4yn3_?authuser=0&entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank" rel="noopener noreferrer" class="btn-google-directions">
+            <i class="fa-solid fa-diamond-turn-right" style="font-size:18px;"></i>
+            <span>Open in Google Maps &amp; Get Directions 🗺️</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT PANE: EMBEDDED INTERACTIVE GOOGLE MAP -->
+      <div class="map-embed-pane">
+        <div class="map-header-bar">
+          <div class="map-header-title">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Interactive Map — Alakaapuri Nidhi</span>
+          </div>
+          <div class="map-header-action">
+            <a href="https://www.google.com/maps/place/Alakaapuri+Nidhi/@17.5284713,78.4216245,17z/data=!4m14!1m7!3m6!1s0x3bcb8fbbe11db253:0x5928856cdc3b83ac!2sAlakaapuri+Nidhi!8m2!3d17.5284662!4d78.4241994!16s%2Fg%2F11zwm4yn3_!3m5!1s0x3bcb8fbbe11db253:0x5928856cdc3b83ac!8m2!3d17.5284662!4d78.4241994!16s%2Fg%2F11zwm4yn3_?authuser=0&entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank" rel="noopener noreferrer">
+              Fullscreen ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="map-frame-wrapper">
+          <iframe
+            src="https://maps.google.com/maps?q=17.5284662,78.4241994+(Alakaapuri+Nidhi)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            title="Alakaapuri Nidhi Office Location Map"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+
+          <div class="map-floating-prompt">
+            <div>
+              <span>📍 <strong>Alakaapuri Nidhi</strong> (17.5284662, 78.4241994)</span>
+            </div>
+            <div>
+              <a href="https://www.google.com/maps/place/Alakaapuri+Nidhi/@17.5284713,78.4216245,17z/data=!4m14!1m7!3m6!1s0x3bcb8fbbe11db253:0x5928856cdc3b83ac!2sAlakaapuri+Nidhi!8m2!3d17.5284662!4d78.4241994!16s%2Fg%2F11zwm4yn3_!3m5!1s0x3bcb8fbbe11db253:0x5928856cdc3b83ac!8m2!3d17.5284662!4d78.4241994!16s%2Fg%2F11zwm4yn3_?authuser=0&entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank" rel="noopener noreferrer">
+                Click for Turn-by-Turn Directions 🚗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- INSIGHTS -->
-  <section class="section-block insights-section" id="insights" style="background: #0D2945; border-top: 1px solid var(--mahogany); border-bottom: 1px solid var(--mahogany);">
-    <div class="section-header-center">
-      <span class="section-label center">Insights &amp; Knowledge Base</span>
-      <h2 class="section-title">Learn to <em>Invest Smarter</em></h2>
-      <p class="section-desc">Actionable guides on wealth creation, tax saving and market strategies.</p>
-    </div>
-    <div class="insights-grid">
-      <div class="blog-card">
-        <div class="blog-img"><i class="fa-solid fa-chart-pie"></i></div>
-        <div class="blog-body">
-          <div class="blog-tag">SIP · Beginner</div>
-          <div class="blog-title">How ₹5,000/month SIP Can Build ₹1 Crore</div>
-          <p class="blog-excerpt">The power of compounding, explained with real numbers. See how a small monthly SIP
-            grows into a life-changing corpus over 20 years.</p>
-          <div class="blog-meta"><span>5 min read</span><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more." target="_blank">Read on WhatsApp →</a></div>
-        </div>
+  <!-- QUICK CALLBACK / DIRECT CONSULTATION INQUIRY -->
+  <section class="callback-form-section">
+    <div class="callback-card">
+      <div class="section-header-center" style="margin-bottom:12px;">
+        <span class="section-label center">Request a Call</span>
+        <h2 class="section-title">Schedule a <em>Consultation Call</em></h2>
+        <p class="section-desc">
+          Drop your details below and Praveen Kumar will connect with you via phone or WhatsApp at your convenience.
+        </p>
       </div>
-      <div class="blog-card">
-        <div class="blog-img"><i class="fa-solid fa-shield-halved"></i></div>
-        <div class="blog-body">
-          <div class="blog-tag">Insurance · Essential</div>
-          <div class="blog-title">Term Insurance: How Much Cover Do You Actually Need?</div>
-          <p class="blog-excerpt">The 15x rule, HLV calculation and common mistakes — everything about buying the right
-            term plan for your family.</p>
-          <div class="blog-meta"><span>4 min read</span><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more." target="_blank">Read on WhatsApp →</a></div>
+
+      <form id="contactQuickForm" onsubmit="handleQuickFormSubmit(event)">
+        <div class="callback-grid">
+          <div>
+            <label class="callback-label" for="clientName">👤 Full Name *</label>
+            <input type="text" id="clientName" class="callback-input" placeholder="e.g. Ramesh Reddy" required />
+          </div>
+
+          <div>
+            <label class="callback-label" for="clientPhone">📱 Phone / WhatsApp Number *</label>
+            <input type="tel" id="clientPhone" class="callback-input" placeholder="e.g. +91 98765 43210" required />
+          </div>
+
+          <div class="form-group-full">
+            <label class="callback-label" for="clientService">🎯 Primary Requirement / Area of Interest *</label>
+            <select id="clientService" class="callback-select" required>
+              <option value="Mutual Funds & SIP Planning">📈 Start or Review Mutual Funds &amp; Monthly SIP</option>
+              <option value="Existing Portfolio Health Audit">🩺 Comprehensive Portfolio Health Diagnostic</option>
+              <option value="Term & Health Insurance Planning">🛡️ Pure Term Insurance &amp; Health Protection</option>
+              <option value="Options Indicator Free Access">📊 Options Indicator (Free Access Inquiry)</option>
+              <option value="Retirement & Goal Blueprint">🎯 Long-Term Retirement &amp; Child Education Planning</option>
+              <option value="General Financial Consultation">💬 General Wealth Advisory Consultation</option>
+            </select>
+          </div>
+
+          <div class="form-group-full">
+            <label class="callback-label" for="clientNote">💬 Message / Preferred Time (Optional)</label>
+            <textarea id="clientNote" class="callback-textarea" rows="3" placeholder="Let us know any specific questions or preferred timing to speak..."></textarea>
+          </div>
         </div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-img"><i class="fa-solid fa-receipt"></i></div>
-        <div class="blog-body">
-          <div class="blog-tag">Tax · Save More</div>
-          <div class="blog-title">Top 5 ELSS Funds to Save Tax in FY 2025-26</div>
-          <p class="blog-excerpt">Save up to ₹46,800 in taxes while growing your wealth. A curated shortlist of
-            best-performing ELSS mutual funds.</p>
-          <div class="blog-meta"><span>6 min read</span><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more." target="_blank">Read on WhatsApp →</a></div>
+
+        <div class="callback-actions">
+          <div style="font-size:13px; color:var(--text-muted); display:flex; align-items:center; gap:8px;">
+            <span>🔒 Your information is 100% confidential. No spam, ever.</span>
+          </div>
+          <button type="submit" class="btn-submit-callback">
+            <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp 🚀
+          </button>
         </div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-img"><i class="fa-solid fa-vault"></i></div>
-        <div class="blog-body">
-          <div class="blog-tag">Retirement · Plan Early</div>
-          <div class="blog-title">Retire Rich: The Magic of Starting 10 Years Early</div>
-          <p class="blog-excerpt">Why your 30s are your most powerful wealth-building decade — and how to start a
-            retirement corpus today.</p>
-          <div class="blog-meta"><span>5 min read</span><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more." target="_blank">Read on WhatsApp →</a></div>
-        </div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-img"><i class="fa-solid fa-graduation-cap"></i></div>
-        <div class="blog-body">
-          <div class="blog-tag">Goals · Child Education</div>
-          <div class="blog-title">Plan Your Child's Education Without Sacrificing Lifestyle</div>
-          <p class="blog-excerpt">Education costs double every 10 years. Build a goal-based SIP plan so your child's
-            future never becomes a burden.</p>
-          <div class="blog-meta"><span>4 min read</span><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more." target="_blank">Read on WhatsApp →</a></div>
-        </div>
-      </div>
-      <div class="blog-card">
-        <div class="blog-img"><i class="fa-solid fa-scale-balanced"></i></div>
-        <div class="blog-body">
-          <div class="blog-tag">Portfolio · Review</div>
-          <div class="blog-title">5 Signs Your Mutual Fund Portfolio Needs a Review</div>
-          <p class="blog-excerpt">Underperformance, style drift, overlap and more — know when it's time to tidy up your
-            investments.</p>
-          <div class="blog-meta"><span>7 min read</span><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more." target="_blank">Read on WhatsApp →</a></div>
-        </div>
-      </div>
+      </form>
     </div>
   </section>
-
-  <!-- CTA -->
-  <div class="cta-section">
-    <span class="section-label center">Ready to Begin?</span>
-    <h2 class="section-title">Your Wealth Journey <em>Starts Today</em></h2>
-    <p class="section-desc">Talk to Praveen Kumar — get a personalised plan tailored to your goals, income and life
-      stage.</p>
-    <div class="cta-btn-row">
-      <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="btn-gold"><i
-          class="fa-solid fa-chart-line"></i> Start Investing Online</a>
-      <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" class="btn-outline-light"><i class="fa-regular fa-calendar-check"></i> Book Consultation</a>
-    </div>
-  </div>
 
   <!-- FOOTER -->
   <footer class="site-footer" id="contact">
@@ -194,9 +1116,9 @@
             <img src="../brand-name-original.png" alt="Alakaapuri Nidhi" class="footer-brand-img" />
           </div>
         </a>
-        <div class="footer-tag">Wealth Expert · AMFI Registered ARN-362567</div>
-        <p class="footer-about">A trusted wealth advisory offering mutual funds, insurance, loans and financial planning
-          — led by Praveen Kumar, AMFI ARN Holder (ARN‑362567).</p>
+        <div class="footer-tag">AMFI-Registered Mutual Fund Distributor · ARN-362567</div>
+        <p class="footer-about">A trusted financial distribution firm offering mutual funds, insurance, loans and portfolio health diagnostics
+          — led by Praveen Kumar, AMFI-Registered Mutual Fund Distributor (ARN‑362567).</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
@@ -206,7 +1128,6 @@
           <li><a href="../services/">Services</a></li>
           <li><a href="../calculators/">Calculator</a></li>
           <li><a href="../Testimonials/">Testimonials</a></li>
-          <li><a href="../insights/">Insights</a></li>
           <li><a href="../Options%20Indicator/">Options Indicator</a></li>
         </ul>
       </div>
@@ -225,11 +1146,11 @@
         <ul>
           <li><a href="tel:+919440581363">+91 94405 81363</a></li>
           <li><a href="mailto:alakaapuri@tanidhi.com">alakaapuri@tanidhi.com</a></li>
-          <li><a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank">Invest Online</a></li>
-          <li><a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank">Book Consultation</a></li>
+          <li><a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" rel="noopener noreferrer">Invest Online</a></li>
+          <li><a href="https://wa.me/919440581363?text=Hello%20Praveen,%20I%20would%20like%20to%20request%20a%20Financial%20Health%20Check." target="_blank" rel="noopener noreferrer">Book Consultation</a></li>
         </ul>
         <div class="footer-social" style="margin-top:14px;">
-          <a href="https://wa.me/919440581363" target="_blank" aria-label="WhatsApp"><i
+          <a href="https://wa.me/919440581363" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
               class="fa-brands fa-whatsapp"></i></a>
           <a href="mailto:alakaapuri@tanidhi.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
           <a href="tel:+919440581363" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
@@ -241,12 +1162,12 @@
       <div>Hyderabad, Telangana · India</div>
     </div>
     <p class="disclaimer">Mutual Fund investments are subject to market risks. Please read all scheme-related documents
-      carefully before investing. Past performance is not indicative of future returns. Insurance is a subject matter of
+      carefully before investing. Past performance is not indicative of future returns. Alakaapuri Nidhi operates as an AMFI-Registered Mutual Fund Distributor (ARN-362567). We do not provide SEBI-registered investment advisory services. Insurance is a subject matter of
       solicitation.</p>
   </footer>
 
   <!-- FLOATING PROMO AD -->
-  <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="fab-promo-ad">
+  <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" rel="noopener noreferrer" class="fab-promo-ad" aria-label="Open Mutual Fund Account">
     <div class="hidden-mob">
       <img class="sticky" src="../lead.png"
         alt="Open a Mutual Fund Account" />
@@ -259,9 +1180,9 @@
 
   <!-- MOBILE STICKY BAR -->
   <div class="mobile-sticky">
-    <a href="tel:+919440581363" class="call"><i class="fa-solid fa-phone"></i> Call</a>
-    <a href="https://wa.me/919440581363?text=Hello%20PK%20Alakapuri%20Nidhi" target="_blank" class="wa"><i
-        class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    <a href="tel:+919440581363" class="call"><i class="fa-solid fa-phone"></i> Call 📞</a>
+    <a href="https://wa.me/919440581363?text=Hello%20PK%20Alakapuri%20Nidhi" target="_blank" rel="noopener noreferrer" class="wa"><i
+        class="fa-brands fa-whatsapp"></i> WhatsApp 💬</a>
   </div>
 
   <script>
@@ -276,6 +1197,26 @@
         document.querySelector('.nav-links').classList.remove('nav-open');
       });
     });
+
+    function handleQuickFormSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('clientName').value.trim();
+      const phone = document.getElementById('clientPhone').value.trim();
+      const service = document.getElementById('clientService').value;
+      const note = document.getElementById('clientNote').value.trim();
+
+      let text = `Hello Praveen, I would like to schedule a consultation.%0A%0A`;
+      text += `*Name:* ${encodeURIComponent(name)}%0A`;
+      text += `*Phone:* ${encodeURIComponent(phone)}%0A`;
+      text += `*Requirement:* ${encodeURIComponent(service)}%0A`;
+      if (note) {
+        text += `*Message:* ${encodeURIComponent(note)}%0A`;
+      }
+      text += `%0AFrom Alakaapuri Nidhi Contact Page.`;
+
+      const whatsappUrl = `https://wa.me/919440581363?text=${text}`;
+      window.open(whatsappUrl, '_blank');
+    }
   </script>
 </body>
 

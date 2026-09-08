@@ -5,19 +5,447 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Derivatives and Hedging advisory by Praveen Kumar at Alakaapuri Nidhi, Hyderabad. Rule-based Futures and Options strategies, portfolio downside protection, and Cumulative Volume Delta (CVD) tools." />
-  <title>Derivatives &amp; Hedging — Alakaapuri Nidhi | Risk Mitigation</title>
+    content="Derivatives, Options Hedging, and MCX Commodities Advisory by Praveen Kumar at Alakaapuri Nidhi, Hyderabad. Rule-based Futures, Defined-Risk Option Spreads, Gold, Silver, Crude Oil, and Cumulative Volume Delta (CVD) order flow tools." />
+  <meta name="keywords"
+    content="Derivatives Hyderabad, Options Hedging, MCX Commodities, Gold Silver Crude Oil, CVD Indicator, Cumulative Volume Delta, Praveen Kumar, Portfolio Downside Protection, Futures and Options" />
+  <title>Derivatives &amp; Commodities — Alakaapuri Nidhi | Risk-Defined Trading &amp; Hedging</title>
   <link rel="icon" type="image/png" href="../../favicon.png" />
-
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@500;700;900&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700;800&family=Cinzel:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Orbitron:wght@600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="../../styles.css" />
   <script src="../../animations.js" defer></script>
+
+  <style>
+    /* ==========================================================================
+       LUXURY DERIVATIVES & COMMODITIES STYLING — WARM IVORY & OBSIDIAN GOLD
+       ========================================================================== */
+
+    .deriv-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 20px;
+      border-radius: 50px;
+      background: rgba(201, 162, 39, 0.14);
+      border: 1px solid rgba(201, 162, 39, 0.45);
+      color: var(--gold-dark);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 14px rgba(201, 162, 39, 0.15);
+    }
+
+    .hero-split-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+      padding-top: 10px;
+    }
+
+    .hero-image-frame {
+      position: relative;
+      border-radius: 24px;
+      padding: 10px;
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.4) 0%, rgba(7, 26, 47, 0.2) 100%);
+      box-shadow: 0 20px 48px rgba(7, 26, 47, 0.12);
+      border: 1.5px solid rgba(201, 162, 39, 0.35);
+    }
+
+    .hero-image-frame img {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(7, 26, 47, 0.18);
+    }
+
+    .hero-floating-stat {
+      position: absolute;
+      bottom: -18px;
+      left: 20px;
+      background: #FFFFFF;
+      border: 2px solid var(--gold-primary);
+      border-radius: 16px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 12px 32px rgba(7, 26, 47, 0.15);
+    }
+
+    .hero-floating-stat .stat-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #FAF1DF 0%, #FFF2C2 100%);
+      color: var(--gold-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      border: 1px solid rgba(201, 162, 39, 0.4);
+    }
+
+    .hero-floating-stat .stat-text h4 {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--navy-deep);
+      line-height: 1.2;
+    }
+
+    .hero-floating-stat .stat-text p {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin: 0;
+      font-weight: 600;
+    }
+
+    /* Commodities Section */
+    .commodities-section {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF1DF 100%);
+      border-top: 1px solid rgba(201, 162, 39, 0.25);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+      padding: 70px 20px;
+    }
+
+    .commodities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      max-width: 1200px;
+      margin: 36px auto 0 auto;
+    }
+
+    .commodity-card {
+      background: #FFFFFF;
+      border: 1.5px solid rgba(201, 162, 39, 0.32);
+      border-radius: 18px;
+      padding: 26px 20px;
+      box-shadow: 0 8px 24px rgba(7, 26, 47, 0.05);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .commodity-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #996515, #C9A227, #E5C158);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .commodity-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 18px 40px rgba(7, 26, 47, 0.12), 0 0 16px rgba(201, 162, 39, 0.15);
+    }
+
+    .commodity-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .comm-emblem {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .commodity-card:hover .comm-emblem {
+      transform: scale(1.12) rotate(3deg);
+    }
+
+    .emblem-gold-bullion { background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); color: #B45309; border: 1px solid #FDE68A; }
+    .emblem-crude-oil { background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); color: #F59E0B; border: 1px solid #475569; }
+    .emblem-nat-gas { background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); color: #0284C7; border: 1px solid #93C5FD; }
+    .emblem-base-metals { background: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%); color: #475569; border: 1px solid #CBD5E1; }
+
+    .comm-title {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--navy-deep);
+      margin-bottom: 6px;
+    }
+
+    .comm-ticker {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: var(--gold-dark);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .comm-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .comm-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 18px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(201, 162, 39, 0.25);
+    }
+
+    /* Core Derivatives Pillars */
+    .deriv-pillars-section {
+      background: #FFFFFF;
+      padding: 70px 20px;
+    }
+
+    .deriv-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1200px;
+      margin: 36px auto 0 auto;
+    }
+
+    .deriv-card {
+      background: #FEF7E9;
+      border: 1.5px solid rgba(201, 162, 39, 0.32);
+      border-radius: 18px;
+      padding: 30px 24px;
+      box-shadow: 0 8px 24px rgba(7, 26, 47, 0.04);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .deriv-card:hover {
+      transform: translateY(-6px);
+      background: #FFFFFF;
+      border-color: var(--gold-primary);
+      box-shadow: 0 16px 36px rgba(7, 26, 47, 0.12);
+    }
+
+    .deriv-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: #FFFFFF;
+      border: 1.5px solid rgba(201, 162, 39, 0.4);
+      color: var(--gold-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+
+    .deriv-title {
+      font-family: var(--font-heading);
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--navy-deep);
+      margin-bottom: 10px;
+    }
+
+    .deriv-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    .deriv-bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .deriv-bullet-list li {
+      font-size: 13px;
+      color: var(--text-body);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .deriv-bullet-list li i {
+      color: var(--gold-dark);
+      font-size: 11px;
+      margin-top: 4px;
+    }
+
+    /* SEBI Risk Warning Box */
+    .sebi-advisory-box {
+      max-width: 1140px;
+      margin: 0 auto;
+      background: #FFFBEB;
+      border: 1.5px solid #F59E0B;
+      border-radius: 16px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.08);
+    }
+
+    .sebi-icon {
+      font-size: 36px;
+      color: #D97706;
+      flex-shrink: 0;
+    }
+
+    .sebi-text h4 {
+      font-family: var(--font-heading);
+      font-size: 16.5px;
+      font-weight: 800;
+      color: #92400E;
+      margin-bottom: 6px;
+    }
+
+    .sebi-text p {
+      font-size: 13px;
+      color: #78350F;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* Crash Hedging Simulator */
+    .hedge-sim-section {
+      background: #071A2F;
+      color: #FFFFFF;
+      padding: 70px 20px;
+      position: relative;
+    }
+
+    .hedge-sim-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #996515, #C9A227, #E5C158, #C9A227, #996515);
+    }
+
+    .hedge-sim-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hedge-calc-card {
+      background: rgba(13, 41, 69, 0.85);
+      border: 1.5px solid rgba(201, 162, 39, 0.35);
+      border-radius: 20px;
+      padding: 32px 28px;
+    }
+
+    .hedge-result-card {
+      background: linear-gradient(135deg, rgba(201, 162, 39, 0.12) 0%, rgba(13, 41, 69, 0.6) 100%);
+      border: 2px solid var(--gold-primary);
+      border-radius: 20px;
+      padding: 34px 30px;
+      text-align: center;
+    }
+
+    .comparison-pills-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .comp-pill-box {
+      border-radius: 14px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .comp-pill-unhedged {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
+
+    .comp-pill-hedged {
+      background: rgba(34, 197, 94, 0.15);
+      border: 1.5px solid rgba(34, 197, 94, 0.5);
+    }
+
+    .comp-pill-box h6 {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .comp-pill-box p {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    /* Options Indicator Feature Callout Banner */
+    .indicator-callout-banner {
+      max-width: 1140px;
+      margin: 60px auto 0 auto;
+      background: linear-gradient(135deg, #FAF1DF 0%, #FFF2C2 100%);
+      border: 2px solid var(--gold-primary);
+      border-radius: 20px;
+      padding: 36px 32px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 30px;
+      align-items: center;
+      box-shadow: 0 14px 34px rgba(7, 26, 47, 0.08);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-split-wrapper { grid-template-columns: 1fr; }
+      .commodities-grid { grid-template-columns: repeat(2, 1fr); }
+      .deriv-grid-3 { grid-template-columns: 1fr; }
+      .hedge-sim-container { grid-template-columns: 1fr; }
+      .indicator-callout-banner { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .commodities-grid { grid-template-columns: 1fr; }
+      .hero-floating-stat { position: static; margin-top: 16px; }
+      .sebi-advisory-box { flex-direction: column; text-align: center; }
+    }
+  </style>
 </head>
 
 <body>
@@ -28,7 +456,7 @@
       <img src="../../main-logo.png" alt="Alakaapuri Nidhi Logo" class="nav-logo-img" />
       <div class="nav-logo-text">
         <img src="../../brand-name-original.png" alt="Alakaapuri Nidhi" class="nav-brand-img" />
-        <span>Praveen Kumar · Wealth Advisory</span>
+        <span>Praveen Kumar · AMFI-Registered MFD (ARN-362567)</span>
       </div>
     </a>
     <ul class="nav-links">
@@ -40,7 +468,7 @@
           <li><a href="../../services/mutual-funds/">Mutual Funds</a></li>
           <li><a href="../../services/insurance/">Insurance</a></li>
           <li><a href="../../services/equity/">Equity</a></li>
-          <li><a href="../../services/derivatives/" class="active">Derivatives</a></li>
+          <li><a href="../../services/derivatives/" class="active">Derivatives &amp; Commodities</a></li>
         </ul>
       </li>
       <li><a href="../../calculators/">Calculator</a></li>
@@ -53,14 +481,45 @@
   </nav>
 
   <!-- PAGE HERO -->
-  <header class="page-hero">
-    <span class="section-label center">Derivatives &amp; Portfolio Hedging</span>
-    <h1 class="section-title">Institutional Risk Management &amp; <em>Options Strategies</em></h1>
-    <p class="section-desc">Protect your equity holdings against sudden market downturns and deploy rule-based derivatives frameworks engineered for risk mitigation.</p>
-    <div class="hero-cta-row" style="justify-content:center; margin-top:28px;">
-      <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20consult%20about%20Derivatives%20and%20Portfolio%20Hedging."
-        target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> Book Strategy Session</a>
-      <a href="../../Options%20Indicator/" class="btn-outline-light"><i class="fa-solid fa-chart-candlestick"></i> Explore CVD Indicator</a>
+  <header class="page-hero" style="padding-bottom: 50px;">
+    <div class="hero-split-wrapper">
+      <div>
+        <span class="deriv-hero-badge"><i class="fa-solid fa-shield-halved"></i> FUTURES, OPTIONS &amp; MCX COMMODITIES</span>
+        <h1 class="section-title" style="text-align: left; margin-bottom: 18px;">
+          Mathematical Discipline in <em>Derivatives &amp; Commodities</em>
+        </h1>
+        <p class="section-desc" style="text-align: left; max-width: 600px; margin-bottom: 26px;">
+          Advanced Portfolio Downside Hedging, Defined-Risk Multi-Leg Option Spreads, and MCX Commodity strategies (Gold, Silver, Crude Oil, Natural Gas) guided by Praveen Kumar. We eliminate reckless naked speculation and ground every position in probability and risk control.
+        </p>
+
+        <div class="hero-cta-row" style="justify-content: flex-start; gap: 14px;">
+          <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20would%20like%20to%20discuss%20Hedging%20and%20Derivatives%20strategies."
+            target="_blank" class="btn-gold">
+            <i class="fa-brands fa-whatsapp"></i> Discuss Risk Hedging
+          </a>
+          <a href="../../Options%20Indicator/" class="btn-outline-light">
+            <i class="fa-solid fa-chart-line"></i> View Options Indicator
+          </a>
+        </div>
+
+        <div style="margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px;">
+          <span class="meta-tag"><i class="fa-solid fa-shield" style="color:var(--gold-dark);"></i> 100% Risk-Defined Strategies</span>
+          <span class="meta-tag"><i class="fa-solid fa-coins" style="color:var(--gold-dark);"></i> MCX Commodities Covered</span>
+          <span class="meta-tag"><i class="fa-solid fa-wave-square" style="color:var(--gold-dark);"></i> Proprietary CVD Order Flow</span>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="hero-image-frame">
+        <img src="derivatives_commodities_hero.jpg" alt="Derivatives Hedging and MCX Commodities Illustration" />
+        <div class="hero-floating-stat">
+          <div class="stat-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <div class="stat-text">
+            <h4>Hedged Portfolios</h4>
+            <p>Protection Against Black Swan Drops</p>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -68,111 +527,247 @@
   <section class="trust-bar">
     <div class="trust-grid">
       <div class="trust-item">
-        <div class="trust-num" data-count="10" data-suffix=" Yrs+">0</div>
-        <div class="trust-lbl">Derivatives Experience</div>
-        <div class="trust-sub">Futures &amp; Options Specialist</div>
+        <div class="trust-num" data-count="10" data-suffix=" Yrs+">10 Yrs+</div>
+        <div class="trust-lbl">Derivatives &amp; MCX</div>
+        <div class="trust-sub">Futures, Options &amp; Commodities</div>
       </div>
       <div class="trust-item">
-        <div class="trust-num" data-count="100" data-suffix="%">0</div>
+        <div class="trust-num" data-count="100" data-suffix="%">100%</div>
         <div class="trust-lbl">Risk-Defined</div>
-        <div class="trust-sub">No Naked Speculation</div>
+        <div class="trust-sub">Zero Naked Gambles</div>
       </div>
       <div class="trust-item">
-        <div class="trust-num" data-count="24" data-suffix="/7">0</div>
-        <div class="trust-lbl">Volatility Tracking</div>
-        <div class="trust-sub">India VIX &amp; Order Flow</div>
+        <div class="trust-num" data-count="4" data-suffix=" Verticals">4 Verticals</div>
+        <div class="trust-lbl">MCX Commodities</div>
+        <div class="trust-sub">Gold, Silver, Energy &amp; Metals</div>
       </div>
       <div class="trust-item">
-        <div class="trust-num" data-count="500" data-suffix="+">0</div>
-        <div class="trust-lbl">Traders &amp; Investors</div>
-        <div class="trust-sub">Mentored &amp; Advised</div>
+        <div class="trust-num" data-count="500" data-suffix="+">500+</div>
+        <div class="trust-lbl">Traders &amp; Hedgers</div>
+        <div class="trust-sub">Mentored &amp; Protected</div>
       </div>
     </div>
   </section>
 
-  <!-- DERIVATIVE PILLARS -->
-  <section class="section-block">
+  <!-- DEDICATED COMMODITIES SECTION (MCX) -->
+  <section class="commodities-section" id="commodities">
     <div class="section-header-center">
-      <span class="section-label center">Core Methodologies</span>
-      <h2 class="section-title">Capital Preservation Comes <em>First</em></h2>
-      <p class="section-desc">Derivatives are powerful instruments when used for hedging and defined-risk positioning. We strip away reckless gambling and replace it with mathematical discipline.</p>
+      <span class="section-label center"><i class="fa-solid fa-coins"></i> Multi Commodity Exchange (MCX)</span>
+      <h2 class="section-title">Strategic Trading &amp; Hedging in <em>Commodities</em></h2>
+      <p class="section-desc">Commodities provide crucial portfolio diversification, inflation defense, and independent price action uncorrelated with broader stock indices.</p>
     </div>
 
-    <div class="products-grid">
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-shield-virus"></i></div>
-        <div class="product-title">Portfolio Downside Hedging</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          Shield your long-term equity or mutual fund portfolio from major market crashes (Budget, elections, global shocks) using index put options and beta-hedging.
-        </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> Insure equity value without selling</li>
-          <li><i class="fa-solid fa-diamond"></i> Avoid capital gains tax triggered by exits</li>
-          <li><i class="fa-solid fa-diamond"></i> Cost-effective insurance against black swans</li>
-        </ul>
+    <div class="commodities-grid">
+      <!-- 1. Gold & Silver (Bullion) -->
+      <div class="commodity-card tilt-3d">
+        <div class="comm-emblem emblem-gold-bullion"><i class="fa-solid fa-bars-staggered"></i></div>
+        <h3 class="comm-title">Precious Metals (Gold &amp; Silver)</h3>
+        <span class="comm-ticker">MCX GOLD · SILVER MINI · PETAL</span>
+        <p class="comm-desc">The ultimate historical hedge against currency debasement and geopolitical crises. We structure safe-haven allocation, long-term hedging, and tactical swing positions.</p>
+        <div class="comm-tags">
+          <span class="meta-tag"><i class="fa-solid fa-shield-halved"></i> Macro Hedge</span>
+          <span class="meta-tag"><i class="fa-solid fa-gem"></i> 99.9% Purity Basis</span>
+        </div>
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Gold%20and%20Silver%20MCX%20trading." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Consult Bullion</a>
       </div>
 
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-chart-line-up"></i></div>
-        <div class="product-title">Defined-Risk Option Spreads</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          Multi-leg strategies (Bull Call Spreads, Bear Put Spreads, Iron Condors) with strictly pre-defined maximum risk and high probability of profit.
-        </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> Capped downside on every trade</li>
-          <li><i class="fa-solid fa-diamond"></i> Exploits implied volatility skew</li>
-          <li><i class="fa-solid fa-diamond"></i> Rule-based entry and exit parameters</li>
-        </ul>
+      <!-- 2. Crude Oil -->
+      <div class="commodity-card tilt-3d">
+        <div class="comm-emblem emblem-crude-oil"><i class="fa-solid fa-oil-well"></i></div>
+        <h3 class="comm-title">Crude Oil (Energy)</h3>
+        <span class="comm-ticker">MCX CRUDEOIL · CRUDE MINI</span>
+        <p class="comm-desc">High-liquidity energy contracts driven by OPEC+ policies, EIA inventories, and global macro demand. Capture trend continuations and mean-reversion with tight risk bounds.</p>
+        <div class="comm-tags">
+          <span class="meta-tag"><i class="fa-solid fa-chart-line"></i> High Liquidity</span>
+          <span class="meta-tag"><i class="fa-solid fa-globe"></i> Global Geopolitics</span>
+        </div>
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Crude%20Oil%20MCX%20strategies." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Consult Crude Oil</a>
       </div>
 
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-chart-candlestick"></i></div>
-        <div class="product-title">Cumulative Volume Delta (CVD)</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          Proprietary order-flow analysis tracking institutional buying and selling volume to identify true market direction before breakouts occur.
-        </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> Institutional absorption detection</li>
-          <li><i class="fa-solid fa-diamond"></i> Spot divergences between price and volume</li>
-          <li><i class="fa-solid fa-diamond"></i> Available on TradingView</li>
-        </ul>
+      <!-- 3. Natural Gas -->
+      <div class="commodity-card tilt-3d">
+        <div class="comm-emblem emblem-nat-gas"><i class="fa-solid fa-fire-flame-curved"></i></div>
+        <h3 class="comm-title">Natural Gas</h3>
+        <span class="comm-ticker">MCX NATURALGAS · MINI</span>
+        <p class="comm-desc">Highly volatile commodity driven by weather forecasting models, heating/cooling demand seasons, and storage data. Handled with multi-leg options spreads to contain margin swings.</p>
+        <div class="comm-tags">
+          <span class="meta-tag"><i class="fa-solid fa-bolt"></i> High Volatility</span>
+          <span class="meta-tag"><i class="fa-solid fa-temperature-arrow-up"></i> Seasonal Cycles</span>
+        </div>
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Natural%20Gas%20trading." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Consult Natural Gas</a>
       </div>
 
-      <div class="product-card tilt-3d">
-        <div class="product-icon"><i class="fa-solid fa-calculator"></i></div>
-        <div class="product-title">Options Greeks &amp; Volatility Analysis</div>
-        <p style="font-size:14px; color:var(--text-muted); line-height:1.6; margin-bottom:14px;">
-          Deep understanding of Delta, Theta, Gamma and Vega to structure positions that benefit from time decay and volatility contraction.
-        </p>
-        <ul class="product-list">
-          <li><i class="fa-solid fa-diamond"></i> India VIX cycle evaluation</li>
-          <li><i class="fa-solid fa-diamond"></i> Non-directional income strategies</li>
-          <li><i class="fa-solid fa-diamond"></i> Continuous risk monitoring</li>
-        </ul>
+      <!-- 4. Base Metals -->
+      <div class="commodity-card tilt-3d">
+        <div class="comm-emblem emblem-base-metals"><i class="fa-solid fa-cubes"></i></div>
+        <h3 class="comm-title">Base Metals</h3>
+        <span class="comm-ticker">COPPER · ZINC · ALUMINIUM</span>
+        <p class="comm-desc">The pulse of the world economy. Driven by infrastructure demand, electric vehicle adoption, and smelter supply disruptions. Strategic positioning for commercial hedgers and active traders.</p>
+        <div class="comm-tags">
+          <span class="meta-tag"><i class="fa-solid fa-industry"></i> Industrial Demand</span>
+          <span class="meta-tag"><i class="fa-solid fa-car-battery"></i> EV &amp; Infra Drivers</span>
+        </div>
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20know%20about%20Base%20Metals%20trading." target="_blank" class="scheme-btn-consult"><i class="fa-brands fa-whatsapp"></i> Consult Base Metals</a>
       </div>
     </div>
   </section>
 
-  <!-- CVD INDICATOR BANNER PREVIEW -->
-  <section class="section-block" style="background: #0D2945; border-top: 1px solid var(--mahogany); border-bottom: 1px solid var(--mahogany);">
-    <div class="container" style="max-width:880px; margin:0 auto; text-align:center;">
-      <span class="section-label center">Proprietary Tool</span>
-      <h2 class="section-title">Trade with Institutional <em>Order Flow Clarity</em></h2>
-      <p class="section-desc" style="margin-bottom:28px;">
-        Alakaapuri Nidhi provides proprietary TradingView tools developed by Praveen Kumar to give serious traders an unfair edge in reading market volume delta.
-      </p>
-      <a href="../../Options%20Indicator/" class="btn-gold"><i class="fa-solid fa-qrcode"></i> View CVD Indicator &amp; Pricing</a>
+  <!-- DERIVATIVES CORE METHODOLOGIES -->
+  <section class="deriv-pillars-section">
+    <div class="section-header-center">
+      <span class="section-label center"><i class="fa-solid fa-shield-halved"></i> Institutional Risk Architecture</span>
+      <h2 class="section-title">Capital Preservation Comes <em>First</em></h2>
+      <p class="section-desc">Derivatives are precision tools. We strip away reckless retail gambling and replace it with strict mathematical risk boundaries.</p>
+    </div>
+
+    <div class="deriv-grid-3">
+      <!-- 1. Portfolio Downside Hedging -->
+      <div class="deriv-card tilt-3d">
+        <div class="deriv-icon"><i class="fa-solid fa-shield-virus"></i></div>
+        <h3 class="deriv-title">Portfolio Downside Beta Hedging</h3>
+        <p class="deriv-desc">Shield your ₹25 Lakh to ₹5 Crore long-term equity or mutual fund portfolio from major market crashes (Budget, elections, recession, war) using index put options and beta-hedging models.</p>
+        <ul class="deriv-bullet-list">
+          <li><i class="fa-solid fa-check"></i> Protect corpus value without selling core stocks</li>
+          <li><i class="fa-solid fa-check"></i> Zero capital gains tax triggered by exits</li>
+          <li><i class="fa-solid fa-check"></i> Inexpensive insurance against black swan corrections</li>
+        </ul>
+      </div>
+
+      <!-- 2. Defined-Risk Option Spreads -->
+      <div class="deriv-card tilt-3d">
+        <div class="deriv-icon"><i class="fa-solid fa-chart-line-up"></i></div>
+        <h3 class="deriv-title">Defined-Risk Multi-Leg Spreads</h3>
+        <p class="deriv-desc">Bull Call Spreads, Bear Put Spreads, Iron Condors, and Calendar Spreads. Strictly pre-defined maximum risk on every trade with mathematically favorable risk-to-reward ratios.</p>
+        <ul class="deriv-bullet-list">
+          <li><i class="fa-solid fa-check"></i> Absolute loss ceiling known before entering trade</li>
+          <li><i class="fa-solid fa-check"></i> Harnesses theta time decay &amp; volatility skew</li>
+          <li><i class="fa-solid fa-check"></i> Eliminates panic and emotional holding</li>
+        </ul>
+      </div>
+
+      <!-- 3. CVD & Order Flow -->
+      <div class="deriv-card tilt-3d">
+        <div class="deriv-icon"><i class="fa-solid fa-chart-candlestick"></i></div>
+        <h3 class="deriv-title">Cumulative Volume Delta (CVD)</h3>
+        <p class="deriv-desc">Proprietary order-flow analysis tracking institutional buying and selling volume delta. Spot institutional accumulation and exhaustion divergences before retail breakout traps.</p>
+        <ul class="deriv-bullet-list">
+          <li><i class="fa-solid fa-check"></i> Tracks institutional market order aggressiveness</li>
+          <li><i class="fa-solid fa-check"></i> Identifies absorption at key support &amp; resistance</li>
+          <li><i class="fa-solid fa-check"></i> Multi-asset compatibility (Indices, Crypto &amp; MCX)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SEBI MANDATORY RISK WARNING -->
+    <div style="margin-top: 50px;">
+      <div class="sebi-advisory-box">
+        <div class="sebi-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <div class="sebi-text">
+          <h4>SEBI Mandatory Risk Disclosure on Derivatives Trading</h4>
+          <p>9 out of 10 individual traders in the equity Futures and Options (F&amp;O) segment incurred net losses, averaging approximately ₹50,000 loss per trader. Most retail losses stem from buying unhedged naked out-of-the-money (OTM) options. At Alakaapuri Nidhi, we strictly mandate defined-risk hedging frameworks and mathematical position sizing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE PORTFOLIO CRASH-HEDGING SIMULATOR -->
+  <section class="hedge-sim-section">
+    <div class="hedge-sim-container">
+      <div>
+        <span class="section-label" style="color:#FFE58F;"><i class="fa-solid fa-shield"></i> Downside Protection Simulator</span>
+        <h2 class="section-title" style="color:#FFFFFF; text-align:left; margin: 10px 0 16px 0;">
+          See How Hedging Saves <em>Your Portfolio</em>
+        </h2>
+        <p style="color:#CBD5E1; font-size:14.5px; line-height:1.6; margin-bottom: 26px;">
+          When a 15% market crash strikes, an unhedged investor suffers brutal capital erosion. A calibrated index put hedge offsets 80%+ of the fall at a minor premium cost.
+        </p>
+
+        <div class="hedge-calc-card">
+          <div class="slider-row" style="margin-bottom:24px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; font-size:14px; font-weight:600; color:#E2E8F0;">
+              <span>Equity Portfolio Size</span>
+              <span id="hedgePortfolioDisplay" style="font-family:var(--font-heading); font-size:20px; font-weight:800; color:#FFE58F;">₹50,00,000</span>
+            </div>
+            <input type="range" id="hedgePortfolioSlider" class="calc-slider" min="1000000" max="20000000" step="1000000" value="5000000" oninput="calculateHedge()" />
+            <div style="display:flex; justify-content:space-between; font-size:11px; color:#94A3B8; margin-top:6px;">
+              <span>₹10 Lakhs</span>
+              <span>₹1 Crore</span>
+              <span>₹2 Crores</span>
+            </div>
+          </div>
+
+          <div class="slider-row" style="margin-bottom:0;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; font-size:14px; font-weight:600; color:#E2E8F0;">
+              <span>Market Crash Scenario</span>
+              <span id="hedgeCrashDisplay" style="font-family:var(--font-heading); font-size:20px; font-weight:800; color:#FCA5A5;">-15% Market Drop</span>
+            </div>
+            <input type="range" id="hedgeCrashSlider" class="calc-slider" min="5" max="30" step="5" value="15" oninput="calculateHedge()" />
+            <div style="display:flex; justify-content:space-between; font-size:11px; color:#94A3B8; margin-top:6px;">
+              <span>-5% Minor Dip</span>
+              <span>-15% Correction</span>
+              <span>-30% Crisis Crash</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Result Card -->
+      <div class="hedge-result-card">
+        <span class="result-ribbon" style="background:var(--gold-primary); color:#071A2F; font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:1px; padding:5px 16px; border-radius:20px; display:inline-block; margin-bottom:12px;"><i class="fa-solid fa-shield-halved"></i> Hedging Impact Analysis</span>
+
+        <div class="comparison-pills-row">
+          <div class="comp-pill-box comp-pill-unhedged">
+            <h6 style="color:#FCA5A5;">Unhedged Loss</h6>
+            <p id="unhedgedLossDisplay" style="color:#F87171;">-₹7.50 Lakhs</p>
+          </div>
+          <div class="comp-pill-box comp-pill-hedged">
+            <h6 style="color:#86EFAC;">Net Loss with Hedge</h6>
+            <p id="hedgedLossDisplay" style="color:#4ADE80;">-₹0.75 Lakhs</p>
+          </div>
+        </div>
+
+        <div style="background:rgba(13,41,69,0.7); border-radius:12px; padding:14px; margin-bottom:20px;">
+          <p style="font-size:13px; color:#E2E8F0; margin:0;">
+            <strong style="color:#FFE58F;">Capital Preserved:</strong> <span id="capitalSavedDisplay">₹6.75 Lakhs</span> shielded from destruction.
+          </p>
+        </div>
+
+        <a href="https://wa.me/919440581363?text=Hello%20Praveen%20sir,%20I%20want%20to%20hedge%20my%20portfolio%20against%20market%20falls." target="_blank" class="btn-gold" style="width:100%; justify-content:center;">
+          <i class="fa-brands fa-whatsapp"></i> Protect My Portfolio Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPTIONS INDICATOR FEATURE CALLOUT BANNER -->
+  <section class="section-block" style="background:#FFFFFF; padding-top:0;">
+    <div class="indicator-callout-banner">
+      <div>
+        <span style="font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--gold-dark);"><i class="fa-solid fa-code"></i> Proprietary Algorithmic Tool</span>
+        <h3 style="font-family:var(--font-heading); font-size:26px; font-weight:800; color:var(--navy-deep); margin-bottom:10px;">The Alakaapuri Options &amp; CVD Indicator (FREE)</h3>
+        <p style="font-size:14.5px; color:var(--text-body); line-height:1.6; margin-bottom:16px;">Track real-time institutional volume delta across Nifty, Bank Nifty, MCX Commodities (Gold, Silver, Crude), and major global assets. Access our complete Pine Script indicator 100% free with step-by-step setup guides.</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <span class="meta-tag"><i class="fa-solid fa-check" style="color:var(--gold-dark);"></i> TradingView Compatible</span>
+          <span class="meta-tag"><i class="fa-solid fa-check" style="color:var(--gold-dark);"></i> Institutional Divergences</span>
+          <span class="meta-tag"><i class="fa-solid fa-tag" style="color:var(--gold-dark);"></i> Strike ₹5,000 · 100% Free</span>
+        </div>
+      </div>
+      <div style="text-align:center;">
+        <a href="../../Options%20Indicator/" class="btn-gold" style="width:100%; justify-content:center; padding: 14px 20px;">
+          <i class="fa-solid fa-arrow-right"></i> Explore Options Indicator
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- CTA -->
   <div class="cta-section">
-    <span class="section-label center">Hedge Your Capital</span>
-    <h2 class="section-title">Protect Your Portfolio <em>From Market Dips</em></h2>
-    <p class="section-desc">Consult with Praveen Kumar to learn how institutional hedging strategies can safeguard your hard-earned wealth.</p>
+    <span class="section-label center">Institutional Hedging</span>
+    <h2 class="section-title">Trade and Protect with <em>Mathematical Certainty</em></h2>
+    <p class="section-desc">Consult Praveen Kumar for portfolio beta-hedging, rule-based option spreads, and disciplined MCX commodity frameworks.</p>
     <div class="cta-btn-row">
-      <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20want%20to%20consult%20on%20Derivatives%20and%20Hedging."
-        target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> WhatsApp Consultation</a>
+      <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20book%20a%20Derivatives%20and%20Hedging%20consultation."
+        target="_blank" class="btn-gold"><i class="fa-brands fa-whatsapp"></i> Book Risk Consultation</a>
       <a href="tel:+919440581363" class="btn-outline-light"><i class="fa-solid fa-phone"></i> Call +91 94405 81363</a>
     </div>
   </div>
@@ -187,9 +782,8 @@
             <img src="../../brand-name-original.png" alt="Alakaapuri Nidhi" class="footer-brand-img" />
           </div>
         </a>
-        <div class="footer-tag">Wealth Expert · AMFI Registered ARN-362567</div>
-        <p class="footer-about">A trusted wealth advisory offering mutual funds, insurance, loans and financial planning
-          — led by Praveen Kumar, AMFI ARN Holder (ARN‑362567).</p>
+        <div class="footer-tag">AMFI Registered MFD · ARN-362567</div>
+        <p class="footer-about">A premier financial distribution firm offering mutual funds, insurance, loans and wealth planning assistance — led by Praveen Kumar, AMFI-Registered Mutual Fund Distributor (ARN-362567) and Derivatives Specialist.</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
@@ -209,7 +803,7 @@
           <li><a href="../../services/mutual-funds/">Mutual Funds &amp; SIP</a></li>
           <li><a href="../../services/insurance/">Insurance</a></li>
           <li><a href="../../services/equity/">Equity &amp; PMS</a></li>
-          <li><a href="../../services/derivatives/">Derivatives</a></li>
+          <li><a href="../../services/derivatives/">Derivatives &amp; Commodities</a></li>
           <li><a href="../../services/">All Services</a></li>
         </ul>
       </div>
@@ -231,28 +825,66 @@
     </div>
     <div class="footer-bottom">
       <div>© <span id="year">2026</span> Alakaapuri Nidhi. All rights reserved. · ARN‑362567</div>
-      <div>Derivatives (Futures &amp; Options) carry significant financial risk. Trade responsibly under disciplined risk parameters.</div>
+      <div>Hyderabad, Telangana · India</div>
     </div>
+    <p class="disclaimer">Derivatives and Commodities trading involve substantial risk of capital loss and are not suitable for all investors. Past performance is not indicative of future results. Information provided is for educational and risk mitigation purposes and does not constitute SEBI registered investment advice. Please review all risk disclosure documents issued by your exchange and broker.</p>
   </footer>
 
   <!-- FLOATING PROMO AD -->
   <a href="https://www.assetplus.in/mfd/ARN-362567" target="_blank" class="fab-promo-ad" data-testid="fab-promo-ad">
     <div class="hidden-mob">
       <img class="sticky" src="../../lead.png"
-        alt="Open a Mutual Fund Account" />
+        alt="Open an Account" />
     </div>
     <div class="hidden-desk">
       <img class="sticky" src="../../lead.png"
-        alt="Open a Mutual Fund Account" />
+        alt="Open an Account" />
     </div>
   </a>
 
   <!-- MOBILE STICKY -->
   <div class="mobile-sticky">
     <a href="tel:+919440581363" class="call"><i class="fa-solid fa-phone"></i> Call</a>
-    <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20Derivatives."
+    <a href="https://wa.me/919440581363?text=Hello%20Alakaapuri%20Nidhi,%20I%20would%20like%20to%20know%20more%20about%20Derivatives%20and%20Hedging."
       target="_blank" class="wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
   </div>
+
+  <script>
+    function calculateHedge() {
+      const portfolio = parseFloat(document.getElementById('hedgePortfolioSlider').value);
+      const crashPercent = parseFloat(document.getElementById('hedgeCrashSlider').value);
+
+      document.getElementById('hedgePortfolioDisplay').innerText = '₹' + portfolio.toLocaleString('en-IN');
+      document.getElementById('hedgeCrashDisplay').innerText = '-' + crashPercent + '% Market Drop';
+
+      // Unhedged loss
+      const unhedgedLoss = portfolio * (crashPercent / 100);
+
+      // Hedged scenario: Put hedge cost is ~1.5% premium, but recovers ~85% of the crash loss
+      const hedgeCost = portfolio * 0.015;
+      const hedgePayoff = unhedgedLoss * 0.85;
+      const netHedgedLoss = unhedgedLoss - hedgePayoff + hedgeCost;
+      const capitalSaved = unhedgedLoss - netHedgedLoss;
+
+      function formatIndian(amount) {
+        if (amount >= 10000000) {
+          return '₹' + (amount / 10000000).toFixed(2) + ' Crores';
+        } else if (amount >= 100000) {
+          return '₹' + (amount / 100000).toFixed(2) + ' Lakhs';
+        } else {
+          return '₹' + Math.round(amount).toLocaleString('en-IN');
+        }
+      }
+
+      document.getElementById('unhedgedLossDisplay').innerText = '-' + formatIndian(unhedgedLoss);
+      document.getElementById('hedgedLossDisplay').innerText = '-' + formatIndian(netHedgedLoss);
+      document.getElementById('capitalSavedDisplay').innerText = formatIndian(capitalSaved);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      calculateHedge();
+    });
+  </script>
 
 </body>
 </html>
