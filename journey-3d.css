@@ -5,19 +5,24 @@
    ========================================================================== */
 
 :root {
-  --bg-deep-navy: #020611;
-  --bg-surface-navy: #061122;
-  --bg-glass-navy: rgba(5, 15, 31, 0.82);
-  --bg-glass-card: rgba(8, 20, 38, 0.78);
-  --bg-glass-input: rgba(12, 28, 52, 0.65);
+  --mocha-brown: #5B4632;
+  --champagne-gold: #F4D9A0;
+  --burnt-copper: #C8792C;
+  --royal-violet: #9D00FF;
+
+  --bg-deep-navy: #1F1710;
+  --bg-surface-navy: #2E2219;
+  --bg-glass-navy: rgba(46, 34, 25, 0.88);
+  --bg-glass-card: rgba(65, 49, 36, 0.85);
+  --bg-glass-input: rgba(91, 70, 50, 0.7);
   
-  --gold-primary: #d4af37;
-  --gold-metallic: #c59b27;
-  --gold-bright: #f3cf65;
-  --gold-soft: #ebd082;
-  --gold-dim: rgba(212, 175, 55, 0.16);
-  --gold-border: rgba(212, 175, 55, 0.28);
-  --gold-glow: rgba(212, 175, 55, 0.35);
+  --gold-primary: #F4D9A0;
+  --gold-metallic: #C8792C;
+  --gold-bright: #F7E4B8;
+  --gold-soft: #F4D9A0;
+  --gold-dim: rgba(244, 217, 160, 0.18);
+  --gold-border: rgba(244, 217, 160, 0.35);
+  --gold-glow: rgba(157, 0, 255, 0.38);
 
   --text-primary: #ffffff;
   --text-secondary: #cbd5e1;
@@ -395,15 +400,16 @@ body.wealth-journey-body {
 }
 
 .gold-btn {
-  background: linear-gradient(135deg, var(--gold-metallic), var(--gold-bright));
-  color: #030814;
-  border: 1px solid var(--gold-bright);
-  box-shadow: 0 4px 16px var(--gold-dim);
+  background: linear-gradient(135deg, var(--royal-violet), #B833FF);
+  color: #FFFFFF;
+  border: 1px solid var(--champagne-gold);
+  box-shadow: 0 4px 16px rgba(157, 0, 255, 0.4);
 }
 
 .gold-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px var(--gold-glow);
+  background: linear-gradient(135deg, #B833FF, var(--royal-violet));
+  box-shadow: 0 6px 22px rgba(157, 0, 255, 0.6);
 }
 
 /* --------------------------------------------------------------------------
@@ -567,10 +573,10 @@ body.wealth-journey-body {
   right: 15px;
   width: 2px;
   height: 0%;
-  background: linear-gradient(180deg, var(--gold-primary), var(--gold-bright));
+  background: linear-gradient(180deg, var(--burnt-copper), var(--royal-violet));
   border-radius: 2px;
   transition: height 0.3s ease;
-  box-shadow: 0 0 8px var(--gold-primary);
+  box-shadow: 0 0 8px var(--royal-violet);
 }
 
 .rail-step {
@@ -616,21 +622,21 @@ body.wealth-journey-body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #152438;
-  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  background: #2E2219;
+  border: 1.5px solid var(--champagne-border);
   transition: var(--transition-fast);
   z-index: 2;
 }
 
 .rail-step:hover .step-dot {
-  border-color: var(--gold-soft);
+  border-color: var(--burnt-copper);
   transform: scale(1.2);
 }
 
 .rail-step.active .step-dot {
-  background: var(--gold-bright);
+  background: var(--royal-violet);
   border-color: #ffffff;
-  box-shadow: 0 0 10px var(--gold-primary);
+  box-shadow: 0 0 10px var(--royal-violet);
   transform: scale(1.35);
 }
 
@@ -1876,20 +1882,20 @@ body.wealth-journey-body {
   align-items: center;
   gap: 10px;
   padding: 14px 28px;
-  background: linear-gradient(135deg, var(--gold-metallic), var(--gold-bright));
-  color: #030814;
+  background: linear-gradient(135deg, var(--royal-violet), #B833FF);
+  color: #FFFFFF;
   border-radius: 30px;
   font-size: 0.88rem;
   font-weight: 700;
   letter-spacing: 1px;
   text-decoration: none;
-  box-shadow: 0 6px 25px var(--gold-glow);
+  box-shadow: 0 6px 25px rgba(157, 0, 255, 0.45);
   transition: var(--transition-smooth);
 }
 
 .cta-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 35px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 10px 35px rgba(157, 0, 255, 0.65);
 }
 
 .cta-secondary {
@@ -1899,7 +1905,7 @@ body.wealth-journey-body {
   padding: 14px 26px;
   background: rgba(255, 255, 255, 0.05);
   color: #ffffff;
-  border: 1px solid var(--gold-border);
+  border: 1px solid var(--burnt-copper);
   border-radius: 30px;
   font-size: 0.88rem;
   font-weight: 600;
@@ -1908,8 +1914,9 @@ body.wealth-journey-body {
 }
 
 .cta-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--gold-bright);
+  background: var(--burnt-copper);
+  border-color: var(--burnt-copper);
+  color: #ffffff;
 }
 
 .cta-tertiary {
